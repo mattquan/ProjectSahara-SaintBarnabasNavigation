@@ -9,6 +9,8 @@ Christopher Bae - github.com/christopherbae
 
 Yana Sang - github.com/ywsang
 
+Nick Primamore - github.com/nickprimamore
+
 The main navigation method is contained in Main.java
 Each floor is represented by their respective Java class.
 Edge, Node, and Graph are auxilary classes.
