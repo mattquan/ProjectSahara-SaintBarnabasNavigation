@@ -7,6 +7,7 @@ Matt Quan - github.com/mattquan
 
 Christopher Bae - github.com/christopherbae
 
+Yana Sang - github.com/ywsang
 
 The main navigation method is contained in Main.java
 Each floor is represented by their respective Java class.
