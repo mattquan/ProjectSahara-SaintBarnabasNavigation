@@ -7,9 +7,9 @@ Matt Quan - github.com/mattquan
 
 Christopher Bae - github.com/christopherbae
 
-Yana Sang - github.com/ywsang
-
 Nick Primamore - github.com/nickprimamore
+
+Yana Sang - github.com/ywsang
 
 Stephanie Tam - github.com/stephtam
 
