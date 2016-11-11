@@ -20,7 +20,7 @@ public class Main {
         runDijkstrasAlgorithm(fg.build(),Keys.nodeNameEastWingFloorGround,Keys.nodeNameHallwayFloorGroundC);
     }
 
-    public static void runDijkstrasAlgorithm(ArrayList<Node> listOfNodes, String startingNodeString, String endingNodeString) {
+    public static String runDijkstrasAlgorithm(ArrayList<Node> listOfNodes, String startingNodeString, String endingNodeString) {
         //creating the unvisited list
         System.out.println("listOfNodes"+listOfNodes+"");
         ArrayList<Node> unvisited = new ArrayList();
@@ -92,9 +92,136 @@ public class Main {
         }
         //done!
         //this printout works becuase of polymorphism. eventually, chosenNode will = endingNode, and then when that happens, endingNode will have already been altered. 
-        System.out.println("The shortest path is " + endingNode.getMinPath() + "with weight" + endingNode.getWeight());
+        
+        String output = "The shortest path is " + endingNode.getMinPath() + "with a weight of " + endingNode.getWeight() + ", ";
+        return output;
 
     }
+    
+    public static void completeNavigation(String startingNode, String endingNode){
+    	
+    	//Strings hold starting/ending floors.
+    	String startingNodeFloor;
+    	String endingNodeFloor;
+    	String startingNodeElevator;
+    	String endingNodeElevator;
+    	
+    	//Determines what floor startingNode is on and sets elevator variable for later use if nodes are on different floors.
+    	if(startingNode.contains("FloorGround")){
+    		startingNodeFloor = "FloorGround";
+    		startingNodeElevator = Keys.nodeNameElevatorFloorGround;}
+    	
+    	else if(startingNode.contains("FloorOne")){
+    		startingNodeFloor = "FloorOne";
+    		startingNodeElevator = Keys.nodeNameElevatorFloorOne;}
+    	
+    	else if(startingNode.contains("FloorTwo")){
+    		startingNodeFloor = "FloorTwo";
+    		startingNodeElevator = Keys.nodeNameElevatorFloorTwo;}
+    	
+    	else if(startingNode.contains("FloorThree")){
+    		startingNodeFloor = "FloorThree";
+    		startingNodeElevator = Keys.nodeNameElevatorFloorThree;}
+    	
+    	else{
+    		startingNodeFloor = "FloorFour";
+    		startingNodeElevator = Keys.nodeNameElevatorFloorFour;}
+    	
+    	//Determines what floor endingNode is on and sets elevator variable for later use if nodes are on different floors.
+    	if(endingNode.contains("FloorGround")){ 
+    		endingNodeFloor = "FloorGround";
+    		endingNodeElevator = Keys.nodeNameElevatorFloorGround;}
+    	
+    	else if(endingNode.contains("FloorOne")){
+    		endingNodeFloor = "FloorOne";
+    		endingNodeElevator = Keys.nodeNameElevatorFloorOne;}
+    	
+    	else if(endingNode.contains("FloorTwo")){ 
+    		endingNodeFloor = "FloorTwo";
+    		endingNodeElevator = Keys.nodeNameElevatorFloorTwo;}
+    	
+    	else if(endingNode.contains("FloorThree")){
+    		endingNodeFloor = "FloorThree";
+    		endingNodeElevator = Keys.nodeNameElevatorFloorThree;}
+    	
+    	else{
+    		endingNodeFloor = "FloorFour";
+    		endingNodeElevator = Keys.nodeNameElevatorFloorFour;}
+    	
+    	//Creates floor objects for later use (if needed) in main algorithm.
+    	FloorGround fg = new FloorGround();
+    	FloorOne f1 = new FloorOne();
+    	FloorTwo f2 = new FloorTwo();
+    	FloorThree f3 = new FloorThree();
+    	FloorFour f4 = new FloorFour();
+    	
+    	
+    	//Will run main algorithm if starting/ending are on the same floor.
+    	if(startingNodeFloor.equals(endingNodeFloor)){
+    		
+    		if(startingNodeFloor.equals("FloorGround"))
+        		System.out.println(runDijkstrasAlgorithm(fg.build(), startingNode, endingNode)); 
+    		
+    		else if(startingNodeFloor.equals("FloorOne"))
+        		System.out.println(runDijkstrasAlgorithm(f1.build(), startingNode, endingNode));
+    		
+    		else if(startingNodeFloor.equals("FloorTwo")) 
+        		System.out.println(runDijkstrasAlgorithm(f2.build(), startingNode, endingNode));
+    		
+    		else if(startingNodeFloor.equals("FloorThree")) 
+        		System.out.println(runDijkstrasAlgorithm(f3.build(), startingNode, endingNode));
+        		
+    		else
+    			System.out.println(runDijkstrasAlgorithm(f4.build(), startingNode, endingNode));
+        		
+    	}
+    	//Will run if starting/ending are on different floors.
+    	else{
+    		
+    		//Two string outputs.
+    		String output1;
+    		String output2;
+    		
+    		//Obtains first minPath. 
+    		if(startingNodeFloor.equals("FloorGround"))
+    			output1 = runDijkstrasAlgorithm(fg.build(), startingNode, startingNodeElevator);
+    			    		
+    		else if(startingNodeFloor.equals("FloorOne"))
+    			output1 = runDijkstrasAlgorithm(f1.build(), startingNode, startingNodeElevator);
+    		
+    		else if(startingNodeFloor.equals("FloorTwo"))
+    			output1 = runDijkstrasAlgorithm(f2.build(), startingNode, startingNodeElevator);
+    		
+    		else if(startingNodeFloor.equals("FloorThree"))
+    			output1 = runDijkstrasAlgorithm(f3.build(), startingNode, startingNodeElevator);
+    		
+    		else
+        		output1 = runDijkstrasAlgorithm(f4.build(), startingNode, startingNodeElevator);
+    		
+    		
+    		//Obtains second minPath.
+    		if(endingNodeFloor.equals("FloorGround"))
+    			output2 = runDijkstrasAlgorithm(fg.build(), endingNodeElevator, endingNode);
+    		
+    		else if(endingNodeFloor.equals("FloorOne"))
+    			output2 = runDijkstrasAlgorithm(f1.build(), endingNodeElevator, endingNode);
+    		
+    		else if(endingNodeFloor.equals("FloorTwo"))
+    			output2 = runDijkstrasAlgorithm(f2.build(), endingNodeElevator, endingNode);
+    		
+    		else if(endingNodeFloor.equals("FloorThree"))
+    			output2 = runDijkstrasAlgorithm(f3.build(), endingNodeElevator, endingNode);
+    		
+    		else
+    			output2 = runDijkstrasAlgorithm(f4.build(), endingNodeElevator, endingNode);
+        		
+    		
+    		//Displays both minPaths.
+    		System.out.println(output1 + output2);
+    	}
+    	
+    	
+    } 		
 
     public static Node binarySearchAndReturn(String findThis, ArrayList<Node> listOfNodes) {
         //returns index of the toBeDestroyed within the array
