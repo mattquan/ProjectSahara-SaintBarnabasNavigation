@@ -30,19 +30,21 @@ public class FloorGround extends Graph{
                 }),
                 new Node(Keys.nodeNameHallwayFloorGroundA, new Edge[]{
                     new Edge(324.2,Keys.nodeNameEastWingFloorGround,0),
-                    new Edge(128,Keys.nodeNameHallwayFloorGroundB,1)
+                    new Edge(128,Keys.nodeNameHallwayFloorGroundB,1),
+                    new Edge(68.9, Keys.nodeNameElevatorFloorGround,2)
                 }),                   
                 
                 new Node(Keys.nodeNameHallwayFloorGroundB,new Edge[]{
                     new Edge(128,Keys.nodeNameHallwayFloorGroundA,0),
                     new Edge(369,Keys.nodeNameEastWingFloorGround,1),
-                    new Edge(64.5,Keys.nodeNameHallwayFloorGroundC,2)
+                    new Edge(64.5,Keys.nodeNameHallwayFloorGroundC,2),
+                    new Edge(59.1, Keys.nodeNameElevatorFloorGround,3)
                 }),
                 new Node(Keys.nodeNameHallwayFloorGroundC,new Edge[]{
                     new Edge(64.5,Keys.nodeNameHallwayFloorGroundB,0)
                 })
                 
-                ));            
+                ));                    
                
     }
 }
