@@ -19,6 +19,29 @@ public class Keys {
     final public static String nodeNameHallwayFloorGroundC = "hallwayFloorGroundC";
     final public static String nodeNameEastWingFloorGround = "eastWingGround";
     final public static String nodeNameElevatorFloorGround = "elevatorFloorGround";
+    final public static String nodeNameElevatorEastWingFloorGround = "elevatorEastWingFloorGround";
+    
+    final public static ArrayList<String> descriptionEastWingFloorGround  = new ArrayList<>(Arrays.asList(
+            "Apnea Center",
+            "Vangvanichyakorn",
+            "Barnabas Health Retail Pharmacy",
+            "Retail Pharmacy",
+            "Craniofacial center",
+            "Craniofacial",
+            "High risk infant follow up",
+            "High risk infant",
+            "North Jersey Blood Center",
+            "Blood Center",
+            "Pediatric health center",
+            "pediactric",
+            "Glick",
+            "Liptsyn",
+            "Center for Wound and Burn Healing",
+            "Wound and burn healing",
+            "wound healing",
+            "burn healing",
+            "Chase atm"
+    ));
     
     //floor one
     final public static String nodeNameHallwayFloorOneA = "hallwayFloorOneA";
@@ -70,8 +93,46 @@ public class Keys {
             "childrens center",
             "kids",
             "pediatric intensive care unit"
-    ));
+    ));        
+    //EAST WING
+            
+    //East Wing Floor One
+    final public static String nodeNameElevatorEastWingFloorOne = "elevatorEastWingFloorOne";
+    final public static ArrayList<String> descriptionEastWingFloorOne = new ArrayList<>(Arrays.asList(
+            "Department of Cardiothoracac surgery",
+            "Cardiothoracic surgery",
+            "Camacho",
+            "Karanam",
+            "Russo",
+            "Sardari",
+            "Saunders",
+            "Heart Failure Management Program",
+            "Heart Failure Management",
+            "Heart Failure",
+            "Zucker",
+            "Jaqua Cardiacpulmonary rehabilitation center",
+            "Cardiacpulmonary rehabilitation",
+            "Cardiacpulmonary rehab",
+            "Neonatology",
+            "Sun",
+            "OBGYN Health Center",
+            "OBGYN",
+            "Fibroid Center"    
+    ));        
+    //East Wing Floor Two
+    final public static String nodeNameElevatorEastWingFloorTwo = "elevatorEastWingFloorTwo";
          
+    //East Wing Floor Three
+    final public static String nodeNameElevatorEastWingFloorThree = "elevatorEastWingFloorThree";
+    
+    //East Wing Floor Four
+    final public static String nodeNameElevatorEastWingFloorFour = "elevatorEastWingFloorFour";
+    
+    //East Wing Floor Five
+    final public static String nodeNameElevatorEastWingFloorFive = "elevatorEastWingFloorFive";
+    
+    
+    
     //ROOMS
     
     //floorOne
