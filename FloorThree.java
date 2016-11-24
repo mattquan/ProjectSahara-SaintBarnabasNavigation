@@ -4,7 +4,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projectsahara;
+package ProjectSahara;
 import java.util.*;
 /**
  *
@@ -17,10 +17,12 @@ public class FloorThree extends Graph{
         
         return new ArrayList<>(
             Arrays.asList( 
-                new Node(Keys.nodeNameElevatorFloorThree, new Edge[]{
-                    new Edge(27.445,Keys.nodeNameDeskFloorThree,0),}),                   
                 new Node(Keys.nodeNameDeskFloorThree, new Edge[]{
-                    new Edge(27.445,Keys.nodeNameElevatorFloorThree,0)})       
+                    new Edge(27.445,Keys.nodeNameElevatorFloorThree,0)}) ,
+                    
+                 new Node(Keys.nodeNameElevatorFloorThree, new Edge[]{
+                    new Edge(27.445,Keys.nodeNameDeskFloorThree,0),})
+                    
                 ));            
                
     }

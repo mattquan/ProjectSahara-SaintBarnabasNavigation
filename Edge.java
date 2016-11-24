@@ -37,4 +37,8 @@ public class Edge {
     public void setIndex(int i){
         index = i;
     }
+    @Override
+    public String toString() {
+        return "TargetNode:"+targetNode;
+    }
 }

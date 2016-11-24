@@ -14,10 +14,7 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-
-        
-        FloorGround fg = new FloorGround();
-        runDijkstrasAlgorithm(fg.build(),Keys.nodeNameEastWingFloorGround,Keys.nodeNameHallwayFloorGroundC);
+        completeNavigation(Keys.nodeNameEastWingFloorGround, Keys.nodeNameDeskFloorThree);
     }
 
     public static String runDijkstrasAlgorithm(ArrayList<Node> listOfNodes, String startingNodeString, String endingNodeString) {
@@ -28,24 +25,26 @@ public class Main {
             unvisited.add(node);
         }
         //set my starting node
-        Node startingNode = binarySearchAndReturn(startingNodeString, listOfNodes);
+        Node startingNode = findNodeGivenString(startingNodeString, listOfNodes);
         //precondition of starting node. it's weight is 0, not infinity
         startingNode.setWeight(0);
         //because by default, minPath is null. so the first one has to have a non null path so that it can copy to all the other nodes.
         startingNode.setMinPath(new Path(startingNode.getName()));
 
         //set my ending node
-        Node endingNode = binarySearchAndReturn(endingNodeString, listOfNodes);
+        Node endingNode = findNodeGivenString(endingNodeString, listOfNodes);
         //first move. and also so i can initilzie chosen node
         Node chosenNode = startingNode;
         while (chosenNode != endingNode) {
-            System.out.println("chosenNode" + chosenNode);
+            
+            /*System.out.println("chosenNode" + chosenNode);
             System.out.println("chosenNodePath" + chosenNode.getMinPath());
-            System.out.println("chosenNodeWeight" + chosenNode.getWeight());
+            System.out.println("chosenNodeWeight" + chosenNode.getWeight());*/
+            
             //for each edge in my chosen node, look at that connecting edge and update values if necessary
             for (Edge edge : chosenNode.getAdjacentEdges()) {
                 //panda is that particular targetnode from that particular edge
-                Node panda = binarySearchAndReturn(edge.getTargetNode(), listOfNodes);
+                Node panda = findNodeGivenString(edge.getTargetNode(), listOfNodes);
                 //update only if panda has been unvisited. if it has already been visited, we don't look at it. 
                 //basiclaly don't look at the targetnode if, as a node, the targetnode has already been looked at
                 //confusing a bit. becuase panda is a target node. but that node only goes to unvisited if it was ever the chosenNode
@@ -65,21 +64,21 @@ public class Main {
                         path.add(self);
                         panda.setMinPath(path);
                         //debugging info
-                        System.out.println("panda:" + panda);
-                        System.out.println("pandaWeight" + panda.getWeight());
+                        /*System.out.println("panda:" + panda);
+                        System.out.println("pandaWeight" + panda.getWeight());*/
                     } else {
                         //debugging info
-                        System.out.println("did not update becuase wasn't min" + panda);
+                        //System.out.println("did not update becuase wasn't min" + panda);
                     }
                 } else {
                     //debugging info
-                    System.out.println("did not look at " + panda+", already updated");                   
+                    //System.out.println("did not look at " + panda+", already updated");                   
                 }
             }
             //remove the chosenNode from the unvisited list becuase it was visited
             binarySearchAndDestroyNode(chosenNode.getName(), unvisited);
             //debugging info
-            System.out.println(unvisited);
+            //System.out.println(unvisited);
             
             //choosing the newest minNode
             Node minNode = new Node();
@@ -97,9 +96,90 @@ public class Main {
         return output;
 
     }
-    
-    public static void completeNavigation(String startingNode, String endingNode){
+    public static String[] findFloorAndElevator (String node) {
+        //element 0 is floor
+        //element 1 is elevator
+        String[] data = new String [2];
+        if(node.contains("FloorGround")){
+    		data[0] = "FloorGround";
+    		data[1] = Keys.nodeNameElevatorFloorGround;
+        }
     	
+    	else if(node.contains("FloorOne")){
+    		data[0] = "FloorOne";
+    		data[1] = Keys.nodeNameElevatorFloorOne;}
+    	
+    	else if(node.contains("FloorTwo")){
+    		data[0] = "FloorTwo";
+    		data[1] = Keys.nodeNameElevatorFloorTwo;}
+    	
+    	else if(node.contains("FloorThree")){
+    		data[0] = "FloorThree";
+    		data[1] = Keys.nodeNameElevatorFloorThree;}
+    	
+        else if(node.contains("FloorFour")){
+    		data[0] = "FloorFour";
+    		data[1] = Keys.nodeNameElevatorFloorFour;}
+        
+        else if (node.contains("EastWingFloorOne")){
+                data[0] = "EastWingFloorOne";
+                data[1] = Keys.nodeNameElevatorEastWingFloorOne;
+        }        
+        else if (node.contains("EastWingFloorTwo")){
+                data[0] = "EastWingFloorTwo";
+                data[1] = Keys.nodeNameElevatorEastWingFloorTwo;                 
+        }
+        else if (node.contains("EastWingFloorThree")){
+                data[0] = "EastWingFloorThree";
+                data[1] = Keys.nodeNameElevatorEastWingFloorThree;    
+        }    
+        else if (node.contains("EastWingFloorFour")){
+                data[0] = "EastWingFloorFour";
+                data[1] = Keys.nodeNameElevatorEastWingFloorFour;
+        }
+        else if (node.contains("EastWingFloorFive")){
+            data[0] = "EastWingFloorFive";
+            data[1] = Keys.nodeNameElevatorEastWingFloorFive;
+        }
+        return data;
+    }
+    
+    public static Graph returnGraphFromFloor (String floor) {
+        System.out.println(floor);
+        if(floor.equals("FloorGround"))
+            return new FloorGround(); 
+    		
+        else if(floor.equals("FloorOne"))
+            return new FloorOne();
+
+        else if(floor.equals("FloorTwo")) 
+            return new FloorTwo();
+
+        else if(floor.equals("FloorThree")) 
+            return new FloorThree();
+
+        else if(floor.equals("FloorFour"))
+            return new FloorFour();
+
+        else if(floor.equals("EastWingFloorOne"))
+            return new EastWingFloorOne();
+
+        else if(floor.equals("EastWingFloorTwo"))
+            return new EastWingFloorTwo();
+
+        else if(floor.equals("EastWingFloorThree"))
+            return new EastWingFloorThree();
+
+        else if(floor.equals("EastWingFloorFour"))
+            return new EastWingFloorFour();
+
+        else if (floor.equals("EastWingFloorFive"))
+            return new EastWingFloorFive();
+        else
+            return null;
+    }
+    public static void completeNavigation(String startingNodeString, String endingNodeString){
+    	   System.out.println(startingNodeString);
     	//Strings hold starting/ending floors.
     	String startingNodeFloor;
     	String endingNodeFloor;
@@ -108,305 +188,80 @@ public class Main {
         
     	
     	//Determines what floor startingNode is on and sets elevator variable for later use if nodes are on different floors.
-    	if(startingNode.contains("FloorGround")){
-    		startingNodeFloor = "FloorGround";
-    		startingNodeElevator = Keys.nodeNameElevatorFloorGround;
-        }
-    	
-    	else if(startingNode.contains("FloorOne")){
-    		startingNodeFloor = "FloorOne";
-    		startingNodeElevator = Keys.nodeNameElevatorFloorOne;}
-    	
-    	else if(startingNode.contains("FloorTwo")){
-    		startingNodeFloor = "FloorTwo";
-    		startingNodeElevator = Keys.nodeNameElevatorFloorTwo;}
-    	
-    	else if(startingNode.contains("FloorThree")){
-    		startingNodeFloor = "FloorThree";
-    		startingNodeElevator = Keys.nodeNameElevatorFloorThree;}
-    	
-        else if(startingNode.contains("FloorFour")){
-    		startingNodeFloor = "FloorFour";
-    		startingNodeElevator = Keys.nodeNameElevatorFloorFour;}
-        
-        else if (startingNode.contains("EastWingFloorOne")){
-                startingNodeFloor = "EastWingFloorOne";
-                startingNodeElevator = Keys.nodeNameElevatorEastWingFloorOne;
-        }        
-        else if (startingNode.contains("EastWingFloorTwo")){
-                startingNodeFloor = "EastWingFloorTwo";
-                startingNodeElevator = Keys.nodeNameElevatorEastWingFloorTwo;
-                 
-        }
-        else if (startingNode.contains("EastWingFloorThree")){
-                startingNodeFloor = "EastWingFloorThree";
-                startingNodeElevator = Keys.nodeNameElevatorEastWingFloorThree;    
-        }    
-        else if (startingNode.contains("EastWingFloorFour")){
-                startingNodeFloor = "EastWingFloorFour";
-                startingNodeElevator = Keys.nodeNameElevatorEastWingFloorFour;
-        }
-        else{
-                startingNodeFloor = "EastWingFloorFive";
-            startingNodeElevator = Keys.nodeNameElevatorEastWingFloorFive;
-        }
+    	String [] results = findFloorAndElevator(startingNodeString);
+        startingNodeFloor = results[0];        
+        startingNodeElevator =results[1];
+        System.out.println(startingNodeFloor);
+        System.out.println(startingNodeElevator);
         
         
     	//Determines what floor endingNode is on and sets elevator variable for later use if nodes are on different floors.
-    	if(endingNode.contains("FloorGround")){ 
-    		endingNodeFloor = "FloorGround";
-    		endingNodeElevator = Keys.nodeNameElevatorFloorGround;
-        }
-    	
-    	else if(endingNode.contains("FloorOne")){
-    		endingNodeFloor = "FloorOne";
-    		endingNodeElevator = Keys.nodeNameElevatorFloorOne;}
-    	
-    	else if(endingNode.contains("FloorTwo")){ 
-    		endingNodeFloor = "FloorTwo";
-    		endingNodeElevator = Keys.nodeNameElevatorFloorTwo;}
-    	
-    	else if(endingNode.contains("FloorThree")){
-    		endingNodeFloor = "FloorThree";
-    		endingNodeElevator = Keys.nodeNameElevatorFloorThree;}
-    	
-        else if(endingNode.contains("FloorFour")){
-    		endingNodeFloor = "FloorFour";
-    		endingNodeElevator = Keys.nodeNameElevatorFloorFour;}
-    	
-        else if(endingNode.contains("EastWingFloorOne")){
-                endingNodeFloor = "EastWIngFloorOne";
-                endingNodeElevator = Keys.nodeNameElevatorEastWingFloorOne;
-        }
-        else if(endingNode.contains("EastWingFloorTwo")){
-                endingNodeFloor = "EastWingFloorTwo";
-                endingNodeElevator = Keys.nodeNameElevatorEastWingFloorTwo; 
-        }
-        else if(endingNode.contains("EastWingFloorThree")){
-                endingNodeFloor = "EastWingFloorThree";
-                endingNodeElevator = Keys.nodeNameElevatorEastWingFloorThree;
-        }
-        else if(endingNode.contains("EastWingFloorFour")){
-                endingNodeFloor = "EastWingFloorFour";
-                endingNodeElevator = Keys.nodeNameElevatorEastWingFloorFour;
-        }   
-        else{
-                endingNodeFloor = "EastWingFloorFive";
-                endingNodeElevator = Keys.nodeNameElevatorEastWingFloorFive;
-        }
-        
-    	//Creates floor objects for later use (if needed) in main algorithm.
-    	FloorGround fg = new FloorGround();
-    	FloorOne f1 = new FloorOne();
-    	FloorTwo f2 = new FloorTwo();
-    	FloorThree f3 = new FloorThree();
-    	FloorFour f4 = new FloorFour();
-    	
-        EastWingFloorOne ewf1 = new EastWingFloorOne();
-        EastWingFloorTwo ewf2 = new EastWingFloorTwo();
-        EastWingFloorThree ewf3 = new EastWingFloorThree();
-        EastWingFloorFour ewf4 = new EastWingFloorFour();
-        EastWingFloorFive ewf5 = new EastWingFloorFive();
-    	
-    	//Will run main algorithm if starting/ending are on the same floor.
-    	if(startingNodeFloor.equals(endingNodeFloor)){
-    		
-    		if(startingNodeFloor.equals("FloorGround"))
-        		System.out.println(runDijkstrasAlgorithm(fg.build(), startingNode, endingNode)); 
-    		
-    		else if(startingNodeFloor.equals("FloorOne"))
-        		System.out.println(runDijkstrasAlgorithm(f1.build(), startingNode, endingNode));
-    		
-    		else if(startingNodeFloor.equals("FloorTwo")) 
-        		System.out.println(runDijkstrasAlgorithm(f2.build(), startingNode, endingNode));
-    		
-    		else if(startingNodeFloor.equals("FloorThree")) 
-        		System.out.println(runDijkstrasAlgorithm(f3.build(), startingNode, endingNode));
-        		
-    		else if(startingNodeFloor.equals("FloorFour"))
-    			System.out.println(runDijkstrasAlgorithm(f4.build(), startingNode, endingNode));
-                
-                else if(startingNodeFloor.equals("EastWingFloorOne"))
-                        System.out.println(runDijkstrasAlgoritm(ewf1.build(), startingNode, endingNode));
-                
-                else if(startingNodeFloor.equals("EastWingFloorTwo"))
-                        System.out.println(runDijkstrasAlgoritm(ewf2.build(), startingNode, endingNode));
-                
-                else if(startingNodeFloor.equals("EastWingFloorThree"))
-                        System.out.println(runDijkstrasAlgoritm(ewf3.build(), startingNode, endingNode));
-                
-                else if(startingNodeFloor.equals("EastWingFloorFour"))
-                        System.out.println(runDijkstrasAlgoritm(ewf4.build(), startingNode, endingNode));
-                
-                else
-                        System.out.println(runDijkstrasAlgoritm(ewf5.build(), startingNode, endingNode));
-                
-                
-    	}
-    	//Will run if starting/ending are on different floors but not between east wing and main building.
-        else if((startingNodeFloor.contains("EastWing") && endingNodeFloor.contains("EastWing")) || (!startingNodeFloor.contains("EastWing") && !endingNodeFloor.contains("EastWing"))){
-    		
-    		//Two string outputs.
-    		String output1;
-    		String output2;
-    		
-    		//Obtains first minPath. 
-    		if(startingNodeFloor.equals("FloorGround"))
-    			output1 = runDijkstrasAlgorithm(fg.build(), startingNode, startingNodeElevator);
-    			    		
-    		else if(startingNodeFloor.equals("FloorOne"))
-    			output1 = runDijkstrasAlgorithm(f1.build(), startingNode, startingNodeElevator);
-    		
-    		else if(startingNodeFloor.equals("FloorTwo"))
-    			output1 = runDijkstrasAlgorithm(f2.build(), startingNode, startingNodeElevator);
-    		
-    		else if(startingNodeFloor.equals("FloorThree"))
-    			output1 = runDijkstrasAlgorithm(f3.build(), startingNode, startingNodeElevator);
-    		
-                else if(startingNodeFloor.equals("FloorFour"))
-        		output1 = runDijkstrasAlgorithm(f4.build(), startingNode, startingNodeElevator);
-                
-                else if(startingNodeFloor.equals("EastWingFloorOne"))
-                        output1 = runDijkstrasAlgorithm(ewf1.build(), startingNode, startingNodeElevator);
-                
-                else if(startingNodeFloor.equals("EastWingFloorTwo"))
-                        output1 = runDijkstrasAlgorithm(ewf2.build(), startingNode, startingNodeElevator);
-                
-                else if(startingNodeFloor.equals("EastWingFloorThree"))
-                        output1 = runDijkstrasAlgorithm(ewf3.build(), startingNode, startingNodeElevator);
-                
-                else if(startingNodeFloor.equals("EastWingFloorFour"))
-                        output1 = runDijkstrasAlgorithm(ewf4.build(), startingNode, startingNodeElevator);
-                
-                else
-                        output1 = runDijkstrasAlgorithm(ewf5.build(), startingNode, startingNodeElevator);
-                
-    		
-    		
-    		//Obtains second minPath.
-    		if(endingNodeFloor.equals("FloorGround"))
-    			output2 = runDijkstrasAlgorithm(fg.build(), endingNodeElevator, endingNode);
-    		
-    		else if(endingNodeFloor.equals("FloorOne"))
-    			output2 = runDijkstrasAlgorithm(f1.build(), endingNodeElevator, endingNode);
-    		
-    		else if(endingNodeFloor.equals("FloorTwo"))
-    			output2 = runDijkstrasAlgorithm(f2.build(), endingNodeElevator, endingNode);
-    		
-    		else if(endingNodeFloor.equals("FloorThree"))
-    			output2 = runDijkstrasAlgorithm(f3.build(), endingNodeElevator, endingNode);
-    		
-                else if(endingNodeFloor.equals("FloorFour"))
-    			output2 = runDijkstrasAlgorithm(f4.build(), endingNodeElevator, endingNode);
-                
-                else if(endingNodeFloor.equals("EastWingFloorOne"))
-                        output2 = runDijkstrasAlgorithm(ewf1.build(), endingNodeElevator, endingNode);
-                
-                else if(endingNodeFloor.equals("EastWingFloorTwo"))
-                        output2 = runDijkstrasAlgorithm(ewf2.build(), endingNodeElevator, endingNode);
-                
-                else if(endingNodeFloor. equals("EastWingFloorThree"))
-                        output2 = runDijkstrasAlgorithm(ewf3.build(), endingNodeElevator, endingNode);
-                
-                else if(endingNodeFloor. equals("EastWingFloorFour"))
-                        output2 = runDijkstrasAlgorithm(ewf4.build(), endingNodeElevator, endingNode);
-                
-                else
-                        output2 = runDijkstrasAlgorithm(ewf5.build(), endingNodeElevator, endingNode);
-        		
-    		
-    		//Displays both minPaths.
-    		System.out.println(output1 + output2);
-    	}
-        //Will run if the starting node is in the main building and the ending node is in the east wing or vice versa (does not apply if the starting/ending node is on ground floor).
-        else{
-             
-                //Three string outputs.
-    		String output1;
-    		String output2;
-    		String output3;
-                
-    		//Obtains first minPath. 
-    		if(startingNodeFloor.equals("FloorGround"))
-    			output1 = runDijkstrasAlgorithm(fg.build(), startingNode, startingNodeElevator);
-    			    		
-    		else if(startingNodeFloor.equals("FloorOne"))
-    			output1 = runDijkstrasAlgorithm(f1.build(), startingNode, startingNodeElevator);
-    		
-    		else if(startingNodeFloor.equals("FloorTwo"))
-    			output1 = runDijkstrasAlgorithm(f2.build(), startingNode, startingNodeElevator);
-    		
-    		else if(startingNodeFloor.equals("FloorThree"))
-    			output1 = runDijkstrasAlgorithm(f3.build(), startingNode, startingNodeElevator);
-    		
-                else if(startingNodeFloor.equals("FloorFour"))
-        		output1 = runDijkstrasAlgorithm(f4.build(), startingNode, startingNodeElevator);
-                
-                else if(startingNodeFloor.equals("EastWingFloorOne"))
-                        output1 = runDijkstrasAlgorithm(ewf1.build(), startingNode, startingNodeElevator);
-                
-                else if(startingNodeFloor.equals("EastWingFloorTwo"))
-                        output1 = runDijkstrasAlgorithm(ewf2.build(), startingNode, startingNodeElevator);
-                
-                else if(startingNodeFloor.equals("EastWingFloorThree"))
-                        output1 = runDijkstrasAlgorithm(ewf3.build(), startingNode, startingNodeElevator);
-                
-                else if(startingNodeFloor.equals("EastWingFloorFour"))
-                        output1 = runDijkstrasAlgorithm(ewf4.build(), startingNode, startingNodeElevator);
-                
-                else
-                        output1 = runDijkstrasAlgorithm(ewf5.build(), startingNode, startingNodeElevator);
-                
-                
-                //nav from main elevators to east wing elevators or vice versa.
-                if(!startingNodeFloor.contains("EastWing"))
-                        output2 = runDijkstrasAlgorithm(fg.build(), Keys.nodeNameElevatorFloorGround, Keys.nodeNameElevatorEastWingFloorGround);
-                
-                else
-                    output2 = runDijkstrasAlgorithm(fg.build(), Keys.nodeNameElevatorEastWingFloorGround, Keys.nodeNameElevatorFloorGround);
-                
-                                
-                //Obtains third minPath.
-    		if(endingNodeFloor.equals("FloorGround"))
-    			output3 = runDijkstrasAlgorithm(fg.build(), endingNodeElevator, endingNode);
-    		
-    		else if(endingNodeFloor.equals("FloorOne"))
-    			output3 = runDijkstrasAlgorithm(f1.build(), endingNodeElevator, endingNode);
-    		
-    		else if(endingNodeFloor.equals("FloorTwo"))
-    			output3 = runDijkstrasAlgorithm(f2.build(), endingNodeElevator, endingNode);
-    		
-    		else if(endingNodeFloor.equals("FloorThree"))
-    			output3 = runDijkstrasAlgorithm(f3.build(), endingNodeElevator, endingNode);
-    		
-                else if(endingNodeFloor.equals("FloorFour"))
-    			output3 = runDijkstrasAlgorithm(f4.build(), endingNodeElevator, endingNode);
-                
-                else if(endingNodeFloor.equals("EastWingFloorOne"))
-                        output3 = runDijkstrasAlgorithm(ewf1.build(), endingNodeElevator, endingNode);
-                
-                else if(endingNodeFloor.equals("EastWingFloorTwo"))
-                        output3 = runDijkstrasAlgorithm(ewf2.build(), endingNodeElevator, endingNode);
-                
-                else if(endingNodeFloor. equals("EastWingFloorThree"))
-                        output3 = runDijkstrasAlgorithm(ewf3.build(), endingNodeElevator, endingNode);
-                
-                else if(endingNodeFloor. equals("EastWingFloorFour"))
-                        output3 = runDijkstrasAlgorithm(ewf4.build(), endingNodeElevator, endingNode);
-                
-                else
-                        output3 = runDijkstrasAlgorithm(ewf5.build(), endingNodeElevator, endingNode);
-                   
+    	results = findFloorAndElevator(endingNodeString);
+        endingNodeFloor = results[0];
+        endingNodeElevator = results[1];
+        //System.out.println(endingNodeFloor);
+        //System.out.println(endingNodeElevator);       
+         	
+        //create the first graph... if they are are on the same floor, great! just use this. if not, you will need to add seperate graphs for other sections
+        ArrayList<Node> myFirstFloor = returnGraphFromFloor(startingNodeFloor).build();
+        //add starting node to graph IFF the starting node is a room
+        Node startingNode = findNodeGivenString(startingNodeString,Keys.listOfRooms);         
+            //System.out.println(startingNode);
+        if (startingNode!=null) {
+                myFirstFloor.add(startingNode);
+                //System.out.println("added starting room");
+            }
+        String output;
+    	//If starting/ending are on the SAME FLOOR.
+    	if(startingNodeFloor.equals(endingNodeFloor)){            
+            //System.out.println("Same floor!");
             
-                //Displays all three minPaths.
-    		System.out.println(output1 + output2 + output3);
-        }
-    	
-    	
+            //add endingNode to graph IFF nodes are rooms       
+            Node endingNode = findNodeGivenString(endingNodeString,Keys.listOfRooms);
+            //System.out.println(endingNode);            
+            if (endingNode !=null) {
+                myFirstFloor.add(endingNode);
+                //System.out.println("added ending node");
+            }
+            
+            //cool now run the algorithm
+            output = runDijkstrasAlgorithm(myFirstFloor,startingNodeString, endingNodeString);
+            
+                
+    	}
+        
+        else {
+            String output1 = runDijkstrasAlgorithm(myFirstFloor,startingNodeString,startingNodeElevator);
+            ArrayList<Node> mySecondFloor = returnGraphFromFloor(endingNodeFloor).build();
+            //add endingNode to graph IFF nodes are rooms       
+            Node endingNode = findNodeGivenString(endingNodeString,Keys.listOfRooms);
+            //System.out.println(endingNode);
+            if (endingNode !=null) {
+                mySecondFloor.add(endingNode);
+                //System.out.println("added ending node");
+            }
+            System.out.println(endingNodeElevator);
+            System.out.println(endingNodeString);
+            System.out.println(mySecondFloor);
+            String output2 = runDijkstrasAlgorithm(mySecondFloor,endingNodeElevator,endingNodeString);
+            //but if you need a bridge to the east wing the starting node is in the main building and the ending node is in the east wing or vice versa (does not apply if the starting/ending node is on ground floor).            
+            
+            if (startingNodeFloor.contains("EastWing")||endingNodeFloor.contains("EastWing")) {
+                //if startingNode is NOT in the east wing... go to the east wing
+                //else go FROM the east wing to the mainbuilding
+                if(!startingNodeFloor.contains("EastWing"))
+                    output1+= runDijkstrasAlgorithm(new FloorGround().build(), Keys.nodeNameElevatorFloorGround, Keys.nodeNameElevatorEastWingFloorGround);
+
+                else
+                    output1+=runDijkstrasAlgorithm(new FloorGround().build(), Keys.nodeNameElevatorEastWingFloorGround, Keys.nodeNameElevatorFloorGround);
+                }           
+            output = output1+output2;
+        }       
+    	System.out.println(output);
     } 		
 
-    public static Node binarySearchAndReturn(String findThis, ArrayList<Node> listOfNodes) {
-        //returns index of the toBeDestroyed within the array
+    public static Node findNodeGivenString(String findThis, ArrayList<Node> listOfNodes) {
+        //returns node object given String
         int min = 0;
         int max = listOfNodes.size() - 1;
         int index;

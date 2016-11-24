@@ -17,7 +17,7 @@ public class Keys {
     final public static String nodeNameHallwayFloorGroundA = "hallwayFloorGroundA";
     final public static String nodeNameHallwayFloorGroundB = "hallwayFloorGroundB";
     final public static String nodeNameHallwayFloorGroundC = "hallwayFloorGroundC";
-    final public static String nodeNameEastWingFloorGround = "eastWingGround";
+    final public static String nodeNameEastWingFloorGround = "eastWingFloorGround";
     final public static String nodeNameElevatorFloorGround = "elevatorFloorGround";
     final public static String nodeNameElevatorEastWingFloorGround = "elevatorEastWingFloorGround";
     
