@@ -121,13 +121,31 @@ public class Keys {
     ));        
     //East Wing Floor Two
     final public static String nodeNameElevatorEastWingFloorTwo = "elevatorEastWingFloorTwo";
-         
+    final public static ArrayList<String> descriptionEastWingFloorTwo = new ArrayList<>(Arrays.asList(
+            "Cancer Center",
+            "Infusion Center",
+            "Cancer",
+            "Infusion"
+    ));
+    
     //East Wing Floor Three
     final public static String nodeNameElevatorEastWingFloorThree = "elevatorEastWingFloorThree";
-    
+    final public static ArrayList<String> descriptionEastWingFloorThree = new ArrayList<>(Arrays.asList(
+            "Transplant Medicine",
+            "Living Donor Institute",
+            "Pre Transplant",
+            "Transplant Administration",
+            "Transplant Clinic",
+            "Transplant Research",
+            "Transplant Research",
+            "Transplant Short Stay"
+    ));
     //East Wing Floor Four
     final public static String nodeNameElevatorEastWingFloorFour = "elevatorEastWingFloorFour";
-    
+     final public static ArrayList<String> descriptionEastWingElevatorFloorFour = new ArrayList<>(Arrays.asList(
+            "Reproductive Medicine and Science",
+            "Perinatal Associates"
+    ));
     //East Wing Floor Five
     final public static String nodeNameElevatorEastWingFloorFive = "elevatorEastWingFloorFive";
     
@@ -289,7 +307,7 @@ public class Keys {
             "G336"
     ));
     final public static String nodeNameRoomG230FloorGround = "roomG320FloorGround";
-    final public static ArrayList<String> descriptionRoomG320FloorGround = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> descriptionRoomG230FloorGround = new ArrayList<>(Arrays.asList(
             "cafeteria",
             "food",
             "cafe",
@@ -305,142 +323,304 @@ public class Keys {
             "pediatric",
             "pediatric outpatient",
             "E00C7"
+    )); final public static String nodeNameRoomG03EastWingFloorGround = "roomG03EastWingFloorGround";
+    final public static ArrayList<String> descriptionRoomG03EastWingFloorGround = new ArrayList<>(Arrays.asList(
+            "Apnea Center",
+            "Vangvanichyakorn",
+            "Barnabas Heatlh Retail Pharmacy",
+            "Craniofacial center",
+            "High risk infant follow up",
+            "New Jersey Blood Center",
+            "Pediatric Health Center",
+            "Glick",
+            "Liptsyn",
+            "center for wound and burn healing",
+            "Chase ATM"
     ));
-    
+    //EastWingFloorOne
+    final public static String nodeNameRoom144EastWingFloorOne = "room144EastWingFloorOne";
+    final public static ArrayList<String> descriptionRoom144EastWingFloorOne = new ArrayList<>(Arrays.asList(
+            "Department of Cardiothoracic surgery",
+            "Camacho",
+            "Karanam",
+            "Russo",
+            "sandari",
+            "Saunders",
+            "Heart Failure Management Program",
+            "Zucker",
+            "Jaqua Cardiac/Pulmonary Rehabilitation Center"
+    ));
+    final public static String nodeNameRoom121EastWingFloorOne = "room121EastWingFloorOne";
+    final public static ArrayList<String> descriptionRoom121EastWingFloorOne = new ArrayList<>(Arrays.asList(
+            "Neonatology",
+            "Sun"
+    ));
+    final public static String nodeNameRoom117EastWingFloorOne = "room117EastWingFloorOne";
+    final public static ArrayList<String> descriptionRoom117EastWingFloorOne = new ArrayList<>(Arrays.asList(
+            "Saint Barnabas OBGYN Health Center",
+            "The Fibroid center"
+    ));
+    //EastWingFloorTwo
+    final public static String nodeNameRoom201EastWingFloorTwo = "room201EastWingFloorTwo";
+    final public static ArrayList<String> descriptionRoom201EastWingFloorTwo = new ArrayList<>(Arrays.asList(
+            "Cancer Center",
+            "Brown",
+            "Conde",
+            "Grossman",
+            "Leitner",
+            "Lipari",
+            "Litvak",
+            "Radovich",
+            "Scoppetuolo",
+            "Wagmiller"
+    ));
+    final public static String nodeNameRoom244EastWingFloorTwo = "room244EastWingFloorTwo";
+    final public static ArrayList<String> descriptionRoom244EastWingFloorTwo = new ArrayList<>(Arrays.asList(
+            "Infusion Center"
+    ));
+    //EastWingFloorThree
+    final public static String nodeNameRoom302EastWingFloorThree = "room302EastWingFloorThree";
+    final public static ArrayList<String> descriptionRoom302EastWingFloorThree = new ArrayList<>(Arrays.asList(
+            "Associates in Transplant and General Surgery",
+            "Aitchison"            
+    ));
+    final public static String nodeNameRoom306EastWingFloorThree = "room306EastWingFloorThree";
+    final public static ArrayList<String> descriptionRoom306EastWingFloorThree = new ArrayList<>(Arrays.asList(
+            "Associates in Transplant Medicine",
+            "Dhillon",
+            "Goldberg",
+            "Kandula",
+            "Luan",
+            "Patel",
+            "Tibaldi",
+            "Weng",
+            "Pre Transplant Department",
+            "Mulgaonkar"
+    ));
+    final public static String nodeNameRoom332EastWingFloorThree = "room332EastWingFloorThree";
+    final public static ArrayList<String> descriptionRoom332EastWingFloorThree = new ArrayList<>(Arrays.asList(
+            "Living Donor Institute"
+     ));
+    final public static String nodeNameRoom303EastWingFloorThree = "room303EastWingFloorThree";
+    final public static ArrayList<String> descriptionRoom303EastWingFloorThree = new ArrayList<>(Arrays.asList(
+            "Transplant Administration"
+     ));
+    final public static String nodeNameRoom305EastWingFloorThree = "room305EastWingFloorThree";
+    final public static ArrayList<String> descriptionRoom305EastWingFloorThree = new ArrayList<>(Arrays.asList(
+            "Transplant Clinic"
+    ));
+    final public static String nodeNameRoom307EastWingFloorThree = "room307EastWingFloorThree";
+    final public static ArrayList<String> descriptionRoom307EastWingFloorThree = new ArrayList<>(Arrays.asList(
+            "Transplant Research"
+    ));
+    final public static String nodeNameRoom308EastWingFloorThree = "room308EastWingFloorThree";
+    final public static ArrayList<String> descriptionRoom308EastWingFloorThree = new ArrayList<>(Arrays.asList(
+            "Transplant Short Stay"
+    ));
+    //EastWingFloorFour
+    final public static String nodeNameRoom403EastWingFloorFour = "room403EastWingFloorFour";
+    final public static ArrayList<String> descriptionRoom403EastWingFloorFour = new ArrayList<>(Arrays.asList(
+            "Institute for Reproductive Medicine and Science",
+            "Cekleniak",
+            "Chen",
+            "Garrisi",
+            "Hessler",
+            "Keegen",
+            "Pascale",
+            "Thompson"
+    ));
+    final public static String nodeNameRoom402EastWingFloorFour = "room402EastWingFloorFour";
+    final public static ArrayList<String> descriptionRoom402EastWingFloorFour = new ArrayList<>(Arrays.asList(
+            "DziadosZ",
+            "Kasdaglis",
+            "Miller",
+            "O'Brien",
+            "Pelaez",
+            "Smith",
+            "Terrone",
+            "Warren",
+            "Wolf"
+    ));
     
     //ListOfRooms!! Alphabetical!!
     
     final public static ArrayList<Node> listOfRooms = new ArrayList<>(Arrays.asList(
             //groundFloorParkingValidation
-            new Node(nodeNameParkingValidationFloorGround, new Edge[]{
+            new Node(nodeNameParkingValidationFloorGround,descriptionParkingValidationFloorGround, new Edge[]{
                 new Edge(44.291, nodeNameHallwayFloorGroundA, 0),
                 new Edge(40.912, nodeNameElevatorFloorGround, 1),
                 new Edge(112.693, nodeNameHallwayFloorGroundB, 2)
             }),
+              //EastWingFloorOne 117
+            new Node(nodeNameRoom117EastWingFloorOne,descriptionRoom117EastWingFloorOne, new Edge[]{
+                new Edge (18.00, nodeNameElevatorEastWingFloorOne,0) 
+            }),
             //floorOneParentLounge
-            new Node(nodeNameRoom1211FloorOne, new Edge[]{
+            new Node(nodeNameRoom1211FloorOne, descriptionRoom1211FloorOne, new Edge[]{
                 new Edge(4.708,nodeNameHallwayFloorOneD, 0),
                 new Edge(5.991,nodeNameHallwayFloorOneE,1)
             }),
-            //floorOneMensRestroom
-            new Node(nodeNameRoom1214FloorOne, new Edge[]{
+             //floorOneMensRestroom
+            new Node(nodeNameRoom1214FloorOne,descriptionRoom1214FloorOne, new Edge[]{
                 new Edge(7.594,nodeNameHallwayFloorOneD, 0),
                 new Edge(3.254,nodeNameHallwayFloorOneE,1)
             }),
-            //floorOneWomensRestroom
-            new Node(nodeNameRoom1215FloorOne, new Edge[]{
+             //floorOneWomensRestroom
+            new Node(nodeNameRoom1215FloorOne,descriptionRoom1215FloorOne, new Edge[]{
                 new Edge(8.569,nodeNameHallwayFloorOneD, 0),
                 new Edge(2.190,nodeNameHallwayFloorOneE,1)
             }),
+             //EastWingFloorOneRoom121
+            new Node(nodeNameRoom121EastWingFloorOne,descriptionRoom121EastWingFloorOne, new Edge[]{
+                new Edge (18.905, nodeNameElevatorEastWingFloorOne,0)
+            }),
             //floorOneWomensRestroom
-            new Node(nodeNameRoom1318FloorOne, new Edge[]{
+            new Node(nodeNameRoom1318FloorOne, descriptionRoom1318FloorOne, new Edge[]{
                 new Edge(11.753,nodeNameHallwayFloorOneA, 0),
                 new Edge(10.504,nodeNameHallwayFloorOneB,1),
                 new Edge(0.461,nodeNameElevatorFloorOne,2)
             }),
             //floorOneMensRestroom
-            new Node(nodeNameRoom1319FloorOne, new Edge[]{
+            new Node(nodeNameRoom1319FloorOne,descriptionRoom1319FloorOne, new Edge[]{
                 new Edge(8.760,nodeNameHallwayFloorOneA, 0),
                 new Edge(12.830,nodeNameHallwayFloorOneB,1),
                 new Edge(1.832,nodeNameElevatorFloorOne,2)
             }),
-            //floorOneSameDayWaitingArea
-            new Node(nodeNameRoom1323FloorOne, new Edge[]{
+               //floorOneSameDayWaitingArea
+            new Node(nodeNameRoom1323FloorOne,descriptionRoom1323FloorOne, new Edge[]{
                 new Edge(3.020,nodeNameHallwayFloorOneA, 0),
                 new Edge(19.226,nodeNameHallwayFloorOneB,1),
                 new Edge(7.880,nodeNameElevatorFloorOne,2)
             }),
-            //floorOneChapel
-            new Node(nodeNameRoom1398FloorOne, new Edge[]{
+                //floorOneChapel
+            new Node(nodeNameRoom1398FloorOne,descriptionRoom1398FloorOne, new Edge[]{
                 new Edge(8.180,nodeNameHallwayFloorOneG, 0)
             }),
+              //EastWingFloorOneRoom144
+            new Node(nodeNameRoom144EastWingFloorOne,descriptionRoom144EastWingFloorOne, new Edge[]{
+                new Edge(5.908, nodeNameElevatorEastWingFloorOne, 0)
+            }),
             //floorOneICUWaiting
-            new Node(nodeNameRoom1607FloorOne, new Edge[]{
+            new Node(nodeNameRoom1607FloorOne, descriptionRoom1607FloorOne, new Edge[]{
                 new Edge(1.725,nodeNameHallwayFloorOneE,1)
             }),
-            //floorOneRadiation
-            new Node(nodeNameRoom1730AFloorOne, new Edge[]{
+             //floorOneRadiation
+            new Node(nodeNameRoom1730AFloorOne,descriptionRoom1730AFloorOne, new Edge[]{
                 new Edge(19.059,nodeNameHallwayFloorOneF, 0)
             }),
-            //floorTwoPhones
-            new Node(nodeNameRoom2350AFloorTwo, new Edge[]{
+            //EastWingFloorTwo 201
+            new Node(nodeNameRoom201EastWingFloorTwo,descriptionRoom201EastWingFloorTwo, new Edge[]{
+                new Edge (9.150, nodeNameElevatorEastWingFloorTwo,0)
+            }), 
+           //floorTwoPhones
+            new Node(nodeNameRoom2350AFloorTwo, descriptionRoom2350AFloorTwo, new Edge[]{
                 new Edge(9.679, nodeNameElevatorFloorTwo,0),
                 new Edge(9.581, nodeNameDeskFloorTwo, 1)    
-            }),
-            //floorTwoReception
-            new Node(nodeNameRoom2424FloorTwo, new Edge[]{
+            }), 
+           //floorTwoReception
+            new Node(nodeNameRoom2424FloorTwo,descriptionRoom2424AFloorTwo, new Edge[]{
                 new Edge(19.963, nodeNameElevatorFloorTwo,0),
                 new Edge(0, nodeNameDeskFloorTwo, 1)
             }),
-            //floorThreeReception
-            new Node(nodeNameRoom3200C1FloorThree, new Edge[]{
+           //EastWingFloorTwo 244
+            new Node(nodeNameRoom244EastWingFloorTwo,descriptionRoom244EastWingFloorTwo,new Edge[]{
+                new Edge (10.765, nodeNameElevatorEastWingFloorTwo,0)
+            }),
+            //EastWingFloorThree 302
+            new Node(nodeNameRoom302EastWingFloorThree,descriptionRoom302EastWingFloorThree, new Edge[]{
+                new Edge (36.983, nodeNameElevatorEastWingFloorThree,0)
+            }),
+            //EastWingFloorThree 306
+            new Node(nodeNameRoom306EastWingFloorThree, descriptionRoom306EastWingFloorThree, new Edge[]{
+                new Edge (68.945, nodeNameElevatorEastWingFloorThree, 0)
+            }), 
+            //EastWingFloorThree 307
+            new Node(nodeNameRoom307EastWingFloorThree, descriptionRoom307EastWingFloorThree, new Edge[]{
+                new Edge(69.945, nodeNameElevatorEastWingFloorThree,0)
+            }),
+           //EastwingFloorThree 308
+            new Node(nodeNameRoom308EastWingFloorThree, descriptionRoom308EastWingFloorThree,new Edge[]{
+                new Edge (69.00, nodeNameElevatorEastWingFloorThree, 0)
+            }),
+             //floorThreeReception
+            new Node(nodeNameRoom3200C1FloorThree, descriptionRoom3200C1FloorThree, new Edge[]{
                 new Edge(27.445, nodeNameElevatorFloorThree,0),
                 new Edge(0, nodeNameDeskFloorThree, 1)
             }),
-            //floorThreeRestroom
-            new Node(nodeNameRoom3301DFloorThree, new Edge[]{
+             //floorThreeRestroom
+            new Node(nodeNameRoom3301DFloorThree, descriptionRoom3301DFloorThree, new Edge[]{
                 new Edge(5.543, nodeNameElevatorFloorThree,0),
                 new Edge(22.173, nodeNameDeskFloorThree,1)
             }),
-            //floorFourReception
-            new Node(nodeNameRoom4034FloorFour, new Edge[]{
+            //EastWingFloorThree 332
+            new Node(nodeNameRoom332EastWingFloorThree,descriptionRoom332EastWingFloorThree, new Edge[]{
+                new Edge (225.769, nodeNameElevatorEastWingFloorThree, 0)
+            }),
+            //EastWingFloorFour 402
+            new Node(nodeNameRoom402EastWingFloorFour, descriptionRoom402EastWingFloorFour, new Edge[]{
+                new Edge(69.698, nodeNameElevatorEastWingFloorFour, 0)
+            }),
+              //floorFourReception
+            new Node(nodeNameRoom4034FloorFour,descriptionRoom4034FloorFour, new Edge[]{
                 new Edge(24.312, nodeNameElevatorFloorFour,0),
                 new Edge(0, nodeNameDeskFloorFour,1)
             }),
-            //floorFourRestroom
-            new Node(nodeNameRoom4235FloorFour, new Edge[]{
+            //EastWingFloorFour 403
+            new Node(nodeNameRoom403EastWingFloorFour, descriptionRoom403EastWingFloorFour, new Edge[]{
+                new Edge(92.583, nodeNameElevatorEastWingFloorFour, 0)
+            }),
+           //floorFourRestroom
+            new Node(nodeNameRoom4235FloorFour,descriptionRoom4235FloorFour, new Edge[]{
                 new Edge(12.719, nodeNameElevatorFloorFour,0),
                 new Edge(12.618, nodeNameDeskFloorFour, 1)
             }),
-            //groundFloorBurnOutpatient
-            new Node(nodeNameRoomE00C6FloorGround, new Edge[]{
+           //groundFloorBurnOutpatient
+            new Node(nodeNameRoomE00C6FloorGround, descriptionRoomE00C6FloorGround, new Edge[]{
                 new Edge(22.543, nodeNameHallwayFloorGroundB, 0),
                 new Edge(355.749, nodeNameEastWingFloorGround, 1)
             }),
             //groundFloorPedriaticOutpatient
-            new Node(nodeNameRoomE00C7FloorGround, new Edge[]{
+            new Node(nodeNameRoomE00C7FloorGround, descriptionRoomE00C7FloorGround, new Edge[]{
                 new Edge(266.703, nodeNameHallwayFloorGroundB, 0),
                 new Edge(99.181, nodeNameEastWingFloorGround, 1)
             }),
             //groundFloorRestroom
-            new Node(nodeNameRoomG106FloorGround, new Edge[]{
+            new Node(nodeNameRoomG106FloorGround, descriptionRoomG106FloorGround, new Edge[]{
                 new Edge(109.818, nodeNameHallwayFloorGroundA, 0),
                 new Edge(30.576, nodeNameElevatorFloorGround, 1),
                 new Edge(47.168, nodeNameHallwayFloorGroundB, 2)
             }),
-            //groundFloorCafeteria
-            new Node(nodeNameRoomG230FloorGround, new Edge[]{
+           //groundFloorCafeteria
+            new Node(nodeNameRoomG230FloorGround, descriptionRoomG230FloorGround, new Edge[]{
                 new Edge(146.263, nodeNameHallwayFloorGroundA, 0),
                 new Edge(208.004, nodeNameEastWingFloorGround, 1)
             }),
-            //groundFloorOutpatientLab
-            new Node(nodeNameRoomG309BFloorGround, new Edge[]{
+           //groundFloorOutpatientLab
+            new Node(nodeNameRoomG309BFloorGround,descriptionRoomG309BFloorGround, new Edge[]{
                 new Edge(70.678, nodeNameHallwayFloorGroundC, 0)
             }),
             //groundFloorClinicalLab
-            new Node(nodeNameRoomG336FloorGround, new Edge[]{
+            new Node(nodeNameRoomG336FloorGround,descriptionRoomG336FloorGround, new Edge[]{
                 new Edge(238.684, nodeNameHallwayFloorGroundC, 0)
             }),
-            //groundFloorMedicalRecords
-            new Node(nodeNameRoomG453FloorGround, new Edge[]{
+         //groundFloorMedicalRecords
+            new Node(nodeNameRoomG453FloorGround, descriptionRoomG453FloorGround, new Edge[]{
                 new Edge(30.644, nodeNameHallwayFloorGroundC, 0)
             }),
-            //floorOneReception
-            new Node(nodeNameRoomReceptionFloorOne, new Edge[]{
+        //floorOneReception
+            new Node(nodeNameRoomReceptionFloorOne,descriptionRoomReceptionFloorOne, new Edge[]{
                 new Edge(5.403,nodeNameHallwayFloorOneA, 0),
                 new Edge(12.830,nodeNameHallwayFloorOneB,1),
                 new Edge(16.842,nodeNameElevatorFloorOne,2)
             }),
-            //floorOneSameDayPrep,Holding,Recovery
-            new Node(nodeNameRoomS12FloorOne, new Edge[]{
+           //floorOneSameDayPrep,Holding,Recovery
+            new Node(nodeNameRoomS12FloorOne, descriptionRoomS12FloorOne,new Edge[]{
                 new Edge(3.613,nodeNameHallwayFloorOneA, 0),
                 new Edge(19.166,nodeNameHallwayFloorOneB,1),
                 new Edge(1.615,nodeNameElevatorFloorOne,2)
             })   
     ));
-            
-            
-    
+           
    public static ArrayList<Node> add(ArrayList<Node> myList, Node addThis) 
     {
         for(int index = 0; index < myList.size(); index++)
