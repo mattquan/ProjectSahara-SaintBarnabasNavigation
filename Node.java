@@ -35,6 +35,12 @@ public class Node {
     public Node () {
         weight = Double.MAX_VALUE;
     }
+    
+    public Node (String name) {
+        this(name,null,null);
+    }
+
+    
     public String getName() { 
         return name; 
     }

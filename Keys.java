@@ -623,13 +623,14 @@ public class Keys {
            
    public static ArrayList<Node> add(ArrayList<Node> myList, Node addThis) 
     {
-        for(int index = 0; index < myList.size(); index++)
-        {
-        	String addThisName = addThis.getName();
+        
+        	
+        String addThisName = addThis.getName();
+            for(int index = 0; index < myList.size(); index++){
+        
         	String nodeInMyListName = myList.get(index).getName();
         	
-        	if((addThisName.compareToIgnoreCase(nodeInMyListName)) < 0)
-        			{
+        	if((addThisName.compareToIgnoreCase(nodeInMyListName)) < 0){
         				myList.add(index, addThis);
         				return myList;
         			}   	

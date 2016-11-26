@@ -14,7 +14,7 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        completeNavigation(Keys.nodeNameEastWingFloorGround, Keys.nodeNameDeskFloorThree);
+        completeNavigation(Keys.nodeNameRoom144EastWingFloorOne, Keys.nodeNameDeskFloorThree);
     }
 
     public static String runDijkstrasAlgorithm(ArrayList<Node> listOfNodes, String startingNodeString, String endingNodeString) {
@@ -208,7 +208,8 @@ public class Main {
         Node startingNode = findNodeGivenString(startingNodeString,Keys.listOfRooms);         
             //System.out.println(startingNode);
         if (startingNode!=null) {
-                myFirstFloor.add(startingNode);
+            //this is the correct add method to use... adds it alphabetically
+            Keys.add(myFirstFloor, startingNode);
                 //System.out.println("added starting room");
             }
         String output;
@@ -220,7 +221,7 @@ public class Main {
             Node endingNode = findNodeGivenString(endingNodeString,Keys.listOfRooms);
             //System.out.println(endingNode);            
             if (endingNode !=null) {
-                myFirstFloor.add(endingNode);
+                Keys.add(myFirstFloor, endingNode);
                 //System.out.println("added ending node");
             }
             
@@ -237,7 +238,7 @@ public class Main {
             Node endingNode = findNodeGivenString(endingNodeString,Keys.listOfRooms);
             //System.out.println(endingNode);
             if (endingNode !=null) {
-                mySecondFloor.add(endingNode);
+                Keys.add(mySecondFloor, endingNode);
                 //System.out.println("added ending node");
             }
             System.out.println(endingNodeElevator);

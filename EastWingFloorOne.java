@@ -1,5 +1,5 @@
 
-package projectsahara;
+package ProjectSahara;
 import java.util.*;
 
  // @author Chris
@@ -11,7 +11,8 @@ public class EastWingFloorOne extends Graph {
             return new ArrayList<>(
                     Arrays.asList(
                             
-                        new Node(Keys.nodeNameEastWingElevatorFloorOne)    
+                        new Node(Keys.nodeNameElevatorEastWingFloorOne)    
+                            
                         
                     )
             );

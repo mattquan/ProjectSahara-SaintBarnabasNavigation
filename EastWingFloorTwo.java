@@ -1,5 +1,5 @@
 
-package projectsahara;
+package ProjectSahara;
 import java.util.*;  
 // @author Chris
  
