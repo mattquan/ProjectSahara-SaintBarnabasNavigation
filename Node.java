@@ -37,7 +37,7 @@ public class Node {
     }
     
     public Node (String name) {
-        this(name,null,null);
+        this(name,null,new Edge[0]);
     }
 
     
@@ -55,7 +55,7 @@ public class Node {
 
     }
     public String toString() {
-        return name;
+        return "Name:"+name+"AdjacentEdges:"+Arrays.toString(adjacencies);
     }
     public double getWeight() {
         return weight;
@@ -71,5 +71,21 @@ public class Node {
 
     public void setMinPath(Path minPath) {
         this.minPath = minPath;
+    }
+    
+    public void addEdge(Edge edge) {
+        //the tricky thing is that we have to add an edge into an alphabetized list
+        //wait, i dont think that it needs to be alphabetized....
+        //it's an array, so i need to create a new array that's one larger
+        System.out.println("hey"+Arrays.toString(adjacencies));
+        Edge [] adjacenciesNew = new Edge[adjacencies.length+1];
+        for (int i =0; i<adjacencies.length;i++) {
+            adjacenciesNew[i]=adjacencies[i];
+        }
+        edge.setIndex(adjacencies.length);
+        adjacenciesNew[adjacencies.length]=edge;
+        adjacencies = adjacenciesNew;
+        System.out.println("hey5"+Arrays.toString(adjacencies));
+        
     }
 }

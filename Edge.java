@@ -14,10 +14,17 @@ public class Edge {
     private double weight;
     private String targetNode;
     private int index;
+    private String description;
     public Edge(double w, String n, int i){
         weight = w;
         targetNode = n;
         index = i;
+    }
+    public Edge(double w, String n, int i, String d){
+        weight = w;
+        targetNode = n;
+        index = i;
+        description = d;
     }
     public double getWeight(){
         return weight;
@@ -39,6 +46,6 @@ public class Edge {
     }
     @Override
     public String toString() {
-        return "TargetNode:"+targetNode;
+        return "TargetNode:"+targetNode+"Weight:"+weight+"Index: "+index;
     }
 }

@@ -14,12 +14,12 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        completeNavigation(Keys.nodeNameRoom144EastWingFloorOne, Keys.nodeNameDeskFloorThree);
+        completeNavigation(Keys.nodeNameRoom403EastWingFloorFour, Keys.nodeNameRoom1323FloorOne);
     }
 
     public static String runDijkstrasAlgorithm(ArrayList<Node> listOfNodes, String startingNodeString, String endingNodeString) {
         //creating the unvisited list
-        System.out.println("listOfNodes"+listOfNodes+"");
+        System.out.println("listOfNodes"+listOfNodes+""+"finding"+startingNodeString);
         ArrayList<Node> unvisited = new ArrayList();
         for (Node node : listOfNodes) {
             unvisited.add(node);
@@ -100,52 +100,60 @@ public class Main {
         //element 0 is floor
         //element 1 is elevator
         String[] data = new String [2];
-        if(node.contains("FloorGround")){
-    		data[0] = "FloorGround";
-    		data[1] = Keys.nodeNameElevatorFloorGround;
-        }
-    	
-    	else if(node.contains("FloorOne")){
-    		data[0] = "FloorOne";
-    		data[1] = Keys.nodeNameElevatorFloorOne;}
-    	
-    	else if(node.contains("FloorTwo")){
-    		data[0] = "FloorTwo";
-    		data[1] = Keys.nodeNameElevatorFloorTwo;}
-    	
-    	else if(node.contains("FloorThree")){
-    		data[0] = "FloorThree";
-    		data[1] = Keys.nodeNameElevatorFloorThree;}
-    	
-        else if(node.contains("FloorFour")){
-    		data[0] = "FloorFour";
-    		data[1] = Keys.nodeNameElevatorFloorFour;}
-        
-        else if (node.contains("EastWingFloorOne")){
+        if(node.contains("EastWing")) {
+            if (node.contains("FloorOne")){
                 data[0] = "EastWingFloorOne";
                 data[1] = Keys.nodeNameElevatorEastWingFloorOne;
-        }        
-        else if (node.contains("EastWingFloorTwo")){
-                data[0] = "EastWingFloorTwo";
-                data[1] = Keys.nodeNameElevatorEastWingFloorTwo;                 
+            }        
+            else if (node.contains("FloorTwo")){
+                    data[0] = "EastWingFloorTwo";
+                    data[1] = Keys.nodeNameElevatorEastWingFloorTwo;                 
+            }
+            else if (node.contains("FloorThree")){
+                    data[0] = "EastWingFloorThree";
+                    data[1] = Keys.nodeNameElevatorEastWingFloorThree;    
+            }    
+            else if (node.contains("FloorFour")){
+                    data[0] = "EastWingFloorFour";
+                    data[1] = Keys.nodeNameElevatorEastWingFloorFour;
+            }
+            else if (node.contains("FloorFive")){
+                data[0] = "EastWingFloorFive";
+                data[1] = Keys.nodeNameElevatorEastWingFloorFive;
+            }
         }
-        else if (node.contains("EastWingFloorThree")){
-                data[0] = "EastWingFloorThree";
-                data[1] = Keys.nodeNameElevatorEastWingFloorThree;    
-        }    
-        else if (node.contains("EastWingFloorFour")){
-                data[0] = "EastWingFloorFour";
-                data[1] = Keys.nodeNameElevatorEastWingFloorFour;
+        else {
+            if(node.contains("FloorGround")){
+    		data[0] = "FloorGround";
+    		data[1] = Keys.nodeNameElevatorFloorGround;
+            }
+    	
+            else if(node.contains("FloorOne")){
+                    data[0] = "FloorOne";
+                    data[1] = Keys.nodeNameElevatorFloorOne;
+            }
+
+            else if(node.contains("FloorTwo")){
+                    data[0] = "FloorTwo";
+                    data[1] = Keys.nodeNameElevatorFloorTwo;
+            }
+
+            else if(node.contains("FloorThree")){
+                    data[0] = "FloorThree";
+                    data[1] = Keys.nodeNameElevatorFloorThree;
+            }
+
+            else if(node.contains("FloorFour")){
+                    data[0] = "FloorFour";
+                    data[1] = Keys.nodeNameElevatorFloorFour;
+            }
         }
-        else if (node.contains("EastWingFloorFive")){
-            data[0] = "EastWingFloorFive";
-            data[1] = Keys.nodeNameElevatorEastWingFloorFive;
-        }
+        
         return data;
     }
     
     public static Graph returnGraphFromFloor (String floor) {
-        System.out.println(floor);
+        //System.out.println(floor);
         if(floor.equals("FloorGround"))
             return new FloorGround(); 
     		
@@ -173,8 +181,8 @@ public class Main {
         else if(floor.equals("EastWingFloorFour"))
             return new EastWingFloorFour();
 
-        else if (floor.equals("EastWingFloorFive"))
-            return new EastWingFloorFive();
+        /*else if (floor.equals("EastWingFloorFive"))
+            return new EastWingFloorFive();*/
         else
             return null;
     }
@@ -222,6 +230,16 @@ public class Main {
             //System.out.println(endingNode);            
             if (endingNode !=null) {
                 Keys.add(myFirstFloor, endingNode);
+                for (Edge edge:endingNode.getAdjacentEdges()) {
+                    //for all of ITS ending nodes, you must create a link TO THOSE POINTS
+                    //add for every target node, a symetrical edge
+                    //we also have to switch the edge's target node to the endingNode
+                    System.out.println("edge"+edge);
+                    Node targetNode = findNodeGivenString(edge.getTargetNode(),myFirstFloor);
+                    edge.setTargetNode(endingNodeString);
+                    System.out.println("adding "+edge+" to "+targetNode);
+                    targetNode.addEdge(edge);
+                }
                 //System.out.println("added ending node");
             }
             
@@ -240,21 +258,32 @@ public class Main {
             if (endingNode !=null) {
                 Keys.add(mySecondFloor, endingNode);
                 //System.out.println("added ending node");
+                for (Edge edge:endingNode.getAdjacentEdges()) {
+                    //for all of ITS ending nodes, you must create a link TO THOSE POINTS
+                    //add for every target node, a symetrical edge
+                    //we also have to switch the edge's target node to the endingNode
+                    System.out.println("edge"+edge);
+                    Node targetNode = findNodeGivenString(edge.getTargetNode(),mySecondFloor);
+                    edge.setTargetNode(endingNodeString);
+                    System.out.println("adding "+edge+" to "+targetNode);
+                    targetNode.addEdge(edge);
+                }
             }
-            System.out.println(endingNodeElevator);
+            /*System.out.println(endingNodeElevator);
             System.out.println(endingNodeString);
-            System.out.println(mySecondFloor);
+            System.out.println(mySecondFloor);*/
             String output2 = runDijkstrasAlgorithm(mySecondFloor,endingNodeElevator,endingNodeString);
             //but if you need a bridge to the east wing the starting node is in the main building and the ending node is in the east wing or vice versa (does not apply if the starting/ending node is on ground floor).            
             
             if (startingNodeFloor.contains("EastWing")||endingNodeFloor.contains("EastWing")) {
                 //if startingNode is NOT in the east wing... go to the east wing
                 //else go FROM the east wing to the mainbuilding
+                System.out.println(output1+output2);
                 if(!startingNodeFloor.contains("EastWing"))
-                    output1+= runDijkstrasAlgorithm(new FloorGround().build(), Keys.nodeNameElevatorFloorGround, Keys.nodeNameElevatorEastWingFloorGround);
+                    output1+= runDijkstrasAlgorithm(new FloorGround().build(), Keys.nodeNameElevatorFloorGround, Keys.nodeNameEastWingFloorGround);
 
                 else
-                    output1+=runDijkstrasAlgorithm(new FloorGround().build(), Keys.nodeNameElevatorEastWingFloorGround, Keys.nodeNameElevatorFloorGround);
+                    output1+=runDijkstrasAlgorithm(new FloorGround().build(), Keys.nodeNameEastWingFloorGround, Keys.nodeNameElevatorFloorGround);
                 }           
             output = output1+output2;
         }       
