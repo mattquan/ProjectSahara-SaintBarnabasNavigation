@@ -91,7 +91,13 @@ public class Main {
         }
         //done!
         //this printout works becuase of polymorphism. eventually, chosenNode will = endingNode, and then when that happens, endingNode will have already been altered. 
-        
+        ArrayList <String> wifis = new ArrayList<>();
+        Path finalPath = endingNode.getMinPath();
+        for (String name:finalPath.getNodePath()) {
+            Node myNode = findNodeGivenString(name,listOfNodes);
+            //add
+            wifis.add(myNode.getMacAddresses());
+        }
         String output = "The shortest path is " + endingNode.getMinPath() + "with a weight of " + endingNode.getWeight() + ", ";
         return output;
 

@@ -621,6 +621,8 @@ public class Keys {
             })   
     ));
            
+   final public static String turnLeft = "Turn left";
+    
    public static ArrayList<Node> add(ArrayList<Node> myList, Node addThis) 
     {
         

@@ -23,7 +23,7 @@ public class FloorGround extends Graph{
                 new Node(Keys.nodeNameEastWingFloorGround,  new Edge[]{
                     new Edge(324.2,Keys.nodeNameHallwayFloorGroundA,0),
                     new Edge(369,Keys.nodeNameHallwayFloorGroundB,1)
-                }),
+                })),
                 new Node(Keys.nodeNameElevatorFloorGround, new Edge[]{
                     new Edge(68.9, Keys.nodeNameHallwayFloorGroundA,0),
                     new Edge(59.1, Keys.nodeNameHallwayFloorGroundB,1)
