@@ -14,7 +14,7 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        completeNavigation(Keys.nodeNameRoom403EastWingFloorFour, Keys.nodeNameRoom1323FloorOne);
+        completeNavigation(Keys.nodeNameRoomE00C6FloorGround, Keys.nodeNameRoomG336FloorGround);
     }
 
     public static String runDijkstrasAlgorithm(ArrayList<Node> listOfNodes, String startingNodeString, String endingNodeString) {
@@ -59,9 +59,9 @@ public class Main {
                         //so i can add myself, the panda, to the new improved chain. becuase the old chain came from the chosenNode, the startingNode of the edge (vs. targetNode).
                         //and THAT path/chain does not include the targetNode/panda. so you have to add itself to the new, min path. beecause the min path takes
                         //vestiges of the old chain from chosenNode + the panda node.
-                        String self = panda.getName();
+                        
                         Path path = new Path(chosenNode.getMinPath());
-                        path.add(self);
+                        path.add(edge);
                         panda.setMinPath(path);
                         //debugging info
                         /*System.out.println("panda:" + panda);

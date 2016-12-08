@@ -14,7 +14,9 @@ public class Edge {
     private double weight;
     private String targetNode;
     private int index;
-    private String description;
+    private String direction;
+    
+    
     public Edge(double w, String n, int i){
         weight = w;
         targetNode = n;
@@ -24,7 +26,7 @@ public class Edge {
         weight = w;
         targetNode = n;
         index = i;
-        description = d;
+        direction = d;
     }
     public double getWeight(){
         return weight;
@@ -43,6 +45,12 @@ public class Edge {
     }
     public void setIndex(int i){
         index = i;
+    }
+    public String getDirection() {
+        return direction;
+    }
+    public void setDirection(String d) {
+        direction = d;
     }
     @Override
     public String toString() {

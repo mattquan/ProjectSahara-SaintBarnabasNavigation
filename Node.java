@@ -19,27 +19,39 @@ public class Node {
     private Edge[] adjacencies;
     private double weight;
     private Path minPath;
-    public Node(String name, Edge[] myEdges) { 
+    private ArrayList<String> macAddresses;
+    
+    public Node(String name, Edge[] myEdges, ArrayList<String> mac) { 
         this.name = name;
         adjacencies = myEdges;
         weight = Double.MAX_VALUE;
         minPath = null;
     }
-    public Node(String name, ArrayList<String> description, Edge[] myEdges) { 
+    public Node(String name, ArrayList<String> description, Edge[] myEdges, ArrayList<String> mac) { 
         this.name = name;
         adjacencies = myEdges;
         weight = Double.MAX_VALUE;
         minPath = null;
         this.description = description;
+        macAddresses=mac;
     }
     public Node () {
         weight = Double.MAX_VALUE;
     }
     
-    public Node (String name) {
-        this(name,null,new Edge[0]);
+    public Node (String name, ArrayList<String> mac) {
+        this(name,null,new Edge[0],null);
     }
 
+    public ArrayList<String> getMacAddresses() {
+        return macAddresses;
+    }
+
+    public void setMacAddresses(ArrayList<String> macAddresses) {
+        this.macAddresses = macAddresses;
+    }
+    
+    
     
     public String getName() { 
         return name; 

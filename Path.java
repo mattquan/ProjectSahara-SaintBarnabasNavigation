@@ -16,7 +16,8 @@ public class Path {
     
     //instance variables
     //private double weight;
-    private ArrayList <String> path = new ArrayList <String> ();
+    private ArrayList <String> nodePath = new ArrayList <String> ();
+    private ArrayList <String> directions = new ArrayList<String>();
     
     //constructor
     /*public Path (String initialNode, String finalNode){
@@ -32,26 +33,36 @@ public class Path {
     
     public Path (String initialNode){
         //this.weight = weight;
-        path.add(initialNode);
+        nodePath.add(initialNode);
     }
     public Path(Path temp){
         //weight = temp.getWeight();
-        ArrayList<String> newPath = new ArrayList<>();
-        for (int i =0; i <temp.getPath().size();i++) {
-            newPath.add(temp.getPath().get(i));
+        ArrayList<String> newNodePath = new ArrayList<>();
+        for (int i =0; i <temp.getNodePath().size();i++) {
+            newNodePath.add(temp.getNodePath().get(i));
         }
-        path = newPath;
+        nodePath = newNodePath;
+        
+        ArrayList<String> newDirections = new ArrayList<>();
+        for (int i =0; i <temp.getDirections().size();i++) {
+            newDirections.add(temp.getDirections().get(i));
+        }
+        directions = newDirections;
     }
 
     
     
-    public void add (String targetNode) {
-        path.add(targetNode);
+    public void add (Edge targetEdge) {
+        nodePath.add(targetEdge.getTargetNode());
+        directions.add(targetEdge.getDirection());
     }
     
     
-    public ArrayList<String> getPath(){
-        return path;
+    public ArrayList<String> getNodePath(){
+        return nodePath;
+    }
+    public ArrayList<String> getDirections(){
+        return directions;
     }
     
     /*public String getLast(){
@@ -59,6 +70,6 @@ public class Path {
     }*/
    
     public String toString(){
-        return path.toString();
+        return "nodes: "+nodePath.toString()+"directions: "+directions;
     }
 }
