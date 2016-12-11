@@ -163,22 +163,22 @@ public class Keys {
     ));
     final public static String nodeNameRoom1319FloorOne = "room1319FloorOne";
     final public static ArrayList<String> descriptionRoom1319FloorOne = new ArrayList<>(Arrays.asList(
-            "mens bathroom",
-            "men's bathroom",
-            "bathroom",
-            "mens restroom",
-            "men's restroom",
-            "restroom"
+            "mens bathroom 1",
+            "men's bathroom 1",
+            "bathroom 1",
+            "mens restroom 1",
+            "men's restroom 1",
+            "restroom 1"
     ));
     final public static String nodeNameRoom1318FloorOne = "room1318FloorOne";
     final public static ArrayList<String> descriptionRoom1318FloorOne = new ArrayList<>(Arrays.asList(
-            "womens bathroom",
-            "womens's bathroom",
-            "bathroom",
-            "womens restroom",
-            "women's restroom",
-            "restroom",
-            "ladies room"
+            "womens bathroom 1",
+            "womens's bathroom 1",
+            "bathroom 1",
+            "womens restroom 1",
+            "women's restroom 1",
+            "restroom 1",
+            "ladies room 1"
     ));
     final public static String nodeNameRoomS12FloorOne = "roomS12FloorOne";
     final public static ArrayList<String> descriptionRoomS12FloorOne = new ArrayList<>(Arrays.asList(
@@ -208,8 +208,8 @@ public class Keys {
     ));
     final public static String nodeNameRoom1214FloorOne = "room1214FloorOne";
     final public static ArrayList<String> descriptionRoom1214FloorOne = new ArrayList<>(Arrays.asList(
-            "mens bathroom",
-            "men's bathroom",
+            "mens bathroom ",
+            "men's bathroom ",
             "bathroom",
             "mens restroom",
             "men's restroom",
@@ -248,41 +248,41 @@ public class Keys {
     ));
     final public static String nodeNameRoom2424FloorTwo = "room2424FloorTwo";
     final public static ArrayList<String> descriptionRoom2424AFloorTwo = new ArrayList<>(Arrays.asList(
-            "desk",
-            "reception",
-            "information"
+            "desk 2",
+            "reception 2",
+            "information 2"
     ));
     //floorThree
     final public static String nodeNameRoom3301DFloorThree = "room3301DFloorThree";
     final public static ArrayList<String> descriptionRoom3301DFloorThree = new ArrayList<>(Arrays.asList(
-            "restroom",
-            "bathroom"
+            "restroom 3",
+            "bathroom 3"
     ));
     final public static String nodeNameRoom3200C1FloorThree = "room3200C1FloorThree";
     final public static ArrayList<String> descriptionRoom3200C1FloorThree = new ArrayList<>(Arrays.asList(
-            "desk",
-            "reception",
-            "information"
+            "desk 3",
+            "reception 3",
+            "information 3"
             
     ));
     //floorFour
     final public static String nodeNameRoom4235FloorFour = "room4235FloorFour";
     final public static ArrayList<String> descriptionRoom4235FloorFour = new ArrayList<>(Arrays.asList(
-            "restroom",
-            "bathroom"
+            "restroom 4",
+            "bathroom 4"
     ));
     final public static String nodeNameRoom4034FloorFour = "room4034FloorFour";
     final public static ArrayList<String> descriptionRoom4034FloorFour = new ArrayList<>(Arrays.asList(
-            "desk",
-            "reception",
-            "information"
+            "desk 4",
+            "reception 4",
+            "information 4"
             
     ));
     //ground floor rooms
     final public static String nodeNameRoomG106FloorGround = "roomG106FloorGround";
     final public static ArrayList<String> descriptionRoomG106FloorGround = new ArrayList<>(Arrays.asList(
-            "bathroom",
-            "restroom"
+            "bathroom 0",
+            "restroom 0"
     ));
     final public static String nodeNameParkingValidationFloorGround = "parkingValidationFloorGround";
     final public static ArrayList<String> descriptionParkingValidationFloorGround = new ArrayList<>(Arrays.asList(
