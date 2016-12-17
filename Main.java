@@ -17,7 +17,7 @@ public class Main {
         completeNavigation(Keys.nodeNameRoomE00C6FloorGround, Keys.nodeNameRoomG336FloorGround);
     }
 
-    public static String runDijkstrasAlgorithm(ArrayList<Node> listOfNodes, String startingNodeString, String endingNodeString) {
+    public static ArrayList<String> runDijkstrasAlgorithm(ArrayList<Node> listOfNodes, String startingNodeString, String endingNodeString) {
         //creating the unvisited list
         System.out.println("listOfNodes"+listOfNodes+""+"finding"+startingNodeString);
         ArrayList<Node> unvisited = new ArrayList();
@@ -91,15 +91,14 @@ public class Main {
         }
         //done!
         //this printout works becuase of polymorphism. eventually, chosenNode will = endingNode, and then when that happens, endingNode will have already been altered. 
-        ArrayList <String> wifis = new ArrayList<>();
+        /*TODO ArrayList <String> wifis = new ArrayList<>();
         Path finalPath = endingNode.getMinPath();
         for (String name:finalPath.getNodePath()) {
             Node myNode = findNodeGivenString(name,listOfNodes);
             //add
             wifis.add(myNode.getMacAddresses());
-        }
-        String output = "The shortest path is " + endingNode.getMinPath() + "with a weight of " + endingNode.getWeight() + ", ";
-        return output;
+        }*/
+        return endingNode.getMinPath().getNodePath();
 
     }
     public static String[] findFloorAndElevator (String node) {
@@ -192,7 +191,7 @@ public class Main {
         else
             return null;
     }
-    public static void completeNavigation(String startingNodeString, String endingNodeString){
+    public static ArrayList<String> completeNavigation(String startingNodeString, String endingNodeString){
     	   System.out.println(startingNodeString);
     	//Strings hold starting/ending floors.
     	String startingNodeFloor;
@@ -226,7 +225,7 @@ public class Main {
             Keys.add(myFirstFloor, startingNode);
                 //System.out.println("added starting room");
             }
-        String output;
+        ArrayList <String> data;
     	//If starting/ending are on the SAME FLOOR.
     	if(startingNodeFloor.equals(endingNodeFloor)){            
             //System.out.println("Same floor!");
@@ -250,13 +249,13 @@ public class Main {
             }
             
             //cool now run the algorithm
-            output = runDijkstrasAlgorithm(myFirstFloor,startingNodeString, endingNodeString);
+            data = runDijkstrasAlgorithm(myFirstFloor,startingNodeString, endingNodeString);
             
                 
     	}
         
         else {
-            String output1 = runDijkstrasAlgorithm(myFirstFloor,startingNodeString,startingNodeElevator);
+            data = runDijkstrasAlgorithm(myFirstFloor,startingNodeString,startingNodeElevator);
             ArrayList<Node> mySecondFloor = returnGraphFromFloor(endingNodeFloor).build();
             //add endingNode to graph IFF nodes are rooms       
             Node endingNode = findNodeGivenString(endingNodeString,Keys.listOfRooms);
@@ -278,22 +277,33 @@ public class Main {
             /*System.out.println(endingNodeElevator);
             System.out.println(endingNodeString);
             System.out.println(mySecondFloor);*/
-            String output2 = runDijkstrasAlgorithm(mySecondFloor,endingNodeElevator,endingNodeString);
-            //but if you need a bridge to the east wing the starting node is in the main building and the ending node is in the east wing or vice versa (does not apply if the starting/ending node is on ground floor).            
-            
             if (startingNodeFloor.contains("EastWing")||endingNodeFloor.contains("EastWing")) {
                 //if startingNode is NOT in the east wing... go to the east wing
                 //else go FROM the east wing to the mainbuilding
-                System.out.println(output1+output2);
-                if(!startingNodeFloor.contains("EastWing"))
-                    output1+= runDijkstrasAlgorithm(new FloorGround().build(), Keys.nodeNameElevatorFloorGround, Keys.nodeNameEastWingFloorGround);
-
-                else
-                    output1+=runDijkstrasAlgorithm(new FloorGround().build(), Keys.nodeNameEastWingFloorGround, Keys.nodeNameElevatorFloorGround);
-                }           
-            output = output1+output2;
-        }       
-    	System.out.println(output);
+                ArrayList <String> data1point5;
+                if(!startingNodeFloor.contains("EastWing")){
+                    data1point5 = runDijkstrasAlgorithm(new FloorGround().build(), Keys.nodeNameElevatorFloorGround, Keys.nodeNameHallwayEastWingFloorGround);
+                    for (int i =0; i <data1point5.size();i++) {
+                        data.add(data1point5.get(i));
+                    }
+                }
+                else{
+                    data1point5 = runDijkstrasAlgorithm(new FloorGround().build(), Keys.nodeNameHallwayEastWingFloorGround, Keys.nodeNameElevatorFloorGround);
+                    
+                }   
+                for (int i =0; i <data1point5.size();i++) {
+                        data.add(data1point5.get(i));
+                    }
+        }   
+            ArrayList<String> data2 = runDijkstrasAlgorithm(mySecondFloor,endingNodeElevator,endingNodeString);
+            for (int i =0; i<data2.size();i++) {
+                data.add(data2.get(i));
+            }
+            //but if you need a bridge to the east wing the starting node is in the main building and the ending node is in the east wing or vice versa (does not apply if the starting/ending node is on ground floor).            
+            
+        }
+                
+    	return data;
     } 		
 
     public static Node findNodeGivenString(String findThis, ArrayList<Node> listOfNodes) {

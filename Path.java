@@ -17,7 +17,6 @@ public class Path {
     //instance variables
     //private double weight;
     private ArrayList <String> nodePath = new ArrayList <String> ();
-    private ArrayList <String> directions = new ArrayList<String>();
     
     //constructor
     /*public Path (String initialNode, String finalNode){
@@ -43,26 +42,17 @@ public class Path {
         }
         nodePath = newNodePath;
         
-        ArrayList<String> newDirections = new ArrayList<>();
-        for (int i =0; i <temp.getDirections().size();i++) {
-            newDirections.add(temp.getDirections().get(i));
-        }
-        directions = newDirections;
     }
 
     
     
     public void add (Edge targetEdge) {
         nodePath.add(targetEdge.getTargetNode());
-        directions.add(targetEdge.getDirection());
     }
     
     
     public ArrayList<String> getNodePath(){
         return nodePath;
-    }
-    public ArrayList<String> getDirections(){
-        return directions;
     }
     
     /*public String getLast(){
@@ -70,6 +60,6 @@ public class Path {
     }*/
    
     public String toString(){
-        return "nodes: "+nodePath.toString()+"directions: "+directions;
+        return "nodes: "+nodePath.toString();
     }
 }

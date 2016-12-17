@@ -13,11 +13,31 @@ import java.util.Arrays;
  * @author mattquan
  */
 public class Keys {
+    //directions
+    final public static String directions_passTheElevatorsUntilEndOfHallway = "Pass the elevators and continue the end of the hallway";   
+    final public static String directions_passTheElevatorsUntilFrontDoors = "Pass the elevators, and continue until the front doors";   
+    final public static String directions_enterTheSecondClusterOfElevators = "Enter the SECOND cluster of elevators";      
+    final public static String directions_enterTheFirstClusterOfElevators = "Enter the FIRST cluster of elevators";    
+    final public static String directions_enterTheElevators = "Enter the elevators";
+    final public static String directions_exitTheElevators = "Exit the elevators";
+    
+    final public static String directions_followTheLongHallway = "Follow the (long) hallway"; //TODO until you reach...
+    final public static String directions_turnLeft = "Turn left";
+    final public static String directions_turnRight = "Turn Right";
+    final public static String directions_walkStraight = "Walk straight";
+    
+    
+    
+    
+    
+    
+    
+    
     //floor ground
     final public static String nodeNameHallwayFloorGroundA = "hallwayFloorGroundA";
     final public static String nodeNameHallwayFloorGroundB = "hallwayFloorGroundB";
     final public static String nodeNameHallwayFloorGroundC = "hallwayFloorGroundC";
-    final public static String nodeNameEastWingFloorGround = "eastWingFloorGround";
+    final public static String nodeNameHallwayEastWingFloorGround = "eastWingFloorGround";
     final public static String nodeNameElevatorFloorGround = "elevatorFloorGround";
     final public static String nodeNameElevatorEastWingFloorGround = "elevatorEastWingFloorGround";
     
@@ -444,8 +464,7 @@ public class Keys {
     
     //ListOfRooms!! Alphabetical!!
     
-    final public static ArrayList<Node> listOfRooms = new ArrayList<>(Arrays.asList(
-            //groundFloorParkingValidation
+    final public static ArrayList<Node> listOfRooms = new ArrayList<>(Arrays.asList(//groundFloorParkingValidation
             new Node(nodeNameParkingValidationFloorGround,descriptionParkingValidationFloorGround, new Edge[]{
                 new Edge(44.291, nodeNameHallwayFloorGroundA, 0),
                 new Edge(40.912, nodeNameElevatorFloorGround, 1),
@@ -577,12 +596,12 @@ public class Keys {
            //groundFloorBurnOutpatient
             new Node(nodeNameRoomE00C6FloorGround, descriptionRoomE00C6FloorGround, new Edge[]{
                 new Edge(22.543, nodeNameHallwayFloorGroundB, 0),
-                new Edge(355.749, nodeNameEastWingFloorGround, 1)
+                new Edge(355.749, nodeNameHallwayEastWingFloorGround, 1)
             }),
             //groundFloorPedriaticOutpatient
             new Node(nodeNameRoomE00C7FloorGround, descriptionRoomE00C7FloorGround, new Edge[]{
                 new Edge(266.703, nodeNameHallwayFloorGroundB, 0),
-                new Edge(99.181, nodeNameEastWingFloorGround, 1)
+                new Edge(99.181, nodeNameHallwayEastWingFloorGround, 1)
             }),
             //groundFloorRestroom
             new Node(nodeNameRoomG106FloorGround, descriptionRoomG106FloorGround, new Edge[]{
@@ -593,7 +612,7 @@ public class Keys {
            //groundFloorCafeteria
             new Node(nodeNameRoomG230FloorGround, descriptionRoomG230FloorGround, new Edge[]{
                 new Edge(146.263, nodeNameHallwayFloorGroundA, 0),
-                new Edge(208.004, nodeNameEastWingFloorGround, 1)
+                new Edge(208.004, nodeNameHallwayEastWingFloorGround, 1)
             }),
            //groundFloorOutpatientLab
             new Node(nodeNameRoomG309BFloorGround,descriptionRoomG309BFloorGround, new Edge[]{
@@ -620,26 +639,26 @@ public class Keys {
                 new Edge(1.615,nodeNameElevatorFloorOne,2)
             })   
     ));
-           
-   final public static String turnLeft = "Turn left";
+   
     
-   public static ArrayList<Node> add(ArrayList<Node> myList, Node addThis) 
-    {
-        
-        	
-        String addThisName = addThis.getName();
-            for(int index = 0; index < myList.size(); index++){
-        
-        	String nodeInMyListName = myList.get(index).getName();
-        	
-        	if((addThisName.compareToIgnoreCase(nodeInMyListName)) < 0){
-        				myList.add(index, addThis);
-        				return myList;
-        			}   	
-        }
-        
-        myList.add(addThis);
-        return myList;
-    }
+     
+    public static ArrayList<Node> add(ArrayList<Node> myList, Node addThis) 
+     {
+
+
+         String addThisName = addThis.getName();
+             for(int index = 0; index < myList.size(); index++){
+
+                 String nodeInMyListName = myList.get(index).getName();
+
+                 if((addThisName.compareToIgnoreCase(nodeInMyListName)) < 0){
+                                         myList.add(index, addThis);
+                                         return myList;
+                                 }   	
+         }
+
+         myList.add(addThis);
+         return myList;
+     }
 
 }

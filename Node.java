@@ -27,6 +27,12 @@ public class Node {
         weight = Double.MAX_VALUE;
         minPath = null;
     }
+    public Node(String name, Edge[] myEdges ) { 
+        this.name = name;
+        adjacencies = myEdges;
+        weight = Double.MAX_VALUE;
+        minPath = null;
+    }
     public Node(String name, ArrayList<String> description, Edge[] myEdges, ArrayList<String> mac) { 
         this.name = name;
         adjacencies = myEdges;
@@ -35,11 +41,22 @@ public class Node {
         this.description = description;
         macAddresses=mac;
     }
+    public Node(String name, ArrayList<String> description, Edge[] myEdges) { 
+        this.name = name;
+        adjacencies = myEdges;
+        weight = Double.MAX_VALUE;
+        minPath = null;
+        this.description = description;
+        macAddresses=null;
+    }
     public Node () {
         weight = Double.MAX_VALUE;
     }
     
     public Node (String name, ArrayList<String> mac) {
+        this(name,null,new Edge[0],null);
+    }
+     public Node (String name) {
         this(name,null,new Edge[0],null);
     }
 
