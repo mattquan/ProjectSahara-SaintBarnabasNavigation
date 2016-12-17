@@ -20,11 +20,22 @@ public class Keys {
     final public static String directions_enterTheFirstClusterOfElevators = "Enter the FIRST cluster of elevators";    
     final public static String directions_enterTheElevators = "Enter the elevators";
     final public static String directions_exitTheElevators = "Exit the elevators";
+    final public static String directions_followTheLongHallway = "Follow the (long) hallway until you reach "; //TODO until you reach...    
+    final public static String directions_followTheHallway = "Follow the hallway until you reach "; //TODO until you reach...
+
+    final public static String directions_facingAwayFromPV = "Facing away from the parking validation booth, ";
+    final public static String directions_exitBurnOutpatient = "Exit the Burn Outpatient Center and ";
+    final public static String directions_exitPediatricOutpatient = "Exit the Pediatric Outpatient Center and ";    
+    final public static String directions_exitRestroom = "Exit the restroom and ";
+    final public static String directions_exitCafeteria = "Exit the cafeteria and ";
+    final public static String directions_exittheOutpatientLabAndTurnLeftAndContinueStraight = "Exit the outpatient lab and turn left. Continue straight.";
+    final public static String directions_exitClinicalLabAndTurnLeftAndFollowHallwayUntilIntersection= "Exit the clinical lab and turn left. Follow the hallway until you reach the intersection.";
+    final public static String directions_exitMedicalRecordsAndTurnLeftAndContinueStraight = "Exit the medical records and turn left. Continue straight.";
     
-    final public static String directions_followTheLongHallway = "Follow the (long) hallway"; //TODO until you reach...
     final public static String directions_turnLeft = "Turn left";
     final public static String directions_turnRight = "Turn Right";
     final public static String directions_walkStraight = "Walk straight";
+    final public static String directions_proceedStraight = "Proceed straight";
     
     
     
@@ -326,9 +337,16 @@ public class Keys {
             "clinical lab",
             "G336"
     ));
-    final public static String nodeNameRoomG230FloorGround = "roomG320FloorGround";
-    final public static ArrayList<String> descriptionRoomG230FloorGround = new ArrayList<>(Arrays.asList(
-            "cafeteria",
+    final public static String nodeNameRoomG230NorthFloorGround = "roomG320NorthFloorGround";
+    final public static ArrayList<String> descriptionRoomG230NorthFloorGround = new ArrayList<>(Arrays.asList(
+            "cafeteria, north exit",
+            "food",
+            "cafe",
+            "G320"
+    ));
+    final public static String nodeNameRoomG230SouthFloorGround = "roomG320SouthFloorGround";
+    final public static ArrayList<String> descriptionRoomG230SouthFloorGround = new ArrayList<>(Arrays.asList(
+            "cafeteria, south exit",
             "food",
             "cafe",
             "G320"
@@ -466,9 +484,9 @@ public class Keys {
     
     final public static ArrayList<Node> listOfRooms = new ArrayList<>(Arrays.asList(//groundFloorParkingValidation
             new Node(nodeNameParkingValidationFloorGround,descriptionParkingValidationFloorGround, new Edge[]{
-                new Edge(44.291, nodeNameHallwayFloorGroundA, 0),
-                new Edge(40.912, nodeNameElevatorFloorGround, 1),
-                new Edge(112.693, nodeNameHallwayFloorGroundB, 2)
+                new Edge(44.291, nodeNameHallwayFloorGroundA, 0, Keys.directions_facingAwayFromPV+"t"+Keys.directions_turnLeft.substring(1)),
+                new Edge(40.912, nodeNameElevatorFloorGround, 1, Keys.directions_facingAwayFromPV+"t"+Keys.directions_turnRight.substring(1)+". Walk straight and "+"e"+Keys.directions_enterTheFirstClusterOfElevators.substring(1)),
+                new Edge(112.693, nodeNameHallwayFloorGroundB, 2, Keys.directions_facingAwayFromPV+"t"+Keys.directions_turnRight.substring(1)+"."+Keys.directions_passTheElevatorsUntilEndOfHallway+Keys.directions_followTheHallway)
             }),
               //EastWingFloorOne 117
             new Node(nodeNameRoom117EastWingFloorOne,descriptionRoom117EastWingFloorOne, new Edge[]{
@@ -595,36 +613,41 @@ public class Keys {
             }),
            //groundFloorBurnOutpatient
             new Node(nodeNameRoomE00C6FloorGround, descriptionRoomE00C6FloorGround, new Edge[]{
-                new Edge(22.543, nodeNameHallwayFloorGroundB, 0),
-                new Edge(355.749, nodeNameHallwayEastWingFloorGround, 1)
+                new Edge(22.543, nodeNameHallwayFloorGroundB, 0, Keys.directions_exitBurnOutpatient + "t" + Keys.directions_turnRight.substring(1)+Keys.directions_followTheLongHallway),
+                new Edge(355.749, nodeNameHallwayEastWingFloorGround, 1, Keys.directions_exitBurnOutpatient + "p" + Keys.directions_proceedStraight )
             }),
             //groundFloorPedriaticOutpatient
             new Node(nodeNameRoomE00C7FloorGround, descriptionRoomE00C7FloorGround, new Edge[]{
-                new Edge(266.703, nodeNameHallwayFloorGroundB, 0),
-                new Edge(99.181, nodeNameHallwayEastWingFloorGround, 1)
+                new Edge(266.703, nodeNameHallwayFloorGroundB, 0, Keys.directions_exitPediatricOutpatient + "t" + Keys.directions_turnRight.substring(1)+Keys.directions_followTheLongHallway),
+                new Edge(99.181, nodeNameHallwayEastWingFloorGround, 1, Keys.directions_exitPediatricOutpatient + "t" + Keys.directions_turnLeft.substring(1)+Keys.directions_followTheHallway)
             }),
             //groundFloorRestroom
             new Node(nodeNameRoomG106FloorGround, descriptionRoomG106FloorGround, new Edge[]{
-                new Edge(109.818, nodeNameHallwayFloorGroundA, 0),
-                new Edge(30.576, nodeNameElevatorFloorGround, 1),
-                new Edge(47.168, nodeNameHallwayFloorGroundB, 2)
+                new Edge(109.818, nodeNameHallwayFloorGroundA, 0, Keys.directions_exitRestroom+"t" + Keys.directions_turnRight.substring(1)+Keys.directions_passTheElevatorsUntilFrontDoors),
+                new Edge(30.576, nodeNameElevatorFloorGround, 1, Keys.directions_exitRestroom+"t" + Keys.directions_turnRight.substring(1)),
+                new Edge(47.168, nodeNameHallwayFloorGroundB, 2, Keys.directions_exitRestroom+"t"+ Keys.directions_turnLeft.substring(1)+Keys.directions_passTheElevatorsUntilEndOfHallway)
             }),
            //groundFloorCafeteria
-            new Node(nodeNameRoomG230FloorGround, descriptionRoomG230FloorGround, new Edge[]{
+            new Node(nodeNameRoomG230NorthFloorGround, descriptionRoomG230NorthFloorGround, new Edge[]{
+                new Edge(186.263, nodeNameHallwayFloorGroundB, 0, Keys.directions_exitCafeteria+"t"+ Keys.directions_turnLeft.substring(1)+Keys.directions_followTheLongHallway),
+                new Edge(208.004, nodeNameHallwayEastWingFloorGround, 1,Keys.directions_exitCafeteria+"t" + Keys.directions_turnRight.substring(1)+Keys.directions_followTheHallway)
+            }),
+            new Node(nodeNameRoomG230SouthFloorGround, descriptionRoomG230SouthFloorGround, new Edge[]{
                 new Edge(146.263, nodeNameHallwayFloorGroundA, 0),
                 new Edge(208.004, nodeNameHallwayEastWingFloorGround, 1)
             }),
+            
            //groundFloorOutpatientLab
             new Node(nodeNameRoomG309BFloorGround,descriptionRoomG309BFloorGround, new Edge[]{
-                new Edge(70.678, nodeNameHallwayFloorGroundC, 0)
+                new Edge(70.678, nodeNameHallwayFloorGroundC, 0, Keys.directions_exittheOutpatientLabAndTurnLeftAndContinueStraight)
             }),
             //groundFloorClinicalLab
             new Node(nodeNameRoomG336FloorGround,descriptionRoomG336FloorGround, new Edge[]{
-                new Edge(238.684, nodeNameHallwayFloorGroundC, 0)
+                new Edge(238.684, nodeNameHallwayFloorGroundC, 0, Keys.directions_exitClinicalLabAndTurnLeftAndFollowHallwayUntilIntersection)
             }),
          //groundFloorMedicalRecords
             new Node(nodeNameRoomG453FloorGround, descriptionRoomG453FloorGround, new Edge[]{
-                new Edge(30.644, nodeNameHallwayFloorGroundC, 0)
+                new Edge(30.644, nodeNameHallwayFloorGroundC, 0, Keys.directions_exitMedicalRecordsAndTurnLeftAndContinueStraight)
             }),
         //floorOneReception
             new Node(nodeNameRoomReceptionFloorOne,descriptionRoomReceptionFloorOne, new Edge[]{
