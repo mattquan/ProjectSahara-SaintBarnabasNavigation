@@ -17,7 +17,7 @@ public class FloorThree extends Graph{
         
         return new ArrayList<>(
             Arrays.asList( 
-                new Node(Keys.nodeNameDeskFloorThree, new Edge[]{
+                new Node(Keys.nodeNameDeskFloorThree, Keys.descriptionDeskFloorThree, new Edge[]{
                     new Edge(27.445,Keys.nodeNameElevatorFloorThree,0)}) ,
                     
                  new Node(Keys.nodeNameElevatorFloorThree, new Edge[]{
