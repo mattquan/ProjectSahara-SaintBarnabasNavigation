@@ -22,6 +22,7 @@ public class Keys {
     final public static String directions_exitTheElevators = "Exit the elevators";
     final public static String directions_followTheLongHallway = "Follow the (long) hallway until you reach "; //TODO until you reach...    
     final public static String directions_followTheHallway = "Follow the hallway until you reach "; //TODO until you reach...
+    final public static String directions_untilTheDesk = "until you reach the desk"; //...
 
     final public static String directions_facingAwayFromPV = "Facing away from the parking validation booth, ";
     final public static String directions_exitBurnOutpatient = "Exit the Burn Outpatient Center and ";
@@ -125,8 +126,8 @@ public class Keys {
             "kids",
             "pediatric intensive care unit"
     ));        
-    //EAST WING
-            
+   
+    //EAST WING:        
     //East Wing Floor One
     final public static String nodeNameElevatorEastWingFloorOne = "elevatorEastWingFloorOne";
     final public static ArrayList<String> descriptionEastWingFloorOne = new ArrayList<>(Arrays.asList(
@@ -277,37 +278,17 @@ public class Keys {
             "phones",
             "phone"
     ));
-    final public static String nodeNameRoom2424FloorTwo = "room2424FloorTwo";
-    final public static ArrayList<String> descriptionRoom2424AFloorTwo = new ArrayList<>(Arrays.asList(
-            "desk 2",
-            "reception 2",
-            "information 2"
-    ));
     //floorThree
     final public static String nodeNameRoom3301DFloorThree = "room3301DFloorThree";
     final public static ArrayList<String> descriptionRoom3301DFloorThree = new ArrayList<>(Arrays.asList(
             "restroom 3",
             "bathroom 3"
     ));
-    final public static String nodeNameRoom3200C1FloorThree = "room3200C1FloorThree";
-    final public static ArrayList<String> descriptionRoom3200C1FloorThree = new ArrayList<>(Arrays.asList(
-            "desk 3",
-            "reception 3",
-            "information 3"
-            
-    ));
     //floorFour
     final public static String nodeNameRoom4235FloorFour = "room4235FloorFour";
     final public static ArrayList<String> descriptionRoom4235FloorFour = new ArrayList<>(Arrays.asList(
             "restroom 4",
             "bathroom 4"
-    ));
-    final public static String nodeNameRoom4034FloorFour = "room4034FloorFour";
-    final public static ArrayList<String> descriptionRoom4034FloorFour = new ArrayList<>(Arrays.asList(
-            "desk 4",
-            "reception 4",
-            "information 4"
-            
     ));
     //ground floor rooms
     final public static String nodeNameRoomG106FloorGround = "roomG106FloorGround";
@@ -554,11 +535,6 @@ public class Keys {
                 new Edge(9.679, nodeNameElevatorFloorTwo,0),
                 new Edge(9.581, nodeNameDeskFloorTwo, 1)    
             }), 
-           //floorTwoReception
-            new Node(nodeNameRoom2424FloorTwo,descriptionRoom2424AFloorTwo, new Edge[]{
-                new Edge(19.963, nodeNameElevatorFloorTwo,0),
-                new Edge(0, nodeNameDeskFloorTwo, 1)
-            }),
            //EastWingFloorTwo 244
             new Node(nodeNameRoom244EastWingFloorTwo,descriptionRoom244EastWingFloorTwo,new Edge[]{
                 new Edge (10.765, nodeNameElevatorEastWingFloorTwo,0)
@@ -575,16 +551,11 @@ public class Keys {
             new Node(nodeNameRoom307EastWingFloorThree, descriptionRoom307EastWingFloorThree, new Edge[]{
                 new Edge(69.945, nodeNameElevatorEastWingFloorThree,0)
             }),
-           //EastwingFloorThree 308
+            //EastwingFloorThree 308
             new Node(nodeNameRoom308EastWingFloorThree, descriptionRoom308EastWingFloorThree,new Edge[]{
                 new Edge (69.00, nodeNameElevatorEastWingFloorThree, 0)
             }),
-             //floorThreeReception
-            new Node(nodeNameRoom3200C1FloorThree, descriptionRoom3200C1FloorThree, new Edge[]{
-                new Edge(27.445, nodeNameElevatorFloorThree,0),
-                new Edge(0, nodeNameDeskFloorThree, 1)
-            }),
-             //floorThreeRestroom
+            //floorThreeRestroom
             new Node(nodeNameRoom3301DFloorThree, descriptionRoom3301DFloorThree, new Edge[]{
                 new Edge(5.543, nodeNameElevatorFloorThree,0),
                 new Edge(22.173, nodeNameDeskFloorThree,1)
@@ -596,11 +567,6 @@ public class Keys {
             //EastWingFloorFour 402
             new Node(nodeNameRoom402EastWingFloorFour, descriptionRoom402EastWingFloorFour, new Edge[]{
                 new Edge(69.698, nodeNameElevatorEastWingFloorFour, 0)
-            }),
-              //floorFourReception
-            new Node(nodeNameRoom4034FloorFour,descriptionRoom4034FloorFour, new Edge[]{
-                new Edge(24.312, nodeNameElevatorFloorFour,0),
-                new Edge(0, nodeNameDeskFloorFour,1)
             }),
             //EastWingFloorFour 403
             new Node(nodeNameRoom403EastWingFloorFour, descriptionRoom403EastWingFloorFour, new Edge[]{
