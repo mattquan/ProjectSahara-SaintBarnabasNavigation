@@ -214,11 +214,11 @@ public class Keys {
     ));
     final public static String nodeNameRoomS12FloorOne = "roomS12FloorOne";
     final public static ArrayList<String> descriptionRoomS12FloorOne = new ArrayList<>(Arrays.asList(
-            "same day surgery",
-            "same day holding",
-            "same day prep",
-            "same day recovery",
-            "same day",
+            "same day surgery 1",
+            "same day holding 1",
+            "same day prep 1",
+            "same day recovery 1",
+            "same day 1",
             "S12"     
     ));
     final public static String nodeNameRoomReceptionFloorOne = "roomReceptionFloorOne";
