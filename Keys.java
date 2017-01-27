@@ -30,6 +30,33 @@ public class Keys {
                 break;
             case "FloorFour":
                 //logic for floor four
+                if (node.equals(Keys.nodeNameHallwayFloorFourB1)) {
+                    if (postNode.equals(Keys.nodeNameHallwayFloorFourB2)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorFourA)) {
+                            return Keys.directions_turnRight;
+                        }
+                        else if(preNode.equals(Keys.nodeNameHallwayFloorFourC1)) {
+                            return Keys.directions_turnLeft;
+                        }
+                    }
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorFourC1)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorFourB2)) {
+                            return Keys.directions_turnRight;
+                        }
+                        else if(preNode.equals(Keys.nodeNameHallwayFloorFourA)) {
+                            return Keys.directions_continueStraight;
+                        }
+                    }
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorFourA)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorFourB2)) {
+                            return Keys.directions_turnLeft;
+                        }
+                        else if(preNode.equals(Keys.nodeNameHallwayFloorFourC1)) {
+                            return Keys.directions_continueStraight;
+                        }
+                    }
+                    
+                }
                 break;
             case "Floor Ground":
                 //logic
@@ -48,8 +75,8 @@ public class Keys {
             case "EastWingFloorFive":
                 
         }
+               return null;
         
-        return null;
     }
     public static Graph returnGraphFromFloor (String floor) {
         //System.out.println(floor);
