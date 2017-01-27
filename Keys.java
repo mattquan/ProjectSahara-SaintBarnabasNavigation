@@ -13,6 +13,62 @@ import java.util.Arrays;
  * @author mattquan
  */
 public class Keys {
+    public static String[] findFloorAndElevator (String node) {
+        //element 0 is floor
+        //element 1 is elevator
+        String[] data = new String [2];
+        if(node.contains("EastWing")) {
+            if (node.contains("FloorOne")){
+                data[0] = "EastWingFloorOne";
+                data[1] = Keys.nodeNameElevatorEastWingFloorOne;
+            }        
+            else if (node.contains("FloorTwo")){
+                    data[0] = "EastWingFloorTwo";
+                    data[1] = Keys.nodeNameElevatorEastWingFloorTwo;                 
+            }
+            else if (node.contains("FloorThree")){
+                    data[0] = "EastWingFloorThree";
+                    data[1] = Keys.nodeNameElevatorEastWingFloorThree;    
+            }    
+            else if (node.contains("FloorFour")){
+                    data[0] = "EastWingFloorFour";
+                    data[1] = Keys.nodeNameElevatorEastWingFloorFour;
+            }
+            else if (node.contains("FloorFive")){
+                data[0] = "EastWingFloorFive";
+                data[1] = Keys.nodeNameElevatorEastWingFloorFive;
+            }
+        }
+        else {
+            if(node.contains("FloorGround")){
+    		data[0] = "FloorGround";
+    		data[1] = Keys.nodeNameElevatorFloorGround;
+            }
+    	
+            else if(node.contains("FloorOne")){
+                    data[0] = "FloorOne";
+                    data[1] = Keys.nodeNameElevatorFloorOne;
+            }
+
+            else if(node.contains("FloorTwo")){
+                    data[0] = "FloorTwo";
+                    data[1] = Keys.nodeNameElevatorFloorTwo;
+            }
+
+            else if(node.contains("FloorThree")){
+                    data[0] = "FloorThree";
+                    data[1] = Keys.nodeNameElevatorFloorThree;
+            }
+
+            else if(node.contains("FloorFour")){
+                    data[0] = "FloorFour";
+                    data[1] = Keys.nodeNameElevatorFloorFour;
+            }
+        }
+        
+        return data;
+    }
+    
     //directions
     final public static String directions_passTheElevatorsUntilEndOfHallway = "Pass the elevators and continue the end of the hallway";   
     final public static String directions_passTheElevatorsUntilFrontDoors = "Pass the elevators, and continue until the front doors";   
