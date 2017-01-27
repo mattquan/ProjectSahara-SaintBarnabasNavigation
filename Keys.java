@@ -33,6 +33,11 @@ public class Keys {
     final public static String directions_exitClinicalLabAndTurnLeftAndFollowHallwayUntilIntersection= "Exit the clinical lab and turn left. Follow the hallway until you reach the intersection.";
     final public static String directions_exitMedicalRecordsAndTurnLeftAndContinueStraight = "Exit the medical records and turn left. Continue straight.";
     
+    //fourth floor directions
+    final public static String directions_passThroughTheArchwayAndContinueStraightPassTheEleveatorsThereShouldBeTwoHallwaysInFrontOfYou = "Pass through the archway and continue straight. Pass the eleveators. There should be two hallways in front ofY you";
+    final public static String directions_goThroughTheLeftDoorway = "Go through the left doorway";
+    final public static String directions_goThroughTheRightDoorway = "Go through the right doorway";
+    
     final public static String directions_turnLeft = "Turn left";
     final public static String directions_turnRight = "Turn Right";
     final public static String directions_walkStraight = "Walk straight";
@@ -46,13 +51,14 @@ public class Keys {
     
     
     //floor ground
+    //names
     final public static String nodeNameHallwayFloorGroundA = "hallwayFloorGroundA";
     final public static String nodeNameHallwayFloorGroundB = "hallwayFloorGroundB";
     final public static String nodeNameHallwayFloorGroundC = "hallwayFloorGroundC";
     final public static String nodeNameHallwayEastWingFloorGround = "eastWingFloorGround";
     final public static String nodeNameElevatorFloorGround = "elevatorFloorGround";
     final public static String nodeNameElevatorEastWingFloorGround = "elevatorEastWingFloorGround";
-    
+    //descriptions
     final public static ArrayList<String> descriptionEastWingFloorGround  = new ArrayList<>(Arrays.asList(
             "Apnea Center",
             "Vangvanichyakorn",
@@ -75,7 +81,7 @@ public class Keys {
             "Chase atm"
     ));
     
-    //floor one
+    //floor one names
     final public static String nodeNameHallwayFloorOneA = "hallwayFloorOneA";
     final public static String nodeNameHallwayFloorOneB = "hallwayFloorOneB";
     final public static String nodeNameHallwayFloorOneC = "hallwayFloorOneC";
@@ -85,7 +91,7 @@ public class Keys {
     final public static String nodeNameHallwayFloorOneG = "hallwayFloorOneG";
     final public static String nodeNameElevatorFloorOne = "elevatorFloorOne";
     
-    //floor two
+    //floor two names +descirptions
     final public static String nodeNameElevatorFloorTwo = "elevatorFloorTwo";
     final public static String nodeNameDeskFloorTwo = "deskFloorTwo";
     final public static ArrayList<String> descriptionDeskFloorTwo  = new ArrayList<>(Arrays.asList(
@@ -104,7 +110,7 @@ public class Keys {
     ));
     
 
-    //floor three
+    //floor three names + descriptions
     final public static String nodeNameElevatorFloorThree = "elevatorFloorThree";
     final public static String nodeNameDeskFloorThree = "deskFloorThree";
     final public static ArrayList<String> descriptionDeskFloorThree = new ArrayList<>(Arrays.asList(
@@ -116,9 +122,20 @@ public class Keys {
             "preemies" 
     ));  
     
-    //floor four
+    //floor four names
     final public static String nodeNameElevatorFloorFour = "elevatorFloorFour";
     final public static String nodeNameDeskFloorFour = "deskFloorFour";
+    final public static String nodeNameHallwayFloorFourA = "hallwayFloorFourA";
+    final public static String nodeNameHallwayFloorFourB1 = "hallwayFloorFourB1";
+    final public static String nodeNameHallwayFloorFourB2 = "hallwayFloorFourB2";
+    final public static String nodeNameHallwayFloorFourC1 = "hallwayFloorFourC1";
+    final public static String nodeNameHallwayFloorFourC2 = "hallwayFloorFourC2";
+    final public static String nodeNameHallwayFloorFourD1 = "hallwayFloorFourD1";
+    final public static String nodeNameHallwayFloorFourD2 = "hallwayFloorFourD2";
+    final public static String nodeNameHallwayFloorFourE1 = "hallwayFloorFourE1";
+    final public static String nodeNameHallwayFloorFourE2 = "hallwayFloorFourE2";
+    
+    //descriptions
     final public static ArrayList<String> descriptionDeskFloorFour = new ArrayList<>(Arrays.asList(
             "PICU",
             "pediatric",
