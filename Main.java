@@ -102,40 +102,6 @@ public class Main {
 
     }
     
-    public static Graph returnGraphFromFloor (String floor) {
-        //System.out.println(floor);
-        if(floor.equals("FloorGround"))
-            return new FloorGround(); 
-    		
-        else if(floor.equals("FloorOne"))
-            return new FloorOne();
-
-        else if(floor.equals("FloorTwo")) 
-            return new FloorTwo();
-
-        else if(floor.equals("FloorThree")) 
-            return new FloorThree();
-
-        else if(floor.equals("FloorFour"))
-            return new FloorFour();
-
-        else if(floor.equals("EastWingFloorOne"))
-            return new EastWingFloorOne();
-
-        else if(floor.equals("EastWingFloorTwo"))
-            return new EastWingFloorTwo();
-
-        else if(floor.equals("EastWingFloorThree"))
-            return new EastWingFloorThree();
-
-        else if(floor.equals("EastWingFloorFour"))
-            return new EastWingFloorFour();
-
-        /*else if (floor.equals("EastWingFloorFive"))
-            return new EastWingFloorFive();*/
-        else
-            return null;
-    }
     public static ArrayList<String> completeNavigation(String startingNodeString, String endingNodeString){
     	   System.out.println(startingNodeString);
     	//Strings hold starting/ending floors.
