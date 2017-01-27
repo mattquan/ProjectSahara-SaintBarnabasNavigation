@@ -171,6 +171,7 @@ public class Keys {
     final public static String directions_turnRight = "Turn Right";
     final public static String directions_walkStraight = "Walk straight";
     final public static String directions_proceedStraight = "Proceed straight";
+    final public static String directions_continueStraight = "Continue straight";
     
     
     
