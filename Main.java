@@ -101,61 +101,6 @@ public class Main {
         return endingNode.getMinPath().getNodePath();
 
     }
-    public static String[] findFloorAndElevator (String node) {
-        //element 0 is floor
-        //element 1 is elevator
-        String[] data = new String [2];
-        if(node.contains("EastWing")) {
-            if (node.contains("FloorOne")){
-                data[0] = "EastWingFloorOne";
-                data[1] = Keys.nodeNameElevatorEastWingFloorOne;
-            }        
-            else if (node.contains("FloorTwo")){
-                    data[0] = "EastWingFloorTwo";
-                    data[1] = Keys.nodeNameElevatorEastWingFloorTwo;                 
-            }
-            else if (node.contains("FloorThree")){
-                    data[0] = "EastWingFloorThree";
-                    data[1] = Keys.nodeNameElevatorEastWingFloorThree;    
-            }    
-            else if (node.contains("FloorFour")){
-                    data[0] = "EastWingFloorFour";
-                    data[1] = Keys.nodeNameElevatorEastWingFloorFour;
-            }
-            else if (node.contains("FloorFive")){
-                data[0] = "EastWingFloorFive";
-                data[1] = Keys.nodeNameElevatorEastWingFloorFive;
-            }
-        }
-        else {
-            if(node.contains("FloorGround")){
-    		data[0] = "FloorGround";
-    		data[1] = Keys.nodeNameElevatorFloorGround;
-            }
-    	
-            else if(node.contains("FloorOne")){
-                    data[0] = "FloorOne";
-                    data[1] = Keys.nodeNameElevatorFloorOne;
-            }
-
-            else if(node.contains("FloorTwo")){
-                    data[0] = "FloorTwo";
-                    data[1] = Keys.nodeNameElevatorFloorTwo;
-            }
-
-            else if(node.contains("FloorThree")){
-                    data[0] = "FloorThree";
-                    data[1] = Keys.nodeNameElevatorFloorThree;
-            }
-
-            else if(node.contains("FloorFour")){
-                    data[0] = "FloorFour";
-                    data[1] = Keys.nodeNameElevatorFloorFour;
-            }
-        }
-        
-        return data;
-    }
     
     public static Graph returnGraphFromFloor (String floor) {
         //System.out.println(floor);
@@ -201,7 +146,7 @@ public class Main {
         
     	
     	//Determines what floor startingNode is on and sets elevator variable for later use if nodes are on different floors.
-    	String [] results = findFloorAndElevator(startingNodeString);
+    	String [] results = Keys.findFloorAndElevator(startingNodeString);
         startingNodeFloor = results[0];        
         startingNodeElevator =results[1];
         System.out.println(startingNodeFloor);
@@ -209,14 +154,14 @@ public class Main {
         
         
     	//Determines what floor endingNode is on and sets elevator variable for later use if nodes are on different floors.
-    	results = findFloorAndElevator(endingNodeString);
+    	results = Keys.findFloorAndElevator(endingNodeString);
         endingNodeFloor = results[0];
         endingNodeElevator = results[1];
         //System.out.println(endingNodeFloor);
         //System.out.println(endingNodeElevator);       
          	
         //create the first graph... if they are are on the same floor, great! just use this. if not, you will need to add seperate graphs for other sections
-        ArrayList<Node> myFirstFloor = returnGraphFromFloor(startingNodeFloor).build();
+        ArrayList<Node> myFirstFloor = Keys.returnGraphFromFloor(startingNodeFloor).build();
         //add starting node to graph IFF the starting node is a room
         Node startingNode = findNodeGivenString(startingNodeString,Keys.listOfRooms);         
             //System.out.println(startingNode);
@@ -256,7 +201,7 @@ public class Main {
         
         else {
             data = runDijkstrasAlgorithm(myFirstFloor,startingNodeString,startingNodeElevator);
-            ArrayList<Node> mySecondFloor = returnGraphFromFloor(endingNodeFloor).build();
+            ArrayList<Node> mySecondFloor = Keys.returnGraphFromFloor(endingNodeFloor).build();
             //add endingNode to graph IFF nodes are rooms       
             Node endingNode = findNodeGivenString(endingNodeString,Keys.listOfRooms);
             //System.out.println(endingNode);
