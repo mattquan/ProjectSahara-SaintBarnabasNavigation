@@ -13,7 +13,44 @@ import java.util.Arrays;
  * @author mattquan
  */
 public class Keys {
-    
+    public static String extraDirectionsInfo(String preNode, String node, String postNode) {
+        //find the floor of the Node.
+        //so you can search within it
+        String floor = findFloorAndElevator(node)[0];
+        
+        switch (floor) {
+            case "FloorOne":
+                 //hard logic code for directions
+                 break;
+            case "FloorTwo":
+                //logic for floor two
+                break;
+            case "FloorThree":
+                //logic for floor three
+                break;
+            case "FloorFour":
+                //logic for floor four
+                break;
+            case "Floor Ground":
+                //logic
+                break;
+            case "EastWingFloorOne":
+                //logic
+                break;
+            case "EastWingFloorTwo":
+                //logic
+                break;
+            case "EastWingFloorThree":
+                //logic
+                break;
+            case "EastWingFloorFour":
+                break;
+            case "EastWingFloorFive":
+                
+        }
+        
+        return null;
+    }
     public static Graph returnGraphFromFloor (String floor) {
         //System.out.println(floor);
         if(floor.equals("FloorGround"))
