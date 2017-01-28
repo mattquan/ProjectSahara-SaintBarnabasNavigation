@@ -30,44 +30,44 @@ public class FloorFour extends Graph{
                 }), 
                 new Node(Keys.nodeNameHallwayFloorFourB1, new Edge[]{
                     new Edge(89.551,Keys.nodeNameHallwayFloorFourA,0), //special directions
-                    new Edge(0, Keys.nodeNameHallwayFloorFourB2,1), //special directions
-                    new Edge (0,Keys.nodeNameHallwayFloorFourC1,2) //special d
+                    new Edge(17, Keys.nodeNameHallwayFloorFourB2,1), //special directions
+                    new Edge (95.19,Keys.nodeNameHallwayFloorFourC1,2) //special d
                     
                     
                 }), 
                 new Node(Keys.nodeNameHallwayFloorFourB2, new Edge[]{
                     new Edge(89.551,Keys.nodeNameHallwayFloorFourA,0), //special directions
-                    new Edge (0, Keys.nodeNameHallwayFloorFourB1,1),//special directions
-                    new Edge(0, Keys.nodeNameHallwayFloorFourC2,2)//special directions
+                    new Edge (17, Keys.nodeNameHallwayFloorFourB1,1),//special directions
+                    new Edge(95.19, Keys.nodeNameHallwayFloorFourC2,2)//special directions
                 }), 
                 new Node(Keys.nodeNameHallwayFloorFourC1, new Edge[]{
-                    new Edge(0,Keys.nodeNameHallwayFloorFourB1,0), //special d
-                    new Edge(0,Keys.nodeNameHallwayFloorFourC2,1),//special d
-                    new Edge(0,Keys.nodeNameHallwayFloorFourD1,2)//special d
+                    new Edge(95.19,Keys.nodeNameHallwayFloorFourB1,0), //special d
+                    new Edge(17,Keys.nodeNameHallwayFloorFourC2,1),//special d
+                    new Edge(60.107,Keys.nodeNameHallwayFloorFourD1,2)//special d
                 }), 
                 new Node(Keys.nodeNameHallwayFloorFourC2, new Edge[]{
-                    new Edge(0,Keys.nodeNameHallwayFloorFourC1,0),//special d
-                    new Edge(0,Keys.nodeNameHallwayFloorFourB2,1),//special d
-                    new Edge(0,Keys.nodeNameHallwayFloorFourD2,2)//special d
+                    new Edge(17,Keys.nodeNameHallwayFloorFourC1,0),//special d
+                    new Edge(95.19,Keys.nodeNameHallwayFloorFourB2,1),//special d
+                    new Edge(57.959,Keys.nodeNameHallwayFloorFourD2,2)//special d
                 }), 
                 new Node(Keys.nodeNameHallwayFloorFourD1, new Edge[]{
-                    new Edge(0,Keys.nodeNameHallwayFloorFourC1,0),//special d
-                    new Edge(0,Keys.nodeNameHallwayFloorFourD2,1),//special d
-                    new Edge(0,Keys.nodeNameHallwayFloorFourE1,2)//special d
+                    new Edge(60.107,Keys.nodeNameHallwayFloorFourC1,0),//special d
+                    new Edge(20.828,Keys.nodeNameHallwayFloorFourD2,1),//special d
+                    new Edge(41.211,Keys.nodeNameHallwayFloorFourE1,2)//special d
                 }), 
                 new Node(Keys.nodeNameHallwayFloorFourD2, new Edge[]{
-                    new Edge(0,Keys.nodeNameHallwayFloorFourC2,0),//special d
-                    new Edge(0,Keys.nodeNameHallwayFloorFourD1,1),//special d
-                    new Edge(0,Keys.nodeNameHallwayFloorFourE2,2)//special d
+                    new Edge(61.907,Keys.nodeNameHallwayFloorFourC2,0),//special d
+                    new Edge(20.828,Keys.nodeNameHallwayFloorFourD1,1),//special d
+                    new Edge(41.211,Keys.nodeNameHallwayFloorFourE2,2)//special d
                 }), 
                 new Node(Keys.nodeNameHallwayFloorFourE1, new Edge[]{
-                    new Edge(0,Keys.nodeNameHallwayFloorFourE2,0),//special d
-                    new Edge(0,Keys.nodeNameHallwayFloorFourD1,1),//special d
+                    new Edge(20.740,Keys.nodeNameHallwayFloorFourE2,0),//special d
+                    new Edge(41.211,Keys.nodeNameHallwayFloorFourD1,1),//special d
                     
                 }), 
                 new Node(Keys.nodeNameHallwayFloorFourE2, new Edge[]{
-                    new Edge(0,Keys.nodeNameHallwayFloorFourD2,0),//special d
-                    new Edge(0,Keys.nodeNameHallwayFloorFourE1,1),//special d
+                    new Edge(41.211,Keys.nodeNameHallwayFloorFourD2,0),//special d
+                    new Edge(20.740,Keys.nodeNameHallwayFloorFourE1,1),//special d
                     
                 })
         
