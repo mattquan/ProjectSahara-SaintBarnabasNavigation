@@ -4,7 +4,7 @@
  * and open the template in the editor
  */
 
-package ProjectSahara;
+package ProjectSahara-SaintBarnabasNavigation-master;
 import java.util.*;
 
 /**
@@ -19,13 +19,14 @@ public class Node {
     private Edge[] adjacencies;
     private double weight;
     private Path minPath;
-    private ArrayList<String> macAddresses;
+    private ArrayList<String> IPAddresses;
     
-    public Node(String name, Edge[] myEdges, ArrayList<String> mac) { 
+    public Node(String name, Edge[] myEdges, ArrayList<String> IP) { 
         this.name = name;
         adjacencies = myEdges;
         weight = Double.MAX_VALUE;
         minPath = null;
+        IPAddresses = IP;
     }
     public Node(String name, Edge[] myEdges ) { 
         this.name = name;
@@ -33,13 +34,13 @@ public class Node {
         weight = Double.MAX_VALUE;
         minPath = null;
     }
-    public Node(String name, ArrayList<String> description, Edge[] myEdges, ArrayList<String> mac) { 
+    public Node(String name, ArrayList<String> description, Edge[] myEdges, ArrayList<String> IP) { 
         this.name = name;
         adjacencies = myEdges;
         weight = Double.MAX_VALUE;
         minPath = null;
         this.description = description;
-        macAddresses=mac;
+        IPAddresses = IP;
     }
     public Node(String name, ArrayList<String> description, Edge[] myEdges) { 
         this.name = name;
@@ -47,7 +48,7 @@ public class Node {
         weight = Double.MAX_VALUE;
         minPath = null;
         this.description = description;
-        macAddresses=null;
+        
     }
     public Node () {
         weight = Double.MAX_VALUE;
@@ -60,15 +61,15 @@ public class Node {
         this(name,null,new Edge[0],null);
     }
 
-    public ArrayList<String> getMacAddresses() {
-        return macAddresses;
+    public ArrayList<String> getIPAddresses() {
+        return IPAddresses;
     }
 
-    public void setMacAddresses(ArrayList<String> macAddresses) {
-        this.macAddresses = macAddresses;
+    public void setIPAddresses(ArrayList<String> macAddresses) {
+        this.IPAddresses = macAddresses;
     }
     
-    
+   
     
     public String getName() { 
         return name; 

@@ -324,7 +324,9 @@ public class Keys {
             "OBGYN Health Center",
             "OBGYN",
             "Fibroid Center"    
-    ));        
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     //East Wing Floor Two
     final public static String nodeNameElevatorEastWingFloorTwo = "elevatorEastWingFloorTwo";
     final public static ArrayList<String> descriptionEastWingFloorTwo = new ArrayList<>(Arrays.asList(
@@ -333,7 +335,8 @@ public class Keys {
             "Cancer",
             "Infusion"
     ));
-    
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     //East Wing Floor Three
     final public static String nodeNameElevatorEastWingFloorThree = "elevatorEastWingFloorThree";
     final public static ArrayList<String> descriptionEastWingFloorThree = new ArrayList<>(Arrays.asList(
@@ -346,11 +349,15 @@ public class Keys {
             "Transplant Research",
             "Transplant Short Stay"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     //East Wing Floor Four
     final public static String nodeNameElevatorEastWingFloorFour = "elevatorEastWingFloorFour";
      final public static ArrayList<String> descriptionEastWingElevatorFloorFour = new ArrayList<>(Arrays.asList(
             "Reproductive Medicine and Science",
             "Perinatal Associates"
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
     ));
     //East Wing Floor Five
     final public static String nodeNameElevatorEastWingFloorFive = "elevatorEastWingFloorFive";
@@ -367,6 +374,8 @@ public class Keys {
             "same day",
             "1323"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoom1319FloorOne = "room1319FloorOne";
     final public static ArrayList<String> descriptionRoom1319FloorOne = new ArrayList<>(Arrays.asList(
             "mens bathroom 1",
@@ -375,6 +384,8 @@ public class Keys {
             "mens restroom 1",
             "men's restroom 1",
             "restroom 1"
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
     ));
     final public static String nodeNameRoom1318FloorOne = "room1318FloorOne";
     final public static ArrayList<String> descriptionRoom1318FloorOne = new ArrayList<>(Arrays.asList(
@@ -386,6 +397,8 @@ public class Keys {
             "restroom 1",
             "ladies room 1"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoomS12FloorOne = "roomS12FloorOne";
     final public static ArrayList<String> descriptionRoomS12FloorOne = new ArrayList<>(Arrays.asList(
             "same day surgery 1",
@@ -395,22 +408,30 @@ public class Keys {
             "same day 1",
             "S12"     
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoomReceptionFloorOne = "roomReceptionFloorOne";
     final public static ArrayList<String> descriptionRoomReceptionFloorOne = new ArrayList<>(Arrays.asList(
             "reception",
             "reception desk",
             "information desk"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoom1398FloorOne = "room1398FloorOne";
     final public static ArrayList<String> descriptionRoom1398FloorOne = new ArrayList<>(Arrays.asList(
             "chapel",
             "1398"
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
     ));
     final public static String nodeNameRoom1211FloorOne = "room1211FloorOne";
     final public static ArrayList<String> descriptionRoom1211FloorOne = new ArrayList<>(Arrays.asList(
             "parent",
             "parent lounge",
             "1211"
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
     ));
     final public static String nodeNameRoom1214FloorOne = "room1214FloorOne";
     final public static ArrayList<String> descriptionRoom1214FloorOne = new ArrayList<>(Arrays.asList(
@@ -421,6 +442,8 @@ public class Keys {
             "men's restroom",
             "restroom"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoom1215FloorOne = "room1215FloorOne";
     final public static ArrayList<String> descriptionRoom1215FloorOne = new ArrayList<>(Arrays.asList(
             "womens bathroom",
@@ -429,6 +452,8 @@ public class Keys {
             "womens restroom",
             "women's restroom",
             "restroom"
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
     ));
     final public static String nodeNameRoom1607FloorOne = "room1607FloorOne";
     final public static ArrayList<String> descriptionRoom1607FloorOne = new ArrayList<>(Arrays.asList(
@@ -442,9 +467,13 @@ public class Keys {
             "CCU waiting room",
             "1607"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoom1730AFloorOne = "room1730AFloorOne";
     final public static ArrayList<String> descriptionRoom1730AFloorOne = new ArrayList<>(Arrays.asList(
             "radiation oncology"
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
     ));
     //floorTwo
     final public static String nodeNameRoom2350AFloorTwo = "room2350AFloorTwo";
@@ -452,11 +481,15 @@ public class Keys {
             "phones",
             "phone"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     //floorThree
     final public static String nodeNameRoom3301DFloorThree = "room3301DFloorThree";
     final public static ArrayList<String> descriptionRoom3301DFloorThree = new ArrayList<>(Arrays.asList(
             "restroom 3",
             "bathroom 3"
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
     ));
     //floorFour
     final public static String nodeNameRoom4235FloorFour = "room4235FloorFour";
@@ -464,11 +497,15 @@ public class Keys {
             "restroom 4",
             "bathroom 4"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     //ground floor rooms
     final public static String nodeNameRoomG106FloorGround = "roomG106FloorGround";
     final public static ArrayList<String> descriptionRoomG106FloorGround = new ArrayList<>(Arrays.asList(
             "bathroom 0",
             "restroom 0"
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
     ));
     final public static String nodeNameParkingValidationFloorGround = "parkingValidationFloorGround";
     final public static ArrayList<String> descriptionParkingValidationFloorGround = new ArrayList<>(Arrays.asList(
@@ -476,21 +513,29 @@ public class Keys {
             "validation",
             "parking validation"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoomG453FloorGround = "roomG453FloorGround";
     final public static ArrayList<String> descriptionRoomG453FloorGround = new ArrayList<>(Arrays.asList(
             "records",
             "medical records",
             "G453"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoomG309BFloorGround = "roomG309BFloorGround";
     final public static ArrayList<String> descriptionRoomG309BFloorGround = new ArrayList<>(Arrays.asList(
             "outpatient lab",
             "G309B"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoomG336FloorGround = "roomG336FloorGround";
     final public static ArrayList<String> descriptionRoomG336FloorGround = new ArrayList<>(Arrays.asList(
             "clinical lab",
             "G336"
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
     ));
     final public static String nodeNameRoomG230NorthFloorGround = "roomG320NorthFloorGround";
     final public static ArrayList<String> descriptionRoomG230NorthFloorGround = new ArrayList<>(Arrays.asList(
@@ -499,6 +544,8 @@ public class Keys {
             "cafe",
             "G320"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoomG230SouthFloorGround = "roomG320SouthFloorGround";
     final public static ArrayList<String> descriptionRoomG230SouthFloorGround = new ArrayList<>(Arrays.asList(
             "cafeteria, south exit",
@@ -506,17 +553,25 @@ public class Keys {
             "cafe",
             "G320"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoomE00C6FloorGround = "roomE00C6FloorGround";
     final public static ArrayList<String> descriptionRoomE00C6FloorGround = new ArrayList<>(Arrays.asList(
             "burn",
             "burn outpatient",
             "E00C6"
-    ));final public static String nodeNameRoomE00C7FloorGround = "roomE00C7FloorGround";
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
+    final public static String nodeNameRoomE00C7FloorGround = "roomE00C7FloorGround";
     final public static ArrayList<String> descriptionRoomE00C7FloorGround = new ArrayList<>(Arrays.asList(
             "pediatric",
             "pediatric outpatient",
             "E00C7"
-    )); final public static String nodeNameRoomG03EastWingFloorGround = "roomG03EastWingFloorGround";
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
+    final public static String nodeNameRoomG03EastWingFloorGround = "roomG03EastWingFloorGround";
     final public static ArrayList<String> descriptionRoomG03EastWingFloorGround = new ArrayList<>(Arrays.asList(
             "Apnea Center",
             "Vangvanichyakorn",
@@ -529,6 +584,8 @@ public class Keys {
             "Liptsyn",
             "center for wound and burn healing",
             "Chase ATM"
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
     ));
     //EastWingFloorOne
     final public static String nodeNameRoom144EastWingFloorOne = "room144EastWingFloorOne";
@@ -543,15 +600,35 @@ public class Keys {
             "Zucker",
             "Jaqua Cardiac/Pulmonary Rehabilitation Center"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoom121EastWingFloorOne = "room121EastWingFloorOne";
     final public static ArrayList<String> descriptionRoom121EastWingFloorOne = new ArrayList<>(Arrays.asList(
             "Neonatology",
             "Sun"
     ));
+    final public static ArrayList<String> IP121 = new ArrayList<>(Arrays.asList(
+        "10.21.221.194",
+            "10.21.221.197",
+            "10.21.221.196",
+            "10.21.223.157",
+            "10.21.221.195",
+            "10.21.221.199",
+            "10.21.221.200"
+    ));
     final public static String nodeNameRoom117EastWingFloorOne = "room117EastWingFloorOne";
     final public static ArrayList<String> descriptionRoom117EastWingFloorOne = new ArrayList<>(Arrays.asList(
             "Saint Barnabas OBGYN Health Center",
             "The Fibroid center"
+    ));
+    final public static ArrayList<String> IP117 = new ArrayList<>(Arrays.asList(
+            "10.21.221.194",
+            "10.21.221.197",
+            "10.21.221.196",
+            "10.21.223.157",
+            "10.21.221.195",
+            "10.21.221.199",
+            "10.21.221.200"
     ));
     //EastWingFloorTwo
     final public static String nodeNameRoom201EastWingFloorTwo = "room201EastWingFloorTwo";
@@ -567,15 +644,21 @@ public class Keys {
             "Scoppetuolo",
             "Wagmiller"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoom244EastWingFloorTwo = "room244EastWingFloorTwo";
     final public static ArrayList<String> descriptionRoom244EastWingFloorTwo = new ArrayList<>(Arrays.asList(
             "Infusion Center"
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
     ));
     //EastWingFloorThree
     final public static String nodeNameRoom302EastWingFloorThree = "room302EastWingFloorThree";
     final public static ArrayList<String> descriptionRoom302EastWingFloorThree = new ArrayList<>(Arrays.asList(
             "Associates in Transplant and General Surgery",
             "Aitchison"            
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
     ));
     final public static String nodeNameRoom306EastWingFloorThree = "room306EastWingFloorThree";
     final public static ArrayList<String> descriptionRoom306EastWingFloorThree = new ArrayList<>(Arrays.asList(
@@ -590,25 +673,37 @@ public class Keys {
             "Pre Transplant Department",
             "Mulgaonkar"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoom332EastWingFloorThree = "room332EastWingFloorThree";
     final public static ArrayList<String> descriptionRoom332EastWingFloorThree = new ArrayList<>(Arrays.asList(
             "Living Donor Institute"
      ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoom303EastWingFloorThree = "room303EastWingFloorThree";
     final public static ArrayList<String> descriptionRoom303EastWingFloorThree = new ArrayList<>(Arrays.asList(
             "Transplant Administration"
      ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoom305EastWingFloorThree = "room305EastWingFloorThree";
     final public static ArrayList<String> descriptionRoom305EastWingFloorThree = new ArrayList<>(Arrays.asList(
             "Transplant Clinic"
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
     ));
     final public static String nodeNameRoom307EastWingFloorThree = "room307EastWingFloorThree";
     final public static ArrayList<String> descriptionRoom307EastWingFloorThree = new ArrayList<>(Arrays.asList(
             "Transplant Research"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoom308EastWingFloorThree = "room308EastWingFloorThree";
     final public static ArrayList<String> descriptionRoom308EastWingFloorThree = new ArrayList<>(Arrays.asList(
             "Transplant Short Stay"
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
     ));
     //EastWingFloorFour
     final public static String nodeNameRoom403EastWingFloorFour = "room403EastWingFloorFour";
@@ -622,6 +717,8 @@ public class Keys {
             "Pascale",
             "Thompson"
     ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
+    ));
     final public static String nodeNameRoom402EastWingFloorFour = "room402EastWingFloorFour";
     final public static ArrayList<String> descriptionRoom402EastWingFloorFour = new ArrayList<>(Arrays.asList(
             "DziadosZ",
@@ -633,6 +730,8 @@ public class Keys {
             "Terrone",
             "Warren",
             "Wolf"
+    ));
+    final public static ArrayList<String> IP = new ArrayList<>(Arrays.asList(
     ));
     
     //ListOfRooms!! Alphabetical!!
