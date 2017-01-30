@@ -30,11 +30,11 @@ public class FloorTwo extends Graph{
                 new Node(Keys.nodeNameHallwayFloorTwoC, new Edge[]{
                     new Edge(74.196, Keys.nodeNameHallwayFloorB1, 0),
                     new Edge(15.443+74.196, Keys.nodeNameHallwayFloorTwoB2,1),
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoD,2)
+                    new Edge(50+25.29+79.016+82.817, Keys.nodeNameHallwayFloorTwoD,2)
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoD, new Edge[]{
                     new Edge(89, Keys.nodeNameHallwayFloorTwoA, 0),
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoC,1)
+                    new Edge(50+25.29+79.016+82.817, Keys.nodeNameHallwayFloorTwoC,1)
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoE, new Edge[]{
                     new Edge(74.5, Keys.nodeNameHallwayFloorTwoA, 0),
