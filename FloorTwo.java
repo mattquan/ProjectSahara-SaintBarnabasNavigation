@@ -63,31 +63,32 @@ public class FloorTwo extends Graph{
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoH1, new Edge[]{
                     new Edge(61.909, Keys.nodeNameHallwayFloorTwoG, 0),
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoH2,1),
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoI1,2)
+                    new Edge(16.087, Keys.nodeNameHallwayFloorTwoH2,1),
+                    new Edge(60.240, Keys.nodeNameHallwayFloorTwoI1,2)
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoH2, new Edge[]{
                     new Edge(88.549, Keys.nodeNameHallwayFloorTwoF2, 0),
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoH1,1),
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoI2,2)
+                    new Edge(16.087, Keys.nodeNameHallwayFloorTwoH1,1),
+                    new Edge(60.240, Keys.nodeNameHallwayFloorTwoI2,2)
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoI1, new Edge[]{
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoH1, 0),
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoI2,1),
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoJ1,2)
+                    new Edge(60.240, Keys.nodeNameHallwayFloorTwoH1, 0),
+                    new Edge(20.912, Keys.nodeNameHallwayFloorTwoI2,1),
+                    new Edge(34.138, Keys.nodeNameHallwayFloorTwoJ1,2)
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoI2, new Edge[]{
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoH2, 0),
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoI1,1),
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoJ2,2)
+                    new Edge(60.240, Keys.nodeNameHallwayFloorTwoH2, 0),
+                    new Edge(20.912, Keys.nodeNameHallwayFloorTwoI1,1),
+                    new Edge(34.138, Keys.nodeNameHallwayFloorTwoJ2,2)
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoJ1, new Edge[]{
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoI1, 0),
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoJ2,1)
+                    new Edge(34.138, Keys.nodeNameHallwayFloorTwoI1, 0),
+                    new Edge(20.685, Keys.nodeNameHallwayFloorTwoJ2,1)
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoJ2, new Edge[]{
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoI2, 0),
-                    new Edge(0, Keys.nodeNameHallwayFloorTwoJ1,1)})
-                ));             
+                    new Edge(34.138, Keys.nodeNameHallwayFloorTwoI2, 0),
+                    new Edge(20.685, Keys.nodeNameHallwayFloorTwoJ1,1)
+		})
+	));             
     }
 }
