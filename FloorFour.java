@@ -42,8 +42,8 @@ public class FloorFour extends Graph{
                 }), 
                 new Node(Keys.nodeNameHallwayFloorFourC1, new Edge[]{
                     new Edge(95.19,Keys.nodeNameHallwayFloorFourB1,0), //special d
-                    new Edge(17,Keys.nodeNameHallwayFloorFourC2,1),//special d
-                    new Edge(60.107,Keys.nodeNameHallwayFloorFourD1,2)//special d
+                    new Edge(17,Keys.nodeNameHallwayFloorFourC2,1), //special d
+                    new Edge(60.107,Keys.nodeNameHallwayFloorFourD1,2) //special d
                 }), 
                 new Node(Keys.nodeNameHallwayFloorFourC2, new Edge[]{
                     new Edge(17,Keys.nodeNameHallwayFloorFourC1,0),//special d

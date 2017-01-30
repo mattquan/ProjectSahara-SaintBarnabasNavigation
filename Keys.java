@@ -326,8 +326,8 @@ public class Keys {
 
     //floor two names +descirptions
     final public static String nodeNameElevatorFloorTwo = "elevatorFloorTwo";
-    final public static String nodeNameDeskFloorTwo = "deskFloorTwo";
-    final public static ArrayList<String> descriptionDeskFloorTwo = new ArrayList<>(Arrays.asList(
+    final public static String nodeNameHallwayFloorTwoA = "hallwayFloorTwoA";
+    final public static ArrayList<String> descriptionHallwayAFloorTwo = new ArrayList<>(Arrays.asList(
             "Cardiac Telemetry",
             "Cardiothoracic ICU",
             "Cardiothoracic ICU",
@@ -435,7 +435,7 @@ final public static String nodeNameRoom4728FloorFour = "room4728FloorFour";
 
 
 //floor two hallway names
-final public static String nodeNameHallwayFloorTwoA = "hallwayFloorTwoA";
+//hallway floor A is renamed somewhere else
 final public static String nodeNameHallwayFloorTwoB1 = "hallwayFloorTwoB1";
 final public static String nodeNameHallwayFloorTwoB2 = "hallwayFloorTwoB2";
 final public static String nodeNameHallwayFloorTwoC = "hallwayFloorTwoC";
@@ -923,7 +923,7 @@ final public static String nodeNameHallwayFloorTwoJ2 = "hallwayFloorTwoJ2";
             //floorTwoPhones
             new Node(nodeNameRoom2350AFloorTwo, descriptionRoom2350AFloorTwo, new Edge[]{
         new Edge(9.679, nodeNameElevatorFloorTwo, 0),
-        new Edge(9.581, nodeNameDeskFloorTwo, 1)
+        new Edge(9.581, nodeNameHallwayFloorTwoA, 1)
     }),
             //EastWingFloorTwo 244
             new Node(nodeNameRoom244EastWingFloorTwo, descriptionRoom244EastWingFloorTwo, new Edge[]{
@@ -1139,6 +1139,17 @@ new Node(nodeNameRoom4725FloorFour, new Edge[]{
 new Node(nodeNameRoom4726FloorFour, new Edge[]{
         new Edge(23.921, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
         new Edge(38.225, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
+    }),
+
+//floor four room 4727, patient room
+new Node(nodeNameRoom4727FloorFour, new Edge[]{
+        new Edge(12.3, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
+        new Edge(49.1, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
+    }),
+
+//floor four room 4728, patient room
+new Node(nodeNameRoom4728FloorFour, new Edge[]{
+        new Edge(1, nodeNameHallwayFloorFourC2, 0, Keys.directions_exitTheRoom),
     }),
 
             //groundFloorBurnOutpatient
