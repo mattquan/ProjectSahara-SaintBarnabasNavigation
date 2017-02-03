@@ -275,6 +275,9 @@ public class Keys {
     final public static String directions_passThroughTheArchwayAndContinueStraightPassTheEleveatorsThereShouldBeTwoHallwaysInFrontOfYou = "Pass through the archway and continue straight. Pass the eleveators. There should be two hallways in front ofY you";
     final public static String directions_goThroughTheLeftDoorway = "Go through the left doorway";
     final public static String directions_goThroughTheRightDoorway = "Go through the right doorway";
+    
+    //second floor directions
+    final public static String directions_continueStraightPassingByTheFirstSetOfElevatorsContinueStraight = "Continue straight, passing by a cluster of elevators. Continue straight, into the fourth floor lobby. The elevators are upahead, next to the windows.";
 
     final public static String directions_turnLeft = "Turn left";
     final public static String directions_turnRight = "Turn Right";
@@ -286,17 +289,17 @@ public class Keys {
     //floor ground
     //names
     final public static String nodeNameHallwayFloorGroundA = "hallwayFloorGroundA";
-    final public static ArrayList<String> IPElevatorFloorGroundA = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPelevatorFloorGroundA = new ArrayList<>(Arrays.asList(
             "10.21.222.35"
      ));
     final public static String nodeNameHallwayFloorGroundB = "hallwayFloorGroundB";
     final public static String nodeNameHallwayFloorGroundC = "hallwayFloorGroundC";
-     final public static ArrayList<String> IPHallwayFloorGroundC = new ArrayList<>(Arrays.asList(
+     final public static ArrayList<String> IPhallwayFloorGroundC = new ArrayList<>(Arrays.asList(
          "10.21.222.12"
             ));
     final public static String nodeNameHallwayEastWingFloorGround = "eastWingFloorGround";
     final public static String nodeNameElevatorFloorGround = "elevatorFloorGround";
-     final public static ArrayList<String> IPElevatorFloorGround = new ArrayList<>(Arrays.asList(
+     final public static ArrayList<String> IPelevatorFloorGround = new ArrayList<>(Arrays.asList(
             "10.21.222.8",
              "10.21.222.18",
              "10.21.222.35"
@@ -696,7 +699,7 @@ final public static String nodeNameHallwayFloorTwoJ2 = "hallwayFloorTwoJ2";
             "cafe",
             "G320"
     ));
-        final public static ArrayList<String> IPRoomG230NorthFloorGround = new ArrayList<>(Arrays.asList(
+        final public static ArrayList<String> IProomG230NorthFloorGround = new ArrayList<>(Arrays.asList(
             "10.21.221.237",
             "10.21.221.236",
             "10.21.221.232",
@@ -714,7 +717,7 @@ final public static String nodeNameHallwayFloorTwoJ2 = "hallwayFloorTwoJ2";
             "cafe",
             "G320"
     ));
-    final public static ArrayList<String> IPRoomG230SouthFloorGround = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IProomG230SouthFloorGround = new ArrayList<>(Arrays.asList(
             "10.21.221.237",
             "10.21.221.236",
             "10.21.221.232",
@@ -786,7 +789,7 @@ final public static String nodeNameHallwayFloorTwoJ2 = "hallwayFloorTwoJ2";
             "Saint Barnabas OBGYN Health Center",
             "The Fibroid center"
     ));
-    final public static ArrayList<String> IPRoom117EastWingFloorOne = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IProom117EastWingFloorOne = new ArrayList<>(Arrays.asList(
             "10.21.221.194",
             "10.21.221.197",
             "10.21.221.196",
