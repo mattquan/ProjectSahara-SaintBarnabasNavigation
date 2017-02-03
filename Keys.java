@@ -25,6 +25,32 @@ public class Keys {
                 break;
             case "FloorTwo":
                 //logic for floor two
+                 if (node.equals(Keys.nodeNameHallwayFloorTwoA)) {
+                    if (postNode.equals(Keys.Keys.nodeNameElevatorFloorTwo)) {
+                        if (preNode.equals(Keys.Keys.nodeNameHallwayFloorTwoB1)) {
+                            return Keys.directions_turnRight;
+                        } else if (preNode.equals(Keys.nodeNameHallwayFloorTwoD)) {
+                            return Keys.directions_turnLeft;
+                        } else if (preNode.equals(Keys.nodeNameHallwayFloorTwoE)) {
+                            //contiue striaght, pass the elevators, take the leftmost door.
+                            return Keys.directions_continueStraightPassingByTheFirstSetOfElevatorsContinueStraight;
+                        }
+                        //place holders below. need to edit.
+                    } else if (postNode.equals(Keys.nodeNameHallwayFloorFourC1)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorFourB2)) {
+                            return Keys.directions_turnRight;
+                        } else if (preNode.equals(Keys.nodeNameHallwayFloorFourA)) {
+                            return Keys.directions_continueStraight;
+                        }
+                    } else if (postNode.equals(Keys.nodeNameHallwayFloorFourA)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorFourB2)) {
+                            return Keys.directions_turnLeft;
+                        } else if (preNode.equals(Keys.nodeNameHallwayFloorFourC1)) {
+                            return Keys.directions_continueStraight;
+                        }
+                    }
+
+                }
                 break;
             case "FloorThree":
                 //logic for floor three
