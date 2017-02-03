@@ -286,10 +286,21 @@ public class Keys {
     //floor ground
     //names
     final public static String nodeNameHallwayFloorGroundA = "hallwayFloorGroundA";
+    final public static ArrayList<String> IPElevatorFloorGroundA = new ArrayList<>(Arrays.asList(
+            "10.21.222.35"
+     ));
     final public static String nodeNameHallwayFloorGroundB = "hallwayFloorGroundB";
     final public static String nodeNameHallwayFloorGroundC = "hallwayFloorGroundC";
+     final public static ArrayList<String> IPHallwayFloorGroundC = new ArrayList<>(Arrays.asList(
+         "10.21.222.12"
+            ));
     final public static String nodeNameHallwayEastWingFloorGround = "eastWingFloorGround";
     final public static String nodeNameElevatorFloorGround = "elevatorFloorGround";
+     final public static ArrayList<String> IPElevatorFloorGround = new ArrayList<>(Arrays.asList(
+            "10.21.222.8",
+             "10.21.222.18",
+             "10.21.222.35"
+     ));
     final public static String nodeNameElevatorEastWingFloorGround = "elevatorEastWingFloorGround";
     //descriptions
     final public static ArrayList<String> descriptionEastWingFloorGround = new ArrayList<>(Arrays.asList(
@@ -646,6 +657,11 @@ final public static String nodeNameHallwayFloorTwoJ2 = "hallwayFloorTwoJ2";
             "bathroom 0",
             "restroom 0"
     ));
+    final public static ArrayList<String> IPG106FloorGround = new ArrayList<>(Arrays.asList(
+            "10.21.222.18",
+            "10.21.222.8"
+     ));
+    
 
     final public static String nodeNameParkingValidationFloorGround = "parkingValidationFloorGround";
     final public static ArrayList<String> descriptionParkingValidationFloorGround = new ArrayList<>(Arrays.asList(
@@ -680,6 +696,16 @@ final public static String nodeNameHallwayFloorTwoJ2 = "hallwayFloorTwoJ2";
             "cafe",
             "G320"
     ));
+        final public static ArrayList<String> IPRoomG230NorthFloorGround = new ArrayList<>(Arrays.asList(
+            "10.21.221.237",
+            "10.21.221.236",
+            "10.21.221.232",
+            "10.21.221.246",
+            "10.21.221.235",
+            "10.21.221.248"
+            
+            ));
+
 
     final public static String nodeNameRoomG230SouthFloorGround = "roomG320SouthFloorGround";
     final public static ArrayList<String> descriptionRoomG230SouthFloorGround = new ArrayList<>(Arrays.asList(
@@ -688,6 +714,15 @@ final public static String nodeNameHallwayFloorTwoJ2 = "hallwayFloorTwoJ2";
             "cafe",
             "G320"
     ));
+    final public static ArrayList<String> IPRoomG230SouthFloorGround = new ArrayList<>(Arrays.asList(
+            "10.21.221.237",
+            "10.21.221.236",
+            "10.21.221.232",
+            "10.21.221.246",
+            "10.21.221.235",
+            "10.21.221.248"
+            
+            ));
 
     final public static String nodeNameRoomE00C6FloorGround = "roomE00C6FloorGround";
     final public static ArrayList<String> descriptionRoomE00C6FloorGround = new ArrayList<>(Arrays.asList(
