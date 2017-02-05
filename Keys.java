@@ -302,16 +302,25 @@ public class Keys {
     final public static String directions_goThroughTheLeftDoorway = "Go through the left doorway";
     final public static String directions_goThroughTheRightDoorway = "Go through the right doorway";
     
+    
     //second floor directions
     final public static String directions_continueStraightPassingByTheFirstSetOfElevatorsContinueStraight = "Continue straight, passing by a cluster of elevators. Continue straight, into the fourth floor lobby. The elevators are upahead, next to the windows.";
-
+    final public static String directions_walkStraightPastTheFirstSetOfElevatorsContinueStraightAndTakeTheElevatorsAtEndOfHallway = "Walk straight, past the first set of elevators. Continue straight and take the elevators at the end of the hallway.";
+    final public static String directions_makeARightAtTheEndOfTheLoop  = "Make a right at the end of the loop";
+    final public static String directions_continueStraightDownTheLoopedHallwayMakingSlightLeftTurns = "Continue straight, down the looped hallway, making slight left turns.";
+    
+    final public static String directions_exitTheLobby  = "Exit the lobby";
+    final public static String directions_makeARightAtTheEndOfTheHallway = "Make a right at the end of the hallway";    
+    final public static String directions_makeALeftAtTheEndOfTheHallway = "Make a left at the end of the hallway";
+    final public static String directions_makeALeftAtTheFirstIntersection = "Make a left at the first intersection";    
+    final public static String directions_makeARightAtTheFirstIntersection = "Make a right at the first intersection";
     final public static String directions_turnLeft = "Turn left";
-    final public static String directions_turnRight = "Turn Right";
+    final public static String directions_turnRight = "Turn right";
     final public static String directions_walkStraight = "Walk straight";
     final public static String directions_proceedStraight = "Proceed straight";
     final public static String directions_continueStraight = "Continue straight";
     final public static String directions_exitTheRoom = "Exit the room";
-
+    final public static String directions_continueDownTheHallway = "Continue down the hallway";
     //floor ground
     //names
     final public static String nodeNameHallwayFloorGroundA = "hallwayFloorGroundA";

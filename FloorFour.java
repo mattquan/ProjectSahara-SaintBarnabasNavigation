@@ -61,13 +61,13 @@ public class FloorFour extends Graph{
                     new Edge(41.211,Keys.nodeNameHallwayFloorFourE2,2)//special d
                 }), 
                 new Node(Keys.nodeNameHallwayFloorFourE1, new Edge[]{
-                    new Edge(20.740,Keys.nodeNameHallwayFloorFourE2,0),//special d
-                    new Edge(41.211,Keys.nodeNameHallwayFloorFourD1,1),//special d
+                    new Edge(20.740,Keys.nodeNameHallwayFloorFourE2,0, Keys.directions_turnRight), //always form D1
+                    new Edge(41.211,Keys.nodeNameHallwayFloorFourD1,1, Keys.directions_turnLeft),
                     
                 }), 
                 new Node(Keys.nodeNameHallwayFloorFourE2, new Edge[]{
-                    new Edge(41.211,Keys.nodeNameHallwayFloorFourD2,0),//special d
-                    new Edge(20.740,Keys.nodeNameHallwayFloorFourE1,1),//special d
+                    new Edge(41.211,Keys.nodeNameHallwayFloorFourD2,0, Keys.directions_turnRight),
+                    new Edge(20.740,Keys.nodeNameHallwayFloorFourE1,1,Keys.directions_turnLeft),//always from D2
                     
                 })
         
