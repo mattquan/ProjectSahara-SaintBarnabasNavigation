@@ -14,13 +14,16 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        completeNavigation(Keys.nodeNameRoomE00C6FloorGround, Keys.nodeNameRoomG336FloorGround);
+        //first creates path of strings from complete navigation
+        ArrayList<String> path =  completeNavigation(Keys.nodeNameRoomE00C6FloorGround, Keys.nodeNameRoomG336FloorGround);
+        ArrayList<String> wifi = generateWifiFromPath(path);
+        //then creates array list of wifi info using generateWifiFromPath()
     }
 
     public static ArrayList<String> runDijkstrasAlgorithm(ArrayList<Node> listOfNodes, String startingNodeString, String endingNodeString) {
         //creating the unvisited list
         System.out.println("listOfNodes"+listOfNodes+""+"finding"+startingNodeString);
-        ArrayList<Node> unvisited = new ArrayList();
+        ArrayList<Node> unvisited = new ArrayList(); 
         for (Node node : listOfNodes) {
             unvisited.add(node);
         }
@@ -215,7 +218,28 @@ public class Main {
         }
                 
     	return data;
-    } 		
+    } 
+    
+    public static ArrayList<String> generateWifiFromPath(ArrayList<String> pathOfStrings)
+    {
+        
+        ArrayList<String> ipAddresses = new ArrayList<String>(); //master list of ip addresses
+        
+        for(int index = 0; index < pathOfStrings.size(); index++)  
+        {
+            //gets current string, makes it a node, finds ip addresses using getIPAddresses method from Node class
+            String currentLocation = pathOfStrings.get(index);
+            Node currentNode = findNodeGivenString(currentLocation, Keys.listOfRooms); 
+            ArrayList<String> thisNodesIPAddresses = currentNode.getIPAddresses();
+            
+            for(int i = 0; i < thisNodesIPAddresses.size(); i++) //now accesses each ip address from the thisNodesIPAddresses array list
+            {
+                ipAddresses.add(thisNodesIPAddresses.get(i)); //adds each one to the master list
+            }
+        }
+        
+        return ipAddresses; //returns the master list of ip addresses
+    }
 
     public static Node findNodeGivenString(String findThis, ArrayList<Node> listOfNodes) {
         //returns node object given String
