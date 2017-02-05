@@ -384,7 +384,13 @@ public class Keys {
 
     //floor three names + descriptions
     final public static String nodeNameElevatorFloorThree = "elevatorFloorThree";
-    final public static String nodeNameDeskFloorThree = "deskFloorThree";
+    final public static String nodeNameHallwayFloorThreeA = "hallwayFloorThreeA";
+    final public static String nodeNameHallwayFloorThreeB = "hallwayFloorThreeB";
+    final public static String nodeNameHallwayFloorThreeC1 = "hallwayFloorThreeC1";
+    final public static String nodeNameHallwayFloorThreeC2 = "hallwayFloorThreeC2";
+    final public static String nodeNameHallwayFloorThreeD1 = "hallwayFloorThreeD1";
+    final public static String nodeNameHallwayFloorThreeD2 = "hallwayFloorThreeD2";
+    final public static String nodeNameHallwayFloorThreeE = "deskFloorThree";//the desk at front
     final public static ArrayList<String> descriptionDeskFloorThree = new ArrayList<>(Arrays.asList(
             "NICU",
             "premature babies",
@@ -1012,7 +1018,7 @@ final public static String nodeNameHallwayFloorTwoJ2 = "hallwayFloorTwoJ2";
             //floorThreeRestroom
             new Node(nodeNameRoom3301DFloorThree, descriptionRoom3301DFloorThree, new Edge[]{
         new Edge(5.543, nodeNameElevatorFloorThree, 0),
-        new Edge(22.173, nodeNameDeskFloorThree, 1)
+        new Edge(22.173, nodeNameHallwayFloorThreeE, 1)
     }),
             //EastWingFloorThree 332
             new Node(nodeNameRoom332EastWingFloorThree, descriptionRoom332EastWingFloorThree, new Edge[]{
