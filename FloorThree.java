@@ -17,13 +17,39 @@ public class FloorThree extends Graph{
         
         return new ArrayList<>(
             Arrays.asList( 
-                new Node(Keys.nodeNameDeskFloorThree, Keys.descriptionDeskFloorThree, new Edge[]{
-                    new Edge(27.445,Keys.nodeNameElevatorFloorThree,0)}) ,
-                    
-                 new Node(Keys.nodeNameElevatorFloorThree, new Edge[]{
-                    new Edge(27.445,Keys.nodeNameDeskFloorThree,0),})
-                    
-                ));            
+                //desk
+                new Node(Keys.nodeNameElevatorFloorThree, new Edge[]{
+                    new Edge(27.445,Keys.nodeNameHallwayFloorThreeE,0)
+                }),
+                new Node(Keys.nodeNameHallwayFloorThreeA, new Edge[]{
+                    new Edge(0, Keys.nodeNameElevatorFloorThree,0),
+                    new Edge(0, Keys.nodeNameHallwayFloorThreeB,1),
+                    new Edge(0, Keys.nodeNameHallwayFloorThreeE,2)
+                }),
+                new Node(Keys.nodeNameHallwayFloorThreeB, new Edge[]{
+                    new Edge(0, Keys.nodeNameHallwayFloorThreeA,0)
+                }),
+                new Node(Keys.nodeNameHallwayFloorThreeC1, new Edge[]{
+                    new Edge(0, Keys.nodeNameHallwayFloorThreeA,0),
+                    new Edge(0, Keys.nodeNameHallwayFloorThreeC2,1),
+                    new Edge(0, Keys.nodeNameHallwayFloorThreeD1,2)
+                }),
+                new Node(Keys.nodeNameHallwayFloorThreeC2, new Edge[]{
+                    new Edge(0, Keys.nodeNameHallwayFloorThreeC1,0),
+                    new Edge(0, Keys.nodeNameHallwayFloorThreeD2,1)
+                }),
+                new Node(Keys.nodeNameHallwayFloorThreeD1, new Edge[]{
+                    new Edge(0, Keys.nodeNameHallwayFloorThreeC1,0),
+                    new Edge(0, Keys.nodeNameHallwayFloorThreeD2,1)
+                }),
+                new Node(Keys.nodeNameHallwayFloorThreeD2, new Edge[]{
+                    new Edge(0, Keys.nodeNameHallwayFloorThreeC2,0),
+                    new Edge(0, Keys.nodeNameHallwayFloorThreeD1,1)
+                }),
+                new Node(Keys.nodeNameHallwayFloorThreeE, Keys.descriptionDeskFloorThree, new Edge[]{
+                    new Edge(27.445,Keys.nodeNameElevatorFloorThree,0)
+                })
+            ));          
                
     }
 }
