@@ -26,8 +26,8 @@ public class Keys {
             case "FloorTwo":
                 //logic for floor two
                  if (node.equals(Keys.nodeNameHallwayFloorTwoA)) {
-                    if (postNode.equals(Keys.Keys.nodeNameElevatorFloorTwo)) {
-                        if (preNode.equals(Keys.Keys.nodeNameHallwayFloorTwoB1)) {
+                    if (postNode.equals(Keys.nodeNameElevatorFloorTwo)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoB1)) {
                             return Keys.directions_turnRight;
                         } else if (preNode.equals(Keys.nodeNameHallwayFloorTwoD)) {
                             return Keys.directions_turnLeft;
@@ -367,7 +367,7 @@ public class Keys {
     //floor two names +descirptions
     final public static String nodeNameElevatorFloorTwo = "elevatorFloorTwo";
     final public static String nodeNameHallwayFloorTwoA = "hallwayFloorTwoA";
-    final public static ArrayList<String> descriptionHallwayAFloorTwo = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> descriptionHallwayFloorTwoA = new ArrayList<>(Arrays.asList(
             "Cardiac Telemetry",
             "Cardiothoracic ICU",
             "Cardiothoracic ICU",
