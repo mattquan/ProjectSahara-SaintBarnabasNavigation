@@ -86,15 +86,42 @@ public class Keys {
                         } 
                     } 
                  }
-                 if (node.equals(Keys.nodeNameHallwayFloorTwoC)) {
-                     if (postNode.equals(Keys.nodeNameHallwayFloorTwoD)) {
-                         if (preNode.equals(Keys.nodeNameHallwayFloorTwoB1)) {
+                if (node.equals(Keys.nodeNameHallwayFloorTwoC)) {
+                    if (postNode.equals(Keys.nodeNameHallwayFloorTwoD)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoB1)) {
                              return Keys.directions_continueStraightDownTheLoopedHallwayMakingSlightRightTurns;
                          }
                          else if (preNode.equals(Keys.nodeNameHallwayFloorTwoB2)) {
                              return Keys.directions_continueDownTheHallway + " and t" + Keys.directions_turnLeft.substring(1)+". "+Keys.directions_continueStraightDownTheLoopedHallwayMakingSlightRightTurns;
                          }
                      }
+                 }
+                
+                 if (node.equals(Keys.nodeNameHallwayFloorTwoE)) {
+                    if (postNode.equals(Keys.nodeNameHallwayFloorTwoA)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoF1)) { //basically the same                           
+                            return Keys.directions_continueStraight;
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoF3)) {
+                            return Keys.directions_turnRight+" and c"+Keys.directions_continueStraight.substring(1);
+                        }
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoF1)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoA)) {
+                            return Keys.directions_continueStraight;
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoF3)) {
+                            return Keys.directions_turnLeft + ". " + Keys.directions_continueStraight;
+                        } 
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoF3)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoA)) {
+                            return Keys.directions_makeALeftAtTheNextIntersection+ " and c"+Keys.directions_continueStraight.substring(1);
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoF1)) {
+                            return "Error: This should not have happened because it is not the shortest path. Nice job team.";
+                        } 
+                    } 
                  }
                  
                 break;

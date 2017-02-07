@@ -30,16 +30,16 @@ public class FloorTwo extends Graph{
                 new Node(Keys.nodeNameHallwayFloorTwoC, new Edge[]{
                     new Edge(74.196, Keys.nodeNameHallwayFloorTwoB1, 0,Keys.directions_continueStraight),//must be from D --> C --> B1. Otherwise u would just make a stupid loop
                     new Edge(15.443+74.196, Keys.nodeNameHallwayFloorTwoB2,1,Keys.directions_makeARightAtTheFirstIntersection+". "+Keys.directions_continueStraight),
-                    new Edge(50+25.29+79.016+82.817, Keys.nodeNameHallwayFloorTwoD,2) //special, 
+                    new Edge(50+25.29+79.016+82.817, Keys.nodeNameHallwayFloorTwoD,2) //special, done
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoD, new Edge[]{
                     new Edge(89, Keys.nodeNameHallwayFloorTwoA, 0, Keys.directions_makeARightAtTheEndOfTheLoop+" and c"+Keys.directions_continueStraight.substring(1)+ " and e"+Keys.directions_exitTheLobby.substring(1)), //from C to D to A. 
                     new Edge(50+25.29+79.016+82.817, Keys.nodeNameHallwayFloorTwoC,1,Keys.directions_makeALeftAtTheFirstIntersection+". "+Keys.directions_continueStraightDownTheLoopedHallwayMakingSlightLeftTurns)
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoE, new Edge[]{
-                    new Edge(74.5, Keys.nodeNameHallwayFloorTwoA, 0),//special //continue straight
+                    new Edge(74.5, Keys.nodeNameHallwayFloorTwoA, 0),//special //continue straight, going to leave them outside of the reception area. dont know if u want to go in or not
                     new Edge(52, Keys.nodeNameHallwayFloorTwoF1,1), //special: Keys.directions_makeALeftAtTheFirstIntersection+" and c"+Keys.directions_continueDownTheHallway.substring(1) (except for F3
-                    new Edge(39.09+10.433+26.915, Keys.nodeNameHallwayFloorTwoF3,2) //always coming from same direction
+                    new Edge(39.09+10.433+26.915, Keys.nodeNameHallwayFloorTwoF3,2) //done.
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoF1, new Edge[]{
                     new Edge(52, Keys.nodeNameHallwayFloorTwoE, 0), //all special directions
