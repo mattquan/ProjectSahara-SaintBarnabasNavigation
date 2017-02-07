@@ -24,7 +24,7 @@ public class FloorTwo extends Graph{
                     new Edge(74.196, Keys.nodeNameHallwayFloorTwoC,2)
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoB2, new Edge[]{
-                    new Edge(15.443, Keys.nodeNameHallwayFloorTwoB1, 0,Keys.directions_makeALeftAtTheFirstIntersection+Keys.directions_continueStraight), //only way is it was from C1
+                    new Edge(15.443, Keys.nodeNameHallwayFloorTwoB1, 0,Keys.directions_makeALeftAtTheNextIntersection+" and c"+Keys.directions_continueStraight.substring(1)), //only way is it was from C1
                     new Edge(15.443+74.196, Keys.nodeNameHallwayFloorTwoC,1, Keys.directions_proceedStraight+" and m"+Keys.directions_makeARightAtTheEndOfTheHallway.substring(1)) //only way is it was from B1 from A
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoC, new Edge[]{

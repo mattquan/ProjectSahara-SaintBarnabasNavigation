@@ -57,9 +57,35 @@ public class Keys {
                         } else if (preNode.equals(Keys.nodeNameHallwayFloorTwoB1)||preNode.equals(Keys.nodeNameHallwayFloorTwoD)) { //basically teh same
                             return Keys.directions_exitTheReceptionArea+" and t"+Keys.directions_turnLeft.substring(1)+". "+Keys.directions_goThroughTheLeftDoorway; //some really weird loop stuff
                         } 
-                    }
-
+                    }                                
                 }
+                 if (node.equals(Keys.nodeNameHallwayFloorTwoB1)) {
+                    if (postNode.equals(Keys.nodeNameHallwayFloorTwoA)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoB2)) { //basically the same                           
+                            return Keys.directions_turnRight+" and c" +Keys.directions_continueStraight.substring(1);
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoC)) {
+                            //contiue striaght, pass the elevators, take the leftmost door.
+                            return Keys.directions_continueStraight;
+                        }
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoB2)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoA)) {
+                            return Keys.directions_makeALeftAtTheNextIntersection+ " and c"+Keys.directions_continueStraight.substring(1); //don't continue straight because its so small?? no. always add continue straight. always. from now on.
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoC)) {
+                            return Keys.directions_makeARightAtTheNextIntersection+ " and c"+Keys.directions_continueStraight.substring(1);
+                        } 
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoC)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoA)) {
+                            return Keys.directions_continueStraight;
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoB2)) {
+                            return Keys.directions_turnLeft+" and c"+Keys.directions_continueStraight.substring(1);
+                        } 
+                    } 
+                 }
                 break;
             case "FloorThree":
                 //logic for floor three
@@ -328,6 +354,8 @@ public class Keys {
     final public static String directions_makeALeftAtTheEndOfTheHallway = "Make a left at the end of the hallway";
     final public static String directions_makeALeftAtTheFirstIntersection = "Make a left at the first intersection";    
     final public static String directions_makeARightAtTheFirstIntersection = "Make a right at the first intersection";
+    final public static String directions_makeALeftAtTheNextIntersection = "Make a left at the next intersection";    
+    final public static String directions_makeARightAtTheNextIntersection = "Make a right at the next intersection"; 
     final public static String directions_turnLeft = "Turn left";
     final public static String directions_turnRight = "Turn right";
     final public static String directions_walkStraight = "Walk straight";
