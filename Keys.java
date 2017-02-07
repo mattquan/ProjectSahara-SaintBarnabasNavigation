@@ -86,6 +86,17 @@ public class Keys {
                         } 
                     } 
                  }
+                 if (node.equals(Keys.nodeNameHallwayFloorTwoC)) {
+                     if (postNode.equals(Keys.nodeNameHallwayFloorTwoD)) {
+                         if (preNode.equals(Keys.nodeNameHallwayFloorTwoB1)) {
+                             return Keys.directions_continueStraightDownTheLoopedHallwayMakingSlightRightTurns;
+                         }
+                         else if (preNode.equals(Keys.nodeNameHallwayFloorTwoB2)) {
+                             return Keys.directions_continueDownTheHallway + " and t" + Keys.directions_turnLeft.substring(1)+". "+Keys.directions_continueStraightDownTheLoopedHallwayMakingSlightRightTurns;
+                         }
+                     }
+                 }
+                 
                 break;
             case "FloorThree":
                 //logic for floor three
@@ -343,6 +354,7 @@ public class Keys {
     final public static String directions_walkStraightPastTheFirstSetOfElevatorsContinueStraightAndTakeTheElevatorsAtEndOfHallway = "Walk straight, past the first set of elevators. Continue straight and take the elevators at the end of the hallway.";
     final public static String directions_makeARightAtTheEndOfTheLoop  = "Make a right at the end of the loop";
     final public static String directions_continueStraightDownTheLoopedHallwayMakingSlightLeftTurns = "Continue straight, down the looped hallway, making slight left turns.";
+    final public static String directions_continueStraightDownTheLoopedHallwayMakingSlightRightTurns = "Continue straight, down the looped hallway, making slight right turns.";
     final public static String directions_passTheSetOfEleators = "Pass the set of elevators";
     final public static String directions_stayInTheReceptionAreaContinueThroughTheOtherCorridorAtTheBackOfTheReceptionAreaOnYourRight = "Stay in the reception area. Continue through the other corridor at the back of the reception area, on your right";
     final public static String directions_stayInTheReceptionAreaContinueThroughTheOtherCorridorAtTheBackOfTheReceptionAreaOnYourLeft = "Stay in the reception area. Continue through the other corridor at the back of the reception area, on your left";
