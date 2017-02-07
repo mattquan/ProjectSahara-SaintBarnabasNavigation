@@ -10,7 +10,7 @@ public class FloorTwo extends Graph{
                 //alphabetical order
             Arrays.asList(                    
                 new Node(Keys.nodeNameElevatorFloorTwo, new Edge[]{
-                    new Edge(19.963,Keys.nodeNameHallwayFloorTwoA,0, Keys.directions_walkStraightPastTheFirstSetOfElevatorsContinueStraightAndTakeTheElevatorsAtEndOfHallway)
+                    new Edge(19.963,Keys.nodeNameHallwayFloorTwoA,0, Keys.directions_proceedStraight+" and p"+Keys.directions_passTheSetOfEleators.substring(1))
                 }),                     
                 new Node(Keys.nodeNameHallwayFloorTwoA, Keys.descriptionHallwayFloorTwoA, new Edge[]{
                     new Edge(19.963,Keys.nodeNameElevatorFloorTwo,0), //special: 
@@ -37,7 +37,7 @@ public class FloorTwo extends Graph{
                     new Edge(50+25.29+79.016+82.817, Keys.nodeNameHallwayFloorTwoC,1,Keys.directions_makeALeftAtTheFirstIntersection+". "+Keys.directions_continueStraightDownTheLoopedHallwayMakingSlightLeftTurns)
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoE, new Edge[]{
-                    new Edge(74.5, Keys.nodeNameHallwayFloorTwoA, 0),//special
+                    new Edge(74.5, Keys.nodeNameHallwayFloorTwoA, 0),//special //continue straight
                     new Edge(52, Keys.nodeNameHallwayFloorTwoF1,1), //special: Keys.directions_makeALeftAtTheFirstIntersection+" and c"+Keys.directions_continueDownTheHallway.substring(1) (except for F3
                     new Edge(39.09+10.433+26.915, Keys.nodeNameHallwayFloorTwoF3,2) //always coming from same direction
                 }),

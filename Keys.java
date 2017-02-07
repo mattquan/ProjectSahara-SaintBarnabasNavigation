@@ -27,9 +27,7 @@ public class Keys {
                 //logic for floor two
                  if (node.equals(Keys.nodeNameHallwayFloorTwoA)) {
                     if (postNode.equals(Keys.nodeNameElevatorFloorTwo)) {
-                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoB1)) {
-                            return Keys.directions_turnRight+". "+Keys.directions_continueStraightPassingByTheFirstSetOfElevatorsContinueStraight;
-                        } else if (preNode.equals(Keys.nodeNameHallwayFloorTwoD)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoB1)||preNode.equals(Keys.nodeNameHallwayFloorTwoD)) { //basically the same                           
                             return Keys.directions_exitTheReceptionArea+" and t" +Keys.directions_turnRight.substring(1)+". "+Keys.directions_continueStraightPassingByTheFirstSetOfElevatorsContinueStraight;
                         } else if (preNode.equals(Keys.nodeNameHallwayFloorTwoE)) {
                             //contiue striaght, pass the elevators, take the leftmost door.
@@ -38,22 +36,27 @@ public class Keys {
                         //place holders below. need to edit.
                     } else if (postNode.equals(Keys.nodeNameHallwayFloorTwoB1)) {
                         if (preNode.equals(Keys.nodeNameElevatorFloorTwo)) {
-                            return Keys.directions_goThroughTheLeftmostHallway;
+                            return Keys.directions_enterTheReceptionArea+", on your left. "+ Keys.directions_goThroughTheLeftmostHallway;
                         } else if (preNode.equals(Keys.nodeNameHallwayFloorTwoD)) {
                             return Keys.directions_stayInTheReceptionAreaContinueThroughTheOtherCorridorAtTheBackOfTheReceptionAreaOnYourRight; //some really weird loop stuff
                         } else if (preNode.equals(Keys.nodeNameHallwayFloorTwoE)) {
-                            //contiue striaght, pass the elevators, take the leftmost door.
-                            return Keys.directions_enterTheReceptionArea+", on your right."+Keys.directions_goThroughTheLeftmostHallway;
+                            return Keys.directions_enterTheReceptionArea+", on your right. "+Keys.directions_goThroughTheLeftmostHallway;
                         }
                     } else if (postNode.equals(Keys.nodeNameHallwayFloorTwoD)) {
                         if (preNode.equals(Keys.nodeNameElevatorFloorTwo)) {
-                            return Keys.directions_goThroughTheLeftmostHallway;
+                            return Keys.directions_enterTheReceptionArea+". "+Keys.directions_goThroughTheRightmostHallway;
                         } else if (preNode.equals(Keys.nodeNameHallwayFloorTwoB1)) {
-                            return Keys.directions_stayInTheReceptionAreaContinueThroughTheOtherCorridorAtTheBackOfTheReceptionAreaOnYourRight; //some really weird loop stuff
+                            return Keys.directions_stayInTheReceptionAreaContinueThroughTheOtherCorridorAtTheBackOfTheReceptionAreaOnYourLeft; //some really weird loop stuff
                         } else if (preNode.equals(Keys.nodeNameHallwayFloorTwoE)) {
-                            //contiue striaght, pass the elevators, take the leftmost door.
-                            return Keys.directions_enterTheReceptionArea+", on your right."+Keys.directions_goThroughTheLeftmostHallway;
+                            return Keys.directions_enterTheReceptionArea+", on your right."+Keys.directions_goThroughTheRightmostHallway;
                         }
+                        
+                    } else if (postNode.equals(Keys.nodeNameHallwayFloorTwoE)) { 
+                        if (preNode.equals(Keys.nodeNameElevatorFloorTwo)) {
+                            return Keys.directions_goThroughTheLeftDoorway; //continue straight would be repetitive, becuase im alreayd going straight.
+                        } else if (preNode.equals(Keys.nodeNameHallwayFloorTwoB1)||preNode.equals(Keys.nodeNameHallwayFloorTwoD)) { //basically teh same
+                            return Keys.directions_exitTheReceptionArea+" and t"+Keys.directions_turnLeft.substring(1)+". "+Keys.directions_goThroughTheLeftDoorway; //some really weird loop stuff
+                        } 
                     }
 
                 }
@@ -316,6 +319,7 @@ public class Keys {
     final public static String directions_continueStraightDownTheLoopedHallwayMakingSlightLeftTurns = "Continue straight, down the looped hallway, making slight left turns.";
     final public static String directions_passTheSetOfEleators = "Pass the set of elevators";
     final public static String directions_stayInTheReceptionAreaContinueThroughTheOtherCorridorAtTheBackOfTheReceptionAreaOnYourRight = "Stay in the reception area. Continue through the other corridor at the back of the reception area, on your right";
+    final public static String directions_stayInTheReceptionAreaContinueThroughTheOtherCorridorAtTheBackOfTheReceptionAreaOnYourLeft = "Stay in the reception area. Continue through the other corridor at the back of the reception area, on your left";
     
     final public static String directions_exitTheLobby  = "Exit the lobby";
     final public static String directions_enterTheReceptionArea  = "Enter the receptetion area";
