@@ -42,7 +42,7 @@ public class FloorTwo extends Graph{
                     new Edge(39.09+10.433+26.915, Keys.nodeNameHallwayFloorTwoF3,2) //done.
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoF1, new Edge[]{
-                    new Edge(52, Keys.nodeNameHallwayFloorTwoE, 0), //all special directions
+                    new Edge(52, Keys.nodeNameHallwayFloorTwoE, 0), //all special directions, done
                     new Edge(16.063, Keys.nodeNameHallwayFloorTwoF2,1),
                     new Edge(43.096, Keys.nodeNameHallwayFloorTwoF3,2),
                     new Edge(38.158, Keys.nodeNameHallwayFloorTwoG,3)
@@ -52,14 +52,15 @@ public class FloorTwo extends Graph{
                     new Edge(88.549, Keys.nodeNameHallwayFloorTwoH2,1,Keys.directions_continueStraight)
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoF3, new Edge[]{
-                    new Edge(39.09+10.433+26.915, Keys.nodeNameHallwayFloorTwoE, 0),//special
+                    //ok so for directions for Hallway Floor Two F3, the only time would be if you were in those rooms... it's not effecieint to go in and out of f3. therefore, with that in mind, that it always originates from a room
+                    new Edge(39.09+10.433+26.915, Keys.nodeNameHallwayFloorTwoE, 0), //you need special types for rooms... thats the only way to do that.
                     new Edge(43.096, Keys.nodeNameHallwayFloorTwoF1,1), //special
                     new Edge(36.337+44.071, Keys.nodeNameHallwayFloorTwoG,2) //special
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoG, new Edge[]{
                     new Edge(38.158, Keys.nodeNameHallwayFloorTwoF1, 0), //special
                     new Edge(36.337+44.071, Keys.nodeNameHallwayFloorTwoF3,1), //special
-                    new Edge(61.909, Keys.nodeNameHallwayFloorTwoH1,2) //
+                    new Edge(61.909, Keys.nodeNameHallwayFloorTwoH1,2) //, done
                 }),
                 new Node(Keys.nodeNameHallwayFloorTwoH1, new Edge[]{
                     new Edge(61.909, Keys.nodeNameHallwayFloorTwoG, 0), //special
