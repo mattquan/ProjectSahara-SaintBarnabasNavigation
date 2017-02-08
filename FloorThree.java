@@ -46,7 +46,7 @@ public class FloorThree extends Graph{
                 //desk
                 new Node(Keys.nodeNameHallwayFloorThreeE, Keys.descriptionDeskFloorThree, new Edge[]{
                     new Edge(27.445,Keys.nodeNameElevatorFloorThree,0),
-                    new Edge(141.792, Keys.nodeNameHallwayFloorThreeA, 1)
+                    new Edge(141.792, Keys.nodeNameHallwayFloorThreeA, 1, Keys.directions_goAroundDesk + " and p" + Keys.directions_proceedStraight.substring(1) + ". " + Keys.directions_makeARightAtTheEndOfTheHallway + " and g" + Keys.directions_goThroughDoorway.substring(1)+". "+Keys.directions_makeALeftAtTheIntersection+". "+Keys.directions_continueStraight)
                 })
             ));          
                
