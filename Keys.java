@@ -825,14 +825,19 @@ final public static ArrayList<String> IPFloorFourDesk = new ArrayList<>(Arrays.a
     final public static ArrayList<String> IPFloorFourRoom4712 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.39",
-                "10.21.223.248"
+                "10.21.223.248",
+                "10.21.223.38",
+                "10.21.222.147",
+                "10.21.223.35"
         ));
     final public static ArrayList<String> IPFloorFourRoom4726 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.39",
                 "10.21.223.248",
                 "10.21.223.250",
-                "10.21.223.169"
+                "10.21.223.169",
+                "10.21.223.168",
+                "10.21.223.254"
         ));
     final public static ArrayList<String> IPFloorFourRoom4727 = new ArrayList<>(Arrays.asList(
  
@@ -898,187 +903,177 @@ final public static ArrayList<String> IPFloorFourDesk = new ArrayList<>(Arrays.a
                 "10.21.221.77",
                 "10.21.223.246"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4130 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4130 = new ArrayList<>(Arrays.asList(
  
                 "10.21.222.155",
                 "10.21.223.249",
                 "10.21.223.42"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4131 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4131 = new ArrayList<>(Arrays.asList(
  
                 "10.21.222.155",
                 "10.21.223.249",
                 "10.21.223.42"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4132 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4132 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.42",
                 "10.21.223.222"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4133 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4133 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.222"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4134 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4134 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.222",
                 "10.21.223.36"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4135 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4135 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.36",
                 "10.21.223.171"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4136 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4136 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.36",
                 "10.21.223.171"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4108 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4108 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.43",
                 "10.21.223.245",
                 "10.21.223.222",
                 "10.21.223.50"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4109 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4109 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.43",
                 "10.21.223.42",
                 "10.21.223.222"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4106 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4106 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.245",
                 "10.21.223.50",
                 "10.21.223.171"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4107 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4107 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.245",
                 "10.21.223.222",
                 "10.21.223.50"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4154 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4154 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.244"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4157 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4157 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.244",
                 "10.21.223.171"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4141A = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4141A = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.251"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4141B = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4141B = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.251"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4141C = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4141C = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.251"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4141D = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4141D = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.251"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4141E = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4141E = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.251"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4143A = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4143A = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.251"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4143E = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4143E = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.251"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4143C = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4143C = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.251"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4166 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4166 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.42"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4167 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4167 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.42"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4153A = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4153A = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.45"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4712 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4714 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.38",
                 "10.21.222.147",
                 "10.21.223.35"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4714 = new ArrayList<>(Arrays.asList(
- 
-                "10.21.223.38",
-                "10.21.222.147",
-                "10.21.223.35"
-        ));
-    final public static ArrayList<String> IPHallwayFloorFour4715 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4715 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.38",
                 "10.21.223.253",
                 "10.21.223.35"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4717 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4717 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.38",
                 "10.21.223.253"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4718 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4718 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.170",
                 "10.21.223.253"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4719 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4719 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.170"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4720 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4720 = new ArrayList<>(Arrays.asList(
  
                 "10.21.221.77",
                 "10.21.223.246"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4721 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4721 = new ArrayList<>(Arrays.asList(
  
                 "10.21.220.190",
                 "10.21.221.77",
                 "10.21.223.246"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4722 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4722 = new ArrayList<>(Arrays.asList(
  
                 "10.21.220.190",
                 "10.21.221.77"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4723 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4723 = new ArrayList<>(Arrays.asList(
  
                 "10.21.220.190"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4724 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4724 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.168",
                 "10.21.223.254"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4725 = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPFloorFourRoom4725 = new ArrayList<>(Arrays.asList(
  
                 "10.21.223.168",
                 "10.21.223.254"
         ));
-    final public static ArrayList<String> IPHallwayFloorFour4726 = new ArrayList<>(Arrays.asList(
- 
-                "10.21.223.168",
-                "10.21.223.254"
-        ));
+
 
 //floor two hallway names
 //hallway floor A is renamed somewhere else
@@ -1636,97 +1631,97 @@ final public static String nodeNameHallwayFloorTwoJ2 = "hallwayFloorTwoJ2";
             new Node(nodeNameRoom4102FloorFour, new Edge[]{
         new Edge(56.805, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
         new Edge(32.746, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
-    }),
+    },IPFloorFourRoom4102),
             //floor fourroom 4103 patient room
             new Node(nodeNameRoom4103FloorFour, new Edge[]{
         new Edge(36.648, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
         new Edge(52.903, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
-    }),
+    },IPFloorFourRoom4103),
             //floor fourroom 4104 patient room
             new Node(nodeNameRoom4104FloorFour, new Edge[]{
         new Edge(18.549, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
         new Edge(71.002, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
-    }),
+    },IPFloorFourRoom4104),
             //floor fourroom 4105 patient room
             new Node(nodeNameRoom4105FloorFour, new Edge[]{
         new Edge(9.141, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
         new Edge(80.410, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
-    }),
+    },IPFloorFourRoom4105),
             //floor fourroom 4106 patient room
             new Node(nodeNameRoom4106FloorFour, new Edge[]{
         new Edge(14.085, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnRight),
         new Edge(86.1, nodeNameHallwayFloorFourC1, 1, Keys.directions_turnLeft)
-    }),
+    },IPFloorFourRoom4106),
             //floor fourroom 4107 patient room
             new Node(nodeNameRoom4107FloorFour, new Edge[]{
         new Edge(71.335, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
         new Edge(20.113, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
-    }),
+    },IPFloorFourRoom4107),
             //floor fourroom 4108 patient room
             new Node(nodeNameRoom4108FloorFour, new Edge[]{
         new Edge(50, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
         new Edge(40, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
-    }),
+    },IPFloorFourRoom4108),
             //floor fourroom 4109 patient room
             new Node(nodeNameRoom4109FloorFour, new Edge[]{
         new Edge(44.578, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
         new Edge(47.842, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
-    }),
+    },IPFloorFourRoom4109),
             //floor fourroom 4110 patient room
             new Node(nodeNameRoom4110FloorFour, new Edge[]{
         new Edge(35.98, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
         new Edge(69.075, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
-    }),
+    },IPFloorFourRoom4110),
             //floor fourroom 4130 patient room
             new Node(nodeNameRoom4130FloorFour, new Edge[]{
         new Edge(18.275, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
         new Edge(80.901, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
-    }),
+    },IPFloorFourRoom4130),
             //floor fourroom 4131 patient room
             new Node(nodeNameRoom4131FloorFour, new Edge[]{
         new Edge(35.98, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
         new Edge(69.075, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
-    }),
+    },IPFloorFourRoom4131),
             //floor fourroom 4132 patient room
             new Node(nodeNameRoom4132FloorFour, new Edge[]{
         new Edge(44.578, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
         new Edge(47.842, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
-    }),
+    },IPFloorFourRoom4132),
             //floor fourroom 4133 patient room
             new Node(nodeNameRoom4133FloorFour, new Edge[]{
         new Edge(50, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
         new Edge(40, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
-    }),
+    },IPFloorFourRoom4133),
             //floor fourroom 4134 patient room
             new Node(nodeNameRoom4134FloorFour, new Edge[]{
         new Edge(71.335, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
         new Edge(20.113, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
-    }),
+    },IPFloorFourRoom4134),
             //floor fourroom 4135 patient room
             new Node(nodeNameRoom4135FloorFour, new Edge[]{
         new Edge(14.085, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnLeft),
         new Edge(86.1, nodeNameHallwayFloorFourC2, 1, Keys.directions_turnRight)
-    }),
+    },IPFloorFourRoom4135),
             //floor fourroom 4136 patient room
             new Node(nodeNameRoom4105FloorFour, new Edge[]{
         new Edge(9.141, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
         new Edge(80.410, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
-    }),
+    },IPFloorFourRoom4136),
             //floor fourroom 4137 patient room
             new Node(nodeNameRoom4104FloorFour, new Edge[]{
         new Edge(18.549, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
         new Edge(71.002, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
-    }),
+    },IPFloorFourRoom4137),
             //floor fourroom 4138 patient room
             new Node(nodeNameRoom4138FloorFour, new Edge[]{
         new Edge(36.648, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
         new Edge(52.903, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
-    }),
+    },IPFloorFourRoom4138),
             //floor fourroom 4139 patient room
             new Node(nodeNameRoom4102FloorFour, new Edge[]{
         new Edge(56.805, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
         new Edge(32.746, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
-    }),
+    },IPFloorFourRoom4139),
             //floorFourRestroom
             new Node(nodeNameRoom4235FloorFour, descriptionRoom4235FloorFour, new Edge[]{
         new Edge(12.719, nodeNameElevatorFloorFour, 0),
@@ -1738,7 +1733,7 @@ final public static String nodeNameHallwayFloorTwoJ2 = "hallwayFloorTwoJ2";
 new Node(nodeNameRoom4712FloorFour, new Edge[]{
         new Edge(23.921, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnRight),
         new Edge(38.225, nodeNameHallwayFloorFourD1, 1, Keys.directions_turnLeft)
-    }),
+    },IPFloorFourRoom4712),
 
 
 
@@ -1746,46 +1741,46 @@ new Node(nodeNameRoom4712FloorFour, new Edge[]{
 new Node(nodeNameRoom4714FloorFour, new Edge[]{
         new Edge(45, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnRight),
         new Edge(16, nodeNameHallwayFloorFourD1, 1, Keys.directions_turnLeft)
-    }),
+    },IPFloorFourRoom4714),
 
 
 //floor four room 4715, patient room
 new Node(nodeNameRoom4715FloorFour, new Edge[]{
         new Edge(51, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnRight),
         new Edge(10, nodeNameHallwayFloorFourD1, 1, Keys.directions_turnLeft)
-    }),
+    },IPFloorFourRoom4715),
 
 
 //floor four room 4717, patient room
 new Node(nodeNameRoom4717FloorFour, new Edge[]{
         new Edge(12.596, nodeNameHallwayFloorFourD1, 0, Keys.directions_turnRight),
         new Edge(17.067, nodeNameHallwayFloorFourE1, 1, Keys.directions_turnLeft)
-    }),
+    },IPFloorFourRoom4717),
 //floor four room 4718, patient room
 new Node(nodeNameRoom4718FloorFour, new Edge[]{
         new Edge(18, nodeNameHallwayFloorFourD1, 0, Keys.directions_turnRight),
         new Edge(12, nodeNameHallwayFloorFourE1, 1, Keys.directions_turnLeft)
-    }),
+    },IPFloorFourRoom4718),
 //floor four room 4719, patient room
 new Node(nodeNameRoom4719FloorFour, new Edge[]{
         new Edge(3, nodeNameHallwayFloorFourE1, 0, Keys.directions_exitTheRoom)
-    }),
+    },IPFloorFourRoom4719),
 //floor four room 4720, patient room
 new Node(nodeNameRoom4719FloorFour, new Edge[]{
         new Edge(3, nodeNameHallwayFloorFourE2, 0, Keys.directions_exitTheRoom)
-    }),
+    },IPFloorFourRoom4720),
 
 //floor four room 4721, patient room
 new Node(nodeNameRoom4721FloorFour, new Edge[]{
         new Edge(18, nodeNameHallwayFloorFourD2, 0, Keys.directions_turnLeft),
         new Edge(12, nodeNameHallwayFloorFourE2, 1, Keys.directions_turnRight)
-    }),
+    },IPFloorFourRoom4721),
 
 //floor four room 4722, patient room
 new Node(nodeNameRoom4717FloorFour, new Edge[]{
         new Edge(12.596, nodeNameHallwayFloorFourD2, 0, Keys.directions_turnLeft),
         new Edge(17.067, nodeNameHallwayFloorFourE2, 1, Keys.directions_turnRight)
-    }),
+    },IPFloorFourRoom4722),
 
 
 
@@ -1793,34 +1788,34 @@ new Node(nodeNameRoom4717FloorFour, new Edge[]{
 //floor four room 4723, patient room
 new Node(nodeNameRoom4723FloorFour, new Edge[]{
         new Edge(1, nodeNameHallwayFloorFourD2, 0, Keys.directions_exitTheRoom)
-    }),
+    },IPFloorFourRoom4723),
 
 //floor four room 4724, patient room
 new Node(nodeNameRoom4724FloorFour, new Edge[]{
         new Edge(51, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
         new Edge(10, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
-    }),
+    },IPFloorFourRoom4724),
 //floor four room 4725, patient room
 new Node(nodeNameRoom4725FloorFour, new Edge[]{
         new Edge(45, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
         new Edge(16, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
-    }),
+    },IPFloorFourRoom4725),
 //floor four room 4726, patient room
 new Node(nodeNameRoom4726FloorFour, new Edge[]{
         new Edge(23.921, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
         new Edge(38.225, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
-    }),
+    },IPFloorFourRoom4726),
 
 //floor four room 4727, patient room
 new Node(nodeNameRoom4727FloorFour, new Edge[]{
         new Edge(12.3, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
         new Edge(49.1, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
-    }),
+    },IPFloorFourRoom4727),
 
 //floor four room 4728, patient room
 new Node(nodeNameRoom4728FloorFour, new Edge[]{
         new Edge(1, nodeNameHallwayFloorFourC2, 0, Keys.directions_exitTheRoom),
-    }),
+    },IPFloorFourRoom4728),
 
             //groundFloorBurnOutpatient
             new Node(nodeNameRoomE00C6FloorGround, descriptionRoomE00C6FloorGround, new Edge[]{
