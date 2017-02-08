@@ -97,7 +97,7 @@ public class Keys {
                      }
                  }
                 
-                 if (node.equals(Keys.nodeNameHallwayFloorTwoE)) {
+                if (node.equals(Keys.nodeNameHallwayFloorTwoE)) {
                     if (postNode.equals(Keys.nodeNameHallwayFloorTwoA)) {
                         if (preNode.equals(Keys.nodeNameHallwayFloorTwoF1)) { //basically the same                           
                             return Keys.directions_continueStraight;
@@ -170,6 +170,140 @@ public class Keys {
                             //contiue striaght, pass the elevators, take the leftmost door.
                             return Keys.directions_turnLeft+". "+Keys.directions_continueStraight;
                         }
+                    } 
+                 }
+                 
+                 if (node.equals(Keys.nodeNameHallwayFloorTwoG)) {
+                    if (postNode.equals(Keys.nodeNameHallwayFloorTwoH1)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoF1)) {                         
+                            return Keys.directions_continueStraight;
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoF3)) {
+                            return Keys.directions_turnLeft+" and c"+Keys.directions_continueStraight.substring(1);
+                        }
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoF1)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoH1)) {
+                            return Keys.directions_continueStraight;
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoF3)) {
+                            return "Error: This should never happen. You done made a boo boo."; //more efficient to go F3--> F1 then all the way around
+                        } 
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoF3)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoF1)) {
+                            return "Error: Why would you go around, just go straight aiya.";
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoH1)) {
+                            return Keys.directions_makeARightAtTheNextIntersection;
+                        } 
+                    } 
+                 }
+                 
+                 if (node.equals(Keys.nodeNameHallwayFloorTwoH1)) {
+                    if (postNode.equals(Keys.nodeNameHallwayFloorTwoG)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoH2)) {                         
+                            return Keys.directions_turnLeft+" and c"+Keys.directions_continueStraight.substring(1);
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoI1)) {
+                            return Keys.directions_continueStraight;
+                        }
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoH2)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoG)) {
+                            return Keys.directions_makeARightAtTheNextIntersection;
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoI1)) {
+                            return Keys.directions_makeALeftAtTheNextIntersection;
+                        } 
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoI1)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoG)) {
+                            return Keys.directions_continueStraight;
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoH2)) {
+                            return Keys.directions_turnRight + " and c"+Keys.directions_continueStraight.substring(1);
+                        } 
+                    } 
+                 }
+                 if (node.equals(Keys.nodeNameHallwayFloorTwoH2)) {
+                    if (postNode.equals(Keys.nodeNameHallwayFloorTwoF2)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoH1)) {                         
+                            return Keys.directions_turnRight+" and c"+Keys.directions_continueStraight.substring(1);
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoI2)) {
+                            return Keys.directions_continueStraight;
+                        }
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoH1)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoF2)) {
+                            return Keys.directions_makeALeftAtTheNextIntersection;
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoI2)) {
+                            return Keys.directions_makeARightAtTheNextIntersection;
+                        } 
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoI2)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoF2)) {
+                            return Keys.directions_continueStraight;
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoH1)) {
+                            return Keys.directions_turnLeft + " and c"+Keys.directions_continueStraight.substring(1);
+                        } 
+                    } 
+                 }
+                 
+                 if (node.equals(Keys.nodeNameHallwayFloorTwoI1)) {
+                    if (postNode.equals(Keys.nodeNameHallwayFloorTwoH1)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoI2)) {                         
+                            return Keys.directions_turnLeft+" and c"+Keys.directions_continueStraight.substring(1);
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoJ1)) {
+                            return Keys.directions_continueStraight;
+                        }
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoI2)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoH1)) {
+                            return Keys.directions_makeARightAtTheNextIntersection;
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoJ1)) {
+                            return Keys.directions_makeALeftAtTheNextIntersection;
+                        } 
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoJ1)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoH1)) {
+                            return Keys.directions_continueStraight;
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoI2)) {
+                            return Keys.directions_turnRight + " and c"+Keys.directions_continueStraight.substring(1);
+                        } 
+                    } 
+                 }
+                 
+                 if (node.equals(Keys.nodeNameHallwayFloorTwoI2)) {
+                    if (postNode.equals(Keys.nodeNameHallwayFloorTwoH2)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoI1)) {                         
+                            return Keys.directions_turnRight+" and c"+Keys.directions_continueStraight.substring(1);
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoJ2)) {
+                            return Keys.directions_continueStraight;
+                        }
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoI1)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoH2)) {
+                            return Keys.directions_makeALeftAtTheNextIntersection;
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoJ2)) {
+                            return Keys.directions_makeARightAtTheNextIntersection;
+                        } 
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoJ2)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoH2)) {
+                            return Keys.directions_continueStraight;
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoI1)) {
+                            return Keys.directions_turnLeft + " and c"+Keys.directions_continueStraight.substring(1);
+                        } 
                     } 
                  }
                  
