@@ -187,7 +187,7 @@ public class Keys {
                             return Keys.directions_continueStraight;
                         } 
                         else if (preNode.equals(Keys.nodeNameHallwayFloorTwoF3)) {
-                            return "Error: This should never happen. You done made a boo boo."; //more efficient to go F3--> F1 then all the way around
+                            return "Error: This should never happen. You done made a boo boo."; //more efficient to go F3--> F1 than all the way around
                         } 
                     } 
                     else if (postNode.equals(Keys.nodeNameHallwayFloorTwoF3)) {
@@ -553,12 +553,6 @@ public class Keys {
     final public static String directions_exitClinicalLabAndTurnLeftAndFollowHallwayUntilIntersection = "Exit the clinical lab and turn left. Follow the hallway until you reach the intersection.";
     final public static String directions_exitMedicalRecordsAndTurnLeftAndContinueStraight = "Exit the medical records and turn left. Continue straight.";
 
-    //fourth floor directions
-    final public static String directions_passThroughTheArchwayAndContinueStraightPassTheEleveatorsThereShouldBeTwoHallwaysInFrontOfYou = "Pass through the archway and continue straight. Pass the eleveators. There should be two hallways in front ofY you";
-    final public static String directions_goThroughTheLeftDoorway = "Go through the left doorway";
-    final public static String directions_goThroughTheRightDoorway = "Go through the right doorway";
-    
-    
     //second floor directions
     final public static String directions_continueStraightPassingByTheFirstSetOfElevatorsContinueStraight = "Continue straight, passing by a cluster of elevators. Continue straight, into the fourth floor lobby. The elevators are upahead, next to the windows.";
     final public static String directions_walkStraightPastTheFirstSetOfElevatorsContinueStraightAndTakeTheElevatorsAtEndOfHallway = "Walk straight, past the first set of elevators. Continue straight and take the elevators at the end of the hallway.";
@@ -587,6 +581,18 @@ public class Keys {
     final public static String directions_continueDownTheHallway = "Continue down the hallway";
     final public static String directions_goThroughTheLeftmostHallway = "Go through the leftmost hallway";    
     final public static String directions_goThroughTheRightmostHallway = "Go through the rightmost hallway";
+    
+    //third floor directions
+    final public static String directions_goAroundDesk = "Walk around the desk";
+    final public static String directions_goThroughDoorway = "Go through the doorway";
+    final public static String directions_makeALeftAtTheIntersection = "Make a left at the intersection";
+    
+
+    //fourth floor directions
+    final public static String directions_passThroughTheArchwayAndContinueStraightPassTheEleveatorsThereShouldBeTwoHallwaysInFrontOfYou = "Pass through the archway and continue straight. Pass the eleveators. There should be two hallways in front ofY you";
+    final public static String directions_goThroughTheLeftDoorway = "Go through the left doorway";
+    final public static String directions_goThroughTheRightDoorway = "Go through the right doorway";
+    
     //floor ground
     //names
     final public static String nodeNameHallwayFloorGroundA = "hallwayFloorGroundA";
