@@ -124,6 +124,55 @@ public class Keys {
                     } 
                  }
                  
+                 
+                 if (node.equals(Keys.nodeNameHallwayFloorTwoF1)) {
+                    if (postNode.equals(Keys.nodeNameHallwayFloorTwoE)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoF2)) {                           
+                            return Keys.directions_turnLeft+". " +Keys.directions_continueStraight; //because that way, we say that there IS an intersection
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoF3)) {
+                            return Keys.directions_turnRight+" and c" +Keys.directions_continueStraight.substring(1);
+                        }
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoG)) {
+                            return Keys.directions_continueStraight+". "+Keys.directions_continueStraight; //because it passes two intersections
+                        }
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoF2)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoE)) {                           
+                            return Keys.directions_continueStraight +". "+ Keys.directions_makeARightAtTheNextIntersection;
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoF3)) {
+                            return Keys.directions_turnLeft+" and then t"+Keys.directions_turnRight.substring(1); //this is a little different, so hopefully post production doesn't touch cuz this works just fine
+                        }
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoG)) {
+                            return Keys.directions_makeALeftAtTheNextIntersection;
+                        }
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoF3)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoF2)) { //basically the same                           
+                            return Keys.directions_turnLeft+" and then t"+Keys.directions_turnRight.substring(1); //this is a little different, so hopefully post production doesn't touch cuz this works just fine
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoE)) {
+                            return "Guys, this should never happen, because this isn't the quickest path.";
+                        }
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoG)) {
+                            return Keys.directions_continueStraight+". "+Keys.directions_turnRight;//cont. straight first, becuase you need to pass one intersection
+                        }
+                    } 
+                    else if (postNode.equals(Keys.nodeNameHallwayFloorTwoG)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoF2)) {                   
+                            return Keys.directions_turnRight + " and c"+Keys.directions_continueStraight.substring(1);
+                        } 
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoE)) {
+                            return Keys.directions_continueStraight; //only pass one, becuase if you went from e to f1, you already said continue straight
+                        }
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorTwoF3)) {
+                            //contiue striaght, pass the elevators, take the leftmost door.
+                            return Keys.directions_turnLeft+". "+Keys.directions_continueStraight;
+                        }
+                    } 
+                 }
+                 
                 break;
             case "FloorThree":
                 //logic for floor three
