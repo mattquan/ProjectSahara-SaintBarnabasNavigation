@@ -753,7 +753,332 @@ final public static String nodeNameRoom4726FloorFour = "room4726FloorFour";
 
 final public static String nodeNameRoom4727FloorFour = "room4727FloorFour";
 final public static String nodeNameRoom4728FloorFour = "room4728FloorFour";
-
+    
+// floor four IPs
+final public static ArrayList<String> IPFloorFourDesk = new ArrayList<>(Arrays.asList(
+        
+                "10.21.223.64",
+                "10.21.223.210"
+                
+        ));
+    final public static ArrayList<String> IPFloorFourElevators = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.64",
+                "10.21.223.210"
+        ));
+    final public static ArrayList<String> IPFloorFourRoom4102 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.46",
+                "10.21.223.244",
+                "10.21.223.45"
+        ));
+    final public static ArrayList<String> IPFloorFourRoom4103 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.46",
+                "10.21.223.247",
+                "10.21.223.244",
+                "10.21.223.45"
+        ));
+    final public static ArrayList<String> IPFloorFourRoom4104 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.46",
+                "10.21.223.247",
+                "10.21.223.171"
+        ));
+    final public static ArrayList<String> IPFloorFourRoom4105 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.247",
+                "10.21.223.171"
+        ));
+    final public static ArrayList<String> IPFloorFourRoom4137 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.46",
+                "10.21.223.171",
+                "10.21.223.37"
+        ));
+    final public static ArrayList<String> IPFloorFourRoom4138 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.46",
+                "10.21.223.244",
+                "10.21.223.37"
+        ));
+    final public static ArrayList<String> IPFloorFourRoom4139 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.46",
+                "10.21.223.244",
+                "10.21.223.251",
+                "10.21.223.37"
+        ));
+    final public static ArrayList<String> IPFloorFourRoom4110 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.43",
+                "10.21.223.39",
+                "10.21.223.248",
+                "10.21.223.42"
+        ));
+    final public static ArrayList<String> IPFloorFourRoom4112 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.39",
+                "10.21.223.248",
+                "10.21.222.147"
+        ));
+    final public static ArrayList<String> IPFloorFourRoom4712 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.39",
+                "10.21.223.248"
+        ));
+    final public static ArrayList<String> IPFloorFourRoom4726 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.39",
+                "10.21.223.248",
+                "10.21.223.250",
+                "10.21.223.169"
+        ));
+    final public static ArrayList<String> IPFloorFourRoom4727 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.39",
+                "10.21.223.248",
+                "10.21.223.250",
+                "10.21.223.169"
+        ));
+    final public static ArrayList<String> IPFloorFourRoom4728 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.39",
+                "10.21.222.155",
+                "10.21.223.248",
+                "10.21.223.249",
+                "10.21.223.250",
+                "10.21.223.169"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFourA = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.55"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFourB1 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.245",
+                "10.21.223.50",
+                "10.21.223.36"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFourB2 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.245",
+                "10.21.223.50",
+                "10.21.223.36"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFourC1 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.222.155",
+                "10.21.223.248",
+                "10.21.223.249",
+                "10.21.223.250"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFourC2 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.222.155",
+                "10.21.223.248",
+                "10.21.223.249",
+                "10.21.223.250",
+                "10.21.223.169"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFourD1 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.220.190"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFourD2 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.220.190"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFourE1 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.170"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFourE2 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.221.77",
+                "10.21.223.246"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4130 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.222.155",
+                "10.21.223.249",
+                "10.21.223.42"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4131 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.222.155",
+                "10.21.223.249",
+                "10.21.223.42"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4132 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.42",
+                "10.21.223.222"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4133 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.222"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4134 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.222",
+                "10.21.223.36"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4135 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.36",
+                "10.21.223.171"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4136 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.36",
+                "10.21.223.171"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4108 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.43",
+                "10.21.223.245",
+                "10.21.223.222",
+                "10.21.223.50"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4109 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.43",
+                "10.21.223.42",
+                "10.21.223.222"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4106 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.245",
+                "10.21.223.50",
+                "10.21.223.171"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4107 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.245",
+                "10.21.223.222",
+                "10.21.223.50"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4154 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.244"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4157 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.244",
+                "10.21.223.171"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4141A = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.251"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4141B = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.251"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4141C = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.251"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4141D = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.251"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4141E = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.251"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4143A = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.251"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4143E = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.251"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4143C = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.251"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4166 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.42"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4167 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.42"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4153A = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.45"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4712 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.38",
+                "10.21.222.147",
+                "10.21.223.35"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4714 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.38",
+                "10.21.222.147",
+                "10.21.223.35"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4715 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.38",
+                "10.21.223.253",
+                "10.21.223.35"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4717 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.38",
+                "10.21.223.253"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4718 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.170",
+                "10.21.223.253"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4719 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.170"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4720 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.221.77",
+                "10.21.223.246"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4721 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.220.190",
+                "10.21.221.77",
+                "10.21.223.246"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4722 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.220.190",
+                "10.21.221.77"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4723 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.220.190"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4724 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.168",
+                "10.21.223.254"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4725 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.168",
+                "10.21.223.254"
+        ));
+    final public static ArrayList<String> IPHallwayFloorFour4726 = new ArrayList<>(Arrays.asList(
+ 
+                "10.21.223.168",
+                "10.21.223.254"
+        ));
 
 //floor two hallway names
 //hallway floor A is renamed somewhere else
