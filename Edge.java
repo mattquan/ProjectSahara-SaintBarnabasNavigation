@@ -51,8 +51,8 @@ public class Edge {
         return IPAddresses;
     }
 
-    public void setIPAddresses(ArrayList<String> macAddresses) {
-        this.IPAddresses = macAddresses;
+    public void setIPAddresses(ArrayList<String> APIPs) {
+        this.IPAddresses = APIPs;
     }
     public int getIndex(){
         return index;
