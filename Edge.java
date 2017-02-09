@@ -15,7 +15,7 @@ public class Edge {
     private String targetNode;
     private int index;
     private String direction;
-    
+    private ArrayList<String> IPAddresses;
     
     public Edge(double w, String n, int i){
         weight = w;
@@ -39,6 +39,13 @@ public class Edge {
     }
     public void setTargetNode(String n){
         targetNode = n;
+    }
+    public ArrayList<String> getIPAddresses() {
+        return IPAddresses;
+    }
+
+    public void setIPAddresses(ArrayList<String> macAddresses) {
+        this.IPAddresses = macAddresses;
     }
     public int getIndex(){
         return index;
