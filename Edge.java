@@ -28,6 +28,13 @@ public class Edge {
         index = i;
         direction = d;
     }
+    public Edge(double w, String n, int i, String d, ArrayList<String> ip){
+        weight = w;
+        targetNode = n;
+        index = i;
+        direction = d;
+        IPAddresses = ip;
+    }
     public double getWeight(){
         return weight;
     }
