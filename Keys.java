@@ -662,7 +662,22 @@ public class Keys {
             "Burn Step Down Unit",
             "Department of Emergency Medicine"
     ));
-
+final public static String nodeNameRoom2144AFloorTwo =  "room2144AFloorTwo";
+final public static String nodeNameRoom2101FloorTwo =  "room2101FloorTwo";
+final public static String nodeNameRoom2102FloorTwo=  "room2102FloorTwo";
+final public static String nodeNameRoom2103FloorTwo= "room2103FloorTwo";
+final public static String nodeNameRoom2104FloorTwo=  "room2104FloorTwo";
+final public static String nodeNameRoom2105FloorTwo=  "room2105FloorTwo";
+final public static String nodeNameRoom2106FloorTwo=  "room2106FloorTwo";
+final public static String nodeNameRoom2107FloorTwo=  "room2107FloorTwo";
+final public static String nodeNameRoom2108AND2109AND2110AFloorTwo= "room2108AND2109AND2110AFloorTwo";
+final public static String nodeNameRoom2110FloorTwo=  "room2110FloorTwo";
+final public static String nodeNameRoom2111FloorTwo=  "room2111FloorTwo";
+final public static String nodeNameRoom2112FloorTwo=  "room2112FloorTwo";
+final public static String nodeNameRoom2154FloorTwo =  "room2154FloorTwo";
+final public static String nodeNameRoom2143FloorTwo =   "room2143FloorTwo";
+final public static String nodeNameRoom2142FloorTwo =  "room2142FloorTwo";
+    final public static String nodeNameRoom2155FloorTwo = "room2155FloorTwo";
     //floor three names + descriptions
     final public static String nodeNameElevatorFloorThree = "elevatorFloorThree";
     final public static String nodeNameHallwayFloorThreeA = "hallwayFloorThreeA";
@@ -1595,6 +1610,87 @@ final public static String nodeNameHallwayFloorTwoJ2 = "hallwayFloorTwoJ2";
             new Node(nodeNameRoom2350AFloorTwo, descriptionRoom2350AFloorTwo, new Edge[]{
         new Edge(9.679, nodeNameElevatorFloorTwo, 0),
         new Edge(9.581, nodeNameHallwayFloorTwoA, 1)
+    }),
+                        //patient room
+            new Node(nodeNameRoom2101FloorTwo, new Edge[]{
+        new Edge(41.457, nodeNameHallwayFloorTwoE, 0 ),
+        new Edge(22.805, nodeNameHallwayFloorTwoF3, 1)
+    }),
+            //patient room
+            new Node(nodeNameRoom2102FloorTwo, new Edge[]{
+        new Edge(57.9, nodeNameHallwayFloorTwoE, 0 ),
+        new Edge(22.995, nodeNameHallwayFloorTwoF3, 1)
+    }),
+            //patient room
+             new Node(nodeNameRoom2103FloorTwo, new Edge[]{
+        new Edge(84, nodeNameHallwayFloorTwoE, 0 ),
+        new Edge(16.464, nodeNameHallwayFloorTwoF3, 1)
+    }),
+             //patient room
+             new Node(nodeNameRoom2104FloorTwo, new Edge[]{
+        new Edge(55.875+40, nodeNameHallwayFloorTwoE, 0 ),
+        new Edge(12.396, nodeNameHallwayFloorTwoF3, 1)
+    }),
+             //patient room
+             new Node(nodeNameRoom2105FloorTwo, new Edge[]{
+        new Edge(55.9+37, nodeNameHallwayFloorTwoG, 0 ),
+        new Edge(15.528, nodeNameHallwayFloorTwoF3, 1)
+    }),
+             //patient room
+              new Node(nodeNameRoom2106FloorTwo, new Edge[]{
+        new Edge(55.828+20.724, nodeNameHallwayFloorTwoG, 0 ),
+        new Edge(23.132, nodeNameHallwayFloorTwoF3, 1)
+    }),
+              //patient room
+              new Node(nodeNameRoom2107FloorTwo, new Edge[]{
+        new Edge(56.632, nodeNameHallwayFloorTwoG, 0 ),
+        new Edge(37.5, nodeNameHallwayFloorTwoF3, 1)
+    }),
+              //HEY, nodes 2108 and 2109 are connected to 2110A
+              new Node(nodeNameRoom2108AND2109AND2110AFloorTwo, new Edge[]{
+        new Edge(52.5, nodeNameHallwayFloorTwoG, 0 ),
+        new Edge(37.5, nodeNameHallwayFloorTwoF3, 1)
+    }),
+              //patient room
+               new Node(nodeNameRoom2110FloorTwo, new Edge[]{
+        new Edge(41.493, nodeNameHallwayFloorTwoG, 0 ),
+        new Edge(44.734+3, nodeNameHallwayFloorTwoF3, 1)
+    }),
+               //patient room
+               new Node(nodeNameRoom2111FloorTwo, new Edge[]{
+        new Edge(34.469, nodeNameHallwayFloorTwoG, 0 ),
+        new Edge(41.092+16.5, nodeNameHallwayFloorTwoF3, 1)
+    }),
+               //patient room
+               new Node(nodeNameRoom2112FloorTwo, new Edge[]{
+        new Edge(15.573, nodeNameHallwayFloorTwoG, 0 ),
+        new Edge(30.255+45, nodeNameHallwayFloorTwoF3, 1)
+    }),
+               //floor tworoom 2142 office             
+            new Node(nodeNameRoom2142FloorTwo, new Edge[]{
+        new Edge(2, nodeNameHallwayFloorTwoE, 0 ),
+        new Edge(37, nodeNameHallwayFloorTwoF1, 1)
+    }),
+                //floor tworoom 2143  Burn rehabilitation office             
+            new Node(nodeNameRoom2143FloorTwo, new Edge[]{
+        new Edge(18.741, nodeNameHallwayFloorTwoE, 0,Keys.directions_turnRight ),
+        new Edge(28, nodeNameHallwayFloorTwoF1, 1)
+    }),
+               //floor tworoom 2144 patient room Burn rehabilitation office             
+            new Node(nodeNameRoom2144AFloorTwo, new Edge[]{
+        new Edge(1.041, nodeNameHallwayFloorTwoE, 0 ),
+        new Edge(41.457+22.805, nodeNameHallwayFloorTwoF3, 1)
+    }),
+            //floor tworoom 2154, Office, need to look up who is in here             
+            new Node(nodeNameRoom2154FloorTwo, new Edge[]{
+        new Edge(1.041+2.969, nodeNameHallwayFloorTwoE, 0 ),
+        new Edge(41.457+22.805-2.969, nodeNameHallwayFloorTwoF3, 1)
+    }),
+            //BICU treatment!!!
+             new Node(nodeNameRoom2155FloorTwo, new Edge[]{
+        new Edge(13.5, nodeNameHallwayFloorTwoG, 0 ),
+        new Edge(24.7, nodeNameHallwayFloorTwoF3, 1),
+        new Edge(13.299, nodeNameHallwayFloorTwoF1, 2)
     }),
             //EastWingFloorTwo 244
             new Node(nodeNameRoom244EastWingFloorTwo, descriptionRoom244EastWingFloorTwo, new Edge[]{
