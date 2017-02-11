@@ -663,7 +663,7 @@ public class Keys {
     final public static String directions_continueDownTheHallway = "Continue down the hallway";
     final public static String directions_goThroughTheLeftmostHallway = "Go through the leftmost hallway";    
     final public static String directions_goThroughTheRightmostHallway = "Go through the rightmost hallway";
-    
+    final public static String directions_yourDestinationIsOnYourRight = "yourDestinationIsOnYourRight";
     //third floor directions
     final public static String directions_goAroundDesk = "Walk around the desk";
     final public static String directions_goThroughDoorway = "Go through the doorway";
@@ -825,6 +825,12 @@ final public static String nodeNameRoom2314FloorTwo = "room2314FloorTwo";
 final public static String nodeNameRoom2402FloorTwo = "room2402FloorTwo";
 final public static String nodeNameRoom2403FloorTwo = "room2403FloorTwo";
 final public static String nodeNameRoom2430AND2433AND2434FloorTwo= "room2430AND2433AND2434FloorTwo";
+
+
+final public static String nodeNameRoom2415FloorTwo = "room2415FloorTwo";
+final public static String nodeNameRoom2416FloorTwo = "room2416FloorTwo";
+
+
 
 
 
@@ -2022,7 +2028,16 @@ final public static String nodeNameRoom2430AND2433AND2434FloorTwo= "room2430AND2
          new Edge(50+25.29+79.016+82.817-5.332, nodeNameHallwayFloorTwoC, 0 ),
          new Edge(5.332, nodeNameHallwayFloorTwoD, 1),
      }),
-              //TODO start at 2416
+              //patient room
+              new Node(nodeNameRoom2415FloorTwo, new Edge[]{
+         new Edge(25.616, nodeNameHallwayFloorTwoD, 0,Keys.directions_turnLeft+". "+Keys.directions_yourDestinationIsOnYourRight),
+     }),
+              //patient room
+              new Node(nodeNameRoom2416FloorTwo, new Edge[]{
+         new Edge(22, nodeNameHallwayFloorTwoD, 0,Keys.directions_turnLeft+". "+Keys.directions_yourDestinationIsOnYourRight),
+     }),
+               
+              //TODO start at 2414
               //office and phys. office and consult room
               new Node(nodeNameRoom2430AND2433AND2434FloorTwo, new Edge[]{
          new Edge(37.857, nodeNameHallwayFloorTwoA, 0 ),
