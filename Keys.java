@@ -309,7 +309,89 @@ public class Keys {
                  
                 break;
             case "FloorThree":
-                //logic for floor three
+                 if (node.equals(Keys.nodeNameHallwayFloorThreeA)) {
+                    if (postNode.equals(Keys.nodeNameHallwayFloorThreeE)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorThreeB)) {
+                            return Keys.directions_turnRight+". "+Keys.directions_continueStraight+" and g"+Keys.directions_goThroughDoorway.substring(1)+". "+Keys.directions_turnRight+". "+Keys.directions_continueStraight;
+                        } else if (preNode.equals(Keys.nodeNameHallwayFloorThreeC1)) {
+                            return Keys.directions_continueStraight+". "+Keys.directions_goThroughDoorway+". "+Keys.directions_turnRight+". "+Keys.directions_continueStraight;
+                        }
+                    } else if (postNode.equals(Keys.nodeNameHallwayFloorThreeB)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorThreeE)) {
+                            return Keys.directions_turnLeft;
+                        } else if (preNode.equals(Keys.nodeNameHallwayFloorThreeC1)) {
+                            return Keys.directions_turnRight;
+                        }
+                    } else if (postNode.equals(Keys.nodeNameHallwayFloorThreeC1)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorThreeB)) {
+                            return Keys.directions_turnLeft+" and c" +Keys.directions_continueStraight.substring(1)+". "+Keys.directions_makeALeftAtTheEndOfTheHallway+". "+Keys.directions_makeARightAtTheFirstIntersection+" and c" +Keys.directions_continueStraight.substring(1)+Keys.directions_makeARightAtTheNextIntersection;
+                        } else if (preNode.equals(Keys.nodeNameHallwayFloorThreeE)) {
+                            return Keys.directions_continueStraight+". "+Keys.directions_makeALeftAtTheEndOfTheHallway+". "+Keys.directions_makeARightAtTheFirstIntersection+" and c" +Keys.directions_continueStraight.substring(1)+Keys.directions_makeARightAtTheNextIntersection;
+                        }
+                    }
+                }
+                
+                //node B = no hard code logic b/c it only goes to A and other rooms? 
+                if(node.equals(Keys.nodeNameHallwayFloorThreeC1)){
+                    if(postNode.equals(Keys.nodeNameHallwayFloorThreeA)){
+                        if(preNode.equals(Keys.nodeNameHallwayFloorThreeC2)){
+                            return Keys.directions_turnRight+". "+Keys.directions_continueStraight+" and m"+Keys.directions_makeARightAtTheEndOfTheHallway+" and c" +Keys.directions_continueStraight.substring(1)+". "+Keys.directions_makeALeftAtTheFirstIntersection+" and c"+Keys.directions_continueStraight.substring(1)+". "+Keys.directions_makeALeftAtTheFirstIntersection+" and c"+Keys.directions_continueStraight.substring(1)+". "+Keys.directions_makeARightAtTheEndOfTheHallway+" and c"+Keys.directions_continueStraight.substring(1);
+                        } else if(preNode.equals(Keys.nodeNameHallwayFloorThreeD1)){
+                            return Keys.directions_continueStraight+" and m"+Keys.directions_makeARightAtTheEndOfTheHallway+" and c" +Keys.directions_continueStraight.substring(1)+". "+Keys.directions_makeALeftAtTheFirstIntersection+" and c"+Keys.directions_continueStraight.substring(1)+". "+Keys.directions_makeALeftAtTheFirstIntersection+" and c"+Keys.directions_continueStraight.substring(1)+". "+Keys.directions_makeARightAtTheEndOfTheHallway+" and c"+Keys.directions_continueStraight.substring(1);
+                        }   
+                    } else if(postNode.equals(Keys.nodeNameHallwayFloorThreeC2)){
+                        if(preNode.equals(Keys.nodeNameHallwayFloorThreeA)){
+                            return Keys.directions_turnLeft;
+                        } else if(preNode.equals(Keys.nodeNameHallwayFloorThreeD1)){
+                            return Keys.directions_turnRight;
+                        }
+                    } else if(postNode.equals(Keys.nodeNameHallwayFloorThreeD1)){
+                        if(preNode.equals(Keys.nodeNameHallwayFloorThreeA)){
+                            return Keys.directions_continueStraight;
+                        } else if(preNode.equals(Keys.nodeNameHallwayFloorThreeC2)){
+                            return Keys.directions_turnLeft;
+                        }
+                    }
+                }
+
+                //hard code logic for node C2 maybe not necessary? 
+                if(node.equals(Keys.nodeNameHallwayFloorThreeC2)){
+                    if(postNode.equals(Keys.nodeNameHallwayFloorThreeC1)){
+                        if(preNode.equals(Keys.nodeNameHallwayFloorThreeD2)){
+                            return Keys.directions_turnLeft;
+                        }
+                    } else if(postNode.equals(Keys.nodeNameHallwayFloorThreeD2)){
+                        if(preNode.equals(Keys.nodeNameHallwayFloorThreeC1)){
+                            return Keys.directions_turnRight;
+                        }
+                    }
+                }
+
+                //not necessary?
+                if(node.equals(Keys.nodeNameHallwayFloorThreeD1)){
+                    if(postNode.equals(Keys.nodeNameHallwayFloorThreeC1)){
+                        if(preNode.equals(Keys.nodeNameHallwayFloorThreeD2)){
+                            return Keys.directions_turnRight;
+                        }
+                    } else if(postNode.equals(Keys.nodeNameHallwayFloorThreeD2)){
+                        if(preNode.equals(Keys.nodeNameHallwayFloorThreeC1)){
+                            return Keys.directions_turnLeft;
+                        }
+                    }
+                }
+
+                //not necessary?
+                if(node.equals(Keys.nodeNameHallwayFloorThreeD2)){
+                    if(postNode.equals(Keys.nodeNameHallwayFloorThreeC2)){
+                        if(preNode.equals(Keys.nodeNameHallwayFloorThreeD1)){
+                            return Keys.directions_turnLeft;
+                        }
+                    } else if(postNode.equals(Keys.nodeNameHallwayFloorThreeD1)){
+                        if(preNode.equals(Keys.nodeNameHallwayFloorThreeC2)){
+                            return Keys.directions_turnRight;
+                        }
+                    }
+                }
                 break;
             case "FloorFour":
                 //logic for floor four
@@ -601,16 +683,16 @@ public class Keys {
      ));
     final public static String nodeNameHallwayFloorGroundB = "hallwayFloorGroundB";
     final public static String nodeNameHallwayFloorGroundC = "hallwayFloorGroundC";
-     final public static ArrayList<String> IPhallwayFloorGroundC = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPhallwayFloorGroundC = new ArrayList<>(Arrays.asList(
          "10.21.222.12"
             ));
     final public static String nodeNameHallwayEastWingFloorGround = "eastWingFloorGround";
     final public static String nodeNameElevatorFloorGround = "elevatorFloorGround";
-     final public static ArrayList<String> IPelevatorFloorGround = new ArrayList<>(Arrays.asList(
+    final public static ArrayList<String> IPelevatorFloorGround = new ArrayList<>(Arrays.asList(
             "10.21.222.8",
              "10.21.222.18",
              "10.21.222.35"
-     ));
+    ));
     final public static String nodeNameElevatorEastWingFloorGround = "elevatorEastWingFloorGround";
     //descriptions
     final public static ArrayList<String> descriptionEastWingFloorGround = new ArrayList<>(Arrays.asList(
@@ -662,60 +744,23 @@ public class Keys {
             "Burn Step Down Unit",
             "Department of Emergency Medicine"
     ));
-final public static String nodeNameRoom2144AFloorTwo =  "room2144AFloorTwo";
-final public static String nodeNameRoom2101FloorTwo =  "room2101FloorTwo";
-final public static String nodeNameRoom2102FloorTwo=  "room2102FloorTwo";
-final public static String nodeNameRoom2103FloorTwo= "room2103FloorTwo";
-final public static String nodeNameRoom2104FloorTwo=  "room2104FloorTwo";
-final public static String nodeNameRoom2105FloorTwo=  "room2105FloorTwo";
-final public static String nodeNameRoom2106FloorTwo=  "room2106FloorTwo";
-final public static String nodeNameRoom2107FloorTwo=  "room2107FloorTwo";
-final public static String nodeNameRoom2108AND2109AND2110AFloorTwo= "room2108AND2109AND2110AFloorTwo";
-final public static String nodeNameRoom2110FloorTwo=  "room2110FloorTwo";
-final public static String nodeNameRoom2111FloorTwo=  "room2111FloorTwo";
-final public static String nodeNameRoom2112FloorTwo=  "room2112FloorTwo";
-final public static String nodeNameRoom2154FloorTwo =  "room2154FloorTwo";
-final public static String nodeNameRoom2143FloorTwo =   "room2143FloorTwo";
-final public static String nodeNameRoom2142FloorTwo =  "room2142FloorTwo";
-final public static String nodeNameRoom2155FloorTwo = "room2155FloorTwo";
-final public static String nodeNameRoom2712FloorTwo=  "room2712FloorTwo";
-final public static String nodeNameRoom2711FloorTwo=  "room2711FloorTwo";
-final public static String nodeNameRoom2714FloorTwo=  "room2714FloorTwo";
-final public static String nodeNameRoom2715FloorTwo=  "room2715FloorTwo";
-final public static String nodeNameRoom2716FloorTwo=  "room2716FloorTwo";
-final public static String nodeNameRoom2717FloorTwo=  "room2717FloorTwo";
-final public static String nodeNameRoom2718FloorTwo=  "room2718FloorTwo";
-final public static String nodeNameRoom2719FloorTwo=  "room2719FloorTwo";
-final public static String nodeNameRoom2720FloorTwo=  "room2720FloorTwo";
-final public static String nodeNameRoom2721FloorTwo=  "room2721FloorTwo";
-final public static String nodeNameRoom2722FloorTwo=  "room2722FloorTwo";
-final public static String nodeNameRoom2723FloorTwo=  "room2723FloorTwo";
-final public static String nodeNameRoom2724FloorTwo=  "room2724FloorTwo";
-final public static String nodeNameRoom2725FloorTwo=  "room2725FloorTwo";
-final public static String nodeNameRoom2726FloorTwo=  "room2726FloorTwo";
-final public static String nodeNameRoom2727FloorTwo=  "room2727FloorTwo";
-final public static String nodeNameRoom2729FloorTwo=  "room2729FloorTwo";
-final public static String nodeNameRoom2730FloorTwo=  "room2730FloorTwo";
-
-
-
-final public static String nodeNameRoom2116FloorTwo=  "room2116FloorTwo";
-final public static String nodeNameRoom2117FloorTwo=  "room2117FloorTwo";
-final public static String nodeNameRoom2118FloorTwo=  "room2118FloorTwo";
-final public static String nodeNameRoom2119FloorTwo=  "room2119FloorTwo";
-final public static String nodeNameRoom2120FloorTwo=  "room2120FloorTwo";
-final public static String nodeNameRoom2121FloorTwo=  "room2121FloorTwo";
-final public static String nodeNameRoom2122FloorTwo=  "room2122FloorTwo";
-final public static String nodeNameRoom2123FloorTwo=  "room2123FloorTwo";
-final public static String nodeNameRoom2124FloorTwo=  "room2124FloorTwo";
-final public static String nodeNameRoom2125FloorTwo=  "room2125FloorTwo";
-final public static String nodeNameRoom2126FloorTwo=  "room2126FloorTwo";
-
-final public static String nodeNameRoom2777FloorTwo=  "room2777FloorTwo";
-final public static String nodeNameRoom2183FloorTwo = "room2183FloorTwo";
-final public static String nodeNameRoom2780FloorTwo = "room2780FloorTwo";
-
-
+    final public static String nodeNameRoom2144AFloorTwo =  "room2144AFloorTwo";
+    final public static String nodeNameRoom2101FloorTwo =  "room2101FloorTwo";
+    final public static String nodeNameRoom2102FloorTwo=  "room2102FloorTwo";
+    final public static String nodeNameRoom2103FloorTwo= "room2103FloorTwo";
+    final public static String nodeNameRoom2104FloorTwo=  "room2104FloorTwo";
+    final public static String nodeNameRoom2105FloorTwo=  "room2105FloorTwo";
+    final public static String nodeNameRoom2106FloorTwo=  "room2106FloorTwo";
+    final public static String nodeNameRoom2107FloorTwo=  "room2107FloorTwo";
+    final public static String nodeNameRoom2108AND2109AND2110AFloorTwo= "room2108AND2109AND2110AFloorTwo";
+    final public static String nodeNameRoom2110FloorTwo=  "room2110FloorTwo";
+    final public static String nodeNameRoom2111FloorTwo=  "room2111FloorTwo";
+    final public static String nodeNameRoom2112FloorTwo=  "room2112FloorTwo";
+    final public static String nodeNameRoom2154FloorTwo =  "room2154FloorTwo";
+    final public static String nodeNameRoom2143FloorTwo =   "room2143FloorTwo";
+    final public static String nodeNameRoom2142FloorTwo =  "room2142FloorTwo";
+    final public static String nodeNameRoom2155FloorTwo = "room2155FloorTwo";
+    
     //floor three names + descriptions
     final public static String nodeNameElevatorFloorThree = "elevatorFloorThree";
     final public static String nodeNameHallwayFloorThreeA = "hallwayFloorThreeA";
@@ -726,15 +771,16 @@ final public static String nodeNameRoom2780FloorTwo = "room2780FloorTwo";
     final public static String nodeNameHallwayFloorThreeD2 = "hallwayFloorThreeD2";
     final public static String nodeNameHallwayFloorThreeE = "deskFloorThree";//the desk at front
     final public static ArrayList<String> descriptionDeskFloorThree = new ArrayList<>(Arrays.asList(
-            "NICU",
-            "premature babies",
-            "neonatal intensive care unit",
-            "babies",
-            "baby",
-            "preemies"
+        "NICU",
+        "premature babies",
+        "neonatal intensive care unit",
+        "babies",
+        "baby",
+        "preemies"
     ));
 
     //floor four names
+    //nodes
     final public static String nodeNameElevatorFloorFour = "elevatorFloorFour";
     final public static String nodeNameDeskFloorFour = "deskFloorFour";
     final public static String nodeNameHallwayFloorFourA = "hallwayFloorFourA";
@@ -746,75 +792,77 @@ final public static String nodeNameRoom2780FloorTwo = "room2780FloorTwo";
     final public static String nodeNameHallwayFloorFourD2 = "hallwayFloorFourD2";
     final public static String nodeNameHallwayFloorFourE1 = "hallwayFloorFourE1";
     final public static String nodeNameHallwayFloorFourE2 = "hallwayFloorFourE2";
-
+    //rooms
     final public static String nodeNameRoom4102FloorFour = "room4102FloorFour";
-
+    
     final public static String nodeNameRoom4103FloorFour = "room4103FloorFour";
-
+    
     final public static String nodeNameRoom4104FloorFour = "room4104FloorFour";
-
+    
     final public static String nodeNameRoom4105FloorFour = "room4105FloorFour";
-
+    
     final public static String nodeNameRoom4106FloorFour = "room4106FloorFour";
-
+    
     final public static String nodeNameRoom4107FloorFour = "room4107FloorFour";
-
+    
     final public static String nodeNameRoom4108FloorFour = "room4108FloorFour";
-
+    
     final public static String nodeNameRoom4109FloorFour = "room4109FloorFour";
-
+    
     final public static String nodeNameRoom4110FloorFour = "room4110FloorFour";
-
+    
     final public static String nodeNameRoom4130FloorFour = "room4130FloorFour";
-
+    
     final public static String nodeNameRoom4131FloorFour = "room4131FloorFour";
-
+    
     final public static String nodeNameRoom4132FloorFour = "room4132FloorFour";
-
+    
     final public static String nodeNameRoom4133FloorFour = "room4133FloorFour";
-
+    
     final public static String nodeNameRoom4134FloorFour = "room4134FloorFour";
-
+    
     final public static String nodeNameRoom4135FloorFour = "room4135FloorFour";
-
+    
     final public static String nodeNameRoom4136FloorFour = "room4136FloorFour";
-
+    
     final public static String nodeNameRoom4137FloorFour = "room4137FloorFour";
-
+    
     final public static String nodeNameRoom4138FloorFour = "room4138FloorFour";
-
+    
     final public static String nodeNameRoom4139FloorFour = "room4139FloorFour";
     
     final public static String nodeNameRoom4712FloorFour = "room4712FloorFour";
-
-final public static String nodeNameRoom4714FloorFour = "room4714FloorFour";
-
-final public static String nodeNameRoom4715FloorFour = "room4715FloorFour";
-
-final public static String nodeNameRoom4717FloorFour = "room4717FloorFour";
-
-final public static String nodeNameRoom4718FloorFour = "room4718FloorFour";
-
-final public static String nodeNameRoom4719FloorFour = "room4719FloorFour";
-final public static String nodeNameRoom4720FloorFour = "room4720FloorFour";
-
-final public static String nodeNameRoom4721FloorFour = "room4721FloorFour";
-
-final public static String nodeNameRoom4722FloorFour = "room4722FloorFour";
-
-final public static String nodeNameRoom4723FloorFour = "room4723FloorFour";
-
-final public static String nodeNameRoom4724FloorFour = "room4724FloorFour";
-
-final public static String nodeNameRoom4725FloorFour = "room4725FloorFour";
-
-final public static String nodeNameRoom4726FloorFour = "room4726FloorFour";
-
-final public static String nodeNameRoom4727FloorFour = "room4727FloorFour";
-final public static String nodeNameRoom4728FloorFour = "room4728FloorFour";
     
-// floor four IPs
-final public static ArrayList<String> IPFloorFourDesk = new ArrayList<>(Arrays.asList(
+    final public static String nodeNameRoom4714FloorFour = "room4714FloorFour"; 
+    
+    final public static String nodeNameRoom4715FloorFour = "room4715FloorFour";
+    
+    final public static String nodeNameRoom4717FloorFour = "room4717FloorFour";
+    
+    final public static String nodeNameRoom4718FloorFour = "room4718FloorFour";
+    
+    final public static String nodeNameRoom4719FloorFour = "room4719FloorFour";
+    
+    final public static String nodeNameRoom4720FloorFour = "room4720FloorFour";
+
+    final public static String nodeNameRoom4721FloorFour = "room4721FloorFour";
+
+    final public static String nodeNameRoom4722FloorFour = "room4722FloorFour";
+
+    final public static String nodeNameRoom4723FloorFour = "room4723FloorFour";
+
+    final public static String nodeNameRoom4724FloorFour = "room4724FloorFour";
+
+    final public static String nodeNameRoom4725FloorFour = "room4725FloorFour";
+
+    final public static String nodeNameRoom4726FloorFour = "room4726FloorFour";
+
+    final public static String nodeNameRoom4727FloorFour = "room4727FloorFour";
+
+    final public static String nodeNameRoom4728FloorFour = "room4728FloorFour";
+    
+    // floor four IPs
+    final public static ArrayList<String> IPFloorFourDesk = new ArrayList<>(Arrays.asList(
         
                 "10.21.223.64",
                 "10.21.223.210"
@@ -1132,90 +1180,86 @@ final public static ArrayList<String> IPFloorFourDesk = new ArrayList<>(Arrays.a
                 "10.21.223.168",
                 "10.21.223.254"
         ));
+    //end floor four IPs
 
-
-//floor two hallway names
-//hallway floor A is renamed somewhere else
-final public static String nodeNameHallwayFloorTwoB1 = "hallwayFloorTwoB1";
-final public static String nodeNameHallwayFloorTwoB2 = "hallwayFloorTwoB2";
-final public static String nodeNameHallwayFloorTwoC = "hallwayFloorTwoC";
-final public static String nodeNameHallwayFloorTwoD = "hallwayFloorTwoD";
-final public static String nodeNameHallwayFloorTwoE = "hallwayFloorTwoE";
-final public static String nodeNameHallwayFloorTwoF1 = "hallwayFloorTwoF1";
-final public static String nodeNameHallwayFloorTwoF2 = "hallwayFloorTwoF2";
-final public static String nodeNameHallwayFloorTwoF3 = "hallwayFloorTwoF3";
-final public static String nodeNameHallwayFloorTwoG = "hallwayFloorTwoG";
-final public static String nodeNameHallwayFloorTwoH1 = "hallwayFloorTwoH1";
-final public static String nodeNameHallwayFloorTwoH2 = "hallwayFloorTwoH2";
-final public static String nodeNameHallwayFloorTwoI1 = "hallwayFloorTwoI1";
-final public static String nodeNameHallwayFloorTwoI2 = "hallwayFloorTwoI2";
-final public static String nodeNameHallwayFloorTwoJ1 = "hallwayFloorTwoJ1";
-
-final public static String nodeNameHallwayFloorTwoJ2 = "hallwayFloorTwoJ2";
-
-
-
+    //floor two hallway names
+    //hallway floor A is renamed somewhere else
+    final public static String nodeNameHallwayFloorTwoB1 = "hallwayFloorTwoB1";
+    final public static String nodeNameHallwayFloorTwoB2 = "hallwayFloorTwoB2";
+    final public static String nodeNameHallwayFloorTwoC = "hallwayFloorTwoC";
+    final public static String nodeNameHallwayFloorTwoD = "hallwayFloorTwoD";
+    final public static String nodeNameHallwayFloorTwoE = "hallwayFloorTwoE";
+    final public static String nodeNameHallwayFloorTwoF1 = "hallwayFloorTwoF1";
+    final public static String nodeNameHallwayFloorTwoF2 = "hallwayFloorTwoF2";
+    final public static String nodeNameHallwayFloorTwoF3 = "hallwayFloorTwoF3";
+    final public static String nodeNameHallwayFloorTwoG = "hallwayFloorTwoG";
+    final public static String nodeNameHallwayFloorTwoH1 = "hallwayFloorTwoH1";
+    final public static String nodeNameHallwayFloorTwoH2 = "hallwayFloorTwoH2";
+    final public static String nodeNameHallwayFloorTwoI1 = "hallwayFloorTwoI1";
+    final public static String nodeNameHallwayFloorTwoI2 = "hallwayFloorTwoI2";
+    final public static String nodeNameHallwayFloorTwoJ1 = "hallwayFloorTwoJ1";
+    final public static String nodeNameHallwayFloorTwoJ2 = "hallwayFloorTwoJ2";
 
     //descriptions
     final public static ArrayList<String> descriptionDeskFloorFour = new ArrayList<>(Arrays.asList(
-            "PICU",
-            "pediatric",
-            "childrens center",
-            "kids",
-            "pediatric intensive care unit"
+        "PICU",
+        "pediatric",
+        "childrens center",
+        "kids",
+        "pediatric intensive care unit"
     ));
 
     //EAST WING:        
     //East Wing Floor One
     final public static String nodeNameElevatorEastWingFloorOne = "elevatorEastWingFloorOne";
     final public static ArrayList<String> descriptionEastWingFloorOne = new ArrayList<>(Arrays.asList(
-            "Department of Cardiothoracac surgery",
-            "Cardiothoracic surgery",
-            "Camacho",
-            "Karanam",
-            "Russo",
-            "Sardari",
-            "Saunders",
-            "Heart Failure Management Program",
-            "Heart Failure Management",
-            "Heart Failure",
-            "Zucker",
-            "Jaqua Cardiacpulmonary rehabilitation center",
-            "Cardiacpulmonary rehabilitation",
-            "Cardiacpulmonary rehab",
-            "Neonatology",
-            "Sun",
-            "OBGYN Health Center",
-            "OBGYN",
-            "Fibroid Center"
+        "Department of Cardiothoracac surgery",
+        "Cardiothoracic surgery",
+        "Camacho",
+        "Karanam",
+        "Russo",
+        "Sardari",
+        "Saunders",
+        "Heart Failure Management Program",
+        "Heart Failure Management",
+        "Heart Failure",
+        "Zucker",
+        "Jaqua Cardiacpulmonary rehabilitation center",
+        "Cardiacpulmonary rehabilitation",
+        "Cardiacpulmonary rehab",
+        "Neonatology",
+        "Sun",
+        "OBGYN Health Center",
+        "OBGYN",
+        "Fibroid Center"
     ));
 
     //East Wing Floor Two
     final public static String nodeNameElevatorEastWingFloorTwo = "elevatorEastWingFloorTwo";
     final public static ArrayList<String> descriptionEastWingFloorTwo = new ArrayList<>(Arrays.asList(
-            "Cancer Center",
-            "Infusion Center",
-            "Cancer",
-            "Infusion"
+        "Cancer Center",
+        "Infusion Center",
+        "Cancer",
+        "Infusion"
     ));
     //East Wing Floor Three
     final public static String nodeNameElevatorEastWingFloorThree = "elevatorEastWingFloorThree";
     final public static ArrayList<String> descriptionEastWingFloorThree = new ArrayList<>(Arrays.asList(
-            "Transplant Medicine",
-            "Living Donor Institute",
-            "Pre Transplant",
-            "Transplant Administration",
-            "Transplant Clinic",
-            "Transplant Research",
-            "Transplant Research",
-            "Transplant Short Stay"
+        "Transplant Medicine",
+        "Living Donor Institute",
+        "Pre Transplant",
+        "Transplant Administration",
+        "Transplant Clinic",
+        "Transplant Research",
+        "Transplant Research",
+        "Transplant Short Stay"
     ));
 
     //East Wing Floor Four
     final public static String nodeNameElevatorEastWingFloorFour = "elevatorEastWingFloorFour";
     final public static ArrayList<String> descriptionEastWingElevatorFloorFour = new ArrayList<>(Arrays.asList(
-            "Reproductive Medicine and Science",
-            "Perinatal Associates"
+        "Reproductive Medicine and Science",
+        "Perinatal Associates"
     ));
 
     //East Wing Floor Five
@@ -1225,944 +1269,790 @@ final public static String nodeNameHallwayFloorTwoJ2 = "hallwayFloorTwoJ2";
     //floorOne
     final public static String nodeNameRoom1323FloorOne = "room1323FloorOne";
     final public static ArrayList<String> descriptionRoom1323FloorOne = new ArrayList<>(Arrays.asList(
-            "same day surgery",
-            "same day waiting area",
-            "same day",
-            "1323"
+        "same day surgery",
+        "same day waiting area",
+        "same day",
+        "1323"
     ));
 
     final public static String nodeNameRoom1319FloorOne = "room1319FloorOne";
     final public static ArrayList<String> descriptionRoom1319FloorOne = new ArrayList<>(Arrays.asList(
-            "mens bathroom 1",
-            "men's bathroom 1",
-            "bathroom 1",
-            "mens restroom 1",
-            "men's restroom 1",
-            "restroom 1"
+        "mens bathroom 1",
+        "men's bathroom 1",
+        "bathroom 1",
+        "mens restroom 1",
+        "men's restroom 1",
+        "restroom 1"
     ));
 
     final public static String nodeNameRoom1318FloorOne = "room1318FloorOne";
     final public static ArrayList<String> descriptionRoom1318FloorOne = new ArrayList<>(Arrays.asList(
-            "womens bathroom 1",
-            "womens's bathroom 1",
-            "bathroom 1",
-            "womens restroom 1",
-            "women's restroom 1",
-            "restroom 1",
-            "ladies room 1"
+        "womens bathroom 1",
+        "womens's bathroom 1",
+        "bathroom 1",
+        "womens restroom 1",
+        "women's restroom 1",
+        "restroom 1",
+        "ladies room 1"
     ));
     final public static String nodeNameRoomS12FloorOne = "roomS12FloorOne";
     final public static ArrayList<String> descriptionRoomS12FloorOne = new ArrayList<>(Arrays.asList(
-            "same day surgery 1",
-            "same day holding 1",
-            "same day prep 1",
-            "same day recovery 1",
-            "same day 1",
-            "S12"
+        "same day surgery 1",
+        "same day holding 1",
+        "same day prep 1",
+        "same day recovery 1",
+        "same day 1",
+        "S12"
     ));
 
     final public static String nodeNameRoomReceptionFloorOne = "roomReceptionFloorOne";
     final public static ArrayList<String> descriptionRoomReceptionFloorOne = new ArrayList<>(Arrays.asList(
-            "reception",
-            "reception desk",
-            "information desk"
+        "reception",
+        "reception desk",
+        "information desk"
     ));
 
     final public static String nodeNameRoom1398FloorOne = "room1398FloorOne";
     final public static ArrayList<String> descriptionRoom1398FloorOne = new ArrayList<>(Arrays.asList(
-            "chapel",
-            "1398"
+        "chapel",
+        "1398"
     ));
 
     final public static String nodeNameRoom1211FloorOne = "room1211FloorOne";
     final public static ArrayList<String> descriptionRoom1211FloorOne = new ArrayList<>(Arrays.asList(
-            "parent",
-            "parent lounge",
-            "1211"
+        "parent",
+        "parent lounge",
+        "1211"
     ));
 
     final public static String nodeNameRoom1214FloorOne = "room1214FloorOne";
     final public static ArrayList<String> descriptionRoom1214FloorOne = new ArrayList<>(Arrays.asList(
-            "mens bathroom ",
-            "men's bathroom ",
-            "bathroom",
-            "mens restroom",
-            "men's restroom",
-            "restroom"
+        "mens bathroom ",
+        "men's bathroom ",
+        "bathroom",
+        "mens restroom",
+        "men's restroom",
+        "restroom"
     ));
 
     final public static String nodeNameRoom1215FloorOne = "room1215FloorOne";
     final public static ArrayList<String> descriptionRoom1215FloorOne = new ArrayList<>(Arrays.asList(
-            "womens bathroom",
-            "womens's bathroom",
-            "bathroom",
-            "womens restroom",
-            "women's restroom",
-            "restroom"
+        "womens bathroom",
+        "womens's bathroom",
+        "bathroom",
+        "womens restroom",
+        "women's restroom",
+        "restroom"
     ));
 
     final public static String nodeNameRoom1607FloorOne = "room1607FloorOne";
     final public static ArrayList<String> descriptionRoom1607FloorOne = new ArrayList<>(Arrays.asList(
-            "ICU",
-            "ICU waiting",
-            "ICU waiting area",
-            "ICU waiting room",
-            "CCU",
-            "CCU waiting",
-            "CCU waiting area",
-            "CCU waiting room",
-            "1607"
+        "ICU",
+        "ICU waiting",
+        "ICU waiting area",
+        "ICU waiting room",
+        "CCU",
+        "CCU waiting",
+        "CCU waiting area",
+        "CCU waiting room",
+        "1607"
     ));
 
     final public static String nodeNameRoom1730AFloorOne = "room1730AFloorOne";
     final public static ArrayList<String> descriptionRoom1730AFloorOne = new ArrayList<>(Arrays.asList(
-            "radiation oncology"
+        "radiation oncology"
     ));
 
     //floorTwo
     final public static String nodeNameRoom2350AFloorTwo = "room2350AFloorTwo";
     final public static ArrayList<String> descriptionRoom2350AFloorTwo = new ArrayList<>(Arrays.asList(
-            "phones",
-            "phone"
+        "phones",
+        "phone"
     ));
 
     //floorThree
     final public static String nodeNameRoom3301DFloorThree = "room3301DFloorThree";
     final public static ArrayList<String> descriptionRoom3301DFloorThree = new ArrayList<>(Arrays.asList(
-            "restroom 3",
-            "bathroom 3"
+        "restroom 3",
+        "bathroom 3"
     ));
 
     //floorFour
     final public static String nodeNameRoom4235FloorFour = "room4235FloorFour";
     final public static ArrayList<String> descriptionRoom4235FloorFour = new ArrayList<>(Arrays.asList(
-            "restroom 4",
-            "bathroom 4"
+        "restroom 4",
+        "bathroom 4"
     ));
 
     //ground floor rooms
     final public static String nodeNameRoomG106FloorGround = "roomG106FloorGround";
     final public static ArrayList<String> descriptionRoomG106FloorGround = new ArrayList<>(Arrays.asList(
-            "bathroom 0",
-            "restroom 0"
+        "bathroom 0",
+        "restroom 0"
     ));
     final public static ArrayList<String> IPG106FloorGround = new ArrayList<>(Arrays.asList(
-            "10.21.222.18",
-            "10.21.222.8"
+        "10.21.222.18",
+        "10.21.222.8"
      ));
     
 
     final public static String nodeNameParkingValidationFloorGround = "parkingValidationFloorGround";
     final public static ArrayList<String> descriptionParkingValidationFloorGround = new ArrayList<>(Arrays.asList(
-            "parking",
-            "validation",
-            "parking validation"
+        "parking",
+        "validation",
+        "parking validation"
     ));
 
     final public static String nodeNameRoomG453FloorGround = "roomG453FloorGround";
     final public static ArrayList<String> descriptionRoomG453FloorGround = new ArrayList<>(Arrays.asList(
-            "records",
-            "medical records",
-            "G453"
+        "records",
+        "medical records",
+        "G453"
     ));
 
     final public static String nodeNameRoomG309BFloorGround = "roomG309BFloorGround";
     final public static ArrayList<String> descriptionRoomG309BFloorGround = new ArrayList<>(Arrays.asList(
-            "outpatient lab",
-            "G309B"
+        "outpatient lab",
+        "G309B"
     ));
 
     final public static String nodeNameRoomG336FloorGround = "roomG336FloorGround";
     final public static ArrayList<String> descriptionRoomG336FloorGround = new ArrayList<>(Arrays.asList(
-            "clinical lab",
-            "G336"
+        "clinical lab",
+        "G336"
     ));
 
     final public static String nodeNameRoomG230NorthFloorGround = "roomG320NorthFloorGround";
     final public static ArrayList<String> descriptionRoomG230NorthFloorGround = new ArrayList<>(Arrays.asList(
-            "cafeteria, north exit",
-            "food",
-            "cafe",
-            "G320"
+        "cafeteria, north exit",
+        "food",
+        "cafe",
+        "G320"
     ));
-        final public static ArrayList<String> IProomG230NorthFloorGround = new ArrayList<>(Arrays.asList(
-            "10.21.221.237",
-            "10.21.221.236",
-            "10.21.221.232",
-            "10.21.221.246",
-            "10.21.221.235",
-            "10.21.221.248"
-            
-            ));
-
+    final public static ArrayList<String> IProomG230NorthFloorGround = new ArrayList<>(Arrays.asList(
+        "10.21.221.237",
+        "10.21.221.236",
+        "10.21.221.232",
+        "10.21.221.246",
+        "10.21.221.235",
+        "10.21.221.248"
+    ));
 
     final public static String nodeNameRoomG230SouthFloorGround = "roomG320SouthFloorGround";
     final public static ArrayList<String> descriptionRoomG230SouthFloorGround = new ArrayList<>(Arrays.asList(
-            "cafeteria, south exit",
-            "food",
-            "cafe",
-            "G320"
+        "cafeteria, south exit",
+        "food",
+        "cafe",
+        "G320"
     ));
     final public static ArrayList<String> IProomG230SouthFloorGround = new ArrayList<>(Arrays.asList(
-            "10.21.221.237",
-            "10.21.221.236",
-            "10.21.221.232",
-            "10.21.221.246",
-            "10.21.221.235",
-            "10.21.221.248"
-            
-            ));
+        "10.21.221.237",
+        "10.21.221.236",
+        "10.21.221.232",
+        "10.21.221.246",
+        "10.21.221.235",
+        "10.21.221.248"
+
+    ));
 
     final public static String nodeNameRoomE00C6FloorGround = "roomE00C6FloorGround";
     final public static ArrayList<String> descriptionRoomE00C6FloorGround = new ArrayList<>(Arrays.asList(
-            "burn",
-            "burn outpatient",
-            "E00C6"
+        "burn",
+        "burn outpatient",
+        "E00C6"
     ));
 
     final public static String nodeNameRoomE00C7FloorGround = "roomE00C7FloorGround";
     final public static ArrayList<String> descriptionRoomE00C7FloorGround = new ArrayList<>(Arrays.asList(
-            "pediatric",
-            "pediatric outpatient",
-            "E00C7"
+        "pediatric",
+        "pediatric outpatient",
+        "E00C7"
     ));
 
     final public static String nodeNameRoomG03EastWingFloorGround = "roomG03EastWingFloorGround";
     final public static ArrayList<String> descriptionRoomG03EastWingFloorGround = new ArrayList<>(Arrays.asList(
-            "Apnea Center",
-            "Vangvanichyakorn",
-            "Barnabas Heatlh Retail Pharmacy",
-            "Craniofacial center",
-            "High risk infant follow up",
-            "New Jersey Blood Center",
-            "Pediatric Health Center",
-            "Glick",
-            "Liptsyn",
-            "center for wound and burn healing",
-            "Chase ATM"
+        "Apnea Center",
+        "Vangvanichyakorn",
+        "Barnabas Heatlh Retail Pharmacy",
+        "Craniofacial center",
+        "High risk infant follow up",
+        "New Jersey Blood Center",
+        "Pediatric Health Center",
+        "Glick",
+        "Liptsyn",
+        "center for wound and burn healing",
+        "Chase ATM"
     ));
 
     //EastWingFloorOne
     final public static String nodeNameRoom144EastWingFloorOne = "room144EastWingFloorOne";
     final public static ArrayList<String> descriptionRoom144EastWingFloorOne = new ArrayList<>(Arrays.asList(
-            "Department of Cardiothoracic surgery",
-            "Camacho",
-            "Karanam",
-            "Russo",
-            "sandari",
-            "Saunders",
-            "Heart Failure Management Program",
-            "Zucker",
-            "Jaqua Cardiac/Pulmonary Rehabilitation Center"
+        "Department of Cardiothoracic surgery",
+        "Camacho",
+        "Karanam",
+        "Russo",
+        "sandari",
+        "Saunders",
+        "Heart Failure Management Program",
+        "Zucker",
+        "Jaqua Cardiac/Pulmonary Rehabilitation Center"
     ));
 
     final public static String nodeNameRoom121EastWingFloorOne = "room121EastWingFloorOne";
     final public static ArrayList<String> descriptionRoom121EastWingFloorOne = new ArrayList<>(Arrays.asList(
-            "Neonatology",
-            "Sun"
+        "Neonatology",
+        "Sun"
     ));
     final public static ArrayList<String> IP121 = new ArrayList<>(Arrays.asList(
-            "10.21.221.194",
-            "10.21.221.197",
-            "10.21.221.196",
-            "10.21.223.157",
-            "10.21.221.195",
-            "10.21.221.199",
-            "10.21.221.200"
+        "10.21.221.194",
+        "10.21.221.197",
+        "10.21.221.196",
+        "10.21.223.157",
+        "10.21.221.195",
+        "10.21.221.199",
+        "10.21.221.200"
     ));
     final public static String nodeNameRoom117EastWingFloorOne = "room117EastWingFloorOne";
     final public static ArrayList<String> descriptionRoom117EastWingFloorOne = new ArrayList<>(Arrays.asList(
-            "Saint Barnabas OBGYN Health Center",
-            "The Fibroid center"
+        "Saint Barnabas OBGYN Health Center",
+        "The Fibroid center"
     ));
     final public static ArrayList<String> IProom117EastWingFloorOne = new ArrayList<>(Arrays.asList(
-            "10.21.221.194",
-            "10.21.221.197",
-            "10.21.221.196",
-            "10.21.223.157",
-            "10.21.221.195",
-            "10.21.221.199",
-            "10.21.221.200"
+        "10.21.221.194",
+        "10.21.221.197",
+        "10.21.221.196",
+        "10.21.223.157",
+        "10.21.221.195",
+        "10.21.221.199",
+        "10.21.221.200"
     ));
     //EastWingFloorTwo
     final public static String nodeNameRoom201EastWingFloorTwo = "room201EastWingFloorTwo";
     final public static ArrayList<String> descriptionRoom201EastWingFloorTwo = new ArrayList<>(Arrays.asList(
-            "Cancer Center",
-            "Brown",
-            "Conde",
-            "Grossman",
-            "Leitner",
-            "Lipari",
-            "Litvak",
-            "Radovich",
-            "Scoppetuolo",
-            "Wagmiller"
+        "Cancer Center",
+        "Brown",
+        "Conde",
+        "Grossman",
+        "Leitner",
+        "Lipari",
+        "Litvak",
+        "Radovich",
+        "Scoppetuolo",
+        "Wagmiller"
     ));
 
     final public static String nodeNameRoom244EastWingFloorTwo = "room244EastWingFloorTwo";
     final public static ArrayList<String> descriptionRoom244EastWingFloorTwo = new ArrayList<>(Arrays.asList(
-            "Infusion Center"
+        "Infusion Center"
     ));
 
     //EastWingFloorThree
     final public static String nodeNameRoom302EastWingFloorThree = "room302EastWingFloorThree";
     final public static ArrayList<String> descriptionRoom302EastWingFloorThree = new ArrayList<>(Arrays.asList(
-            "Associates in Transplant and General Surgery",
-            "Aitchison"
+        "Associates in Transplant and General Surgery",
+        "Aitchison"
     ));
 
     final public static String nodeNameRoom306EastWingFloorThree = "room306EastWingFloorThree";
     final public static ArrayList<String> descriptionRoom306EastWingFloorThree = new ArrayList<>(Arrays.asList(
-            "Associates in Transplant Medicine",
-            "Dhillon",
-            "Goldberg",
-            "Kandula",
-            "Luan",
-            "Patel",
-            "Tibaldi",
-            "Weng",
-            "Pre Transplant Department",
-            "Mulgaonkar"
+        "Associates in Transplant Medicine",
+        "Dhillon",
+        "Goldberg",
+        "Kandula",
+        "Luan",
+        "Patel",
+        "Tibaldi",
+        "Weng",
+        "Pre Transplant Department",
+        "Mulgaonkar"
     ));
 
     final public static String nodeNameRoom332EastWingFloorThree = "room332EastWingFloorThree";
     final public static ArrayList<String> descriptionRoom332EastWingFloorThree = new ArrayList<>(Arrays.asList(
-            "Living Donor Institute"
+        "Living Donor Institute"
     ));
 
     final public static String nodeNameRoom303EastWingFloorThree = "room303EastWingFloorThree";
     final public static ArrayList<String> descriptionRoom303EastWingFloorThree = new ArrayList<>(Arrays.asList(
-            "Transplant Administration"
+        "Transplant Administration"
     ));
 
     final public static String nodeNameRoom305EastWingFloorThree = "room305EastWingFloorThree";
     final public static ArrayList<String> descriptionRoom305EastWingFloorThree = new ArrayList<>(Arrays.asList(
-            "Transplant Clinic"
+        "Transplant Clinic"
     ));
 
     final public static String nodeNameRoom307EastWingFloorThree = "room307EastWingFloorThree";
     final public static ArrayList<String> descriptionRoom307EastWingFloorThree = new ArrayList<>(Arrays.asList(
-            "Transplant Research"
+        "Transplant Research"
     ));
 
     final public static String nodeNameRoom308EastWingFloorThree = "room308EastWingFloorThree";
     final public static ArrayList<String> descriptionRoom308EastWingFloorThree = new ArrayList<>(Arrays.asList(
-            "Transplant Short Stay"
+        "Transplant Short Stay"
     ));
 
     //EastWingFloorFour
     final public static String nodeNameRoom403EastWingFloorFour = "room403EastWingFloorFour";
     final public static ArrayList<String> descriptionRoom403EastWingFloorFour = new ArrayList<>(Arrays.asList(
-            "Institute for Reproductive Medicine and Science",
-            "Cekleniak",
-            "Chen",
-            "Garrisi",
-            "Hessler",
-            "Keegen",
-            "Pascale",
-            "Thompson"
+        "Institute for Reproductive Medicine and Science",
+        "Cekleniak",
+        "Chen",
+        "Garrisi",
+        "Hessler",
+        "Keegen",
+        "Pascale",
+        "Thompson"
     ));
 
     final public static String nodeNameRoom402EastWingFloorFour = "room402EastWingFloorFour";
     final public static ArrayList<String> descriptionRoom402EastWingFloorFour = new ArrayList<>(Arrays.asList(
-            "DziadosZ",
-            "Kasdaglis",
-            "Miller",
-            "O'Brien",
-            "Pelaez",
-            "Smith",
-            "Terrone",
-            "Warren",
-            "Wolf"
+        "DziadosZ",
+        "Kasdaglis",
+        "Miller",
+        "O'Brien",
+        "Pelaez",
+        "Smith",
+        "Terrone",
+        "Warren",
+        "Wolf"
     ));
 
     //ListOfRooms!! Alphabetical!!
-    final public static ArrayList<Node> listOfRooms = new ArrayList<>(Arrays.asList(//groundFloorParkingValidation
-            new Node(nodeNameParkingValidationFloorGround, descriptionParkingValidationFloorGround, new Edge[]{
-        new Edge(44.291, nodeNameHallwayFloorGroundA, 0, Keys.directions_facingAwayFromPV + "t" + Keys.directions_turnLeft.substring(1)),
-        new Edge(40.912, nodeNameElevatorFloorGround, 1, Keys.directions_facingAwayFromPV + "t" + Keys.directions_turnRight.substring(1) + ". Walk straight and " + "e" + Keys.directions_enterTheFirstClusterOfElevators.substring(1)),
-        new Edge(112.693, nodeNameHallwayFloorGroundB, 2, Keys.directions_facingAwayFromPV + "t" + Keys.directions_turnRight.substring(1) + "." + Keys.directions_passTheElevatorsUntilEndOfHallway + Keys.directions_followTheHallway)
-    }),
-            //EastWingFloorOne 117
-            new Node(nodeNameRoom117EastWingFloorOne, descriptionRoom117EastWingFloorOne, new Edge[]{
-        new Edge(18.00, nodeNameElevatorEastWingFloorOne, 0)
-    }),
-            //floorOneParentLounge
-            new Node(nodeNameRoom1211FloorOne, descriptionRoom1211FloorOne, new Edge[]{
-        new Edge(4.708, nodeNameHallwayFloorOneD, 0),
-        new Edge(5.991, nodeNameHallwayFloorOneE, 1)
-    }),
-            //floorOneMensRestroom
-            new Node(nodeNameRoom1214FloorOne, descriptionRoom1214FloorOne, new Edge[]{
-        new Edge(7.594, nodeNameHallwayFloorOneD, 0),
-        new Edge(3.254, nodeNameHallwayFloorOneE, 1)
-    }),
-            //floorOneWomensRestroom
-            new Node(nodeNameRoom1215FloorOne, descriptionRoom1215FloorOne, new Edge[]{
-        new Edge(8.569, nodeNameHallwayFloorOneD, 0),
-        new Edge(2.190, nodeNameHallwayFloorOneE, 1)
-    }),
-            //EastWingFloorOneRoom121
-            new Node(nodeNameRoom121EastWingFloorOne, descriptionRoom121EastWingFloorOne, new Edge[]{
-        new Edge(18.905, nodeNameElevatorEastWingFloorOne, 0)
-    }),
-            //floorOneWomensRestroom
-            new Node(nodeNameRoom1318FloorOne, descriptionRoom1318FloorOne, new Edge[]{
-        new Edge(11.753, nodeNameHallwayFloorOneA, 0),
-        new Edge(10.504, nodeNameHallwayFloorOneB, 1),
-        new Edge(0.461, nodeNameElevatorFloorOne, 2)
-    }),
-            //floorOneMensRestroom
-            new Node(nodeNameRoom1319FloorOne, descriptionRoom1319FloorOne, new Edge[]{
-        new Edge(8.760, nodeNameHallwayFloorOneA, 0),
-        new Edge(12.830, nodeNameHallwayFloorOneB, 1),
-        new Edge(1.832, nodeNameElevatorFloorOne, 2)
-    }),
-            //floorOneSameDayWaitingArea
-            new Node(nodeNameRoom1323FloorOne, descriptionRoom1323FloorOne, new Edge[]{
-        new Edge(3.020, nodeNameHallwayFloorOneA, 0),
-        new Edge(19.226, nodeNameHallwayFloorOneB, 1),
-        new Edge(7.880, nodeNameElevatorFloorOne, 2)
-    }),
-            //floorOneChapel
-            new Node(nodeNameRoom1398FloorOne, descriptionRoom1398FloorOne, new Edge[]{
-        new Edge(8.180, nodeNameHallwayFloorOneG, 0)
-    }),
-            //EastWingFloorOneRoom144
-            new Node(nodeNameRoom144EastWingFloorOne, descriptionRoom144EastWingFloorOne, new Edge[]{
-        new Edge(5.908, nodeNameElevatorEastWingFloorOne, 0)
-    }),
-            //floorOneICUWaiting
-            new Node(nodeNameRoom1607FloorOne, descriptionRoom1607FloorOne, new Edge[]{
-        new Edge(1.725, nodeNameHallwayFloorOneE, 1)
-    }),
-            //floorOneRadiation
-            new Node(nodeNameRoom1730AFloorOne, descriptionRoom1730AFloorOne, new Edge[]{
-        new Edge(19.059, nodeNameHallwayFloorOneF, 0)
-    }),
-            //EastWingFloorTwo 201
-            new Node(nodeNameRoom201EastWingFloorTwo, descriptionRoom201EastWingFloorTwo, new Edge[]{
-        new Edge(9.150, nodeNameElevatorEastWingFloorTwo, 0)
-    }),
-            //floorTwoPhones
-            new Node(nodeNameRoom2350AFloorTwo, descriptionRoom2350AFloorTwo, new Edge[]{
-        new Edge(9.679, nodeNameElevatorFloorTwo, 0),
-        new Edge(9.581, nodeNameHallwayFloorTwoA, 1)
-    }),
-                        //patient room
-            new Node(nodeNameRoom2101FloorTwo, new Edge[]{
-        new Edge(41.457, nodeNameHallwayFloorTwoE, 0 ),
-        new Edge(22.805, nodeNameHallwayFloorTwoF3, 1)
-    }),
-            //patient room
-            new Node(nodeNameRoom2102FloorTwo, new Edge[]{
-        new Edge(57.9, nodeNameHallwayFloorTwoE, 0 ),
-        new Edge(22.995, nodeNameHallwayFloorTwoF3, 1)
-    }),
-            //patient room
-             new Node(nodeNameRoom2103FloorTwo, new Edge[]{
-        new Edge(84, nodeNameHallwayFloorTwoE, 0 ),
-        new Edge(16.464, nodeNameHallwayFloorTwoF3, 1)
-    }),
-             //patient room
-             new Node(nodeNameRoom2104FloorTwo, new Edge[]{
-        new Edge(55.875+40, nodeNameHallwayFloorTwoE, 0 ),
-        new Edge(12.396, nodeNameHallwayFloorTwoF3, 1)
-    }),
-             //patient room
-             new Node(nodeNameRoom2105FloorTwo, new Edge[]{
-        new Edge(55.9+37, nodeNameHallwayFloorTwoG, 0 ),
-        new Edge(15.528, nodeNameHallwayFloorTwoF3, 1)
-    }),
-             //patient room
-              new Node(nodeNameRoom2106FloorTwo, new Edge[]{
-        new Edge(55.828+20.724, nodeNameHallwayFloorTwoG, 0 ),
-        new Edge(23.132, nodeNameHallwayFloorTwoF3, 1)
-    }),
-              //patient room
-              new Node(nodeNameRoom2107FloorTwo, new Edge[]{
-        new Edge(56.632, nodeNameHallwayFloorTwoG, 0 ),
-        new Edge(37.5, nodeNameHallwayFloorTwoF3, 1)
-    }),
-              //HEY, nodes 2108 and 2109 are connected to 2110A
-              new Node(nodeNameRoom2108AND2109AND2110AFloorTwo, new Edge[]{
-        new Edge(52.5, nodeNameHallwayFloorTwoG, 0 ),
-        new Edge(37.5, nodeNameHallwayFloorTwoF3, 1)
-    }),
-              //patient room
-               new Node(nodeNameRoom2110FloorTwo, new Edge[]{
-        new Edge(41.493, nodeNameHallwayFloorTwoG, 0 ),
-        new Edge(44.734+3, nodeNameHallwayFloorTwoF3, 1)
-    }),
-               //patient room
-               new Node(nodeNameRoom2111FloorTwo, new Edge[]{
-        new Edge(34.469, nodeNameHallwayFloorTwoG, 0 ),
-        new Edge(41.092+16.5, nodeNameHallwayFloorTwoF3, 1)
-    }),
-               //patient room
-               new Node(nodeNameRoom2112FloorTwo, new Edge[]{
-        new Edge(15.573, nodeNameHallwayFloorTwoG, 0 ),
-        new Edge(30.255+45, nodeNameHallwayFloorTwoF3, 1)
-    }),
-               //patient room
-               new Node(nodeNameRoom2116FloorTwo, new Edge[]{
-        new Edge(21.521+24.245, nodeNameHallwayFloorTwoA, 0 ),
-        new Edge(71, nodeNameHallwayFloorTwoF2, 1)
-    }),
-               //patient room
-               new Node(nodeNameRoom2117FloorTwo, new Edge[]{
-        new Edge(46.451+24.245, nodeNameHallwayFloorTwoA, 0 ),
-        new Edge(56.611, nodeNameHallwayFloorTwoF2, 1)
-    }),
-       //patient room
-               new Node(nodeNameRoom2118FloorTwo, new Edge[]{
-        new Edge(57.109+24.245, nodeNameHallwayFloorTwoA, 0 ),
-        new Edge(34.5, nodeNameHallwayFloorTwoF2, 1)
-    }),  
-               //patient room
-               new Node(nodeNameRoom2119FloorTwo, new Edge[]{
-        new Edge(64.243+24.245, nodeNameHallwayFloorTwoA, 0 ),
-        new Edge(26.589, nodeNameHallwayFloorTwoF2, 1)
-    }),      
-                //patient room
-               new Node(nodeNameRoom2120FloorTwo, new Edge[]{
-        new Edge(82+24.245, nodeNameHallwayFloorTwoA, 0 ),
-        new Edge(14, nodeNameHallwayFloorTwoF2, 1)
-    }),       
-               //patient lounge
-               new Node(nodeNameRoom2121FloorTwo, new Edge[]{
-        new Edge(85.269, nodeNameHallwayFloorTwoH2, 0 ),
-        new Edge(9.088, nodeNameHallwayFloorTwoF2, 1)
-    }),        
-               //patient room
-               new Node(nodeNameRoom2122FloorTwo, new Edge[]{
-        new Edge(72.741, nodeNameHallwayFloorTwoH2, 0 ),
-        new Edge(16, nodeNameHallwayFloorTwoF2, 1)
-    }), 
-               //patient room
-               new Node(nodeNameRoom2123FloorTwo, new Edge[]{
-        new Edge(56.907, nodeNameHallwayFloorTwoH2, 0 ),
-        new Edge(29.728, nodeNameHallwayFloorTwoF2, 1)
-    }),      
-               //patient room
-               new Node(nodeNameRoom2124FloorTwo, new Edge[]{
-        new Edge(45.893, nodeNameHallwayFloorTwoH2, 0 ),
-        new Edge(40.468, nodeNameHallwayFloorTwoF2, 1)
-    }),
-               //patient room
-               new Node(nodeNameRoom2125FloorTwo, new Edge[]{
-        new Edge(33.55, nodeNameHallwayFloorTwoH2, 0 ),
-        new Edge(53.33, nodeNameHallwayFloorTwoF2, 1)
-    }),    
-                  //patient room
-               new Node(nodeNameRoom2126FloorTwo, new Edge[]{
-        new Edge(12.478, nodeNameHallwayFloorTwoH2, 0 ),
-        new Edge(76.409, nodeNameHallwayFloorTwoF2, 1)
-    }),
-               //floor tworoom 2142 office             
-            new Node(nodeNameRoom2142FloorTwo, new Edge[]{
-        new Edge(2, nodeNameHallwayFloorTwoE, 0 ),
-        new Edge(37, nodeNameHallwayFloorTwoF1, 1)
-    }),
-                //floor tworoom 2143  Burn rehabilitation office             
-            new Node(nodeNameRoom2143FloorTwo, new Edge[]{
-        new Edge(18.741, nodeNameHallwayFloorTwoE, 0,Keys.directions_turnRight ),
-        new Edge(28, nodeNameHallwayFloorTwoF1, 1)
-    }),
-               //floor tworoom 2144 patient room Burn rehabilitation office             
-            new Node(nodeNameRoom2144AFloorTwo, new Edge[]{
-        new Edge(1.041, nodeNameHallwayFloorTwoE, 0 ),
-        new Edge(41.457+22.805, nodeNameHallwayFloorTwoF3, 1)
-    }),
-            //floor tworoom 2154, Office, need to look up who is in here             
-            new Node(nodeNameRoom2154FloorTwo, new Edge[]{
-        new Edge(1.041+2.969, nodeNameHallwayFloorTwoE, 0 ),
-        new Edge(41.457+22.805-2.969, nodeNameHallwayFloorTwoF3, 1)
-    }),
-            //BICU treatment!!!
-             new Node(nodeNameRoom2155FloorTwo, new Edge[]{
-        new Edge(13.5, nodeNameHallwayFloorTwoG, 0 ),
-        new Edge(24.7, nodeNameHallwayFloorTwoF3, 1),
-        new Edge(13.299, nodeNameHallwayFloorTwoF1, 2)
-    }),
-             //treatment!!! room.
-             new Node(nodeNameRoom2183FloorTwo, new Edge[]{
-        new Edge(35.678, nodeNameHallwayFloorTwoH2, 0 ),
-        new Edge(49.302, nodeNameHallwayFloorTwoF2, 1),
-    }),
-             //patientRoom
-            new Node(nodeNameRoom2711FloorTwo, new Edge[]{
-        new Edge(9, nodeNameHallwayFloorTwoH1, 0 ),
-        new Edge(52.235, nodeNameHallwayFloorTwoG, 1)
-    }),
-            //patientRoom
-             new Node(nodeNameRoom2712FloorTwo, new Edge[]{
-        new Edge(11, nodeNameHallwayFloorTwoH1, 0 ),
-        new Edge(57.539, nodeNameHallwayFloorTwoI1, 1)
-             }),
-                      //patientRoom
-             new Node(nodeNameRoom2714FloorTwo, new Edge[]{
-        new Edge(37.121, nodeNameHallwayFloorTwoH1, 0 ),
-        new Edge(34.937, nodeNameHallwayFloorTwoI1, 1)
-    }),
-     //patientRoom
-             new Node(nodeNameRoom2715FloorTwo, new Edge[]{
-        new Edge(37.683, nodeNameHallwayFloorTwoH1, 0 ),
-        new Edge(22.879, nodeNameHallwayFloorTwoI1, 1)
-    }),
-     //patientRoom
-             new Node(nodeNameRoom2716FloorTwo, new Edge[]{
-        new Edge(55.981, nodeNameHallwayFloorTwoH1, 0 ),
-        new Edge(10.842, nodeNameHallwayFloorTwoI1, 1)
-    }),
-              //patientRoom
-             new Node(nodeNameRoom2717FloorTwo, new Edge[]{
-        new Edge(55.981, nodeNameHallwayFloorTwoH1, 0 )
-    }),
-              //patientRoom
-             new Node(nodeNameRoom2718FloorTwo, new Edge[]{
-        new Edge(15.8, nodeNameHallwayFloorTwoI1, 0 ),
-        new Edge(18, nodeNameHallwayFloorTwoJ1, 1)
-    }),
-             //patientRoom
-             new Node(nodeNameRoom2719FloorTwo, new Edge[]{
-        new Edge(24, nodeNameHallwayFloorTwoI1, 0 ),
-        new Edge(9, nodeNameHallwayFloorTwoJ1, 1)
-    }),
-             //patientRoom
-             new Node(nodeNameRoom2720FloorTwo, new Edge[]{
-        new Edge(8.931, nodeNameHallwayFloorTwoJ1, 0 )
-    }),
-             //patientRoom
-             new Node(nodeNameRoom2721FloorTwo, new Edge[]{
-        new Edge(8.931, nodeNameHallwayFloorTwoJ2, 0 )
-    }),
-             //patientRoom
-             new Node(nodeNameRoom2722FloorTwo, new Edge[]{
-        new Edge(24, nodeNameHallwayFloorTwoI2, 0 ),
-        new Edge(9, nodeNameHallwayFloorTwoJ2, 1)
-    }),
-             //patientRoom
-             new Node(nodeNameRoom2723FloorTwo, new Edge[]{
-        new Edge(15.8, nodeNameHallwayFloorTwoI2, 0 ),
-        new Edge(18, nodeNameHallwayFloorTwoJ2, 1)
-    }),
-             //patientRoom
-             new Node(nodeNameRoom2724FloorTwo, new Edge[]{
-        new Edge(55.981, nodeNameHallwayFloorTwoH2, 0 )
-    }),
-             //patientRoom
-             new Node(nodeNameRoom2725FloorTwo, new Edge[]{
-        new Edge(55.981, nodeNameHallwayFloorTwoH2, 0 ),
-        new Edge(10.842, nodeNameHallwayFloorTwoI2, 1)
-    }),
-             //patientRoom
-             new Node(nodeNameRoom2726FloorTwo, new Edge[]{
-        new Edge(37.683, nodeNameHallwayFloorTwoH2, 0 ),
-        new Edge(22.879, nodeNameHallwayFloorTwoI2, 1)
-    }),
-             //patientRoom
-             new Node(nodeNameRoom2727FloorTwo, new Edge[]{
-        new Edge(37.121, nodeNameHallwayFloorTwoH1, 0 ),
-        new Edge(34.937, nodeNameHallwayFloorTwoI1, 1)
-    }),
-              //patientRoom
-             new Node(nodeNameRoom2729FloorTwo, new Edge[]{
-        new Edge(11, nodeNameHallwayFloorTwoH2, 0 ),
-        new Edge(57.539, nodeNameHallwayFloorTwoI2, 1)
-             }),
-              //patientRoom
-            new Node(nodeNameRoom2730FloorTwo, new Edge[]{
-        new Edge(9, nodeNameHallwayFloorTwoH2, 0 ),
-        new Edge(52.235+38.158, nodeNameHallwayFloorTwoF2, 1)
-    }),
-             //pateint lounge
-            new Node(nodeNameRoom2777FloorTwo, new Edge[]{
-        new Edge(12.633, nodeNameHallwayFloorTwoH2, 0 ),
-        new Edge(52.235, nodeNameHallwayFloorTwoF2, 1)
-    }),
-            //medical room
-            new Node(nodeNameRoom2780FloorTwo, new Edge[]{
-        new Edge(2.4, nodeNameHallwayFloorTwoI1, 0 ),
-        new Edge(17.127, nodeNameHallwayFloorTwoI2, 1)
-    }),
-            //EastWingFloorTwo 244
-            new Node(nodeNameRoom244EastWingFloorTwo, descriptionRoom244EastWingFloorTwo, new Edge[]{
-        new Edge(10.765, nodeNameElevatorEastWingFloorTwo, 0)
-    }),
-            //EastWingFloorThree 302
-            new Node(nodeNameRoom302EastWingFloorThree, descriptionRoom302EastWingFloorThree, new Edge[]{
-        new Edge(36.983, nodeNameElevatorEastWingFloorThree, 0)
-    }),
-            //EastWingFloorThree 306
-            new Node(nodeNameRoom306EastWingFloorThree, descriptionRoom306EastWingFloorThree, new Edge[]{
-        new Edge(68.945, nodeNameElevatorEastWingFloorThree, 0)
-    }),
-            //EastWingFloorThree 307
-            new Node(nodeNameRoom307EastWingFloorThree, descriptionRoom307EastWingFloorThree, new Edge[]{
-        new Edge(69.945, nodeNameElevatorEastWingFloorThree, 0)
-    }),
-            //EastwingFloorThree 308
-            new Node(nodeNameRoom308EastWingFloorThree, descriptionRoom308EastWingFloorThree, new Edge[]{
-        new Edge(69.00, nodeNameElevatorEastWingFloorThree, 0)
-    }),
-            //floorThreeRestroom
-            new Node(nodeNameRoom3301DFloorThree, descriptionRoom3301DFloorThree, new Edge[]{
-        new Edge(5.543, nodeNameElevatorFloorThree, 0),
-        new Edge(22.173, nodeNameHallwayFloorThreeE, 1)
-    }),
-            //EastWingFloorThree 332
-            new Node(nodeNameRoom332EastWingFloorThree, descriptionRoom332EastWingFloorThree, new Edge[]{
-        new Edge(225.769, nodeNameElevatorEastWingFloorThree, 0)
-    }),
-            //EastWingFloorFour 402
-            new Node(nodeNameRoom402EastWingFloorFour, descriptionRoom402EastWingFloorFour, new Edge[]{
-        new Edge(69.698, nodeNameElevatorEastWingFloorFour, 0)
-    }),
-            //EastWingFloorFour 403
-            new Node(nodeNameRoom403EastWingFloorFour, descriptionRoom403EastWingFloorFour, new Edge[]{
-        new Edge(92.583, nodeNameElevatorEastWingFloorFour, 0)
-    }),
-            //floor fourroom 4102 patient room
-            new Node(nodeNameRoom4102FloorFour, new Edge[]{
-        new Edge(56.805, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
-        new Edge(32.746, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
-    },IPFloorFourRoom4102),
-            //floor fourroom 4103 patient room
-            new Node(nodeNameRoom4103FloorFour, new Edge[]{
-        new Edge(36.648, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
-        new Edge(52.903, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
-    },IPFloorFourRoom4103),
-            //floor fourroom 4104 patient room
-            new Node(nodeNameRoom4104FloorFour, new Edge[]{
-        new Edge(18.549, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
-        new Edge(71.002, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
-    },IPFloorFourRoom4104),
-            //floor fourroom 4105 patient room
-            new Node(nodeNameRoom4105FloorFour, new Edge[]{
-        new Edge(9.141, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
-        new Edge(80.410, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
-    },IPFloorFourRoom4105),
-            //floor fourroom 4106 patient room
-            new Node(nodeNameRoom4106FloorFour, new Edge[]{
-        new Edge(14.085, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnRight),
-        new Edge(86.1, nodeNameHallwayFloorFourC1, 1, Keys.directions_turnLeft)
-    },IPFloorFourRoom4106),
-            //floor fourroom 4107 patient room
-            new Node(nodeNameRoom4107FloorFour, new Edge[]{
-        new Edge(71.335, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
-        new Edge(20.113, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
-    },IPFloorFourRoom4107),
-            //floor fourroom 4108 patient room
-            new Node(nodeNameRoom4108FloorFour, new Edge[]{
-        new Edge(50, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
-        new Edge(40, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
-    },IPFloorFourRoom4108),
-            //floor fourroom 4109 patient room
-            new Node(nodeNameRoom4109FloorFour, new Edge[]{
-        new Edge(44.578, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
-        new Edge(47.842, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
-    },IPFloorFourRoom4109),
-            //floor fourroom 4110 patient room
-            new Node(nodeNameRoom4110FloorFour, new Edge[]{
-        new Edge(35.98, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
-        new Edge(69.075, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
-    },IPFloorFourRoom4110),
-            //floor fourroom 4130 patient room
-            new Node(nodeNameRoom4130FloorFour, new Edge[]{
-        new Edge(18.275, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
-        new Edge(80.901, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
-    },IPFloorFourRoom4130),
-            //floor fourroom 4131 patient room
-            new Node(nodeNameRoom4131FloorFour, new Edge[]{
-        new Edge(35.98, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
-        new Edge(69.075, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
-    },IPFloorFourRoom4131),
-            //floor fourroom 4132 patient room
-            new Node(nodeNameRoom4132FloorFour, new Edge[]{
-        new Edge(44.578, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
-        new Edge(47.842, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
-    },IPFloorFourRoom4132),
-            //floor fourroom 4133 patient room
-            new Node(nodeNameRoom4133FloorFour, new Edge[]{
-        new Edge(50, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
-        new Edge(40, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
-    },IPFloorFourRoom4133),
-            //floor fourroom 4134 patient room
-            new Node(nodeNameRoom4134FloorFour, new Edge[]{
-        new Edge(71.335, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
-        new Edge(20.113, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
-    },IPFloorFourRoom4134),
-            //floor fourroom 4135 patient room
-            new Node(nodeNameRoom4135FloorFour, new Edge[]{
-        new Edge(14.085, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnLeft),
-        new Edge(86.1, nodeNameHallwayFloorFourC2, 1, Keys.directions_turnRight)
-    },IPFloorFourRoom4135),
-            //floor fourroom 4136 patient room
-            new Node(nodeNameRoom4105FloorFour, new Edge[]{
-        new Edge(9.141, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
-        new Edge(80.410, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
-    },IPFloorFourRoom4136),
-            //floor fourroom 4137 patient room
-            new Node(nodeNameRoom4104FloorFour, new Edge[]{
-        new Edge(18.549, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
-        new Edge(71.002, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
-    },IPFloorFourRoom4137),
-            //floor fourroom 4138 patient room
-            new Node(nodeNameRoom4138FloorFour, new Edge[]{
-        new Edge(36.648, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
-        new Edge(52.903, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
-    },IPFloorFourRoom4138),
-            //floor fourroom 4139 patient room
-            new Node(nodeNameRoom4102FloorFour, new Edge[]{
-        new Edge(56.805, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
-        new Edge(32.746, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
-    },IPFloorFourRoom4139),
-            //floorFourRestroom
-            new Node(nodeNameRoom4235FloorFour, descriptionRoom4235FloorFour, new Edge[]{
-        new Edge(12.719, nodeNameElevatorFloorFour, 0),
-        new Edge(12.618, nodeNameDeskFloorFour, 1)
-    }),
+    final public static ArrayList<Node> listOfRooms = new ArrayList<>(Arrays.asList(
+        //groundFloorParkingValidation
+        new Node(nodeNameParkingValidationFloorGround, descriptionParkingValidationFloorGround, new Edge[]{
+            new Edge(44.291, nodeNameHallwayFloorGroundA, 0, Keys.directions_facingAwayFromPV + "t" + Keys.directions_turnLeft.substring(1)),
+            new Edge(40.912, nodeNameElevatorFloorGround, 1, Keys.directions_facingAwayFromPV + "t" + Keys.directions_turnRight.substring(1) + ". Walk straight and " + "e" + Keys.directions_enterTheFirstClusterOfElevators.substring(1)),
+            new Edge(112.693, nodeNameHallwayFloorGroundB, 2, Keys.directions_facingAwayFromPV + "t" + Keys.directions_turnRight.substring(1) + "." + Keys.directions_passTheElevatorsUntilEndOfHallway + Keys.directions_followTheHallway)
+        }),
+        //FLOOR ONE
+        //EastWingFloorOne 117
+        new Node(nodeNameRoom117EastWingFloorOne, descriptionRoom117EastWingFloorOne, new Edge[]{
+            new Edge(18.00, nodeNameElevatorEastWingFloorOne, 0)
+        }),
+        //floorOneParentLounge
+        new Node(nodeNameRoom1211FloorOne, descriptionRoom1211FloorOne, new Edge[]{
+            new Edge(4.708, nodeNameHallwayFloorOneD, 0),
+            new Edge(5.991, nodeNameHallwayFloorOneE, 1)
+        }),
+        //floorOneMensRestroom
+        new Node(nodeNameRoom1214FloorOne, descriptionRoom1214FloorOne, new Edge[]{
+            new Edge(7.594, nodeNameHallwayFloorOneD, 0),
+            new Edge(3.254, nodeNameHallwayFloorOneE, 1)
+        }),
+        //floorOneWomensRestroom
+        new Node(nodeNameRoom1215FloorOne, descriptionRoom1215FloorOne, new Edge[]{
+            new Edge(8.569, nodeNameHallwayFloorOneD, 0),
+            new Edge(2.190, nodeNameHallwayFloorOneE, 1)
+        }),
+        //EastWingFloorOneRoom121
+        new Node(nodeNameRoom121EastWingFloorOne, descriptionRoom121EastWingFloorOne, new Edge[]{
+            new Edge(18.905, nodeNameElevatorEastWingFloorOne, 0)
+        }),
+        //floorOneWomensRestroom
+        new Node(nodeNameRoom1318FloorOne, descriptionRoom1318FloorOne, new Edge[]{
+            new Edge(11.753, nodeNameHallwayFloorOneA, 0),
+            new Edge(10.504, nodeNameHallwayFloorOneB, 1),
+            new Edge(0.461, nodeNameElevatorFloorOne, 2)
+        }),
+        //floorOneMensRestroom
+        new Node(nodeNameRoom1319FloorOne, descriptionRoom1319FloorOne, new Edge[]{
+            new Edge(8.760, nodeNameHallwayFloorOneA, 0),
+            new Edge(12.830, nodeNameHallwayFloorOneB, 1),
+            new Edge(1.832, nodeNameElevatorFloorOne, 2)
+        }),
+        //floorOneSameDayWaitingArea
+        new Node(nodeNameRoom1323FloorOne, descriptionRoom1323FloorOne, new Edge[]{
+            new Edge(3.020, nodeNameHallwayFloorOneA, 0),
+            new Edge(19.226, nodeNameHallwayFloorOneB, 1),
+            new Edge(7.880, nodeNameElevatorFloorOne, 2)
+        }),
+        //floorOneChapel
+        new Node(nodeNameRoom1398FloorOne, descriptionRoom1398FloorOne, new Edge[]{
+            new Edge(8.180, nodeNameHallwayFloorOneG, 0)
+        }),
+        //EastWingFloorOneRoom144
+        new Node(nodeNameRoom144EastWingFloorOne, descriptionRoom144EastWingFloorOne, new Edge[]{
+            new Edge(5.908, nodeNameElevatorEastWingFloorOne, 0)
+        }),
+        //floorOneICUWaiting
+        new Node(nodeNameRoom1607FloorOne, descriptionRoom1607FloorOne, new Edge[]{
+            new Edge(1.725, nodeNameHallwayFloorOneE, 1)
+        }),
+        //floorOneRadiation
+        new Node(nodeNameRoom1730AFloorOne, descriptionRoom1730AFloorOne, new Edge[]{
+            new Edge(19.059, nodeNameHallwayFloorOneF, 0)
+        }),
+        //FLOOR TWO
+        //EastWingFloorTwo 201
+        new Node(nodeNameRoom201EastWingFloorTwo, descriptionRoom201EastWingFloorTwo, new Edge[]{
+            new Edge(9.150, nodeNameElevatorEastWingFloorTwo, 0)
+        }),
+        //floorTwoPhones
+        new Node(nodeNameRoom2350AFloorTwo, descriptionRoom2350AFloorTwo, new Edge[]{
+            new Edge(9.679, nodeNameElevatorFloorTwo, 0),
+            new Edge(9.581, nodeNameHallwayFloorTwoA, 1)
+        }),
+        //patient room
+        new Node(nodeNameRoom2101FloorTwo, new Edge[]{
+            new Edge(41.457, nodeNameHallwayFloorTwoE, 0 ),
+            new Edge(22.805, nodeNameHallwayFloorTwoF3, 1)
+        }),
+        //patient room
+        new Node(nodeNameRoom2102FloorTwo, new Edge[]{
+            new Edge(57.9, nodeNameHallwayFloorTwoE, 0 ),
+            new Edge(22.995, nodeNameHallwayFloorTwoF3, 1)
+        }),
+        //patient room
+        new Node(nodeNameRoom2103FloorTwo, new Edge[]{
+            new Edge(84, nodeNameHallwayFloorTwoE, 0 ),
+            new Edge(16.464, nodeNameHallwayFloorTwoF3, 1)
+        }),
+        //patient room
+        new Node(nodeNameRoom2104FloorTwo, new Edge[]{
+            new Edge(55.875 + 40, nodeNameHallwayFloorTwoE, 0),
+            new Edge(12.396, nodeNameHallwayFloorTwoF3, 1)
+        }),
+        //patient room
+        new Node(nodeNameRoom2105FloorTwo, new Edge[]{
+            new Edge(55.9 + 37, nodeNameHallwayFloorTwoG, 0),
+            new Edge(15.528, nodeNameHallwayFloorTwoF3, 1)
+        }),
+        //patient room
+        new Node(nodeNameRoom2106FloorTwo, new Edge[]{
+            new Edge(55.828 + 20.724, nodeNameHallwayFloorTwoG, 0),
+            new Edge(23.132, nodeNameHallwayFloorTwoF3, 1)
+        }),
+        //patient room
+        new Node(nodeNameRoom2107FloorTwo, new Edge[]{
+            new Edge(56.632, nodeNameHallwayFloorTwoG, 0),
+            new Edge(37.5, nodeNameHallwayFloorTwoF3, 1)
+        }),
+        //HEY, nodes 2108 and 2109 are connected to 2110A
+        new Node(nodeNameRoom2108AND2109AND2110AFloorTwo, new Edge[]{
+            new Edge(52.5, nodeNameHallwayFloorTwoG, 0),
+            new Edge(37.5, nodeNameHallwayFloorTwoF3, 1)
+        }),
+        //patient room
+        new Node(nodeNameRoom2110FloorTwo, new Edge[]{
+            new Edge(41.493, nodeNameHallwayFloorTwoG, 0),
+            new Edge(44.734 + 3, nodeNameHallwayFloorTwoF3, 1)
+        }),
+        //patient room
+        new Node(nodeNameRoom2111FloorTwo, new Edge[]{
+            new Edge(34.469, nodeNameHallwayFloorTwoG, 0),
+            new Edge(41.092 + 16.5, nodeNameHallwayFloorTwoF3, 1)
+        }),
+        //patient room
+        new Node(nodeNameRoom2112FloorTwo, new Edge[]{
+            new Edge(15.573, nodeNameHallwayFloorTwoG, 0),
+            new Edge(30.255 + 45, nodeNameHallwayFloorTwoF3, 1)
+        }),
+        //floor tworoom 2142 office             
+        new Node(nodeNameRoom2142FloorTwo, new Edge[]{
+            new Edge(2, nodeNameHallwayFloorTwoE, 0),
+            new Edge(37, nodeNameHallwayFloorTwoF1, 1)
+        }),
+        //floor tworoom 2143  Burn rehabilitation office             
+        new Node(nodeNameRoom2143FloorTwo, new Edge[]{
+            new Edge(18.741, nodeNameHallwayFloorTwoE, 0, Keys.directions_turnRight),
+            new Edge(28, nodeNameHallwayFloorTwoF1, 1)
+        }),
+        //floor tworoom 2144 patient room Burn rehabilitation office             
+        new Node(nodeNameRoom2144AFloorTwo, new Edge[]{
+            new Edge(1.041, nodeNameHallwayFloorTwoE, 0),
+            new Edge(41.457 + 22.805, nodeNameHallwayFloorTwoF3, 1)
+        }),
+        //floor tworoom 2154, Office, need to look up who is in here             
+        new Node(nodeNameRoom2154FloorTwo, new Edge[]{
+            new Edge(1.041 + 2.969, nodeNameHallwayFloorTwoE, 0),
+            new Edge(41.457 + 22.805 - 2.969, nodeNameHallwayFloorTwoF3, 1)
+        }),
+        //BICU treatment!!!
+        new Node(nodeNameRoom2155FloorTwo, new Edge[]{
+            new Edge(13.5, nodeNameHallwayFloorTwoG, 0),
+            new Edge(24.7, nodeNameHallwayFloorTwoF3, 1),
+            new Edge(13.299, nodeNameHallwayFloorTwoF1, 2)
+        }),
+        //EastWingFloorTwo 244
+        new Node(nodeNameRoom244EastWingFloorTwo, descriptionRoom244EastWingFloorTwo, new Edge[]{
+            new Edge(10.765, nodeNameElevatorEastWingFloorTwo, 0)
+        }),
+        //FLOOR THREE
+        //EastWingFloorThree 302
+        new Node(nodeNameRoom302EastWingFloorThree, descriptionRoom302EastWingFloorThree, new Edge[]{
+            new Edge(36.983, nodeNameElevatorEastWingFloorThree, 0)
+        }),
+        //EastWingFloorThree 306
+        new Node(nodeNameRoom306EastWingFloorThree, descriptionRoom306EastWingFloorThree, new Edge[]{
+            new Edge(68.945, nodeNameElevatorEastWingFloorThree, 0)
+        }),
+        //EastWingFloorThree 307
+        new Node(nodeNameRoom307EastWingFloorThree, descriptionRoom307EastWingFloorThree, new Edge[]{
+            new Edge(69.945, nodeNameElevatorEastWingFloorThree, 0)
+        }),
+        //EastwingFloorThree 308
+        new Node(nodeNameRoom308EastWingFloorThree, descriptionRoom308EastWingFloorThree, new Edge[]{
+            new Edge(69.00, nodeNameElevatorEastWingFloorThree, 0)
+        }),
+        //floorThreeRestroom
+        new Node(nodeNameRoom3301DFloorThree, descriptionRoom3301DFloorThree, new Edge[]{
+            new Edge(5.543, nodeNameElevatorFloorThree, 0),
+            new Edge(22.173, nodeNameHallwayFloorThreeE, 1)
+        }),
+        //FLOOR FOUR
+        //EastWingFloorThree 332
+        new Node(nodeNameRoom332EastWingFloorThree, descriptionRoom332EastWingFloorThree, new Edge[]{
+            new Edge(225.769, nodeNameElevatorEastWingFloorThree, 0)
+        }),
+        //EastWingFloorFour 402
+        new Node(nodeNameRoom402EastWingFloorFour, descriptionRoom402EastWingFloorFour, new Edge[]{
+            new Edge(69.698, nodeNameElevatorEastWingFloorFour, 0)
+        }),
+        //EastWingFloorFour 403
+        new Node(nodeNameRoom403EastWingFloorFour, descriptionRoom403EastWingFloorFour, new Edge[]{
+            new Edge(92.583, nodeNameElevatorEastWingFloorFour, 0)
+        }),
+        //floor fourroom 4102 patient room
+        new Node(nodeNameRoom4102FloorFour, new Edge[]{
+            new Edge(56.805, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
+            new Edge(32.746, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
+        }, IPFloorFourRoom4102),
+        //floor fourroom 4103 patient room
+        new Node(nodeNameRoom4103FloorFour, new Edge[]{
+            new Edge(36.648, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
+            new Edge(52.903, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
+        }, IPFloorFourRoom4103),
+        //floor fourroom 4104 patient room
+        new Node(nodeNameRoom4104FloorFour, new Edge[]{
+            new Edge(18.549, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
+            new Edge(71.002, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
+        }, IPFloorFourRoom4104),
+        //floor fourroom 4105 patient room
+        new Node(nodeNameRoom4105FloorFour, new Edge[]{
+            new Edge(9.141, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
+            new Edge(80.410, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
+        }, IPFloorFourRoom4105),
+        //floor fourroom 4106 patient room
+        new Node(nodeNameRoom4106FloorFour, new Edge[]{
+            new Edge(14.085, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnRight),
+            new Edge(86.1, nodeNameHallwayFloorFourC1, 1, Keys.directions_turnLeft)
+        }, IPFloorFourRoom4106),
+        //floor fourroom 4107 patient room
+        new Node(nodeNameRoom4107FloorFour, new Edge[]{
+            new Edge(71.335, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
+            new Edge(20.113, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
+        }, IPFloorFourRoom4107),
+        //floor fourroom 4108 patient room
+        new Node(nodeNameRoom4108FloorFour, new Edge[]{
+            new Edge(50, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
+            new Edge(40, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
+        }, IPFloorFourRoom4108),
+        //floor fourroom 4109 patient room
+        new Node(nodeNameRoom4109FloorFour, new Edge[]{
+            new Edge(44.578, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
+            new Edge(47.842, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
+        }, IPFloorFourRoom4109),
+        //floor fourroom 4110 patient room
+        new Node(nodeNameRoom4110FloorFour, new Edge[]{
+            new Edge(35.98, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
+            new Edge(69.075, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
+        }, IPFloorFourRoom4110),
+        //floor fourroom 4130 patient room
+        new Node(nodeNameRoom4130FloorFour, new Edge[]{
+            new Edge(18.275, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
+            new Edge(80.901, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
+        }, IPFloorFourRoom4130),
+        //floor fourroom 4131 patient room
+        new Node(nodeNameRoom4131FloorFour, new Edge[]{
+            new Edge(35.98, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
+            new Edge(69.075, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
+        }, IPFloorFourRoom4131),
+
+        //floor fourroom 4132 patient room
+        new Node(nodeNameRoom4132FloorFour, new Edge[]{
+            new Edge(44.578, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
+            new Edge(47.842, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
+        }, IPFloorFourRoom4132),
+        //floor fourroom 4133 patient room
+        new Node(nodeNameRoom4133FloorFour, new Edge[]{
+            new Edge(50, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
+            new Edge(40, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
+        }, IPFloorFourRoom4133),
+        //floor fourroom 4134 patient room
+        new Node(nodeNameRoom4134FloorFour, new Edge[]{
+            new Edge(71.335, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
+            new Edge(20.113, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
+        }, IPFloorFourRoom4134),
+        //floor fourroom 4135 patient room
+        new Node(nodeNameRoom4135FloorFour, new Edge[]{
+            new Edge(14.085, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnLeft),
+            new Edge(86.1, nodeNameHallwayFloorFourC2, 1, Keys.directions_turnRight)
+        }, IPFloorFourRoom4135),
+        //floor fourroom 4136 patient room
+        new Node(nodeNameRoom4105FloorFour, new Edge[]{
+            new Edge(9.141, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
+            new Edge(80.410, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
+        }, IPFloorFourRoom4136),
+        //floor fourroom 4137 patient room
+        new Node(nodeNameRoom4104FloorFour, new Edge[]{
+            new Edge(18.549, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
+            new Edge(71.002, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
+        }, IPFloorFourRoom4137),
+        //floor fourroom 4138 patient room
+        new Node(nodeNameRoom4138FloorFour, new Edge[]{
+            new Edge(36.648, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
+            new Edge(52.903, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
+        }, IPFloorFourRoom4138),
+        //floor fourroom 4139 patient room
+        new Node(nodeNameRoom4102FloorFour, new Edge[]{
+            new Edge(56.805, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
+            new Edge(32.746, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
+        }, IPFloorFourRoom4139),
+        //floorFourRestroom
+        new Node(nodeNameRoom4235FloorFour, descriptionRoom4235FloorFour, new Edge[]{
+            new Edge(12.719, nodeNameElevatorFloorFour, 0),
+            new Edge(12.618, nodeNameDeskFloorFour, 1)
+        }),
             
 
-//floor four room 4712, patient room
-new Node(nodeNameRoom4712FloorFour, new Edge[]{
-        new Edge(23.921, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnRight),
-        new Edge(38.225, nodeNameHallwayFloorFourD1, 1, Keys.directions_turnLeft)
-    },IPFloorFourRoom4712),
+        //floor four room 4712, patient room
+        new Node(nodeNameRoom4712FloorFour, new Edge[]{
+            new Edge(23.921, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnRight),
+            new Edge(38.225, nodeNameHallwayFloorFourD1, 1, Keys.directions_turnLeft)
+        }, IPFloorFourRoom4712),
 
+        //floor four room 4714, patient room
+        new Node(nodeNameRoom4714FloorFour, new Edge[]{
+            new Edge(45, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnRight),
+            new Edge(16, nodeNameHallwayFloorFourD1, 1, Keys.directions_turnLeft)
+        }, IPFloorFourRoom4714),
 
+        //floor four room 4715, patient room
+        new Node(nodeNameRoom4715FloorFour, new Edge[]{
+            new Edge(51, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnRight),
+            new Edge(10, nodeNameHallwayFloorFourD1, 1, Keys.directions_turnLeft)
+        }, IPFloorFourRoom4715),
+        
+        //floor four room 4717, patient room
+        new Node(nodeNameRoom4717FloorFour, new Edge[]{
+            new Edge(12.596, nodeNameHallwayFloorFourD1, 0, Keys.directions_turnRight),
+            new Edge(17.067, nodeNameHallwayFloorFourE1, 1, Keys.directions_turnLeft)
+        }, IPFloorFourRoom4717),
+        
+        //floor four room 4718, patient room
+        new Node(nodeNameRoom4718FloorFour, new Edge[]{
+            new Edge(18, nodeNameHallwayFloorFourD1, 0, Keys.directions_turnRight),
+            new Edge(12, nodeNameHallwayFloorFourE1, 1, Keys.directions_turnLeft)
+        }, IPFloorFourRoom4718),
+        
+        //floor four room 4719, patient room
+        new Node(nodeNameRoom4719FloorFour, new Edge[]{
+            new Edge(3, nodeNameHallwayFloorFourE1, 0, Keys.directions_exitTheRoom)
+        }, IPFloorFourRoom4719),
+        
+        //floor four room 4720, patient room
+        new Node(nodeNameRoom4719FloorFour, new Edge[]{
+            new Edge(3, nodeNameHallwayFloorFourE2, 0, Keys.directions_exitTheRoom)
+        }, IPFloorFourRoom4720),
+        
+        //floor four room 4721, patient room
+        new Node(nodeNameRoom4721FloorFour, new Edge[]{
+            new Edge(18, nodeNameHallwayFloorFourD2, 0, Keys.directions_turnLeft),
+            new Edge(12, nodeNameHallwayFloorFourE2, 1, Keys.directions_turnRight)
+        }, IPFloorFourRoom4721),
+        
+        //floor four room 4722, patient room
+        new Node(nodeNameRoom4717FloorFour, new Edge[]{
+            new Edge(12.596, nodeNameHallwayFloorFourD2, 0, Keys.directions_turnLeft),
+            new Edge(17.067, nodeNameHallwayFloorFourE2, 1, Keys.directions_turnRight)
+        }, IPFloorFourRoom4722),
+        
+        //floor four room 4723, patient room
+        new Node(nodeNameRoom4723FloorFour, new Edge[]{
+            new Edge(1, nodeNameHallwayFloorFourD2, 0, Keys.directions_exitTheRoom)
+        }, IPFloorFourRoom4723),
+        
+        //floor four room 4724, patient room
+        new Node(nodeNameRoom4724FloorFour, new Edge[]{
+            new Edge(51, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
+            new Edge(10, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
+        }, IPFloorFourRoom4724),
+        
+        //floor four room 4725, patient room
+        new Node(nodeNameRoom4725FloorFour, new Edge[]{
+            new Edge(45, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
+            new Edge(16, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
+        }, IPFloorFourRoom4725),
+        
+        //floor four room 4726, patient room
+        new Node(nodeNameRoom4726FloorFour, new Edge[]{
+            new Edge(23.921, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
+            new Edge(38.225, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
+        }, IPFloorFourRoom4726),
+        
+        //floor four room 4727, patient room
+        new Node(nodeNameRoom4727FloorFour, new Edge[]{
+            new Edge(12.3, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
+            new Edge(49.1, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
+        }, IPFloorFourRoom4727),
+        
+        //floor four room 4728, patient room
+        new Node(nodeNameRoom4728FloorFour, new Edge[]{
+            new Edge(1, nodeNameHallwayFloorFourC2, 0, Keys.directions_exitTheRoom),}, IPFloorFourRoom4728),
 
-//floor four room 4714, patient room
-new Node(nodeNameRoom4714FloorFour, new Edge[]{
-        new Edge(45, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnRight),
-        new Edge(16, nodeNameHallwayFloorFourD1, 1, Keys.directions_turnLeft)
-    },IPFloorFourRoom4714),
-
-
-//floor four room 4715, patient room
-new Node(nodeNameRoom4715FloorFour, new Edge[]{
-        new Edge(51, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnRight),
-        new Edge(10, nodeNameHallwayFloorFourD1, 1, Keys.directions_turnLeft)
-    },IPFloorFourRoom4715),
-
-
-//floor four room 4717, patient room
-new Node(nodeNameRoom4717FloorFour, new Edge[]{
-        new Edge(12.596, nodeNameHallwayFloorFourD1, 0, Keys.directions_turnRight),
-        new Edge(17.067, nodeNameHallwayFloorFourE1, 1, Keys.directions_turnLeft)
-    },IPFloorFourRoom4717),
-//floor four room 4718, patient room
-new Node(nodeNameRoom4718FloorFour, new Edge[]{
-        new Edge(18, nodeNameHallwayFloorFourD1, 0, Keys.directions_turnRight),
-        new Edge(12, nodeNameHallwayFloorFourE1, 1, Keys.directions_turnLeft)
-    },IPFloorFourRoom4718),
-//floor four room 4719, patient room
-new Node(nodeNameRoom4719FloorFour, new Edge[]{
-        new Edge(3, nodeNameHallwayFloorFourE1, 0, Keys.directions_exitTheRoom)
-    },IPFloorFourRoom4719),
-//floor four room 4720, patient room
-new Node(nodeNameRoom4719FloorFour, new Edge[]{
-        new Edge(3, nodeNameHallwayFloorFourE2, 0, Keys.directions_exitTheRoom)
-    },IPFloorFourRoom4720),
-
-//floor four room 4721, patient room
-new Node(nodeNameRoom4721FloorFour, new Edge[]{
-        new Edge(18, nodeNameHallwayFloorFourD2, 0, Keys.directions_turnLeft),
-        new Edge(12, nodeNameHallwayFloorFourE2, 1, Keys.directions_turnRight)
-    },IPFloorFourRoom4721),
-
-//floor four room 4722, patient room
-new Node(nodeNameRoom4717FloorFour, new Edge[]{
-        new Edge(12.596, nodeNameHallwayFloorFourD2, 0, Keys.directions_turnLeft),
-        new Edge(17.067, nodeNameHallwayFloorFourE2, 1, Keys.directions_turnRight)
-    },IPFloorFourRoom4722),
-
-
-
-
-//floor four room 4723, patient room
-new Node(nodeNameRoom4723FloorFour, new Edge[]{
-        new Edge(1, nodeNameHallwayFloorFourD2, 0, Keys.directions_exitTheRoom)
-    },IPFloorFourRoom4723),
-
-//floor four room 4724, patient room
-new Node(nodeNameRoom4724FloorFour, new Edge[]{
-        new Edge(51, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
-        new Edge(10, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
-    },IPFloorFourRoom4724),
-//floor four room 4725, patient room
-new Node(nodeNameRoom4725FloorFour, new Edge[]{
-        new Edge(45, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
-        new Edge(16, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
-    },IPFloorFourRoom4725),
-//floor four room 4726, patient room
-new Node(nodeNameRoom4726FloorFour, new Edge[]{
-        new Edge(23.921, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
-        new Edge(38.225, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
-    },IPFloorFourRoom4726),
-
-//floor four room 4727, patient room
-new Node(nodeNameRoom4727FloorFour, new Edge[]{
-        new Edge(12.3, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
-        new Edge(49.1, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
-    },IPFloorFourRoom4727),
-
-//floor four room 4728, patient room
-new Node(nodeNameRoom4728FloorFour, new Edge[]{
-        new Edge(1, nodeNameHallwayFloorFourC2, 0, Keys.directions_exitTheRoom),
-    },IPFloorFourRoom4728),
-
-            //groundFloorBurnOutpatient
-            new Node(nodeNameRoomE00C6FloorGround, descriptionRoomE00C6FloorGround, new Edge[]{
-        new Edge(22.543, nodeNameHallwayFloorGroundB, 0, Keys.directions_exitBurnOutpatient + "t" + Keys.directions_turnRight.substring(1) + Keys.directions_followTheLongHallway),
-        new Edge(355.749, nodeNameHallwayEastWingFloorGround, 1, Keys.directions_exitBurnOutpatient + "p" + Keys.directions_proceedStraight)
-    }),
-            //groundFloorPedriaticOutpatient
-            new Node(nodeNameRoomE00C7FloorGround, descriptionRoomE00C7FloorGround, new Edge[]{
-        new Edge(266.703, nodeNameHallwayFloorGroundB, 0, Keys.directions_exitPediatricOutpatient + "t" + Keys.directions_turnRight.substring(1) + Keys.directions_followTheLongHallway),
-        new Edge(99.181, nodeNameHallwayEastWingFloorGround, 1, Keys.directions_exitPediatricOutpatient + "t" + Keys.directions_turnLeft.substring(1) + Keys.directions_followTheHallway)
-    }),
-            //groundFloorRestroom
-            new Node(nodeNameRoomG106FloorGround, descriptionRoomG106FloorGround, new Edge[]{
-        new Edge(109.818, nodeNameHallwayFloorGroundA, 0, Keys.directions_exitRestroom + "t" + Keys.directions_turnRight.substring(1) + Keys.directions_passTheElevatorsUntilFrontDoors),
-        new Edge(30.576, nodeNameElevatorFloorGround, 1, Keys.directions_exitRestroom + "t" + Keys.directions_turnRight.substring(1)),
-        new Edge(47.168, nodeNameHallwayFloorGroundB, 2, Keys.directions_exitRestroom + "t" + Keys.directions_turnLeft.substring(1) + Keys.directions_passTheElevatorsUntilEndOfHallway)
-    }),
-            //groundFloorCafeteria
-            new Node(nodeNameRoomG230NorthFloorGround, descriptionRoomG230NorthFloorGround, new Edge[]{
-        new Edge(186.263, nodeNameHallwayFloorGroundB, 0, Keys.directions_exitCafeteria + "t" + Keys.directions_turnLeft.substring(1) + Keys.directions_followTheLongHallway),
-        new Edge(208.004, nodeNameHallwayEastWingFloorGround, 1, Keys.directions_exitCafeteria + "t" + Keys.directions_turnRight.substring(1) + Keys.directions_followTheHallway)
-    }),
-            new Node(nodeNameRoomG230SouthFloorGround, descriptionRoomG230SouthFloorGround, new Edge[]{
-        new Edge(146.263, nodeNameHallwayFloorGroundA, 0),
-        new Edge(208.004, nodeNameHallwayEastWingFloorGround, 1)
-    }),
-            //groundFloorOutpatientLab
-            new Node(nodeNameRoomG309BFloorGround, descriptionRoomG309BFloorGround, new Edge[]{
-        new Edge(70.678, nodeNameHallwayFloorGroundC, 0, Keys.directions_exittheOutpatientLabAndTurnLeftAndContinueStraight)
-    }),
-            //groundFloorClinicalLab
-            new Node(nodeNameRoomG336FloorGround, descriptionRoomG336FloorGround, new Edge[]{
-        new Edge(238.684, nodeNameHallwayFloorGroundC, 0, Keys.directions_exitClinicalLabAndTurnLeftAndFollowHallwayUntilIntersection)
-    }),
-            //groundFloorMedicalRecords
-            new Node(nodeNameRoomG453FloorGround, descriptionRoomG453FloorGround, new Edge[]{
-        new Edge(30.644, nodeNameHallwayFloorGroundC, 0, Keys.directions_exitMedicalRecordsAndTurnLeftAndContinueStraight)
-    }),
-            //floorOneReception
-            new Node(nodeNameRoomReceptionFloorOne, descriptionRoomReceptionFloorOne, new Edge[]{
-        new Edge(5.403, nodeNameHallwayFloorOneA, 0),
-        new Edge(12.830, nodeNameHallwayFloorOneB, 1),
-        new Edge(16.842, nodeNameElevatorFloorOne, 2)
-    }),
-            //floorOneSameDayPrep,Holding,Recovery
-            new Node(nodeNameRoomS12FloorOne, descriptionRoomS12FloorOne, new Edge[]{
-        new Edge(3.613, nodeNameHallwayFloorOneA, 0),
-        new Edge(19.166, nodeNameHallwayFloorOneB, 1),
-        new Edge(1.615, nodeNameElevatorFloorOne, 2)
-    })
-    ));
+        //FLOOR GROUND
+        //groundFloorBurnOutpatient
+        new Node(nodeNameRoomE00C6FloorGround, descriptionRoomE00C6FloorGround, new Edge[]{
+            new Edge(22.543, nodeNameHallwayFloorGroundB, 0, Keys.directions_exitBurnOutpatient + "t" + Keys.directions_turnRight.substring(1) + Keys.directions_followTheLongHallway),
+            new Edge(355.749, nodeNameHallwayEastWingFloorGround, 1, Keys.directions_exitBurnOutpatient + "p" + Keys.directions_proceedStraight)
+        }),
+        //groundFloorPedriaticOutpatient
+        new Node(nodeNameRoomE00C7FloorGround, descriptionRoomE00C7FloorGround, new Edge[]{
+            new Edge(266.703, nodeNameHallwayFloorGroundB, 0, Keys.directions_exitPediatricOutpatient + "t" + Keys.directions_turnRight.substring(1) + Keys.directions_followTheLongHallway),
+            new Edge(99.181, nodeNameHallwayEastWingFloorGround, 1, Keys.directions_exitPediatricOutpatient + "t" + Keys.directions_turnLeft.substring(1) + Keys.directions_followTheHallway)
+        }),
+        //groundFloorRestroom
+        new Node(nodeNameRoomG106FloorGround, descriptionRoomG106FloorGround, new Edge[]{
+            new Edge(109.818, nodeNameHallwayFloorGroundA, 0, Keys.directions_exitRestroom + "t" + Keys.directions_turnRight.substring(1) + Keys.directions_passTheElevatorsUntilFrontDoors),
+            new Edge(30.576, nodeNameElevatorFloorGround, 1, Keys.directions_exitRestroom + "t" + Keys.directions_turnRight.substring(1)),
+            new Edge(47.168, nodeNameHallwayFloorGroundB, 2, Keys.directions_exitRestroom + "t" + Keys.directions_turnLeft.substring(1) + Keys.directions_passTheElevatorsUntilEndOfHallway)
+        }),
+        //groundFloorCafeteria
+        new Node(nodeNameRoomG230NorthFloorGround, descriptionRoomG230NorthFloorGround, new Edge[]{
+            new Edge(186.263, nodeNameHallwayFloorGroundB, 0, Keys.directions_exitCafeteria + "t" + Keys.directions_turnLeft.substring(1) + Keys.directions_followTheLongHallway),
+            new Edge(208.004, nodeNameHallwayEastWingFloorGround, 1, Keys.directions_exitCafeteria + "t" + Keys.directions_turnRight.substring(1) + Keys.directions_followTheHallway)
+        }),
+        new Node(nodeNameRoomG230SouthFloorGround, descriptionRoomG230SouthFloorGround, new Edge[]{
+            new Edge(146.263, nodeNameHallwayFloorGroundA, 0),
+            new Edge(208.004, nodeNameHallwayEastWingFloorGround, 1)
+        }),
+        //groundFloorOutpatientLab
+        new Node(nodeNameRoomG309BFloorGround, descriptionRoomG309BFloorGround, new Edge[]{
+            new Edge(70.678, nodeNameHallwayFloorGroundC, 0, Keys.directions_exittheOutpatientLabAndTurnLeftAndContinueStraight)
+        }),
+        //groundFloorClinicalLab
+        new Node(nodeNameRoomG336FloorGround, descriptionRoomG336FloorGround, new Edge[]{
+            new Edge(238.684, nodeNameHallwayFloorGroundC, 0, Keys.directions_exitClinicalLabAndTurnLeftAndFollowHallwayUntilIntersection)
+        }),
+        //groundFloorMedicalRecords
+        new Node(nodeNameRoomG453FloorGround, descriptionRoomG453FloorGround, new Edge[]{
+            new Edge(30.644, nodeNameHallwayFloorGroundC, 0, Keys.directions_exitMedicalRecordsAndTurnLeftAndContinueStraight)
+        }),
+        //floorOneReception
+        new Node(nodeNameRoomReceptionFloorOne, descriptionRoomReceptionFloorOne, new Edge[]{
+            new Edge(5.403, nodeNameHallwayFloorOneA, 0),
+            new Edge(12.830, nodeNameHallwayFloorOneB, 1),
+            new Edge(16.842, nodeNameElevatorFloorOne, 2)
+        }),
+        //floorOneSameDayPrep,Holding,Recovery
+        new Node(nodeNameRoomS12FloorOne, descriptionRoomS12FloorOne, new Edge[]{
+            new Edge(3.613, nodeNameHallwayFloorOneA, 0),
+            new Edge(19.166, nodeNameHallwayFloorOneB, 1),
+            new Edge(1.615, nodeNameElevatorFloorOne, 2)
+        })
+));
 
     public static ArrayList<Node> add(ArrayList<Node> myList, Node addThis) {
 
