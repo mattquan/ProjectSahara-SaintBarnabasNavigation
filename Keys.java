@@ -664,6 +664,9 @@ public class Keys {
     final public static String directions_goThroughTheLeftmostHallway = "Go through the leftmost hallway";    
     final public static String directions_goThroughTheRightmostHallway = "Go through the rightmost hallway";
     final public static String directions_yourDestinationIsOnYourRight = "yourDestinationIsOnYourRight";
+    final public static String directions_yourDestinationIsOnYourLeft = "yourDestinationIsOnYourLeft";
+    
+    
     //third floor directions
     final public static String directions_goAroundDesk = "Walk around the desk";
     final public static String directions_goThroughDoorway = "Go through the doorway";
@@ -825,6 +828,20 @@ final public static String nodeNameRoom2314FloorTwo = "room2314FloorTwo";
 final public static String nodeNameRoom2402FloorTwo = "room2402FloorTwo";
 final public static String nodeNameRoom2403FloorTwo = "room2403FloorTwo";
 final public static String nodeNameRoom2430AND2433AND2434FloorTwo= "room2430AND2433AND2434FloorTwo";
+
+final public static String nodeNameRoom2401FloorTwo = "room2401FloorTwo";
+final public static String nodeNameRoom2404FloorTwo = "room2404FloorTwo";
+final public static String nodeNameRoom2405FloorTwo = "room2405FloorTwo";
+final public static String nodeNameRoom2406FloorTwo = "room2406FloorTwo";
+final public static String nodeNameRoom2407FloorTwo = "room2407FloorTwo";
+final public static String nodeNameRoom2411FloorTwo = "room2411FloorTwo";
+final public static String nodeNameRoom2409FloorTwo = "room2409FloorTwo";
+final public static String nodeNameRoom2412FloorTwo = "room2412FloorTwo";
+final public static String nodeNameRoom2414FloorTwo = "room2414FloorTwo";
+final public static String nodeNameRoom2408FloorTwo = "room2408FloorTwo";
+final public static String nodeNameRoom2410FloorTwo = "room2410FloorTwo";
+
+
 
 
 final public static String nodeNameRoom2415FloorTwo = "room2415FloorTwo";
@@ -2018,6 +2035,11 @@ final public static String nodeNameRoom2416FloorTwo = "room2416FloorTwo";
          new Edge(54.757, nodeNameHallwayFloorTwoA, 0 ),
          new Edge(24.608, nodeNameHallwayFloorTwoB1, 1),
      }),
+              //THERAPY room
+              new Node(nodeNameRoom2401FloorTwo, new Edge[]{
+         new Edge(52.960, nodeNameHallwayFloorTwoA, 0 ),
+         new Edge(31.519, nodeNameHallwayFloorTwoD, 1),
+     }),
               //patient room
               new Node(nodeNameRoom2402FloorTwo, new Edge[]{
          new Edge(73.322, nodeNameHallwayFloorTwoA, 0 ),
@@ -2029,6 +2051,46 @@ final public static String nodeNameRoom2416FloorTwo = "room2416FloorTwo";
          new Edge(5.332, nodeNameHallwayFloorTwoD, 1),
      }),
               //patient room
+              new Node(nodeNameRoom2404FloorTwo, new Edge[]{
+         new Edge(71.371, nodeNameHallwayFloorTwoD, 0,Keys.directions_turnLeft+". "+Keys.directions_yourDestinationIsOnYourLeft),
+     }),
+              //patient room
+              new Node(nodeNameRoom2405FloorTwo, new Edge[]{
+         new Edge(88.707, nodeNameHallwayFloorTwoD, 0,Keys.directions_turnLeft+". "+Keys.directions_yourDestinationIsOnYourLeft),
+     }),
+              //patient room
+              new Node(nodeNameRoom2406FloorTwo, new Edge[]{
+         new Edge(95.335, nodeNameHallwayFloorTwoD, 0,Keys.directions_turnLeft+". "+Keys.directions_yourDestinationIsOnYourLeft),
+     }),
+              //patient room
+              new Node(nodeNameRoom2407FloorTwo, new Edge[]{
+         new Edge(112.691, nodeNameHallwayFloorTwoD, 0,Keys.directions_turnLeft+". "+Keys.directions_yourDestinationIsOnYourLeft),
+     }),
+              //patient room
+              new Node(nodeNameRoom2408FloorTwo, new Edge[]{
+         new Edge(119.733, nodeNameHallwayFloorTwoD, 0,Keys.directions_turnLeft+". "+Keys.directions_yourDestinationIsOnYourLeft),
+     }),
+              //patient room
+              new Node(nodeNameRoom2409FloorTwo, new Edge[]{
+         new Edge(113.103, nodeNameHallwayFloorTwoD, 0,Keys.directions_turnLeft+". "+Keys.directions_yourDestinationIsOnYourRight),
+     }),
+              //patient room
+              new Node(nodeNameRoom2410FloorTwo, new Edge[]{
+         new Edge(95.609, nodeNameHallwayFloorTwoD, 0,Keys.directions_turnLeft+". "+Keys.directions_yourDestinationIsOnYourRight),
+     }),
+              //patient room
+              new Node(nodeNameRoom2411FloorTwo, new Edge[]{
+         new Edge(89.316, nodeNameHallwayFloorTwoD, 0,Keys.directions_turnLeft+". "+Keys.directions_yourDestinationIsOnYourRight),
+     }),
+              //patient room
+              new Node(nodeNameRoom2412FloorTwo, new Edge[]{
+         new Edge(75.477, nodeNameHallwayFloorTwoD, 0,Keys.directions_turnLeft+". "+Keys.directions_yourDestinationIsOnYourRight),
+     }),
+              //patient room
+              new Node(nodeNameRoom2414FloorTwo, new Edge[]{
+         new Edge(63.073, nodeNameHallwayFloorTwoD, 0,Keys.directions_turnLeft+". "+Keys.directions_yourDestinationIsOnYourRight),
+     }),
+              //patient room
               new Node(nodeNameRoom2415FloorTwo, new Edge[]{
          new Edge(25.616, nodeNameHallwayFloorTwoD, 0,Keys.directions_turnLeft+". "+Keys.directions_yourDestinationIsOnYourRight),
      }),
@@ -2036,6 +2098,7 @@ final public static String nodeNameRoom2416FloorTwo = "room2416FloorTwo";
               new Node(nodeNameRoom2416FloorTwo, new Edge[]{
          new Edge(22, nodeNameHallwayFloorTwoD, 0,Keys.directions_turnLeft+". "+Keys.directions_yourDestinationIsOnYourRight),
      }),
+              
                
               //TODO start at 2414
               //office and phys. office and consult room
