@@ -2492,5 +2492,12 @@ final public static String nodeNameRoom2416FloorTwo = "room2416FloorTwo";
         myList.add(addThis);
         return myList;
     }
+    public static ArrayList<String> addArrays(ArrayList<String> ... args){
+        ArrayList<String> refined = new ArrayList<String>();
+        for (ArrayList<String> d: args){
+            refined.addAll(d);
+        }
+        return refined;
+    }
 
 }
