@@ -21,9 +21,9 @@ public class FloorGround extends Graph{
         return new ArrayList<>(
             Arrays.asList(
                 new Node(Keys.nodeNameHallwayEastWingFloorGround,  new Edge[]{
-                    new Edge(324.2,Keys.nodeNameHallwayFloorGroundA,0, Keys.directions_followTheLongHallway),
-                    new Edge(369,Keys.nodeNameHallwayFloorGroundB,1, Keys.directions_followTheLongHallway),
-                    new Edge(50,Keys.nodeNameElevatorEastWingFloorGround,2, Keys.directions_enterTheElevators)
+                    new Edge(324.2,Keys.nodeNameHallwayFloorGroundA,0),
+                    new Edge(369,Keys.nodeNameHallwayFloorGroundB,1),
+                    new Edge(50,Keys.nodeNameElevatorEastWingFloorGround,2)
                 }),
                 new Node(Keys.nodeNameElevatorEastWingFloorGround, new Edge[]{
                     new Edge(50,Keys.nodeNameHallwayEastWingFloorGround,0, Keys.directions_exitTheElevators)
