@@ -2294,99 +2294,122 @@ final public static String nodeNameRoom2416FloorTwo = "room2416FloorTwo";
      }),
              //floor fourroom 4102 patient room
              new Node(nodeNameRoom4102FloorFour, new Edge[]{
-         new Edge(56.805, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
-         new Edge(32.746, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
-     },IPFloorFourRoom4102),
+         new Edge(56.805, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4102,
+                 IPFloorFourRoom4103,IPFloorFourRoom4104,IPFloorFourRoom4105)),
+         new Edge(32.746, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight,addArrays(IPFloorFourRoom4102,IPFloorFourRoom4153A))
+                
+     }),
              //floor fourroom 4103 patient room
              new Node(nodeNameRoom4103FloorFour, new Edge[]{
-         new Edge(36.648, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
-         new Edge(52.903, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
-     },IPFloorFourRoom4103),
+         new Edge(36.648, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4103,IPFloorFourRoom4104,IPFloorFourRoom4105)),
+         new Edge(52.903, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight,addArrays(IPFloorFourRoom4103,IPFloorFourRoom4102,IPFloorFourRoom4153A))
+     }),
              //floor fourroom 4104 patient room
              new Node(nodeNameRoom4104FloorFour, new Edge[]{
-         new Edge(18.549, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
-         new Edge(71.002, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
-     },IPFloorFourRoom4104),
+         new Edge(18.549, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4104,IPFloorFourRoom4105)),
+         new Edge(71.002, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight,addArrays(IPFloorFourRoom4104,
+                 IPFloorFourRoom4103,IPFloorFourRoom4102,IPFloorFourRoom4153A))
+     }),
              //floor fourroom 4105 patient room
              new Node(nodeNameRoom4105FloorFour, new Edge[]{
-         new Edge(9.141, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft),
-         new Edge(80.410, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight)
-     },IPFloorFourRoom4105),
+         new Edge(9.141, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnLeft,IPFloorFourRoom4105),
+         new Edge(80.410, nodeNameHallwayFloorFourA, 1, Keys.directions_turnRight,addArrays(IPFloorFourRoom4105,
+                 IPFloorFourRoom4104,IPFloorFourRoom4103,IPFloorFourRoom4102,IPFloorFourRoom4153A))
+     }),
              //floor fourroom 4106 patient room
              new Node(nodeNameRoom4106FloorFour, new Edge[]{
-         new Edge(14.085, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnRight),
-         new Edge(86.1, nodeNameHallwayFloorFourC1, 1, Keys.directions_turnLeft)
-     },IPFloorFourRoom4106),
+         new Edge(14.085, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnRight,addArrays(IPFloorFourRoom4106,IPFloorFourRoom4105)),
+         new Edge(86.1, nodeNameHallwayFloorFourC1, 1, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4106,IPFloorFourRoom4107,
+                 IPFloorFourRoom4108,IPFloorFourRoom4109,IPFloorFourRoom4110,IPFloorFourRoom4112))
+     }),
              //floor fourroom 4107 patient room
              new Node(nodeNameRoom4107FloorFour, new Edge[]{
-         new Edge(71.335, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
-         new Edge(20.113, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
-     },IPFloorFourRoom4107),
+         new Edge(71.335, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4107,IPFloorFourRoom4108,
+                 IPFloorFourRoom4109,IPFloorFourRoom4110,IPFloorFourRoom4112)),
+         new Edge(20.113, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight,addArrays(IPFloorFourRoom4107,IPFloorFourRoom4106))
+     }),
              //floor fourroom 4108 patient room
              new Node(nodeNameRoom4108FloorFour, new Edge[]{
-         new Edge(50, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
-         new Edge(40, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
-     },IPFloorFourRoom4108),
+         new Edge(50, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4108,IPFloorFourRoom4109,IPFloorFourRoom4110,IPFloorFourRoom4112)),
+         new Edge(40, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight,addArrays(IPFloorFourRoom4108,IPFloorFourRoom4107,IPFloorFourRoom4106))
+     }),
              //floor fourroom 4109 patient room
              new Node(nodeNameRoom4109FloorFour, new Edge[]{
-         new Edge(44.578, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
-         new Edge(47.842, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
-     },IPFloorFourRoom4109),
+         new Edge(44.578, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4109,IPFloorFourRoom4110,IPFloorFourRoom4112)),
+         new Edge(47.842, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight,addArrays(IPFloorFourRoom4109,IPFloorFourRoom4108,IPFloorFourRoom4107,
+                 IPFloorFourRoom4106))
+     }),
              //floor fourroom 4110 patient room
              new Node(nodeNameRoom4110FloorFour, new Edge[]{
-         new Edge(35.98, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft),
-         new Edge(69.075, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight)
-     },IPFloorFourRoom4110),
+         new Edge(35.98, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4110,IPFloorFourRoom4112)),
+         new Edge(69.075, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight,addArrays(IPFloorFourRoom4110,IPFloorFourRoom4109,
+                 IPFloorFourRoom4108,IPFloorFourRoom4107,IPFloorFourRoom4106))
+     }),
              //floor fourroom 4130 patient room
              new Node(nodeNameRoom4130FloorFour, new Edge[]{
-         new Edge(18.275, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
-         new Edge(80.901, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
-     },IPFloorFourRoom4130),
+         new Edge(18.275, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight,addArrays(IPFloorFourRoom4130,IPFloorFourRoom4728)),
+         new Edge(80.901, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4130,IPFloorFourRoom4131,IPFloorFourRoom4132,
+                 IPFloorFourRoom4133,IPFloorFourRoom4134,IPFloorFourRoom4135))
+     }),
              //floor fourroom 4131 patient room
              new Node(nodeNameRoom4131FloorFour, new Edge[]{
-         new Edge(35.98, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
-         new Edge(69.075, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
-     },IPFloorFourRoom4131),
+         new Edge(35.98, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight,addArrays(IPFloorFourRoom4131,IPFloorFourRoom4130,
+                 IPFloorFourRoom4728)),
+         new Edge(69.075, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4131,IPFloorFourRoom4132,
+                 IPFloorFourRoom4133,IPFloorFourRoom4134,IPFloorFourRoom4135))
+     }),
              //floor fourroom 4132 patient room
              new Node(nodeNameRoom4132FloorFour, new Edge[]{
-         new Edge(44.578, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
-         new Edge(47.842, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
-     },IPFloorFourRoom4132),
+         new Edge(44.578, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight,addArrays(IPFloorFourRoom4132,IPFloorFourRoom4131,IPFloorFourRoom4130,
+                 IPFloorFourRoom4728)),
+         new Edge(47.842, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4132,IPFloorFourRoom4133,
+                 IPFloorFourRoom4134,IPFloorFourRoom4135))
+     }),
              //floor fourroom 4133 patient room
              new Node(nodeNameRoom4133FloorFour, new Edge[]{
-         new Edge(50, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
-         new Edge(40, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
-     },IPFloorFourRoom4133),
+         new Edge(50, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight,addArrays(IPFloorFourRoom4133,IPFloorFourRoom4132,
+                 IPFloorFourRoom4131,IPFloorFourRoom4130,IPFloorFourRoom4728)),
+         new Edge(40, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4133,IPFloorFourRoom4134,
+                 IPFloorFourRoom4135))
+     }),
              //floor fourroom 4134 patient room
              new Node(nodeNameRoom4134FloorFour, new Edge[]{
-         new Edge(71.335, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight),
-         new Edge(20.113, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft)
-     },IPFloorFourRoom4134),
+         new Edge(71.335, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight,addArrays(IPFloorFourRoom4134,IPFloorFourRoom4133,
+                 IPFloorFourRoom4132,IPFloorFourRoom4131,IPFloorFourRoom4130,IPFloorFourRoom4728)),
+         new Edge(20.113, nodeNameHallwayFloorFourB2, 1, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4134,IPFloorFourRoom4135))
+     }),
              //floor fourroom 4135 patient room
              new Node(nodeNameRoom4135FloorFour, new Edge[]{
-         new Edge(14.085, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnLeft),
-         new Edge(86.1, nodeNameHallwayFloorFourC2, 1, Keys.directions_turnRight)
-     },IPFloorFourRoom4135),
+         new Edge(14.085, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnLeft,IPFloorFourRoom4135),
+         new Edge(86.1, nodeNameHallwayFloorFourC2, 1, Keys.directions_turnRight,addArrays(IPFloorFourRoom4135,IPFloorFourRoom4134,
+                 IPFloorFourRoom4133,IPFloorFourRoom4132,IPFloorFourRoom4131,IPFloorFourRoom4130,IPFloorFourRoom4728))
+     }),
              //floor fourroom 4136 patient room
-             new Node(nodeNameRoom4105FloorFour, new Edge[]{
-         new Edge(9.141, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
-         new Edge(80.410, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
-     },IPFloorFourRoom4136),
+             new Node(nodeNameRoom4136FloorFour, new Edge[]{
+         new Edge(9.141, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight,IPFloorFourRoom4136),
+         new Edge(80.410, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4136,IPFloorFourRoom4137,
+                 IPFloorFourRoom4138,IPFloorFourRoom4139,IPFloorFourRoom4143A,IPFloorFourRoom4141A))
+     }),
              //floor fourroom 4137 patient room
-             new Node(nodeNameRoom4104FloorFour, new Edge[]{
-         new Edge(18.549, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
-         new Edge(71.002, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
-     },IPFloorFourRoom4137),
+             new Node(nodeNameRoom4137FloorFour, new Edge[]{
+         new Edge(18.549, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight,addArrays(IPFloorFourRoom4137,IPFloorFourRoom4136)),
+         new Edge(71.002, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4137,IPFloorFourRoom4138,
+                 IPFloorFourRoom4139,IPFloorFourRoom4141A,IPFloorFourRoom4143A))
+     }),
              //floor fourroom 4138 patient room
              new Node(nodeNameRoom4138FloorFour, new Edge[]{
-         new Edge(36.648, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
-         new Edge(52.903, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
-     },IPFloorFourRoom4138),
+         new Edge(36.648, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight,addArrays(IPFloorFourRoom4138,IPFloorFourRoom4137,
+                 IPFloorFourRoom4136)),
+         new Edge(52.903, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4138,IPFloorFourRoom4139,
+                 IPFloorFourRoom4141A,IPFloorFourRoom4143A))
+     }),
              //floor fourroom 4139 patient room
              new Node(nodeNameRoom4102FloorFour, new Edge[]{
-         new Edge(56.805, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
-        new Edge(32.746, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft)
-     },IPFloorFourRoom4139),
+         new Edge(56.805, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight,addArrays(IPFloorFourRoom4139,IPFloorFourRoom4138,
+                 IPFloorFourRoom4137,IPFloorFourRoom4136)),
+        new Edge(32.746, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4139,IPFloorFourRoom4141A,
+                IPFloorFourRoom4143A))
+     }),
              //floorFourRestroom
              new Node(nodeNameRoom4235FloorFour, descriptionRoom4235FloorFour, new Edge[]{
          new Edge(12.719, nodeNameElevatorFloorFour, 0),
@@ -2394,88 +2417,99 @@ final public static String nodeNameRoom2416FloorTwo = "room2416FloorTwo";
      }),
         //floor four room 4712, patient room
         new Node(nodeNameRoom4712FloorFour, new Edge[]{
-            new Edge(23.921, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnRight),
-            new Edge(38.225, nodeNameHallwayFloorFourD1, 1, Keys.directions_turnLeft)
-        }, IPFloorFourRoom4712),
+            new Edge(23.921, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnRight,addArrays(IPFloorFourRoom4712,IPFloorFourRoom4112)),
+            new Edge(38.225, nodeNameHallwayFloorFourD1, 1, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4712,IPFloorFourRoom4714,
+                    IPFloorFourRoom4715))
+        }),
 
         //floor four room 4714, patient room
         new Node(nodeNameRoom4714FloorFour, new Edge[]{
-            new Edge(45, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnRight),
-            new Edge(16, nodeNameHallwayFloorFourD1, 1, Keys.directions_turnLeft)
-        }, IPFloorFourRoom4714),
+            new Edge(45, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnRight,addArrays(IPFloorFourRoom4714,IPFloorFourRoom4712,
+                    IPFloorFourRoom4112)),
+            new Edge(16, nodeNameHallwayFloorFourD1, 1, Keys.directions_turnLeft, addArrays(IPFloorFourRoom4714,IPFloorFourRoom4715))
+        }),
 
         //floor four room 4715, patient room
         new Node(nodeNameRoom4715FloorFour, new Edge[]{
-            new Edge(51, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnRight),
-            new Edge(10, nodeNameHallwayFloorFourD1, 1, Keys.directions_turnLeft)
-        }, IPFloorFourRoom4715),
+            new Edge(51, nodeNameHallwayFloorFourC1, 0, Keys.directions_turnRight,addArrays(IPFloorFourRoom4715,IPFloorFourRoom4714,
+                    IPFloorFourRoom4712,IPFloorFourRoom4112)),
+            new Edge(10, nodeNameHallwayFloorFourD1, 1, Keys.directions_turnLeft,IPFloorFourRoom4715)
+        }),
         
         //floor four room 4717, patient room
         new Node(nodeNameRoom4717FloorFour, new Edge[]{
-            new Edge(12.596, nodeNameHallwayFloorFourD1, 0, Keys.directions_turnRight),
-            new Edge(17.067, nodeNameHallwayFloorFourE1, 1, Keys.directions_turnLeft)
-        }, IPFloorFourRoom4717),
+            new Edge(12.596, nodeNameHallwayFloorFourD1, 0, Keys.directions_turnRight,IPFloorFourRoom4717),
+            new Edge(17.067, nodeNameHallwayFloorFourE1, 1, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4717,IPFloorFourRoom4718,
+                    IPFloorFourRoom4719))
+        }),
         
         //floor four room 4718, patient room
         new Node(nodeNameRoom4718FloorFour, new Edge[]{
-            new Edge(18, nodeNameHallwayFloorFourD1, 0, Keys.directions_turnRight),
-            new Edge(12, nodeNameHallwayFloorFourE1, 1, Keys.directions_turnLeft)
-        }, IPFloorFourRoom4718),
+            new Edge(18, nodeNameHallwayFloorFourD1, 0, Keys.directions_turnRight,addArrays(IPFloorFourRoom4718,IPFloorFourRoom4717)),
+            new Edge(12, nodeNameHallwayFloorFourE1, 1, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4718,IPFloorFourRoom4719))
+        }),
         
         //floor four room 4719, patient room
         new Node(nodeNameRoom4719FloorFour, new Edge[]{
-            new Edge(3, nodeNameHallwayFloorFourE1, 0, Keys.directions_exitTheRoom)
-        }, IPFloorFourRoom4719),
+            new Edge(3, nodeNameHallwayFloorFourE1, 0, Keys.directions_exitTheRoom,IPFloorFourRoom4719)
+        }),
         
         //floor four room 4720, patient room
         new Node(nodeNameRoom4719FloorFour, new Edge[]{
-            new Edge(3, nodeNameHallwayFloorFourE2, 0, Keys.directions_exitTheRoom)
-        }, IPFloorFourRoom4720),
+            new Edge(3, nodeNameHallwayFloorFourE2, 0, Keys.directions_exitTheRoom,IPFloorFourRoom4720)
+        }),
         
         //floor four room 4721, patient room
         new Node(nodeNameRoom4721FloorFour, new Edge[]{
-            new Edge(18, nodeNameHallwayFloorFourD2, 0, Keys.directions_turnLeft),
-            new Edge(12, nodeNameHallwayFloorFourE2, 1, Keys.directions_turnRight)
-        }, IPFloorFourRoom4721),
+            new Edge(18, nodeNameHallwayFloorFourD2, 0, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4721,IPFloorFourRoom4722)),
+            new Edge(12, nodeNameHallwayFloorFourE2, 1, Keys.directions_turnRight,addArrays(IPFloorFourRoom4721,IPFloorFourRoom4720))
+        }),
         
         //floor four room 4722, patient room
         new Node(nodeNameRoom4717FloorFour, new Edge[]{
-            new Edge(12.596, nodeNameHallwayFloorFourD2, 0, Keys.directions_turnLeft),
-            new Edge(17.067, nodeNameHallwayFloorFourE2, 1, Keys.directions_turnRight)
-        }, IPFloorFourRoom4722),
+            new Edge(12.596, nodeNameHallwayFloorFourD2, 0, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4722)),
+            new Edge(17.067, nodeNameHallwayFloorFourE2, 1, Keys.directions_turnRight,addArrays(IPFloorFourRoom4722,IPFloorFourRoom4721,
+                    IPFloorFourRoom4720))
+        }),
         
         //floor four room 4723, patient room
         new Node(nodeNameRoom4723FloorFour, new Edge[]{
-            new Edge(1, nodeNameHallwayFloorFourD2, 0, Keys.directions_exitTheRoom)
-        }, IPFloorFourRoom4723),
+            new Edge(1, nodeNameHallwayFloorFourD2, 0, Keys.directions_exitTheRoom,IPFloorFourRoom4723)
+        }),
         
         //floor four room 4724, patient room
         new Node(nodeNameRoom4724FloorFour, new Edge[]{
-            new Edge(51, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
-            new Edge(10, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
-        }, IPFloorFourRoom4724),
+            new Edge(51, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4724,IPFloorFourRoom4725,
+                    IPFloorFourRoom4726,IPFloorFourRoom4727)),
+            new Edge(10, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight,addArrays(IPFloorFourRoom4724,IPFloorFourRoom4723))
+        }),
         
         //floor four room 4725, patient room
         new Node(nodeNameRoom4725FloorFour, new Edge[]{
-            new Edge(45, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
-            new Edge(16, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
-        }, IPFloorFourRoom4725),
+            new Edge(45, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft,addArrays(IPFloorFourRoom4725,IPFloorFourRoom4726,
+                    IPFloorFourRoom4727)),
+            new Edge(16, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight,addArrays(IPFloorFourRoom4725,IPFloorFourRoom4724,
+                    IPFloorFourRoom4723))
+        }),
         
         //floor four room 4726, patient room
         new Node(nodeNameRoom4726FloorFour, new Edge[]{
-            new Edge(23.921, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
-            new Edge(38.225, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
-        }, IPFloorFourRoom4726),
+            new Edge(23.921, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft, addArrays(IPFloorFourRoom4726,IPFloorFourRoom4727)),
+            new Edge(38.225, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight, addArrays(IPFloorFourRoom4726,IPFloorFourRoom4725,
+                    IPFloorFourRoom4724,IPFloorFourRoom4723))
+        }),
         
         //floor four room 4727, patient room
         new Node(nodeNameRoom4727FloorFour, new Edge[]{
-            new Edge(12.3, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft),
-            new Edge(49.1, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight)
-        }, IPFloorFourRoom4727),
+            new Edge(12.3, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnLeft,IPFloorFourRoom4727),
+            new Edge(49.1, nodeNameHallwayFloorFourD2, 1, Keys.directions_turnRight,addArrays(IPFloorFourRoom4727,IPFloorFourRoom4726,IPFloorFourRoom4725,
+                    IPFloorFourRoom4724,IPFloorFourRoom4723))
+        }),
         
         //floor four room 4728, patient room
         new Node(nodeNameRoom4728FloorFour, new Edge[]{
-            new Edge(1, nodeNameHallwayFloorFourC2, 0, Keys.directions_exitTheRoom),}, IPFloorFourRoom4728),
+            new Edge(1, nodeNameHallwayFloorFourC2, 0, Keys.directions_exitTheRoom,IPFloorFourRoom4728)
+        }),
 
         //FLOOR GROUND
         //groundFloorBurnOutpatient
