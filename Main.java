@@ -14,10 +14,12 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        //first creates path of strings from complete navigation
-        ArrayList<String> path =  completeNavigation(Keys.nodeNameRoomE00C6FloorGround, Keys.nodeNameRoomG336FloorGround);
-        ArrayList<String> wifi = generateWifiFromPath(path);
-        //then creates array list of wifi info using generateWifiFromPath()
+        
+       //generates path of strings
+       ArrayList<String> path =  completeNavigation(Keys.nodeNameRoomE00C6FloorGround, Keys.nodeNameRoomG336FloorGround);
+       ArrayList<String> wifi = generateEdgeWifiFromPath(path); 
+       //generates list of wifi using generateEdgeWifiFromPath
+        
     }
 
     public static ArrayList<String> runDijkstrasAlgorithm(ArrayList<Node> listOfNodes, String startingNodeString, String endingNodeString) {
@@ -219,6 +221,64 @@ public class Main {
                 
     	return data;
     } 
+    
+    public static ArrayList<String> generateEdgeWifiFromPath(ArrayList<String> pathOfStrings)
+    {
+        ArrayList<String> ipAddresses = new ArrayList<String>(); //master list of ip addresses
+        ArrayList<Node> nodeList = new ArrayList<Node>(); //makes a new array list of nodes converted from strings
+        
+        for(int index = 0; index < pathOfStrings.size(); index++) //completes the strng to node conversion 
+        {
+            String currentLocation = pathOfStrings.get(index);
+            Node currentNode = findNodeGivenString(currentLocation, Keys.listOfRooms);
+            nodeList.add(currentNode);
+        }
+        
+        for(int i = 0; i < nodeList.size()-1; i++)
+        {
+            Edge[] edgeList = nodeList.get(i).getAdjacentEdges(); //retrieves each node edge list (except last node)
+            
+            for(int x = 0; x < edgeList.length; x++) //looks at each node in the specific edgeList
+            {
+                String targetNode = edgeList[x].getTargetNode(); //finds target node (string) 
+                Node thisNode = findNodeGivenString(targetNode, Keys.listOfRooms); //converts to node
+                
+                if(thisNode.equals(nodeList.get(i + 1))) //is target node equal to next node in path?
+                {
+                    ArrayList<String> thisEdgeIPAddresses = edgeList[x].getIPAddresses(); //if yes, get this edge ip addresses
+                    
+                    for(int z = 0; z < thisEdgeIPAddresses.size(); z++) 
+                    {
+                        ipAddresses.add(thisEdgeIPAddresses.get(z)); //adds to master list
+                    }
+                }
+                    
+            }
+        }
+        
+        //deletes master list duplicates
+        ipAddresses = deleteDuplicateWifi(ipAddresses);
+        return ipAddresses;
+        //returns master list of ip addresses
+    }
+    
+    //universal algorithm to delete duplicates in an array list
+    public static ArrayList<String> deleteDuplicateWifi(ArrayList<String> wifiList) 
+    {
+        for(int x = 0; x < wifiList.size()-1; x++)
+       {
+           for(int z = x + 1; z < wifiList.size(); z++)
+           {
+               if(wifiList.get(x).equals(wifiList.get(z)))
+               {
+                   wifiList.remove(z);
+                   z--;
+               }
+           }
+       }
+        
+        return wifiList;
+    }
     
     public static ArrayList<String> generateWifiFromPath(ArrayList<String> pathOfStrings)
     {
