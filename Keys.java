@@ -528,7 +528,60 @@ public class Keys {
                 }
                 break;
             case "Floor Ground":
-                //logic
+                if (node.equals(Keys.nodeNameHallwayEastWingFloorGround)) {
+                    if (postNode.equals(Keys.nodeNameHallwayFloorGroundA)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorGroundB)) {
+                            return "Error: Should never happen";
+                        } else if (preNode.equals(Keys.nodeNameElevatorEastWingFloorGround)) {
+                            return Keys.directions_turnRight+" and c"+Keys.directions_continueDownTheHallway.substring(1);
+                        }
+                        else {
+                            return Keys.directions_turnLeft+" and c"+Keys.directions_continueDownTheHallway.substring(1);
+                        }
+                    } else if (postNode.equals(Keys.nodeNameHallwayFloorGroundB)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorGroundA)) {
+                            return "Error: Should never happen";
+                        } else if (preNode.equals(Keys.nodeNameElevatorEastWingFloorGround)) {
+                            return Keys.directions_turnLeft+" and c"+Keys.directions_continueDownTheHallway.substring(1);
+                        }
+                        else {
+                            return Keys.directions_turnRight+" and c"+Keys.directions_continueDownTheHallway.substring(1);
+                        }
+                    } else if (postNode.equals(Keys.nodeNameElevatorEastWingFloorGround)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorGroundB)) {
+                            return Keys.directions_turnRight+". "+Keys.directions_enterTheElevators;
+                        } else if (preNode.equals(Keys.nodeNameHallwayFloorGroundA)) {
+                            return Keys.directions_turnLeft+". "+Keys.directions_enterTheElevators;
+                        }
+                    }
+                }
+                if (node.equals(Keys.nodeNameHallwayFloorGroundA)) {
+                    if (postNode.equals(Keys.nodeNameHallwayFloorGroundA)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorGroundB)) {
+                            return "Error: Should never happen";
+                        } else if (preNode.equals(Keys.nodeNameElevatorEastWingFloorGround)) {
+                            return Keys.directions_turnRight+" and c"+Keys.directions_continueDownTheHallway.substring(1);
+                        }
+                        else {
+                            return Keys.directions_turnLeft+" and c"+Keys.directions_continueDownTheHallway.substring(1);
+                        }
+                    } else if (postNode.equals(Keys.nodeNameHallwayFloorGroundB)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorGroundA)) {
+                            return "Error: Should never happen";
+                        } else if (preNode.equals(Keys.nodeNameElevatorEastWingFloorGround)) {
+                            return Keys.directions_turnLeft+" and c"+Keys.directions_continueDownTheHallway.substring(1);
+                        }
+                        else {
+                            return Keys.directions_turnRight+" and c"+Keys.directions_continueDownTheHallway.substring(1);
+                        }
+                    } else if (postNode.equals(Keys.nodeNameElevatorEastWingFloorGround)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorGroundB)) {
+                            return Keys.directions_turnRight+". "+Keys.directions_enterTheElevators;
+                        } else if (preNode.equals(Keys.nodeNameHallwayFloorGroundA)) {
+                            return Keys.directions_turnLeft+". "+Keys.directions_enterTheElevators;
+                        }
+                    }
+                }
                 break;
             case "EastWingFloorOne":
                 //logic
