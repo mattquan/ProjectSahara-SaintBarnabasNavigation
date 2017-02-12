@@ -28,12 +28,11 @@ public class Keys {
                  if (node.equals(Keys.nodeNameHallwayFloorTwoA)) {
                     if (postNode.equals(Keys.nodeNameElevatorFloorTwo)) {
                         if (preNode.equals(Keys.nodeNameHallwayFloorTwoB1)||preNode.equals(Keys.nodeNameHallwayFloorTwoD)) { //basically the same                           
-                            return Keys.directions_exitTheReceptionArea+" and t" +Keys.directions_turnRight.substring(1)+". "+Keys.directions_continueStraightPassingByTheFirstSetOfElevatorsContinueStraight;
+                            return Keys.directions_exitTheReceptionArea+" and t" +Keys.directions_turnRight.substring(1)+". "+Keys.directions_continueStraightPassingByAClusterOfElevatorsTheElevatorsAreUpAheadNextToTheWindows;
                         } else if (preNode.equals(Keys.nodeNameHallwayFloorTwoE)) {
                             //contiue striaght, pass the elevators, take the leftmost door.
-                            return Keys.directions_continueStraightPassingByTheFirstSetOfElevatorsContinueStraight;
+                            return Keys.directions_continueStraightPassingByAClusterOfElevatorsTheElevatorsAreUpAheadNextToTheWindows;
                         }
-                        //place holders below. need to edit.
                     } else if (postNode.equals(Keys.nodeNameHallwayFloorTwoB1)) {
                         if (preNode.equals(Keys.nodeNameElevatorFloorTwo)) {
                             return Keys.directions_enterTheReceptionArea+", on your left. "+ Keys.directions_goThroughTheLeftmostHallway;
@@ -542,7 +541,7 @@ public class Keys {
                         if (preNode.equals(Keys.nodeNameHallwayFloorGroundA)) {
                             return "Error: Should never happen";
                         } else if (preNode.equals(Keys.nodeNameElevatorEastWingFloorGround)) {
-                            return Keys.directions_turnLeft+" and c"+Keys.directions_continueDownTheHallway.substring(1);
+                            return Keys.directions_turnLeft+" and c"+Keys.directions_continueStraightPassingAFirstSetOfElevators+". "+Keys.directions_enterTheSecondSetOfElevators;
                         }
                         else {
                             return Keys.directions_turnRight+" and c"+Keys.directions_continueDownTheHallway.substring(1);
@@ -556,29 +555,56 @@ public class Keys {
                     }
                 }
                 if (node.equals(Keys.nodeNameHallwayFloorGroundA)) {
-                    if (postNode.equals(Keys.nodeNameHallwayFloorGroundA)) {
+                    /*if (postNode.equals(Keys.nodeNameElevatorFloorGround)) {
                         if (preNode.equals(Keys.nodeNameHallwayFloorGroundB)) {
                             return "Error: Should never happen";
-                        } else if (preNode.equals(Keys.nodeNameElevatorEastWingFloorGround)) {
-                            return Keys.directions_turnRight+" and c"+Keys.directions_continueDownTheHallway.substring(1);
-                        }
-                        else {
-                            return Keys.directions_turnLeft+" and c"+Keys.directions_continueDownTheHallway.substring(1);
+                        }  redundant! else if (preNode.equals(Keys.nodeNameHallwayEastWingFloorGround)) {
+                            return Keys.directions_turnRight+" and c"+Keys.directions_continueStraight.substring(1)+Keys.directions_enterTheFirstSetOfElevators; //to the end of the hallway
                         }
                     } else if (postNode.equals(Keys.nodeNameHallwayFloorGroundB)) {
-                        if (preNode.equals(Keys.nodeNameHallwayFloorGroundA)) {
+                        if (preNode.equals(Keys.nodeNameElevatorFloorGround)) {
                             return "Error: Should never happen";
-                        } else if (preNode.equals(Keys.nodeNameElevatorEastWingFloorGround)) {
-                            return Keys.directions_turnLeft+" and c"+Keys.directions_continueDownTheHallway.substring(1);
-                        }
-                        else {
+                        } else if (preNode.equals(Keys.nodeNameHallwayEastWingFloorGround)) {
                             return Keys.directions_turnRight+" and c"+Keys.directions_continueDownTheHallway.substring(1);
                         }
-                    } else if (postNode.equals(Keys.nodeNameElevatorEastWingFloorGround)) {
+                    }  don't need this!
+                    else if (postNode.equals(Keys.nodeNameElevatorFloorGround)) { //this part needs to change anyway
                         if (preNode.equals(Keys.nodeNameHallwayFloorGroundB)) {
-                            return Keys.directions_turnRight+". "+Keys.directions_enterTheElevators;
+                            return Keys.directions_turnRight+". "+Keys.directions_enterTheFirstSetOfElevators;
                         } else if (preNode.equals(Keys.nodeNameHallwayFloorGroundA)) {
-                            return Keys.directions_turnLeft+". "+Keys.directions_enterTheElevators;
+                            return Keys.directions_turnLeft+". "+Keys.directions_enterTheFirstSetOfElevators;
+                        }
+                    }*/
+                }
+                if (node.equals(Keys.nodeNameHallwayFloorGroundB)) {
+                    if (postNode.equals(Keys.nodeNameHallwayFloorGroundA)) {
+                        if (preNode.equals(Keys.nodeNameHallwayEastWingFloorGround)) {
+                            return Keys.directions_turnLeft+". "+Keys.directions_continueStraightToTheEndOfTheHallwayPassingTheElevators;
+                        } else if (preNode.equals(Keys.nodeNameElevatorFloorGround)) {
+                            return "Error: should never happen";
+                        }
+                        else if (preNode.equals(nodeNameHallwayFloorGroundC)) {
+                            return Keys.directions_turnRight+". "+Keys.directions_continueStraightToTheEndOfTheHallwayPassingTheElevators;
+                        }
+                    } else if (postNode.equals(Keys.nodeNameHallwayFloorGroundC)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorGroundA)) {
+                            return Keys.directions_turnLeft+" and c"+Keys.directions_continueStraight.substring(1);
+                        } else if (preNode.equals(Keys.nodeNameHallwayEastWingFloorGround)) {
+                            return Keys.directions_continueStraight;
+                        }
+                        else if (preNode.equals(Keys.nodeNameElevatorFloorGround)) {
+                            //TODO how do you know from which elevator they enter/exit? 
+                            return "TODO have not figured this out yet";
+                        }
+                    } else if (postNode.equals(Keys.nodeNameElevatorFloorGround)) {
+                        if (preNode.equals(Keys.nodeNameHallwayFloorGroundA)) {
+                            return "Error: should never happen";
+                        } else if (preNode.equals(Keys.nodeNameHallwayEastWingFloorGround)) {
+                            return Keys.directions_turnLeft+" and c"+Keys.directions_continueStraightPassingAFirstSetOfElevators.substring(1)+". "+Keys.directions_enterTheSecondSetOfElevators;
+                        }
+                        else if (preNode.equals(Keys.nodeNameHallwayFloorGroundC)) {
+                            //TODO how do you know from which elevator they enter/exit? 
+                            return Keys.directions_turnRight+" and c"+Keys.directions_continueStraightPassingAFirstSetOfElevators.substring(1)+". "+Keys.directions_enterTheSecondSetOfElevators;
                         }
                     }
                 }
@@ -669,10 +695,11 @@ public class Keys {
     }
 
     //directions
-    final public static String directions_passTheElevatorsUntilEndOfHallway = "Pass the elevators and continue the end of the hallway";
+    final public static String  directions_continueStraightToTheEndOfTheHallwayPassingTheElevators = "Continue straight to the end of the hallway, passing the elevators";
+    final public static String directions_continueStraightPassingAFirstSetOfElevators = "Continue straight, passing a first set of elevators";
     final public static String directions_passTheElevatorsUntilFrontDoors = "Pass the elevators, and continue until the front doors";
-    final public static String directions_enterTheSecondClusterOfElevators = "Enter the SECOND cluster of elevators";
-    final public static String directions_enterTheFirstClusterOfElevators = "Enter the FIRST cluster of elevators";
+    final public static String directions_enterTheSecondSetOfElevators = "Enter the SECOND set of elevators. (There should only be two elevators, one across from the other.)";
+    final public static String directions_enterTheFirstSetOfElevators = "Enter the FIRST set of elevators. (There should only be two elevators, one across from the other.)";
     final public static String directions_enterTheElevators = "Enter the elevators";
     final public static String directions_exitTheElevators = "Exit the elevators";
     final public static String directions_followTheLongHallway = "Follow the (long) hallway until you reach "; //TODO until you reach...    
@@ -689,7 +716,7 @@ public class Keys {
     final public static String directions_exitMedicalRecordsAndTurnLeftAndContinueStraight = "Exit the medical records and turn left. Continue straight.";
 
     //second floor directions
-    final public static String directions_continueStraightPassingByTheFirstSetOfElevatorsContinueStraight = "Continue straight, passing by a cluster of elevators. Continue straight, into the fourth floor lobby. The elevators are upahead, next to the windows.";
+    final public static String directions_continueStraightPassingByAClusterOfElevatorsTheElevatorsAreUpAheadNextToTheWindows = "Continue straight, passing by a cluster of elevators. The elevators are up ahead, next to the windows.";
     final public static String directions_walkStraightPastTheFirstSetOfElevatorsContinueStraightAndTakeTheElevatorsAtEndOfHallway = "Walk straight, past the first set of elevators. Continue straight and take the elevators at the end of the hallway.";
     final public static String directions_makeARightAtTheEndOfTheLoop  = "Make a right at the end of the loop";
     final public static String directions_continueStraightDownTheLoopedHallwayMakingSlightLeftTurns = "Continue straight, down the looped hallway, making slight left turns.";
@@ -1766,12 +1793,11 @@ final public static String nodeNameRoom2416FloorTwo = "room2416FloorTwo";
     ));
 
     //ListOfRooms!! Alphabetical!!
-    final public static ArrayList<Node> listOfRooms = new ArrayList<>(Arrays.asList(
-        //groundFloorParkingValidation
+    final public static ArrayList<Node> listOfRooms = new ArrayList<>(Arrays.asList(//groundFloorParkingValidation
         new Node(nodeNameParkingValidationFloorGround, descriptionParkingValidationFloorGround, new Edge[]{
             new Edge(44.291, nodeNameHallwayFloorGroundA, 0, Keys.directions_facingAwayFromPV + "t" + Keys.directions_turnLeft.substring(1)),
-            new Edge(40.912, nodeNameElevatorFloorGround, 1, Keys.directions_facingAwayFromPV + "t" + Keys.directions_turnRight.substring(1) + ". Walk straight and " + "e" + Keys.directions_enterTheFirstClusterOfElevators.substring(1)),
-            new Edge(112.693, nodeNameHallwayFloorGroundB, 2, Keys.directions_facingAwayFromPV + "t" + Keys.directions_turnRight.substring(1) + "." + Keys.directions_passTheElevatorsUntilEndOfHallway + Keys.directions_followTheHallway)
+            new Edge(40.912, nodeNameElevatorFloorGround, 1, Keys.directions_facingAwayFromPV + "t" + Keys.directions_turnRight.substring(1) + ". Walk straight and " + "e" + Keys.directions_enterTheFirstSetOfElevators.substring(1)),
+            new Edge(112.693, nodeNameHallwayFloorGroundB, 2, Keys.directions_facingAwayFromPV + "t" + Keys.directions_turnRight.substring(1) + "." + Keys.directions_continueStraightPassingAFirstSetOfElevators + Keys.directions_followTheHallway)
         }),
         //FLOOR ONE
         //EastWingFloorOne 117
@@ -2526,7 +2552,7 @@ final public static String nodeNameRoom2416FloorTwo = "room2416FloorTwo";
         new Node(nodeNameRoomG106FloorGround, descriptionRoomG106FloorGround, new Edge[]{
             new Edge(109.818, nodeNameHallwayFloorGroundA, 0, Keys.directions_exitRestroom + "t" + Keys.directions_turnRight.substring(1) + Keys.directions_passTheElevatorsUntilFrontDoors),
             new Edge(30.576, nodeNameElevatorFloorGround, 1, Keys.directions_exitRestroom + "t" + Keys.directions_turnRight.substring(1)),
-            new Edge(47.168, nodeNameHallwayFloorGroundB, 2, Keys.directions_exitRestroom + "t" + Keys.directions_turnLeft.substring(1) + Keys.directions_passTheElevatorsUntilEndOfHallway)
+            new Edge(47.168, nodeNameHallwayFloorGroundB, 2, Keys.directions_exitRestroom + "t" + Keys.directions_turnLeft.substring(1) + Keys.directions_continueStraightPassingAFirstSetOfElevators)
         }),
         //groundFloorCafeteria
         new Node(nodeNameRoomG230NorthFloorGround, descriptionRoomG230NorthFloorGround, new Edge[]{

@@ -29,23 +29,23 @@ public class FloorGround extends Graph{
                     new Edge(50,Keys.nodeNameHallwayEastWingFloorGround,0, Keys.directions_exitTheElevators)
                 }),
                 new Node(Keys.nodeNameElevatorFloorGround, new Edge[]{
-                    new Edge(68.9, Keys.nodeNameHallwayFloorGroundA,0, Keys.directions_followTheLongHallway),
-                    new Edge(59.1, Keys.nodeNameHallwayFloorGroundB,1, Keys.directions_followTheLongHallway)
+                    new Edge(68.9, Keys.nodeNameHallwayFloorGroundA,0), //TODO how do u know which elevator they entered
+                    new Edge(59.1, Keys.nodeNameHallwayFloorGroundB,1)
                 }),
                 new Node(Keys.nodeNameHallwayFloorGroundA, new Edge[]{
-                    new Edge(324.2,Keys.nodeNameHallwayEastWingFloorGround,0),
-                    new Edge(128,Keys.nodeNameHallwayFloorGroundB,1,Keys.directions_passTheElevatorsUntilEndOfHallway),
-                    new Edge(68.9, Keys.nodeNameElevatorFloorGround,2,Keys.directions_enterTheFirstClusterOfElevators)
+                    new Edge(324.2,Keys.nodeNameHallwayEastWingFloorGround,0,Keys.directions_makeALeftAtTheNextIntersection+" and c"+Keys.directions_continueDownTheHallway.substring(1)), //turn left, becuase i am always coming from one side
+                    new Edge(128,Keys.nodeNameHallwayFloorGroundB,1,Keys.directions_turnRight+" and c"+Keys.directions_continueDownTheHallway.substring(1)), //turn right, becuase im always coming in from one side
+                    new Edge(68.9, Keys.nodeNameElevatorFloorGround,2,Keys.directions_turnRight+" and c"+Keys.directions_continueStraight.substring(1)+Keys.directions_enterTheFirstSetOfElevators) //same as above
                 }),                   
                 
                 new Node(Keys.nodeNameHallwayFloorGroundB,new Edge[]{
-                    new Edge(128,Keys.nodeNameHallwayFloorGroundA,0, Keys.directions_passTheElevatorsUntilFrontDoors),
-                    new Edge(369,Keys.nodeNameHallwayEastWingFloorGround,1, Keys.directions_followTheLongHallway),
+                    new Edge(128,Keys.nodeNameHallwayFloorGroundA,0),
+                    new Edge(369,Keys.nodeNameHallwayEastWingFloorGround,1),
                     new Edge(64.5,Keys.nodeNameHallwayFloorGroundC,2), //special
-                    new Edge(59.1, Keys.nodeNameElevatorFloorGround,3, Keys.directions_enterTheSecondClusterOfElevators)
+                    new Edge(59.1, Keys.nodeNameElevatorFloorGround,3)
                 }),
                 new Node(Keys.nodeNameHallwayFloorGroundC,new Edge[]{
-                    new Edge(64.5,Keys.nodeNameHallwayFloorGroundB,0)  //special
+                    new Edge(64.5,Keys.nodeNameHallwayFloorGroundB,0,Keys.directions_continueStraight)  //special for the ROOMS
                 })
                 
                 ));                    
