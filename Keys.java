@@ -98,7 +98,7 @@ public class Keys {
                 
                 if (node.equals(Keys.nodeNameHallwayFloorTwoE)) {
                     if (postNode.equals(Keys.nodeNameHallwayFloorTwoA)) {
-                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoF1)) { //basically the same                           
+                        if (preNode.equals(Keys.nodeNameHallwayFloorTwoF1)) {                      
                             return Keys.directions_continueStraight;
                         } 
                         else if (preNode.equals(Keys.nodeNameHallwayFloorTwoF3)) {
@@ -724,6 +724,8 @@ public class Keys {
     final public static String directions_passTheSetOfEleators = "Pass the set of elevators";
     final public static String directions_stayInTheReceptionAreaContinueThroughTheOtherCorridorAtTheBackOfTheReceptionAreaOnYourRight = "Stay in the reception area. Continue through the other corridor at the back of the reception area, on your right";
     final public static String directions_stayInTheReceptionAreaContinueThroughTheOtherCorridorAtTheBackOfTheReceptionAreaOnYourLeft = "Stay in the reception area. Continue through the other corridor at the back of the reception area, on your left";
+    
+    
     
     final public static String directions_exitTheLobby  = "Exit the lobby";
     final public static String directions_enterTheReceptionArea  = "Enter the receptetion area";
@@ -2389,28 +2391,28 @@ public class Keys {
         }),
         //patient room
         new Node(nodeNameRoom2116FloorTwo, new Edge[]{
-            new Edge(21.521 + 24.245, nodeNameHallwayFloorTwoA, 0),
-            new Edge(71, nodeNameHallwayFloorTwoF2, 1)
+            new Edge(21.521 + 24.245, nodeNameHallwayFloorTwoA, 0, Keys.directions_exitTheRoom+", t"+Keys.directions_turnLeft.substring(1)+", and  c"+Keys.directions_continueStraight.substring(1)),
+            new Edge(71, nodeNameHallwayFloorTwoF2, 1,Keys.directions_exitTheRoom+", t"+Keys.directions_turnRight.substring(1)+", and  c"+Keys.directions_continueStraight.substring(1))
         }),
         //patient room
         new Node(nodeNameRoom2117FloorTwo, new Edge[]{
-            new Edge(46.451 + 24.245, nodeNameHallwayFloorTwoA, 0),
-            new Edge(56.611, nodeNameHallwayFloorTwoF2, 1)
+            new Edge(46.451 + 24.245, nodeNameHallwayFloorTwoA, 0,Keys.directions_exitTheRoom+", t"+Keys.directions_turnLeft.substring(1)+", and  c"+Keys.directions_continueStraight.substring(1)),
+            new Edge(56.611, nodeNameHallwayFloorTwoF2, 1,Keys.directions_exitTheRoom+", t"+Keys.directions_turnRight.substring(1)+", and  c"+Keys.directions_continueStraight.substring(1))
         }),
         //patient room
         new Node(nodeNameRoom2118FloorTwo, new Edge[]{
-            new Edge(57.109 + 24.245, nodeNameHallwayFloorTwoA, 0),
-            new Edge(34.5, nodeNameHallwayFloorTwoF2, 1)
+            new Edge(57.109 + 24.245, nodeNameHallwayFloorTwoA, 0,Keys.directions_exitTheRoom+", t"+Keys.directions_turnLeft.substring(1)+", and  c"+Keys.directions_continueStraight.substring(1)),
+            new Edge(34.5, nodeNameHallwayFloorTwoF2, 1,Keys.directions_exitTheRoom+", t"+Keys.directions_turnRight.substring(1)+", and  c"+Keys.directions_continueStraight.substring(1))
         }),
         //patient room
         new Node(nodeNameRoom2119FloorTwo, new Edge[]{
-            new Edge(64.243 + 24.245, nodeNameHallwayFloorTwoA, 0),
-            new Edge(26.589, nodeNameHallwayFloorTwoF2, 1)
+            new Edge(64.243 + 24.245, nodeNameHallwayFloorTwoA, 0,Keys.directions_exitTheRoom+", t"+Keys.directions_turnLeft.substring(1)+", and  c"+Keys.directions_continueStraight.substring(1)),
+            new Edge(26.589, nodeNameHallwayFloorTwoF2, 1,Keys.directions_exitTheRoom+", t"+Keys.directions_turnRight.substring(1)+", and  c"+Keys.directions_continueStraight.substring(1))
         }),
         //patient room
         new Node(nodeNameRoom2120FloorTwo, new Edge[]{
-            new Edge(82 + 24.245, nodeNameHallwayFloorTwoA, 0),
-            new Edge(14, nodeNameHallwayFloorTwoF2, 1)
+            new Edge(82 + 24.245, nodeNameHallwayFloorTwoA, 0,Keys.directions_exitTheRoom+", t"+Keys.directions_turnLeft.substring(1)+", and  c"+Keys.directions_continueStraight.substring(1)),
+            new Edge(14, nodeNameHallwayFloorTwoF2, 1,Keys.directions_exitTheRoom+", t"+Keys.directions_turnRight.substring(1)+", and  c"+Keys.directions_continueStraight.substring(1))
         }),
         //patient lounge
         new Node(nodeNameRoom2121FloorTwo, new Edge[]{
@@ -2419,28 +2421,29 @@ public class Keys {
         }),
         //patient room
         new Node(nodeNameRoom2122FloorTwo, new Edge[]{
-            new Edge(72.741, nodeNameHallwayFloorTwoH2, 0),
-            new Edge(16, nodeNameHallwayFloorTwoF2, 1)
+            new Edge(72.741, nodeNameHallwayFloorTwoH2, 0, Keys.directions_exitTheRoom+", t"+Keys.directions_turnRight.substring(1)+", and c"+Keys.directions_continueStraight.substring(1)),
+            new Edge(16, nodeNameHallwayFloorTwoF2, 1 , Keys.directions_exitTheRoom+" and t"+Keys.directions_turnLeft.substring(1)), 
+            
         }),
         //patient room
         new Node(nodeNameRoom2123FloorTwo, new Edge[]{
-            new Edge(56.907, nodeNameHallwayFloorTwoH2, 0),
-            new Edge(29.728, nodeNameHallwayFloorTwoF2, 1)
+            new Edge(56.907, nodeNameHallwayFloorTwoH2, 0,Keys.directions_exitTheRoom+", t"+Keys.directions_turnRight.substring(1)+", and c"+Keys.directions_continueStraight.substring(1)),
+            new Edge(29.728, nodeNameHallwayFloorTwoF2, 1,Keys.directions_exitTheRoom+", t"+Keys.directions_turnLeft.substring(1)+", and c"+Keys.directions_continueStraight.substring(1))
         }),
         //patient room
         new Node(nodeNameRoom2124FloorTwo, new Edge[]{
-            new Edge(45.893, nodeNameHallwayFloorTwoH2, 0),
-            new Edge(40.468, nodeNameHallwayFloorTwoF2, 1)
+            new Edge(45.893, nodeNameHallwayFloorTwoH2, 0,Keys.directions_exitTheRoom+", t"+Keys.directions_turnRight.substring(1)+", and c"+Keys.directions_continueStraight.substring(1)),
+            new Edge(40.468, nodeNameHallwayFloorTwoF2, 1,Keys.directions_exitTheRoom+", t"+Keys.directions_turnLeft.substring(1)+", and c"+Keys.directions_continueStraight.substring(1))
         }),
         //patient room
         new Node(nodeNameRoom2125FloorTwo, new Edge[]{
-            new Edge(33.55, nodeNameHallwayFloorTwoH2, 0),
-            new Edge(53.33, nodeNameHallwayFloorTwoF2, 1)
+            new Edge(33.55, nodeNameHallwayFloorTwoH2, 0,Keys.directions_exitTheRoom+", t"+Keys.directions_turnRight.substring(1)+", and c"+Keys.directions_continueStraight.substring(1)),
+            new Edge(53.33, nodeNameHallwayFloorTwoF2, 1,Keys.directions_exitTheRoom+", t"+Keys.directions_turnLeft.substring(1)+", and c"+Keys.directions_continueStraight.substring(1))
         }),
         //patient room
         new Node(nodeNameRoom2126FloorTwo, new Edge[]{
-            new Edge(12.478, nodeNameHallwayFloorTwoH2, 0),
-            new Edge(76.409, nodeNameHallwayFloorTwoF2, 1)
+            new Edge(12.478, nodeNameHallwayFloorTwoH2, 0,Keys.directions_exitTheRoom+", t"+Keys.directions_turnRight.substring(1)+", and c"+Keys.directions_continueStraight.substring(1)),
+            new Edge(76.409, nodeNameHallwayFloorTwoF2, 1,Keys.directions_exitTheRoom+", t"+Keys.directions_turnLeft.substring(1)+", and c"+Keys.directions_continueStraight.substring(1))
         }),
         //floor tworoom 2142 office             
         new Node(nodeNameRoom2142FloorTwo, new Edge[]{
