@@ -243,14 +243,11 @@ public class Main {
                 String targetNode = edgeList[x].getTargetNode(); //finds target node (string) 
                 Node thisNode = findNodeGivenString(targetNode, Keys.listOfRooms); //converts to node
                 
-                if(thisNode.equals(nodeList.get(i + 1))) //is target node equal to next node in path?
+                if(thisNode.equals(nodeList.get(i+1))) //is target node equal to next node in path? --> the key is the i+1
                 {
-                    ArrayList<String> thisEdgeIPAddresses = edgeList[x].getIPAddresses(); //if yes, get this edge ip addresses
+                    ipAddresses.addAll(edgeList[x].getIPAddresses()); //adds all the elemtents.               
                     
-                    for(int z = 0; z < thisEdgeIPAddresses.size(); z++) 
-                    {
-                        ipAddresses.add(thisEdgeIPAddresses.get(z)); //adds to master list
-                    }
+                    
                 }
                     
             }
