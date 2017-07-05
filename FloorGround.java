@@ -20,17 +20,18 @@ public class FloorGround extends Graph{
 
         return new ArrayList<>(
             Arrays.asList(
-                new Node(Keys.nodeNameHallwayEastWingFloorGround,  new Edge[]{
-                    new Edge(324.2,Keys.nodeNameHallwayFloorGroundA,0),
-                    new Edge(369,Keys.nodeNameHallwayFloorGroundB,1),
-                    new Edge(50,Keys.nodeNameElevatorEastWingFloorGround,2)
-                }),
+                
                 new Node(Keys.nodeNameElevatorEastWingFloorGround, new Edge[]{
                     new Edge(50,Keys.nodeNameHallwayEastWingFloorGround,0, Keys.directions_exitTheElevators)
                 }),
                 new Node(Keys.nodeNameElevatorFloorGround, new Edge[]{
                     new Edge(68.9, Keys.nodeNameHallwayFloorGroundA,0), //TODO how do u know which elevator they entered
                     new Edge(59.1, Keys.nodeNameHallwayFloorGroundB,1)
+                }),
+                new Node(Keys.nodeNameHallwayEastWingFloorGround,  new Edge[]{
+                    new Edge(324.2,Keys.nodeNameHallwayFloorGroundA,0),
+                    new Edge(369,Keys.nodeNameHallwayFloorGroundB,1),
+                    new Edge(50,Keys.nodeNameElevatorEastWingFloorGround,2)
                 }),
                 new Node(Keys.nodeNameHallwayFloorGroundA, new Edge[]{
                     new Edge(324.2,Keys.nodeNameHallwayEastWingFloorGround,0,Keys.directions_makeALeftAtTheNextIntersection+" and c"+Keys.directions_continueDownTheHallway.substring(1)), //turn left, becuase i am always coming from one side
