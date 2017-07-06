@@ -2969,7 +2969,21 @@ public class Keys {
         new Node(nodeNameRoom3169FloorThree, descriptionRoom3169FloorThree, new Edge[]{
                 new Edge(7.968+37.492, nodeNameHallwayFloorThreeB, 0)
         }),
-        //PICK UP WITH ROOM 3174!!!!!!!!
+        //room 3174
+        new Node("nodeNameRoom3174FloorThree", new Edge[]{
+            new Edge(33.288, nodeNameHallwayFloorThreeA, 0, Keys.directions_turnLeft),
+            new Edge(86.065, nodeNameHallwayFloorThreeE, 1, "Turn Right & continue straight. Make a right towards the elevators. Continue straight towards the lobby.")
+        }),
+        //room 3452A
+        new Node("nodeNameRoom3452AFloorThree", new Edge[]{
+            new Edge(27.723+61.749, nodeNameHallwayFloorThreeA, 0, "Turn left and continue to the end of the hall. Then turn left."),
+            new Edge(31.458+47.522, nodeNameHallwayFloorThreeE, 1, "Turn left and continue to the end of the hall. Then turn right towards the elevators. Continue straight towards the lobby.")
+        }),
+        //room 3452B
+        new Node("nodeNameRoom3452BFloorThree", new Edge[]{
+            new Edge(27.723+61.749, nodeNameHallwayFloorThreeA, 0, "Exit from door away from the lobby. Turn right and continue to the end of the hall. Then turn left."),
+            new Edge(31.602, nodeNameHallwayFloorThreeE, 1, "Exit and turn right elevators and head towards the lobby.")
+        }),
         //EastWingFloorThree 332
         new Node(nodeNameRoom332EastWingFloorThree, descriptionRoom332EastWingFloorThree, new Edge[]{
             new Edge(225.769, nodeNameElevatorEastWingFloorThree, 0)
@@ -3036,6 +3050,10 @@ public class Keys {
             new Edge(69.075, nodeNameHallwayFloorFourB1, 1, Keys.directions_turnRight, addArrays(IPFloorFourRoom4110, IPFloorFourRoom4109,
                             IPFloorFourRoom4108, IPFloorFourRoom4107, IPFloorFourRoom4106))
         }),
+        //floor fourroom 4112 patient room probably
+        new Node("nodeNameRoom4112", new Edge[]{
+            new Edge(1, nodeNameHallwayFloorFourC1, 0, Keys.directions_exitTheRoom)
+        }),
         //floor fourroom 4130 patient room
         new Node(nodeNameRoom4130FloorFour, new Edge[]{
             new Edge(18.275, nodeNameHallwayFloorFourC2, 0, Keys.directions_turnRight, addArrays(IPFloorFourRoom4130, IPFloorFourRoom4728)),
@@ -3094,12 +3112,22 @@ public class Keys {
             new Edge(52.903, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft, addArrays(IPFloorFourRoom4138, IPFloorFourRoom4139,
                             IPFloorFourRoom4141A, IPFloorFourRoom4143A))
         }),
-        //floor fourroom 4139 patient room
-        new Node(nodeNameRoom4102FloorFour, new Edge[]{
-            new Edge(56.805, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight, addArrays(IPFloorFourRoom4139, IPFloorFourRoom4138,
+        //floor four room 4139 patient room
+        new Node(nodeNameRoom4139FloorFour, new Edge[]{
+            new Edge(51.236, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight, addArrays(IPFloorFourRoom4139, IPFloorFourRoom4138,
                             IPFloorFourRoom4137, IPFloorFourRoom4136)),
-            new Edge(32.746, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft, addArrays(IPFloorFourRoom4139, IPFloorFourRoom4141A,
+            new Edge(43.432, nodeNameHallwayFloorFourA, 1, Keys.directions_turnLeft, addArrays(IPFloorFourRoom4139, IPFloorFourRoom4141A,
                             IPFloorFourRoom4143A))
+        }),
+        //floor four room 4163 patient room
+        new Node("nodeNameRoom4163FloorFour", new Edge[]{
+            new Edge(36.141, nodeNameHallwayFloorFourB2, 0, Keys.directions_turnRight),
+            new Edge(66.552, nodeNameHallwayFloorFourC2, 1, Keys.directions_turnLeft)
+        }),
+        //floorFourRestroom
+        new Node("nodeNameRoom4172FloorFour", new Edge[]{
+            new Edge(80.127, nodeNameHallwayFloorFourB1, 0, Keys.directions_turnRight),
+            new Edge(19.470, nodeNameHallwayFloorFourC1, 1, Keys.directions_turnLeft)
         }),
         //floorFourRestroom
         new Node(nodeNameRoom4235FloorFour, descriptionRoom4235FloorFour, new Edge[]{
