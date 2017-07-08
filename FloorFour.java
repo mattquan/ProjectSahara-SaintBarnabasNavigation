@@ -17,14 +17,19 @@ public class FloorFour extends Graph{
             Arrays.asList( 
                     
                 new Node(Keys.nodeNameDeskFloorFour, Keys.descriptionDeskFloorFour, new Edge[]{
-                    new Edge(24.321,Keys.nodeNameElevatorFloorFour,0)}),
+                    new Edge(24.321,Keys.nodeNameElevatorFloorFour,0, "Enter the elevators, straight ahead."),
+                    new Edge(13.2+38.221+24.373,Keys.nodeNameHallwayFloorFourA,0,Keys.directions_passThroughTheArchwayAndContinueStraightPassTheEleveatorsThereShouldBeTwoHallwaysInFrontOfYou)
+                
+                }),                    
+                    
                 
                 new Node(Keys.nodeNameElevatorFloorFour, new Edge[]{
-                    new Edge(24.321,Keys.nodeNameDeskFloorFour,0),
+                    new Edge(24.321,Keys.nodeNameDeskFloorFour,0, "Continue straight"),                    
+                    new Edge(24.321+13.2+38.221+24.373-1,Keys.nodeNameHallwayFloorFourA,1,Keys.directions_passThroughTheArchwayAndContinueStraightPassTheEleveatorsThereShouldBeTwoHallwaysInFrontOfYou),
                 }),           
-                new Node(Keys.nodeNameHallwayFloorFourA, new Edge[]{
-                    new Edge(13.2+38.221+24.373,Keys.nodeNameDeskFloorFour,0,Keys.directions_passThroughTheArchwayAndContinueStraightPassTheEleveatorsThereShouldBeTwoHallwaysInFrontOfYou),
-                    new Edge(24.321+13.2+38.221+24.373,Keys.nodeNameElevatorFloorFour,1,Keys.directions_passThroughTheArchwayAndContinueStraightPassTheEleveatorsThereShouldBeTwoHallwaysInFrontOfYou),
+                new Node(Keys.nodeNameHallwayFloorFourA, new Edge[]{                    
+                    new Edge(13.2+38.221+24.373,Keys.nodeNameDeskFloorFour,0, "Continue straight, to the front desk."), 
+                    new Edge(24.321+13.2+38.221+24.373-1,Keys.nodeNameElevatorFloorFour,1, "Continue straight to the elevators"),
                     new Edge(89.551, Keys.nodeNameHallwayFloorFourB1,2,Keys.directions_goThroughTheLeftDoorway),
                     new Edge(89.551, Keys.nodeNameHallwayFloorFourB2,3,Keys.directions_goThroughTheRightDoorway)
                 }), 
