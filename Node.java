@@ -42,6 +42,21 @@ public class Node {
         this.description = description;
         IPAddresses = IP;
     }
+    public Node(String name, String description, Edge[] myEdges) { 
+        this.name = name;
+        adjacencies = myEdges;
+        weight = Double.MAX_VALUE;
+        minPath = null;
+        this.description = new ArrayList<String>();
+        if (description.equals("")) {
+            
+            this.description.add(description);
+        }
+        else {
+            this.description = null;
+        }
+        IPAddresses = null;
+    }
     public Node(String name, ArrayList<String> description, Edge[] myEdges) { 
         this.name = name;
         adjacencies = myEdges;

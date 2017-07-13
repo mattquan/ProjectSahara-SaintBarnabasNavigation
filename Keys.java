@@ -1960,14 +1960,14 @@ public class Keys {
         "1398"
     ));
 
-    final public static String nodeNameRoom1211FloorOne = "room1211FloorOne";
+    final public static String nodeNameRoom1234FloorOne = "room1234FloorOne";
     final public static ArrayList<String> descriptionRoom1211FloorOne = new ArrayList<>(Arrays.asList(
-        "parent",
+        "parent icu",
         "parent lounge",
         "1211"
     ));
 
-    final public static String nodeNameRoom1214FloorOne = "room1214FloorOne";
+    final public static String nodeNameRoom1233FloorOne = "room1233FloorOne";
     final public static ArrayList<String> descriptionRoom1214FloorOne = new ArrayList<>(Arrays.asList(
         "mens bathroom ",
         "men's bathroom ",
@@ -1977,7 +1977,7 @@ public class Keys {
         "restroom"
     ));
 
-    final public static String nodeNameRoom1215FloorOne = "room1215FloorOne";
+    final public static String nodeNameRoom1232FloorOne = "room1232FloorOne";
     final public static ArrayList<String> descriptionRoom1215FloorOne = new ArrayList<>(Arrays.asList(
         "womens bathroom",
         "womens's bathroom",
@@ -2000,9 +2000,9 @@ public class Keys {
         "1607"
     ));
 
-    final public static String nodeNameRoom1730AFloorOne = "room1730AFloorOne";
+    final public static String nodeNameRoom1750FloorOne = "room1750FloorOne";
     final public static ArrayList<String> descriptionRoom1730AFloorOne = new ArrayList<>(Arrays.asList(
-        "radiation oncology"
+        "radiation oncology waiting room"
     ));
 
     //floorTwo
@@ -2263,7 +2263,22 @@ public class Keys {
 
     //ListOfRooms!! Alphabetical!!
     final public static ArrayList<Node> listOfRooms = new ArrayList<>(Arrays.asList(
-        //groundFloorParkingValidation
+            
+            
+        new Node("entranceEmergencyRoomFloorOne", "entrance by ER", new Edge[]{
+            new Edge(66.002, nodeNameHallwayFloorOneC, 0),
+            new Edge(42.661, nodeNameHallwayFloorOneD, 1)
+        }),
+            
+        new Node("entranceRadiationOncologyFloorOne", "entrance by radiation oncology", new Edge[]{
+            new Edge(6.836, nodeNameHallwayFloorOneF, 0)
+        }),
+            
+
+
+
+
+//groundFloorParkingValidation
         new Node(nodeNameParkingValidationFloorGround, descriptionParkingValidationFloorGround, new Edge[]{
             new Edge(44.291, nodeNameHallwayFloorGroundA, 0, Keys.directions_facingAwayFromPV + "t" + Keys.directions_turnLeft.substring(1)),
             new Edge(40.912, nodeNameElevatorFloorGround, 1, Keys.directions_facingAwayFromPV + "t" + Keys.directions_turnRight.substring(1) + ". Walk straight and " + "e" + Keys.directions_enterTheFirstSetOfElevators.substring(1)),
@@ -2271,61 +2286,80 @@ public class Keys {
         }),
         //FLOOR ONE
         //EastWingFloorOne 117
-        new Node(nodeNameRoom117EastWingFloorOne, descriptionRoom117EastWingFloorOne, new Edge[]{
+        new Node("room117eastwingFloorOne", descriptionRoom117EastWingFloorOne, new Edge[]{
             new Edge(18.00, nodeNameElevatorEastWingFloorOne, 0)
         }),
-        //floorOneParentLounge
-        new Node(nodeNameRoom1211FloorOne, descriptionRoom1211FloorOne, new Edge[]{
-            new Edge(4.708, nodeNameHallwayFloorOneD, 0),
-            new Edge(5.991, nodeNameHallwayFloorOneE, 1)
+        //waiting area for exam rooms
+        new Node("room1172FloorOne", "exam room waiting room", new Edge[]{
+            new Edge(18.440, nodeNameHallwayFloorOneF, 0),
+            new Edge(53.927, nodeNameHallwayFloorOneC, 1)
         }),
-        //floorOneMensRestroom
-        new Node(nodeNameRoom1214FloorOne, descriptionRoom1214FloorOne, new Edge[]{
-            new Edge(7.594, nodeNameHallwayFloorOneD, 0),
-            new Edge(3.254, nodeNameHallwayFloorOneE, 1)
-        }),
-        //floorOneWomensRestroom
-        new Node(nodeNameRoom1215FloorOne, descriptionRoom1215FloorOne, new Edge[]{
-            new Edge(8.569, nodeNameHallwayFloorOneD, 0),
-            new Edge(2.190, nodeNameHallwayFloorOneE, 1)
-        }),
+        
         //EastWingFloorOneRoom121
-        new Node(nodeNameRoom121EastWingFloorOne, descriptionRoom121EastWingFloorOne, new Edge[]{
+        new Node("room121eastWingFloorOne", descriptionRoom121EastWingFloorOne, new Edge[]{
             new Edge(18.905, nodeNameElevatorEastWingFloorOne, 0)
         }),
+       
+        
         //floorOneWomensRestroom
-        new Node(nodeNameRoom1318FloorOne, descriptionRoom1318FloorOne, new Edge[]{
-            new Edge(11.753, nodeNameHallwayFloorOneA, 0),
-            new Edge(10.504, nodeNameHallwayFloorOneB, 1),
-            new Edge(0.461, nodeNameElevatorFloorOne, 2)
+        new Node("room1232FloorOne", descriptionRoom1215FloorOne, new Edge[]{
+            new Edge(13.622, nodeNameHallwayFloorOneD, 0),
+            new Edge(3.223, nodeNameHallwayFloorOneE, 1)
         }),
         //floorOneMensRestroom
-        new Node(nodeNameRoom1319FloorOne, descriptionRoom1319FloorOne, new Edge[]{
-            new Edge(8.760, nodeNameHallwayFloorOneA, 0),
-            new Edge(12.830, nodeNameHallwayFloorOneB, 1),
-            new Edge(1.832, nodeNameElevatorFloorOne, 2)
+        new Node("room1233FloorOne", descriptionRoom1214FloorOne, new Edge[]{
+            new Edge(12.014, nodeNameHallwayFloorOneD, 0),
+            new Edge(5.025, nodeNameHallwayFloorOneE, 1)
+        }),
+         //floorOneParentLounge
+        new Node("room1234FloorOne", descriptionRoom1211FloorOne, new Edge[]{
+            new Edge(5.467, nodeNameHallwayFloorOneD, 0),
+            new Edge(8.678, nodeNameHallwayFloorOneE, 1)
+        }),
+        
+        //floorOneWomensRestroom
+        new Node("room1318FloorOne", descriptionRoom1318FloorOne, new Edge[]{
+            new Edge(18.669, nodeNameHallwayFloorOneA, 0),
+            new Edge(18.962, nodeNameHallwayFloorOneB, 1),
+            new Edge(1.391, nodeNameElevatorFloorOne, 2)
+        }),
+        //floorOneMensRestroom
+        new Node("room1319FloorOne", descriptionRoom1319FloorOne, new Edge[]{
+            new Edge(12.276, nodeNameHallwayFloorOneA, 0),
+            new Edge(25.671, nodeNameHallwayFloorOneB, 1),
+            new Edge(2.616, nodeNameElevatorFloorOne, 2)
         }),
         //floorOneSameDayWaitingArea
-        new Node(nodeNameRoom1323FloorOne, descriptionRoom1323FloorOne, new Edge[]{
-            new Edge(3.020, nodeNameHallwayFloorOneA, 0),
-            new Edge(19.226, nodeNameHallwayFloorOneB, 1),
-            new Edge(7.880, nodeNameElevatorFloorOne, 2)
+        new Node("room1323FloorOne", descriptionRoom1323FloorOne, new Edge[]{
+            new Edge(4.976, nodeNameHallwayFloorOneA, 0),
+            new Edge(35.844, nodeNameHallwayFloorOneB, 1),
+            new Edge(12.932, nodeNameElevatorFloorOne, 2)
         }),
         //floorOneChapel
-        new Node(nodeNameRoom1398FloorOne, descriptionRoom1398FloorOne, new Edge[]{
-            new Edge(8.180, nodeNameHallwayFloorOneG, 0)
+        new Node("room1308FloorOne", descriptionRoom1398FloorOne, new Edge[]{
+            new Edge(10.916, nodeNameHallwayFloorOneG, 0)
         }),
         //EastWingFloorOneRoom144
-        new Node(nodeNameRoom144EastWingFloorOne, descriptionRoom144EastWingFloorOne, new Edge[]{
+        new Node("room144EastWingFloorOne", descriptionRoom144EastWingFloorOne, new Edge[]{
             new Edge(5.908, nodeNameElevatorEastWingFloorOne, 0)
         }),
         //floorOneICUWaiting
-        new Node(nodeNameRoom1607FloorOne, descriptionRoom1607FloorOne, new Edge[]{
-            new Edge(1.725, nodeNameHallwayFloorOneE, 1)
+        new Node("room1607FloorOne", descriptionRoom1607FloorOne, new Edge[]{
+            new Edge(1.662, nodeNameHallwayFloorOneE, 0)
         }),
-        //floorOneRadiation
-        new Node(nodeNameRoom1730AFloorOne, descriptionRoom1730AFloorOne, new Edge[]{
-            new Edge(19.059, nodeNameHallwayFloorOneF, 0)
+        //floorOneERWaitingRoom
+        new Node("room1611FloorOne", "ER waiting room", new Edge[]{
+            new Edge(64.149, nodeNameHallwayFloorOneC, 0),
+            new Edge(40.808, nodeNameHallwayFloorOneD, 1)
+        }),
+        //floorOnePediatricWaitingRoom
+        new Node("room1619FloorOne", "Pediatric waiting room", new Edge[]{
+            new Edge(79.743, nodeNameHallwayFloorOneC, 0),
+            new Edge(59.402, nodeNameHallwayFloorOneD, 1)
+        }),
+        //floorOneRadiationOncologyWaitingRoom
+        new Node("room1750FloorOne", "radiation oncology waiting area", new Edge[]{
+            new Edge(28.394, nodeNameHallwayFloorOneF, 0)
         }),
         //END FLOOR ONE - START FLOOR TWO
         //EastWingFloorTwo 201
@@ -3270,15 +3304,15 @@ public class Keys {
         }),
         //floorOneReception
         new Node(nodeNameRoomReceptionFloorOne, descriptionRoomReceptionFloorOne, new Edge[]{
-            new Edge(5.403, nodeNameHallwayFloorOneA, 0),
-            new Edge(12.830, nodeNameHallwayFloorOneB, 1),
-            new Edge(16.842, nodeNameElevatorFloorOne, 2)
+            new Edge(9.794, nodeNameHallwayFloorOneA, 0),
+            new Edge(27.696, nodeNameHallwayFloorOneB, 1),
+            new Edge(6.178, nodeNameElevatorFloorOne, 2)
         }),
         //floorOneSameDayPrep,Holding,Recovery
         new Node(nodeNameRoomS12FloorOne, descriptionRoomS12FloorOne, new Edge[]{
-            new Edge(3.613, nodeNameHallwayFloorOneA, 0),
-            new Edge(19.166, nodeNameHallwayFloorOneB, 1),
-            new Edge(1.615, nodeNameElevatorFloorOne, 2)
+            new Edge(3.446, nodeNameHallwayFloorOneA, 0),
+            new Edge(32.656, nodeNameHallwayFloorOneB, 1),
+            new Edge(9.947, nodeNameElevatorFloorOne, 2)
         })
 ));
 

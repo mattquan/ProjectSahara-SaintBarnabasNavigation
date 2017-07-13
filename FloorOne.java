@@ -12,44 +12,44 @@ import java.util.*;
  */
 public class FloorOne extends Graph{
     public ArrayList<Node> build(){
-        
+        //in meters
         
         return new ArrayList<>(
                 Arrays.asList(
                    new Node(Keys.nodeNameElevatorFloorOne, new Edge[]{
-                        new Edge(10.5, Keys.nodeNameHallwayFloorOneA, 0),
-                        new Edge(11.7, Keys.nodeNameHallwayFloorOneB, 1)
+                        new Edge(18.017, Keys.nodeNameHallwayFloorOneA, 0),
+                        new Edge(20.500, Keys.nodeNameHallwayFloorOneB, 1)
                         }),
                     new Node(Keys.nodeNameHallwayFloorOneA,  new Edge[]{
-                        new Edge(22.2, Keys.nodeNameHallwayFloorOneB,0),
-                        new Edge(10.5, Keys.nodeNameElevatorFloorOne,1)
+                        new Edge(39.019, Keys.nodeNameHallwayFloorOneB,0),
+                        new Edge(18.017, Keys.nodeNameElevatorFloorOne,1)
 
                     }),
                     new Node(Keys.nodeNameHallwayFloorOneB, new Edge[]{
-                        new Edge(22.2, Keys.nodeNameHallwayFloorOneA, 0),
-                        new Edge(10.7, Keys.nodeNameHallwayFloorOneC, 1),
-                        new Edge (13.3, Keys.nodeNameHallwayFloorOneD, 2),
-                        new Edge(11.7, Keys.nodeNameElevatorFloorOne, 3),
-                        new Edge(14.138, Keys.nodeNameHallwayFloorOneG, 4)
+                        new Edge(39.019, Keys.nodeNameHallwayFloorOneA, 0),
+                        new Edge(8.724, Keys.nodeNameHallwayFloorOneC, 1),
+                        new Edge (27.243, Keys.nodeNameHallwayFloorOneD, 2),
+                        new Edge(20.500, Keys.nodeNameElevatorFloorOne, 3),
+                        new Edge(21.070, Keys.nodeNameHallwayFloorOneG, 4)
                     }),
                     new Node(Keys.nodeNameHallwayFloorOneC, new Edge[]{
-                        new Edge(10.7, Keys.nodeNameHallwayFloorOneB, 0),
-                        new Edge(21.7, Keys.nodeNameHallwayFloorOneD, 1),
-                        new Edge(39.9, Keys.nodeNameHallwayFloorOneF, 2)
+                        new Edge(8.724, Keys.nodeNameHallwayFloorOneB, 0),
+                        new Edge(31.937, Keys.nodeNameHallwayFloorOneD, 1),
+                        new Edge(71.465, Keys.nodeNameHallwayFloorOneF, 2)
                     }),
                     new Node(Keys.nodeNameHallwayFloorOneD, new Edge[]{
-                        new Edge(13.3, Keys.nodeNameHallwayFloorOneB, 0),
-                        new Edge(21.7, Keys.nodeNameHallwayFloorOneC, 1),
-                        new Edge(10.7, Keys.nodeNameHallwayFloorOneE, 2)
+                        new Edge(27.243, Keys.nodeNameHallwayFloorOneB, 0),
+                        new Edge(31.937, Keys.nodeNameHallwayFloorOneC, 1),
+                        new Edge(15.691, Keys.nodeNameHallwayFloorOneE, 2)
                     }),
                     new Node(Keys.nodeNameHallwayFloorOneE, new Edge[]{
-                        new Edge(10.7, Keys.nodeNameHallwayFloorOneD, 0)
+                        new Edge(15.691, Keys.nodeNameHallwayFloorOneD, 0)
                     }),
                     new Node(Keys.nodeNameHallwayFloorOneF, new Edge[]{
-                        new Edge(39.9, Keys.nodeNameHallwayFloorOneC, 0)
+                        new Edge(71.465, Keys.nodeNameHallwayFloorOneC, 0)
                     }),
                     new Node(Keys.nodeNameHallwayFloorOneG, new Edge[]{
-                        new Edge(14.138, Keys.nodeNameHallwayFloorOneB, 0)
+                        new Edge(21.070, Keys.nodeNameHallwayFloorOneB, 0)
                         })
 
 
